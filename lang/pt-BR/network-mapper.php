@@ -14,7 +14,7 @@ return [
 
     // Diagrams landing page (index.php)
     'index' => [
-        'browser_title'    => 'Domus Desk — Network Mapper',
+        'browser_title'    => 'Domus Desk',
         'heading'          => 'Diagramas de rede',
         'filter_placeholder' => 'Filtrar por título…',
         'new'              => 'Novo diagrama',
@@ -51,7 +51,7 @@ return [
 
     // Diagram editor shell (diagram.php)
     'editor' => [
-        'browser_title'    => 'Domus Desk — Diagrama de rede',
+        'browser_title'    => 'Domus Desk',
         'browser_title_named' => 'Domus Desk — {title}',
         'back'             => '← Todos os diagramas',
         'loading'          => 'Carregando…',
@@ -299,7 +299,7 @@ return [
 
     // Help guide (help.php)
     'help' => [
-        'browser_title'    => 'Domus Desk — Guia do Network Mapper',
+        'browser_title'    => 'Domus Desk',
         'sidebar_title'    => 'Guia',
         'hero_title'       => 'Guia do Network Mapper',
         'hero_subtitle'    => 'Desenhe seus diagramas de rede e arquitetura sobre o CMDB — cada caixa que você posiciona é um objeto real que o restante da plataforma conhece.',

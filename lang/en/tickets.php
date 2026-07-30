@@ -479,7 +479,7 @@ return [
 
     // tickets/settings/index.php — admin settings page (tabs + section headings)
     'settings' => [
-        'page_title' => 'Service Desk - Settings',
+        'page_title' => 'Domus Desk - Settings',
         // Tab labels along the top of the page
         'tabs' => [
             'departments'     => 'Departments',
@@ -1156,7 +1156,7 @@ return [
 
     // tickets/rota.php — weekly staff rota grid
     'rota' => [
-        'page_title'      => 'Service Desk - Rota',
+        'page_title'      => 'Domus Desk - Rota',
         'analyst_col'     => 'Analyst',
         'no_analysts'     => 'No active analysts found.',
         'add_entry'       => 'Add entry',
@@ -1181,7 +1181,7 @@ return [
 
     // tickets/users.php — end-user directory with per-user ticket list
     'users' => [
-        'page_title'            => 'Service Desk - Users',
+        'page_title'            => 'Domus Desk - Users',
         'list_title'            => 'Users',
         'search_placeholder'    => 'Search users...',
         'count'                 => '{count} users',
@@ -1230,7 +1230,7 @@ return [
 
     // tickets/calendar.php — scheduled-tickets calendar view
     'calendar' => [
-        'page_title'    => 'Service Desk - Calendar',
+        'page_title'    => 'Domus Desk - Calendar',
         'modal_title'   => 'Ticket Details',
         'open_in_inbox' => 'Open in Inbox',
         'x_more'        => '{count} more...',
@@ -1249,7 +1249,7 @@ return [
 
     // tickets/activity.php — full-screen mailbox activity log
     'activity' => [
-        'page_title'           => 'Service Desk - Mailbox Activity',
+        'page_title'           => 'Domus Desk - Mailbox Activity',
         'sidebar_title'        => 'Mailboxes',
         'filter_placeholder'   => 'Filter mailboxes...',
         'back_to_settings'     => 'Back to Settings',
@@ -1303,7 +1303,7 @@ return [
 
     // tickets/dashboard/index.php + library.php — ticket dashboard + widget library
     'dashboard' => [
-        'page_title'              => 'Service Desk - Ticket Dashboard',
+        'page_title'              => 'Domus Desk - Ticket Dashboard',
         'empty_title'             => 'No widgets yet',
         'empty_body'              => 'Use the <strong>Add</strong> button in the top right to pick widgets from the library.',
         'edit_widget'             => 'Edit Widget',
@@ -1314,7 +1314,7 @@ return [
         'widget_removed'          => 'Widget removed',
         'widget_updated'          => 'Widget updated',
         'library' => [
-            'page_title'          => 'Service Desk - Ticket Widget Library',
+            'page_title'          => 'Domus Desk - Ticket Widget Library',
             'back_dashboard'      => 'Dashboard',
             'heading'             => 'Widget Library',
             'search_placeholder'  => 'Search widgets...',
@@ -1358,7 +1358,7 @@ return [
     // tickets/help.php — Tickets module help guide. Prose values contain inline
     // HTML markup (strong/em/code/a/&mdash; etc.) and are echoed unescaped.
     'help' => [
-        'page_title'   => 'Service Desk - Tickets Guide',
+        'page_title'   => 'Domus Desk - Tickets Guide',
         'sidebar_title'=> 'Guide',
         'hero_title'   => 'Tickets module guide',
         'hero_sub'     => 'Log, track, and resolve IT support requests from a single folder-based inbox &mdash; built for service desk teams.',
@@ -1710,7 +1710,7 @@ return [
     // tickets/help-sla.php — SLA management deep-dive help page. Prose values
     // contain inline HTML markup and are echoed unescaped.
     'help_sla' => [
-        'page_title'    => 'Service Desk - SLA Management',
+        'page_title'    => 'Domus Desk - SLA Management',
         'back_link'     => '&larr; Back to Tickets guide',
         'sidebar_title' => 'SLA Guide',
         'hero_title'    => 'SLA Management',

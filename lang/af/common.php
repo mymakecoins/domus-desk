@@ -55,16 +55,16 @@ return [
 
     // Home / landing page (index.php)
     'home' => [
-        'header_title'     => 'Dienstoonbank',
-        'browser_title'    => 'Dienstoonbank - ITSM',
+        'header_title'     => 'Domus Desk',
+        'browser_title'    => 'Domus Desk',
         'welcome_heading'  => 'Wat wil u doen?',
         'welcome_subtitle' => 'Kies \'n module om te begin',
-        'footer'           => 'Dienstoonbank ITSM',
+        'footer'           => 'Domus Desk',
     ],
 
     // Waffle module-switcher panel (shared header)
     'waffle' => [
-        'title' => 'ITSM-modules',
+        'title' => 'Domus Desk',
     ],
 
     // Per-module display name + one-line description.

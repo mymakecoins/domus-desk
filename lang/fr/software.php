@@ -20,7 +20,7 @@ return [
 
     // -- Inventory (index.php) ------------------------------------------------
     'inventory' => [
-        'page_title'      => 'Service Desk - Logiciels',
+        'page_title'      => 'Domus Desk - Logiciels',
         'heading'         => 'Inventaire logiciel',
         'search'          => 'Rechercher par nom d\'application ou éditeur...',
         'tab_apps'        => 'Applications',
@@ -54,7 +54,7 @@ return [
 
     // -- Dashboard (dashboard/index.php) -------------------------------------
     'dashboard' => [
-        'page_title'   => 'Service Desk - Tableau de bord des logiciels',
+        'page_title'   => 'Domus Desk - Tableau de bord des logiciels',
         'heading'      => 'Tableau de bord',
         'add'          => 'Ajouter',
         'empty_heading'=> 'Aucun widget pour l\'instant',
@@ -108,7 +108,7 @@ return [
 
     // -- Widget library (dashboard/library.php) ------------------------------
     'library' => [
-        'page_title'   => 'Service Desk - Bibliothèque de widgets logiciels',
+        'page_title'   => 'Domus Desk - Bibliothèque de widgets logiciels',
         'back'         => 'Tableau de bord',
         'heading'      => 'Bibliothèque de widgets',
         'search'       => 'Rechercher des widgets...',
@@ -167,7 +167,7 @@ return [
 
     // -- Licences (licences/index.php) ---------------------------------------
     'licences' => [
-        'page_title'   => 'Service Desk - Licences logicielles',
+        'page_title'   => 'Domus Desk - Licences logicielles',
         'heading'      => 'Licences logicielles',
         'search'       => 'Rechercher des licences...',
         'export_csv'   => 'Exporter CSV',
@@ -250,7 +250,7 @@ return [
 
     // -- Settings / API keys (settings/index.php) ----------------------------
     'settings' => [
-        'page_title'  => 'Service Desk - Paramètres des logiciels',
+        'page_title'  => 'Domus Desk - Paramètres des logiciels',
         'tab_api_keys'=> 'Clés API',
         'heading'     => 'Clés API',
         'label_input' => 'Libellé (facultatif)',
@@ -293,7 +293,7 @@ return [
 
     // -- Help guide (help.php) -----------------------------------------------
     'help' => [
-        'page_title' => 'Service Desk - Guide des logiciels',
+        'page_title' => 'Domus Desk - Guide des logiciels',
         'guide'      => 'Guide',
 
         'nav_overview'    => 'Aperçu',

@@ -30,10 +30,10 @@ return [
     ],
 
     'browser_title' => [
-        'main'     => 'Service Desk - Knowledge Base',
-        'review'   => 'Service Desk - Knowledge review',
-        'settings' => 'Service Desk - Knowledge settings',
-        'help'     => 'Service Desk - Knowledge Base Guide',
+        'main'     => 'Domus Desk - Knowledge Base',
+        'review'   => 'Domus Desk - Knowledge review',
+        'settings' => 'Domus Desk - Knowledge settings',
+        'help'     => 'Domus Desk - Knowledge Base Guide',
     ],
 
     'sidebar' => [

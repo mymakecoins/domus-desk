@@ -1134,7 +1134,7 @@ $translationNamespaces = ['common', 'forms'];
                 return;
             }
             const alignClass = 'align-' + logoAlignment;
-            let html = `<img src="<?php echo BASE_URL; ?>assets/images/CompanyLogo.png" alt="${escAttr(window.t('forms.preview.logo_alt'))}" class="preview-logo ${alignClass}">`;
+            let html = `<img src="<?php echo BASE_URL; ?>assets/images/CompanyLogo.png?v=2" alt="${escAttr(window.t('forms.preview.logo_alt'))}" class="preview-logo ${alignClass}">`;
             html += `<p class="preview-title">${esc(title)}</p>`;
             if (desc) html += `<p class="preview-desc">${esc(desc)}</p>`;
             html += fields.map(f => {

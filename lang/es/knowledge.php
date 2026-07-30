@@ -23,10 +23,10 @@ return [
     ],
 
     'browser_title' => [
-        'main'     => 'Mesa de servicio - Base de conocimiento',
-        'review'   => 'Mesa de servicio - Revisión de conocimiento',
-        'settings' => 'Mesa de servicio - Ajustes de conocimiento',
-        'help'     => 'Mesa de servicio - Guía de la base de conocimiento',
+        'main'     => 'Domus Desk - Base de conocimiento',
+        'review'   => 'Domus Desk - Revisión de conocimiento',
+        'settings' => 'Domus Desk - Ajustes de conocimiento',
+        'help'     => 'Domus Desk - Guía de la base de conocimiento',
     ],
 
     'sidebar' => [

@@ -28,7 +28,7 @@ return [
 
     // -- Inventory (index.php) ------------------------------------------------
     'inventory' => [
-        'page_title'      => 'Service Desk - Програмне забезпечення',
+        'page_title'      => 'Domus Desk - Програмне забезпечення',
         'heading'         => 'Інвентаризація ПЗ',
         'search'          => 'Пошук за назвою застосунку або видавцем...',
         'tab_apps'        => 'Застосунки',
@@ -62,7 +62,7 @@ return [
 
     // -- Dashboard (dashboard/index.php) -------------------------------------
     'dashboard' => [
-        'page_title'   => 'Service Desk - Панель керування ПЗ',
+        'page_title'   => 'Domus Desk - Панель керування ПЗ',
         'heading'      => 'Панель керування',
         'add'          => 'Додати',
         'empty_heading'=> 'Ще немає віджетів',
@@ -116,7 +116,7 @@ return [
 
     // -- Widget library (dashboard/library.php) ------------------------------
     'library' => [
-        'page_title'   => 'Service Desk - Бібліотека віджетів ПЗ',
+        'page_title'   => 'Domus Desk - Бібліотека віджетів ПЗ',
         'back'         => 'Панель керування',
         'heading'      => 'Бібліотека віджетів',
         'search'       => 'Пошук віджетів...',
@@ -175,7 +175,7 @@ return [
 
     // -- Licences (licences/index.php) ---------------------------------------
     'licences' => [
-        'page_title'   => 'Service Desk - Ліцензії на ПЗ',
+        'page_title'   => 'Domus Desk - Ліцензії на ПЗ',
         'heading'      => 'Ліцензії на ПЗ',
         'search'       => 'Пошук ліцензій...',
         'export_csv'   => 'Експорт CSV',
@@ -258,7 +258,7 @@ return [
 
     // -- Settings / API keys (settings/index.php) ----------------------------
     'settings' => [
-        'page_title'  => 'Service Desk - Налаштування ПЗ',
+        'page_title'  => 'Domus Desk - Налаштування ПЗ',
         'tab_api_keys'=> 'API-ключі',
         'heading'     => 'API-ключі',
         'label_input' => 'Мітка (необов\'язково)',
@@ -301,7 +301,7 @@ return [
 
     // -- Help guide (help.php) -----------------------------------------------
     'help' => [
-        'page_title' => 'Service Desk - Посібник з ПЗ',
+        'page_title' => 'Domus Desk - Посібник з ПЗ',
         'guide'      => 'Посібник',
 
         'nav_overview'    => 'Огляд',

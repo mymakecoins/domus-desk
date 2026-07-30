@@ -190,7 +190,7 @@ return [
         'position' => 'Posição',
     ],
     'help' => [
-        'page_title' => 'Central de Serviços - Guia do Mapeador de processos',
+        'page_title' => 'Domus Desk - Guia do Mapeador de processos',
         'guide' => 'Guia',
         'nav_overview' => 'Visão geral',
         'nav_creating' => 'Criando um processo',

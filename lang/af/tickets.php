@@ -147,7 +147,7 @@ return [
 
     // tickets/settings/index.php — admin settings page (tabs + section headings)
     'settings' => [
-        'page_title' => 'Dienstoonbank - Instellings',
+        'page_title' => 'Domus Desk - Instellings',
         'tabs' => [
             'departments'     => 'Departemente',
             'teams'           => 'Spanne',
@@ -369,7 +369,7 @@ return [
 
     // tickets/rota.php — weekly staff rota grid
     'rota' => [
-        'page_title'      => 'Dienstoonbank - Rooster',
+        'page_title'      => 'Domus Desk - Rooster',
         'analyst_col'     => 'Ontleder',
         'no_analysts'     => 'Geen aktiewe ontleders gevind nie.',
         'add_entry'       => 'Voeg inskrywing by',
@@ -394,7 +394,7 @@ return [
 
     // tickets/users.php — end-user directory with per-user ticket list
     'users' => [
-        'page_title'            => 'Dienstoonbank - Gebruikers',
+        'page_title'            => 'Domus Desk - Gebruikers',
         'list_title'            => 'Gebruikers',
         'search_placeholder'    => 'Soek gebruikers...',
         'count'                 => '{count} gebruikers',
@@ -422,7 +422,7 @@ return [
 
     // tickets/calendar.php — scheduled-tickets calendar view
     'calendar' => [
-        'page_title'    => 'Dienstoonbank - Kalender',
+        'page_title'    => 'Domus Desk - Kalender',
         'modal_title'   => 'Kaartjiebesonderhede',
         'open_in_inbox' => 'Maak oop in Inboks',
         'x_more'        => 'Nog {count}...',

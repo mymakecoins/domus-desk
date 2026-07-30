@@ -23,10 +23,10 @@ return [
     ],
 
     'browser_title' => [
-        'main'     => 'Service Desk - Baza wiedzy',
-        'review'   => 'Service Desk - Przegląd bazy wiedzy',
-        'settings' => 'Service Desk - Ustawienia bazy wiedzy',
-        'help'     => 'Service Desk - Przewodnik po bazie wiedzy',
+        'main'     => 'Domus Desk - Baza wiedzy',
+        'review'   => 'Domus Desk - Przegląd bazy wiedzy',
+        'settings' => 'Domus Desk - Ustawienia bazy wiedzy',
+        'help'     => 'Domus Desk - Przewodnik po bazie wiedzy',
     ],
 
     'sidebar' => [

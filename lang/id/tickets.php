@@ -148,7 +148,7 @@ return [
 
     // tickets/settings/index.php — admin settings page (tabs + section headings)
     'settings' => [
-        'page_title' => 'Service Desk - Pengaturan',
+        'page_title' => 'Domus Desk - Pengaturan',
         // Tab labels along the top of the page
         'tabs' => [
             'departments'     => 'Departemen',
@@ -388,7 +388,7 @@ return [
 
     // tickets/rota.php — weekly staff rota grid
     'rota' => [
-        'page_title'      => 'Service Desk - Jadwal Kerja',
+        'page_title'      => 'Domus Desk - Jadwal Kerja',
         'analyst_col'     => 'Analis',
         'no_analysts'     => 'Tidak ada analis aktif yang ditemukan.',
         'add_entry'       => 'Tambah entri',
@@ -413,7 +413,7 @@ return [
 
     // tickets/users.php — end-user directory with per-user ticket list
     'users' => [
-        'page_title'            => 'Service Desk - Pengguna',
+        'page_title'            => 'Domus Desk - Pengguna',
         'list_title'            => 'Pengguna',
         'search_placeholder'    => 'Cari pengguna...',
         'count'                 => '{count} pengguna',
@@ -441,7 +441,7 @@ return [
 
     // tickets/calendar.php — scheduled-tickets calendar view
     'calendar' => [
-        'page_title'    => 'Service Desk - Kalender',
+        'page_title'    => 'Domus Desk - Kalender',
         'modal_title'   => 'Detail Tiket',
         'open_in_inbox' => 'Buka di Kotak Masuk',
         'x_more'        => '{count} lainnya...',

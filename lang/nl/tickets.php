@@ -134,7 +134,7 @@ return [
 
     // tickets/settings/index.php — admin settings page (tabs + section headings)
     'settings' => [
-        'page_title' => 'Servicedesk - Instellingen',
+        'page_title' => 'Domus Desk - Instellingen',
         'tabs' => [
             'departments'     => 'Afdelingen',
             'teams'           => 'Teams',
@@ -342,7 +342,7 @@ return [
 
     // tickets/rota.php — weekly staff rota grid
     'rota' => [
-        'page_title'      => 'Servicedesk - Rooster',
+        'page_title'      => 'Domus Desk - Rooster',
         'analyst_col'     => 'Analist',
         'no_analysts'     => 'Geen actieve analisten gevonden.',
         'add_entry'       => 'Vermelding toevoegen',
@@ -367,7 +367,7 @@ return [
 
     // tickets/users.php — end-user directory with per-user ticket list
     'users' => [
-        'page_title'            => 'Servicedesk - Gebruikers',
+        'page_title'            => 'Domus Desk - Gebruikers',
         'list_title'            => 'Gebruikers',
         'search_placeholder'    => 'Gebruikers zoeken…',
         'count'                 => '{count} gebruikers',
@@ -395,7 +395,7 @@ return [
 
     // tickets/calendar.php — scheduled-tickets calendar view
     'calendar' => [
-        'page_title'    => 'Servicedesk - Kalender',
+        'page_title'    => 'Domus Desk - Kalender',
         'modal_title'   => 'Ticketdetails',
         'open_in_inbox' => 'Openen in Postvak IN',
         'x_more'        => '{count} meer...',

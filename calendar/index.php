@@ -21,7 +21,7 @@ $translationNamespaces = ['common', 'calendar'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Desk - <?php echo htmlspecialchars(t('calendar.title')); ?></title>
+    <title>Domus Desk - <?php echo htmlspecialchars(t('calendar.title')); ?></title>
     <link rel="stylesheet" href="../assets/css/theme.css?v=22">
     <link rel="stylesheet" href="../assets/css/inbox.css?v=37">
     <link rel="stylesheet" href="../assets/css/calendar-grid.css?v=1">

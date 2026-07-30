@@ -20,7 +20,7 @@ return [
 
     // -- Inventory (index.php) ------------------------------------------------
     'inventory' => [
-        'page_title'      => 'Service Desk - Oprogramowanie',
+        'page_title'      => 'Domus Desk - Oprogramowanie',
         'heading'         => 'Spis oprogramowania',
         'search'          => 'Szukaj według nazwy aplikacji lub wydawcy...',
         'tab_apps'        => 'Aplikacje',
@@ -54,7 +54,7 @@ return [
 
     // -- Dashboard (dashboard/index.php) -------------------------------------
     'dashboard' => [
-        'page_title'   => 'Service Desk - Pulpit oprogramowania',
+        'page_title'   => 'Domus Desk - Pulpit oprogramowania',
         'heading'      => 'Pulpit',
         'add'          => 'Dodaj',
         'empty_heading'=> 'Brak widżetów',
@@ -108,7 +108,7 @@ return [
 
     // -- Widget library (dashboard/library.php) ------------------------------
     'library' => [
-        'page_title'   => 'Service Desk - Biblioteka widżetów oprogramowania',
+        'page_title'   => 'Domus Desk - Biblioteka widżetów oprogramowania',
         'back'         => 'Pulpit',
         'heading'      => 'Biblioteka widżetów',
         'search'       => 'Szukaj widżetów...',
@@ -167,7 +167,7 @@ return [
 
     // -- Licences (licences/index.php) ---------------------------------------
     'licences' => [
-        'page_title'   => 'Service Desk - Licencje oprogramowania',
+        'page_title'   => 'Domus Desk - Licencje oprogramowania',
         'heading'      => 'Licencje oprogramowania',
         'search'       => 'Szukaj licencji...',
         'export_csv'   => 'Eksportuj CSV',
@@ -250,7 +250,7 @@ return [
 
     // -- Settings / API keys (settings/index.php) ----------------------------
     'settings' => [
-        'page_title'  => 'Service Desk - Ustawienia oprogramowania',
+        'page_title'  => 'Domus Desk - Ustawienia oprogramowania',
         'tab_api_keys'=> 'Klucze API',
         'heading'     => 'Klucze API',
         'label_input' => 'Etykieta (opcjonalnie)',
@@ -293,7 +293,7 @@ return [
 
     // -- Help guide (help.php) -----------------------------------------------
     'help' => [
-        'page_title' => 'Service Desk - Przewodnik po oprogramowaniu',
+        'page_title' => 'Domus Desk - Przewodnik po oprogramowaniu',
         'guide'      => 'Przewodnik',
 
         'nav_overview'    => 'Przegląd',

@@ -303,7 +303,7 @@ $translationNamespaces = ['common', 'forms'];
 
             <div class="logo-preview">
                 <div class="logo-preview-label"><?php echo htmlspecialchars(t('forms.settings.preview')); ?></div>
-                <img id="logoPreview" src="../../assets/images/CompanyLogo.png" alt="<?php echo htmlspecialchars(t('forms.settings.logo_alt')); ?>" class="align-center">
+                <img id="logoPreview" src="../../assets/images/CompanyLogo.png?v=2" alt="<?php echo htmlspecialchars(t('forms.settings.logo_alt')); ?>" class="align-center">
             </div>
 
             <div class="form-actions">

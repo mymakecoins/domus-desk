@@ -207,7 +207,7 @@ return [
     ],
 
     'help' => [
-        'page_title' => 'Service Desk - Process Mapper Guide',
+        'page_title' => 'Domus Desk - Process Mapper Guide',
         'guide'      => 'Guide',
 
         'nav_overview'   => 'Overview',

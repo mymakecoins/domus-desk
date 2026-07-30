@@ -20,7 +20,7 @@ $translationNamespaces = ['common', 'tickets'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Desk - <?php echo htmlspecialchars(t('tickets.triage.title')); ?></title>
+    <title>Domus Desk - <?php echo htmlspecialchars(t('tickets.triage.title')); ?></title>
     <link rel="stylesheet" href="../../assets/css/inbox.css">
     <style>
         .triage-container { flex: 1; overflow-y: auto; padding: 30px 20px; }

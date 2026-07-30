@@ -45,7 +45,7 @@ return [
     ],
 
     'login' => [
-        'title'              => 'Self-Service Portal - Login',
+        'title'              => 'Domus Desk - Self-Service Portal',
         'heading'            => 'Self-Service Portal',
         'subtitle'           => 'Sign in to view your tickets',
         'subtitle_mfa'       => 'Multi-factor authentication',

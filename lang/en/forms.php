@@ -27,7 +27,7 @@ return [
     // ── Dashboard / list (forms/index.php) ──────────────────────────
     'list' => [
         'title'              => 'Forms',
-        'page_title'         => 'Service Desk - Forms',
+        'page_title'         => 'Domus Desk - Forms',
         'search_placeholder' => 'Search by title or description...',
         'new_form'           => 'New form',
         'col_title'          => 'Title',
@@ -131,7 +131,7 @@ return [
 
     // ── Editor / builder (forms/edit/index.php) ─────────────────────
     'editor' => [
-        'page_title'       => 'Service Desk - Edit form',
+        'page_title'       => 'Domus Desk - Edit form',
         'title_new'        => 'New form',
         'title_edit'       => 'Edit form',
         'unsaved'          => 'Unsaved changes',
@@ -318,7 +318,7 @@ return [
 
     // ── Fill page (forms/fill.php) ──────────────────────────────────
     'fill' => [
-        'page_title'       => 'Service Desk - Fill Form',
+        'page_title'       => 'Domus Desk - Fill Form',
         'loading'          => 'Loading form...',
         'no_id'            => 'No form ID specified',
         'logo_alt'         => 'Company Logo',
@@ -340,8 +340,8 @@ return [
 
     // ── Submissions page (forms/submissions.php) ────────────────────
     'subs' => [
-        'page_title'        => 'Service Desk - Form Submissions',
-        'page_title_named'  => 'Service Desk - {title} Submissions',
+        'page_title'        => 'Domus Desk - Form Submissions',
+        'page_title_named'  => 'Domus Desk - {title} Submissions',
         'back'              => 'Back',
         'heading'           => 'Submissions',
         'heading_named'     => '{title} — Submissions',
@@ -382,7 +382,7 @@ return [
 
     // ── Settings page (forms/settings/index.php) ────────────────────
     'settings' => [
-        'page_title'        => 'Service Desk - Forms Settings',
+        'page_title'        => 'Domus Desk - Forms Settings',
         'tab_layout'        => 'Layout',
         'tab_ai'            => 'AI',
         'layout_heading'    => 'Layout Settings',
@@ -433,7 +433,7 @@ return [
 
     // ── Help guide (forms/help.php) ─────────────────────────────────
     'help' => [
-        'page_title'   => 'Service Desk - Forms Guide',
+        'page_title'   => 'Domus Desk - Forms Guide',
         'guide'        => 'Guide',
         'nav_overview'    => 'Overview',
         'nav_building'    => 'Building forms',

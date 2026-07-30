@@ -10,7 +10,7 @@
  */
 return [
     'title'      => 'Контракти',
-    'title_full' => 'Service Desk - Контракти',
+    'title_full' => 'Domus Desk - Контракти',
 
     // Header / sidebar navigation
     'nav' => [
@@ -94,7 +94,7 @@ return [
 
     // View contract (view.php)
     'detail' => [
-        'page_title'                => 'Service Desk - Перегляд контракту',
+        'page_title'                => 'Domus Desk - Перегляд контракту',
         'loading'                   => 'Завантаження контракту...',
         'error_prefix'              => 'Помилка:',
         'load_failed'               => 'Не вдалося завантажити контракт',
@@ -168,8 +168,8 @@ return [
 
     // Add/Edit contract (edit.php)
     'edit' => [
-        'page_title_edit'      => 'Service Desk - Редагування контракту',
-        'page_title_add'       => 'Service Desk - Додавання контракту',
+        'page_title_edit'      => 'Domus Desk - Редагування контракту',
+        'page_title_add'       => 'Domus Desk - Додавання контракту',
         'heading_edit'         => 'Редагувати контракт',
         'heading_add'          => 'Додати контракт',
         'none'                 => 'Немає',
@@ -194,7 +194,7 @@ return [
 
     // Settings (settings/index.php)
     'settings' => [
-        'page_title'              => 'Service Desk - Налаштування контрактів',
+        'page_title'              => 'Domus Desk - Налаштування контрактів',
         'tab_supplier_types'      => 'Типи постачальників',
         'tab_supplier_statuses'   => 'Статуси постачальників',
         'tab_contract_statuses'   => 'Статуси контрактів',
@@ -275,8 +275,8 @@ return [
 
     // Suppliers (suppliers/index.php + suppliers/view/index.php)
     'suppliers' => [
-        'page_title'           => 'Service Desk - Постачальники',
-        'view_page_title'      => 'Service Desk - Перегляд постачальника',
+        'page_title'           => 'Domus Desk - Постачальники',
+        'view_page_title'      => 'Domus Desk - Перегляд постачальника',
         'all_suppliers'        => 'Усі постачальники',
         'add_supplier'         => 'Додати постачальника',
         'edit_supplier'        => 'Редагувати постачальника',
@@ -322,7 +322,7 @@ return [
 
     // Contacts (contacts/index.php)
     'contacts' => [
-        'page_title'          => 'Service Desk - Контакти',
+        'page_title'          => 'Domus Desk - Контакти',
         'all_contacts'        => 'Усі контакти',
         'add_contact'         => 'Додати контакт',
         'edit_contact'        => 'Редагувати контакт',
@@ -345,7 +345,7 @@ return [
 
     // Help guide (help.php)
     'help' => [
-        'page_title'    => 'Service Desk - Довідник з контрактів',
+        'page_title'    => 'Domus Desk - Довідник з контрактів',
         'guide'         => 'Довідник',
         'nav_overview'  => 'Огляд',
         'nav_managing'  => 'Управління контрактами',
@@ -453,7 +453,7 @@ return [
 
         // List / dashboard (index.php)
         'list' => [
-            'page_title'          => 'Service Desk - RFP Builder',
+            'page_title'          => 'Domus Desk - RFP Builder',
             'rfps'                => 'RFP',
             'in_progress'         => 'В роботі',
             'back_to_contracts'   => 'До контрактів',
@@ -482,7 +482,7 @@ return [
 
         // Help / user guide (help.php)
         'help' => [
-            'page_title'         => 'Service Desk - Довідка RFP Builder',
+            'page_title'         => 'Domus Desk - Довідка RFP Builder',
             'heading'            => 'RFP Builder — посібник користувача',
             'nav_getting_started'=> 'Початок роботи',
             'nav_overview'       => 'Огляд',
@@ -717,7 +717,7 @@ return [
 
         // Scoring (scoring.php)
         'scoring' => [
-            'page_title'          => 'Service Desk - Оцінювання',
+            'page_title'          => 'Domus Desk - Оцінювання',
             'title'               => 'Оцінювання',
             'score_by_category'   => 'Оцінка за категорією',
             'my_overall'          => 'Моя загальна',
@@ -746,7 +746,7 @@ return [
 
         // Source documents (documents.php)
         'documents' => [
-            'page_title'          => 'Service Desk - Документи RFP',
+            'page_title'          => 'Domus Desk - Документи RFP',
             'rfp'                 => 'RFP',
             'documents'           => 'Документи',
             'heading'             => 'Вихідні документи',
@@ -768,7 +768,7 @@ return [
             'col_uploaded'        => 'Завантажено',
             'extracted_text'      => 'Вилучений текст',
             'no_rfp_selected'     => 'RFP не обрано',
-            'title_with_name'     => 'Service Desk - Документи — {name}',
+            'title_with_name'     => 'Domus Desk - Документи — {name}',
             'could_not_load'      => '(не вдалося завантажити RFP)',
             'empty'               => 'Документів ще немає. Завантажте файл .docx вище, щоб розпочати.',
             'chars'               => '{n} символів',
@@ -803,7 +803,7 @@ return [
 
         // Generated document (document.php)
         'document' => [
-            'page_title'          => 'Service Desk - Документ RFP',
+            'page_title'          => 'Domus Desk - Документ RFP',
             'heading'             => 'Згенерований документ',
             'preview_document'    => 'Попередній перегляд документа',
             'generate_all'        => 'Генерувати все',
@@ -893,7 +893,7 @@ return [
 
         // Extracted requirements (extracted.php)
         'extracted' => [
-            'page_title'        => 'Service Desk - Вилучені вимоги',
+            'page_title'        => 'Domus Desk - Вилучені вимоги',
             'heading'           => 'Вилучені вимоги',
             'total'             => 'Всього',
             'requirements'      => 'Вимоги',
@@ -939,7 +939,7 @@ return [
 
         // Compare suppliers (compare.php)
         'compare' => [
-            'page_title'         => 'Service Desk - Порівняння',
+            'page_title'         => 'Domus Desk - Порівняння',
             'compare'            => 'Порівняти',
             'heading'            => 'Порівняння постачальників',
             'load_failed'        => 'Не вдалося завантажити дані порівняння',
@@ -964,7 +964,7 @@ return [
 
         // Coverage heatmap (coverage.php)
         'coverage' => [
-            'page_title'              => 'Service Desk - Карта покриття',
+            'page_title'              => 'Domus Desk - Карта покриття',
             'heading'                 => 'Карта покриття',
             'consolidated_requirements' => 'Консолідовані вимоги',
             'load_failed'             => 'Не вдалося завантажити покриття',
@@ -985,7 +985,7 @@ return [
 
         // AI audit trail (audit.php)
         'audit' => [
-            'page_title'          => 'Service Desk - Журнал аудиту AI',
+            'page_title'          => 'Domus Desk - Журнал аудиту AI',
             'audit_trail'         => 'Журнал аудиту',
             'heading'             => 'Журнал аудиту AI',
             'total_input_tokens'  => 'Всього вхідних токенів',
@@ -1003,7 +1003,7 @@ return [
 
         // Consolidated requirements (consolidate.php)
         'consolidate' => [
-            'page_title'          => 'Service Desk - Консолідовані вимоги',
+            'page_title'          => 'Domus Desk - Консолідовані вимоги',
             'consolidated'        => 'Консолідовані',
             'heading'             => 'Консолідовані вимоги',
             'add_custom'          => 'Додати власне',

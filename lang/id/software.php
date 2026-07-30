@@ -20,7 +20,7 @@ return [
 
     // -- Inventory (index.php) ------------------------------------------------
     'inventory' => [
-        'page_title'      => 'Service Desk - Perangkat Lunak',
+        'page_title'      => 'Domus Desk - Perangkat Lunak',
         'heading'         => 'Inventaris Perangkat Lunak',
         'search'          => 'Cari berdasarkan nama aplikasi atau penerbit...',
         'tab_apps'        => 'Aplikasi',
@@ -54,7 +54,7 @@ return [
 
     // -- Dashboard (dashboard/index.php) -------------------------------------
     'dashboard' => [
-        'page_title'   => 'Service Desk - Dasbor Perangkat Lunak',
+        'page_title'   => 'Domus Desk - Dasbor Perangkat Lunak',
         'heading'      => 'Dasbor',
         'add'          => 'Tambah',
         'empty_heading'=> 'Belum ada widget',
@@ -108,7 +108,7 @@ return [
 
     // -- Widget library (dashboard/library.php) ------------------------------
     'library' => [
-        'page_title'   => 'Service Desk - Pustaka Widget Perangkat Lunak',
+        'page_title'   => 'Domus Desk - Pustaka Widget Perangkat Lunak',
         'back'         => 'Dasbor',
         'heading'      => 'Pustaka Widget',
         'search'       => 'Cari widget...',
@@ -167,7 +167,7 @@ return [
 
     // -- Licences (licences/index.php) ---------------------------------------
     'licences' => [
-        'page_title'   => 'Service Desk - Lisensi Perangkat Lunak',
+        'page_title'   => 'Domus Desk - Lisensi Perangkat Lunak',
         'heading'      => 'Lisensi Perangkat Lunak',
         'search'       => 'Cari lisensi...',
         'export_csv'   => 'Ekspor CSV',
@@ -250,7 +250,7 @@ return [
 
     // -- Settings / API keys (settings/index.php) ----------------------------
     'settings' => [
-        'page_title'  => 'Service Desk - Pengaturan Perangkat Lunak',
+        'page_title'  => 'Domus Desk - Pengaturan Perangkat Lunak',
         'tab_api_keys'=> 'API key',
         'heading'     => 'API key',
         'label_input' => 'Label (opsional)',
@@ -293,7 +293,7 @@ return [
 
     // -- Help guide (help.php) -----------------------------------------------
     'help' => [
-        'page_title' => 'Service Desk - Panduan Perangkat Lunak',
+        'page_title' => 'Domus Desk - Panduan Perangkat Lunak',
         'guide'      => 'Panduan',
 
         'nav_overview'    => 'Ikhtisar',

@@ -265,7 +265,7 @@ return [
     ],
 
     'help' => [
-        'page_title' => 'Service Desk - Tasks Guide',
+        'page_title' => 'Domus Desk - Tasks Guide',
         'guide'      => 'Guide',
 
         'nav_overview' => 'Overview',

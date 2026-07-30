@@ -147,7 +147,7 @@ $translationNamespaces = ['common', 'self-service'];
 <body>
     <div class="login-container">
         <div class="login-header">
-            <img src="../assets/images/CompanyLogo.png" alt="Company Logo">
+            <img src="../assets/images/CompanyLogo.png?v=2" alt="Company Logo">
             <h1><?php echo htmlspecialchars(t('self-service.register.heading')); ?></h1>
             <p><?php echo htmlspecialchars(t('self-service.register.subtitle')); ?></p>
         </div>

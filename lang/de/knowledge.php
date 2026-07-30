@@ -23,10 +23,10 @@ return [
     ],
 
     'browser_title' => [
-        'main'     => 'Service Desk - Wissensdatenbank',
-        'review'   => 'Service Desk - Wissensprüfung',
-        'settings' => 'Service Desk - Wissenseinstellungen',
-        'help'     => 'Service Desk - Leitfaden zur Wissensdatenbank',
+        'main'     => 'Domus Desk - Wissensdatenbank',
+        'review'   => 'Domus Desk - Wissensprüfung',
+        'settings' => 'Domus Desk - Wissenseinstellungen',
+        'help'     => 'Domus Desk - Leitfaden zur Wissensdatenbank',
     ],
 
     'sidebar' => [

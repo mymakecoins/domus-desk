@@ -32,8 +32,8 @@ return [
     ],
 
     'login' => [
-        'title'              => 'Portal de Autoatendimento - Login',
-        'heading'            => 'Portal de Autoatendimento',
+        'title'              => 'Domus Desk - Portal de Autoatendimento',
+        'heading'            => 'Domus Desk',
         'subtitle'           => 'Entre para ver seus tickets',
         'subtitle_mfa'       => 'Autenticação multifator',
         'email'              => 'E-mail',

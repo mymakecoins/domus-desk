@@ -15,7 +15,7 @@ return [
     // ── Dashboard / list (forms/index.php) ──────────────────────────
     'list' => [
         'title'              => 'Formulieren',
-        'page_title'         => 'Service Desk - Formulieren',
+        'page_title'         => 'Domus Desk - Formulieren',
         'search_placeholder' => 'Zoeken op titel of beschrijving...',
         'new_form'           => 'Nieuw formulier',
         'col_title'          => 'Titel',
@@ -70,7 +70,7 @@ return [
 
     // ── Editor / builder (forms/edit/index.php) ─────────────────────
     'editor' => [
-        'page_title'       => 'Service Desk - Formulier bewerken',
+        'page_title'       => 'Domus Desk - Formulier bewerken',
         'title_new'        => 'Nieuw formulier',
         'title_edit'       => 'Formulier bewerken',
         'unsaved'          => 'Niet-opgeslagen wijzigingen',
@@ -257,7 +257,7 @@ return [
 
     // ── Fill page (forms/fill.php) ──────────────────────────────────
     'fill' => [
-        'page_title'       => 'Service Desk - Formulier invullen',
+        'page_title'       => 'Domus Desk - Formulier invullen',
         'loading'          => 'Formulier laden...',
         'no_id'            => 'Geen formulier-ID opgegeven',
         'logo_alt'         => 'Bedrijfslogo',
@@ -279,8 +279,8 @@ return [
 
     // ── Submissions page (forms/submissions.php) ────────────────────
     'subs' => [
-        'page_title'        => 'Service Desk - Formulierinzendingen',
-        'page_title_named'  => 'Service Desk - {title} inzendingen',
+        'page_title'        => 'Domus Desk - Formulierinzendingen',
+        'page_title_named'  => 'Domus Desk - {title} inzendingen',
         'back'              => 'Terug',
         'heading'           => 'Inzendingen',
         'heading_named'     => '{title} — Inzendingen',
@@ -321,7 +321,7 @@ return [
 
     // ── Settings page (forms/settings/index.php) ────────────────────
     'settings' => [
-        'page_title'        => 'Service Desk - Formulierinstellingen',
+        'page_title'        => 'Domus Desk - Formulierinstellingen',
         'tab_layout'        => 'Lay-out',
         'tab_ai'            => 'AI',
         'layout_heading'    => 'Lay-outinstellingen',
@@ -372,7 +372,7 @@ return [
 
     // ── Help guide (forms/help.php) ─────────────────────────────────
     'help' => [
-        'page_title'   => 'Service Desk - Formuliergids',
+        'page_title'   => 'Domus Desk - Formuliergids',
         'guide'        => 'Gids',
         'nav_overview'    => 'Overzicht',
         'nav_building'    => 'Formulieren bouwen',

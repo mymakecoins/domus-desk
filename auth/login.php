@@ -409,7 +409,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Desk Login</title>
+    <title>Domus Desk Login</title>
     <style>
         * {
             margin: 0;
@@ -627,11 +627,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <div class="login-container">
         <div class="login-header">
-            <img src="assets/images/CompanyLogo.png" alt="Company Logo">
+            <img src="assets/images/CompanyLogo.png?v=2" alt="Company Logo">
             <?php if ($mfa_required): ?>
                 <h1>Verification</h1>
             <?php else: ?>
-                <h1>ITSM Login</h1>
+                <h1>Domus Desk Login</h1>
             <?php endif; ?>
         </div>
 

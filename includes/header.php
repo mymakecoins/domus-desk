@@ -20,7 +20,7 @@ $analyst_name = $_SESSION['analyst_name'] ?? 'Analyst';
 $current_page = $current_page ?? '';
 ?>
 <div class="header">
-    <h1>Service Desk Ticketing System</h1>
+    <h1>Domus Desk</h1>
     <nav class="header-nav">
         <a href="<?php echo $path_prefix; ?>tickets/" class="nav-btn <?php echo $current_page === 'inbox' ? 'active' : ''; ?>" title="Inbox">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

@@ -86,7 +86,7 @@ $pageTitle  = isset($pageTitleKey) ? t($pageTitleKey) : t('self-service.portal')
 <body class="<?php echo htmlspecialchars($bodyClass); ?>">
     <div class="portal-header">
         <div class="portal-brand">
-            <img src="../assets/images/CompanyLogo.png" alt="">
+            <img src="../assets/images/CompanyLogo.png?v=2" alt="">
             <span><?php echo htmlspecialchars(t('self-service.portal')); ?></span>
         </div>
         <nav class="portal-nav">

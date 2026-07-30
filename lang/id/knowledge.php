@@ -23,10 +23,10 @@ return [
     ],
 
     'browser_title' => [
-        'main'     => 'Service Desk - Basis Pengetahuan',
-        'review'   => 'Service Desk - Tinjauan pengetahuan',
-        'settings' => 'Service Desk - Pengaturan pengetahuan',
-        'help'     => 'Service Desk - Panduan Basis Pengetahuan',
+        'main'     => 'Domus Desk - Basis Pengetahuan',
+        'review'   => 'Domus Desk - Tinjauan pengetahuan',
+        'settings' => 'Domus Desk - Pengaturan pengetahuan',
+        'help'     => 'Domus Desk - Panduan Basis Pengetahuan',
     ],
 
     'sidebar' => [

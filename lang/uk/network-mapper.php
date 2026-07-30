@@ -23,7 +23,7 @@ return [
 
     // Diagrams landing page (index.php)
     'index' => [
-        'browser_title'    => 'Domus Desk — Network Mapper',
+        'browser_title'    => 'Domus Desk',
         'heading'          => 'Мережеві діаграми',
         'filter_placeholder' => 'Фільтр за назвою…',
         'new'              => 'Нова діаграма',
@@ -60,7 +60,7 @@ return [
 
     // Diagram editor shell (diagram.php)
     'editor' => [
-        'browser_title'    => 'Domus Desk — Мережева діаграма',
+        'browser_title'    => 'Domus Desk',
         'browser_title_named' => 'Domus Desk — {title}',
         'back'             => '← Усі діаграми',
         'loading'          => 'Завантаження…',
@@ -308,7 +308,7 @@ return [
 
     // Help guide (help.php)
     'help' => [
-        'browser_title'    => 'Domus Desk — Посібник Network Mapper',
+        'browser_title'    => 'Domus Desk',
         'sidebar_title'    => 'Посібник',
         'hero_title'       => 'Посібник Network Mapper',
         'hero_subtitle'    => 'Малюйте мережеві та архітектурні діаграми поверх CMDB — кожен розміщений блок є реальним об\'єктом, відомим усій платформі.',

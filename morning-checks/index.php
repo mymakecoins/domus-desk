@@ -81,7 +81,7 @@ $translationNamespaces = ['common', 'morning-checks'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Desk - <?php echo htmlspecialchars(t('morning-checks.title')); ?></title>
+    <title>Domus Desk - <?php echo htmlspecialchars(t('morning-checks.title')); ?></title>
     <link rel="stylesheet" href="../assets/css/theme.css?v=22">
     <link rel="stylesheet" href="../assets/css/inbox.css">
     <link rel="stylesheet" href="style.css?v=2">
@@ -1051,7 +1051,7 @@ $translationNamespaces = ['common', 'morning-checks'];
                 await new Promise((resolve, reject) => {
                     img.onload = resolve;
                     img.onerror = reject;
-                    img.src = '../assets/images/CompanyLogo.png';
+                    img.src = '../assets/images/CompanyLogo.png?v=2';
                 });
                 const maxH = 12;
                 const w = maxH * (img.width / img.height);

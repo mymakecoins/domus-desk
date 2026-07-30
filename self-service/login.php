@@ -224,7 +224,7 @@ $localAllowed = $localOn || $forceLocal;
 <body>
     <div class="login-container">
         <div class="login-header">
-            <img src="../assets/images/CompanyLogo.png" alt="Company Logo">
+            <img src="../assets/images/CompanyLogo.png?v=2" alt="Company Logo">
             <h1><?php echo htmlspecialchars(t('self-service.login.heading')); ?></h1>
             <p id="loginSubtitle"><?php echo htmlspecialchars(t('self-service.login.subtitle')); ?></p>
         </div>

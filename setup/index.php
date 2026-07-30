@@ -390,7 +390,7 @@ $translationNamespaces = ['common', 'setup'];
 <body>
     <div class="setup-container">
         <div class="setup-header">
-            <img src="../assets/images/CompanyLogo.png" alt="Domus Desk">
+            <img src="../assets/images/CompanyLogo.png?v=2" alt="Domus Desk">
             <h1><?= htmlspecialchars(t('setup.heading')) ?></h1>
         </div>
 

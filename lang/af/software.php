@@ -20,7 +20,7 @@ return [
 
     // -- Inventory (index.php) ------------------------------------------------
     'inventory' => [
-        'page_title'      => 'Dienstoonbank - Sagteware',
+        'page_title'      => 'Domus Desk - Sagteware',
         'heading'         => 'Sagteware-inventaris',
         'search'          => 'Soek volgens toepassingsnaam of uitgewer...',
         'tab_apps'        => 'Toepassings',
@@ -54,7 +54,7 @@ return [
 
     // -- Dashboard (dashboard/index.php) -------------------------------------
     'dashboard' => [
-        'page_title'   => 'Dienstoonbank - Sagteware-paneelbord',
+        'page_title'   => 'Domus Desk - Sagteware-paneelbord',
         'heading'      => 'Paneelbord',
         'add'          => 'Voeg by',
         'empty_heading'=> 'Nog geen legstukke nie',
@@ -108,7 +108,7 @@ return [
 
     // -- Widget library (dashboard/library.php) ------------------------------
     'library' => [
-        'page_title'   => 'Dienstoonbank - Sagteware-legstukbiblioteek',
+        'page_title'   => 'Domus Desk - Sagteware-legstukbiblioteek',
         'back'         => 'Paneelbord',
         'heading'      => 'Legstukbiblioteek',
         'search'       => 'Soek legstukke...',
@@ -167,7 +167,7 @@ return [
 
     // -- Licences (licences/index.php) ---------------------------------------
     'licences' => [
-        'page_title'   => 'Dienstoonbank - Sagtewarelisensies',
+        'page_title'   => 'Domus Desk - Sagtewarelisensies',
         'heading'      => 'Sagtewarelisensies',
         'search'       => 'Soek lisensies...',
         'export_csv'   => 'Voer CSV uit',
@@ -250,7 +250,7 @@ return [
 
     // -- Settings / API keys (settings/index.php) ----------------------------
     'settings' => [
-        'page_title'  => 'Dienstoonbank - Sagteware-instellings',
+        'page_title'  => 'Domus Desk - Sagteware-instellings',
         'tab_api_keys'=> 'API-sleutels',
         'heading'     => 'API-sleutels',
         'label_input' => 'Etiket (opsioneel)',
@@ -293,7 +293,7 @@ return [
 
     // -- Help guide (help.php) -----------------------------------------------
     'help' => [
-        'page_title' => 'Dienstoonbank - Sagtewaregids',
+        'page_title' => 'Domus Desk - Sagtewaregids',
         'guide'      => 'Gids',
 
         'nav_overview'    => 'Oorsig',

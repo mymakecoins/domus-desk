@@ -552,7 +552,7 @@ return [
 
     // tickets/dashboard/index.php + library.php — панель керування заявками + бібліотека віджетів
     'dashboard' => [
-        'page_title'              => 'Service Desk - Панель керування заявками',
+        'page_title'              => 'Domus Desk - Панель керування заявками',
         'empty_title'             => 'Ще немає віджетів',
         'empty_body'              => 'Скористайтеся кнопкою <strong>Додати</strong> у верхньому правому куті, щоб вибрати віджети з бібліотеки.',
         'edit_widget'             => 'Редагувати віджет',
@@ -563,7 +563,7 @@ return [
         'widget_removed'          => 'Віджет видалено',
         'widget_updated'          => 'Віджет оновлено',
         'library' => [
-            'page_title'          => 'Service Desk - Бібліотека віджетів заявок',
+            'page_title'          => 'Domus Desk - Бібліотека віджетів заявок',
             'back_dashboard'      => 'Панель керування',
             'heading'             => 'Бібліотека віджетів',
             'search_placeholder'  => 'Пошук віджетів...',
@@ -607,7 +607,7 @@ return [
     // tickets/help.php — довідковий посібник модуля Заявки. Значення з прозою містять вбудовану
     // HTML-розмітку (strong/em/code/a/&mdash; тощо) і виводяться без екранування.
     'help' => [
-        'page_title'   => 'Service Desk - Посібник із заявок',
+        'page_title'   => 'Domus Desk - Посібник із заявок',
         'sidebar_title'=> 'Посібник',
         'hero_title'   => 'Посібник модуля Заявки',
         'hero_sub'     => 'Реєструйте, відстежуйте та вирішуйте запити IT-підтримки з єдиної папки вхідних &mdash; розроблено для команд service desk.',

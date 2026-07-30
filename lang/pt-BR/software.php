@@ -20,7 +20,7 @@ return [
 
     // -- Inventory (index.php) ------------------------------------------------
     'inventory' => [
-        'page_title'      => 'Central de Serviços - Software',
+        'page_title'      => 'Domus Desk - Software',
         'heading'         => 'Inventário de software',
         'search'          => 'Pesquisar por nome do aplicativo ou fabricante...',
         'tab_apps'        => 'Aplicativos',
@@ -54,7 +54,7 @@ return [
 
     // -- Dashboard (dashboard/index.php) -------------------------------------
     'dashboard' => [
-        'page_title'   => 'Central de Serviços - Painel de software',
+        'page_title'   => 'Domus Desk - Painel de software',
         'heading'      => 'Painel',
         'add'          => 'Adicionar',
         'empty_heading'=> 'Nenhum widget ainda',
@@ -108,7 +108,7 @@ return [
 
     // -- Widget library (dashboard/library.php) ------------------------------
     'library' => [
-        'page_title'   => 'Central de Serviços - Biblioteca de widgets de software',
+        'page_title'   => 'Domus Desk - Biblioteca de widgets de software',
         'back'         => 'Painel',
         'heading'      => 'Biblioteca de widgets',
         'search'       => 'Pesquisar widgets...',
@@ -167,7 +167,7 @@ return [
 
     // -- Licences (licences/index.php) ---------------------------------------
     'licences' => [
-        'page_title'   => 'Central de Serviços - Licenças de software',
+        'page_title'   => 'Domus Desk - Licenças de software',
         'heading'      => 'Licenças de software',
         'search'       => 'Pesquisar licenças...',
         'export_csv'   => 'Exportar CSV',
@@ -250,7 +250,7 @@ return [
 
     // -- Settings / API keys (settings/index.php) ----------------------------
     'settings' => [
-        'page_title'  => 'Central de Serviços - Configurações de software',
+        'page_title'  => 'Domus Desk - Configurações de software',
         'tab_api_keys'=> 'Chaves de API',
         'heading'     => 'Chaves de API',
         'label_input' => 'Rótulo (opcional)',
@@ -293,7 +293,7 @@ return [
 
     // -- Help guide (help.php) -----------------------------------------------
     'help' => [
-        'page_title' => 'Central de Serviços - Guia de software',
+        'page_title' => 'Domus Desk - Guia de software',
         'guide'      => 'Guia',
 
         'nav_overview'    => 'Visão geral',

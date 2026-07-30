@@ -43,7 +43,7 @@
         defaultSort: { key: 'hostname', dir: 'asc' },
         columns: COLUMNS,
         onRowClick: row => { window.location.href = `index.php?asset=${row.id}`; },
-        pdf: { title: tt('nav.assets'), headFill: [0, 120, 212], logo: '../assets/images/CompanyLogo.png' },
+        pdf: { title: tt('nav.assets'), headFill: [0, 120, 212], logo: '../assets/images/CompanyLogo.png?v=2' },
 
         load: async () => {
             const d = await fetch('../api/assets/get_assets.php').then(r => r.json());

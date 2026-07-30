@@ -1024,7 +1024,7 @@ async function buildArticlePdf() {
         await new Promise((resolve, reject) => {
             img.onload = resolve;
             img.onerror = reject;
-            img.src = '../assets/images/CompanyLogo.png';
+            img.src = '../assets/images/CompanyLogo.png?v=2';
         });
         const maxH = 12;
         const w = maxH * (img.width / img.height);

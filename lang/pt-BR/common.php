@@ -79,16 +79,16 @@ return [
 
     // Home / landing page (index.php)
     'home' => [
-        'header_title'     => 'Central de Serviços',
-        'browser_title'    => 'Central de Serviços - ITSM',
+        'header_title'     => 'Domus Desk',
+        'browser_title'    => 'Domus Desk',
         'welcome_heading'  => 'O que você gostaria de fazer?',
         'welcome_subtitle' => 'Selecione um módulo para começar',
-        'footer'           => 'Central de Serviços ITSM',
+        'footer'           => 'Domus Desk',
     ],
 
     // Waffle module-switcher panel (shared header)
     'waffle' => [
-        'title' => 'Módulos ITSM',
+        'title' => 'Domus Desk',
     ],
 
     // Per-module display name + one-line description.

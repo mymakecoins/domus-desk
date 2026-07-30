@@ -134,7 +134,7 @@ return [
 
     // tickets/settings/index.php — admin settings page (tabs + section headings)
     'settings' => [
-        'page_title' => 'Centrum obsługi - Ustawienia',
+        'page_title' => 'Domus Desk - Ustawienia',
         'tabs' => [
             'departments'     => 'Działy',
             'teams'           => 'Zespoły',
@@ -342,7 +342,7 @@ return [
 
     // tickets/rota.php — weekly staff rota grid
     'rota' => [
-        'page_title'      => 'Centrum obsługi - Harmonogram',
+        'page_title'      => 'Domus Desk - Harmonogram',
         'analyst_col'     => 'Analityk',
         'no_analysts'     => 'Nie znaleziono aktywnych analityków.',
         'add_entry'       => 'Dodaj wpis',
@@ -367,7 +367,7 @@ return [
 
     // tickets/users.php — end-user directory with per-user ticket list
     'users' => [
-        'page_title'            => 'Centrum obsługi - Użytkownicy',
+        'page_title'            => 'Domus Desk - Użytkownicy',
         'list_title'            => 'Użytkownicy',
         'search_placeholder'    => 'Szukaj użytkowników…',
         'count'                 => '{count} użytkowników',
@@ -395,7 +395,7 @@ return [
 
     // tickets/calendar.php — scheduled-tickets calendar view
     'calendar' => [
-        'page_title'    => 'Centrum obsługi - Kalendarz',
+        'page_title'    => 'Domus Desk - Kalendarz',
         'modal_title'   => 'Szczegóły zgłoszenia',
         'open_in_inbox' => 'Otwórz w skrzynce odbiorczej',
         'x_more'        => 'więcej: {count}...',

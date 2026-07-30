@@ -15,7 +15,7 @@ return [
     // ── Dashboard / list (forms/index.php) ──────────────────────────
     'list' => [
         'title'              => 'Formularze',
-        'page_title'         => 'Service Desk - Formularze',
+        'page_title'         => 'Domus Desk - Formularze',
         'search_placeholder' => 'Szukaj według tytułu lub opisu...',
         'new_form'           => 'Nowy formularz',
         'col_title'          => 'Tytuł',
@@ -70,7 +70,7 @@ return [
 
     // ── Editor / builder (forms/edit/index.php) ─────────────────────
     'editor' => [
-        'page_title'       => 'Service Desk - Edytuj formularz',
+        'page_title'       => 'Domus Desk - Edytuj formularz',
         'title_new'        => 'Nowy formularz',
         'title_edit'       => 'Edytuj formularz',
         'unsaved'          => 'Niezapisane zmiany',
@@ -257,7 +257,7 @@ return [
 
     // ── Fill page (forms/fill.php) ──────────────────────────────────
     'fill' => [
-        'page_title'       => 'Service Desk - Wypełnij formularz',
+        'page_title'       => 'Domus Desk - Wypełnij formularz',
         'loading'          => 'Wczytywanie formularza...',
         'no_id'            => 'Nie podano identyfikatora formularza',
         'logo_alt'         => 'Logo firmy',
@@ -279,8 +279,8 @@ return [
 
     // ── Submissions page (forms/submissions.php) ────────────────────
     'subs' => [
-        'page_title'        => 'Service Desk - Zgłoszenia formularzy',
-        'page_title_named'  => 'Service Desk - Zgłoszenia: {title}',
+        'page_title'        => 'Domus Desk - Zgłoszenia formularzy',
+        'page_title_named'  => 'Domus Desk - Zgłoszenia: {title}',
         'back'              => 'Wstecz',
         'heading'           => 'Zgłoszenia',
         'heading_named'     => '{title} — Zgłoszenia',
@@ -321,7 +321,7 @@ return [
 
     // ── Settings page (forms/settings/index.php) ────────────────────
     'settings' => [
-        'page_title'        => 'Service Desk - Ustawienia formularzy',
+        'page_title'        => 'Domus Desk - Ustawienia formularzy',
         'tab_layout'        => 'Układ',
         'tab_ai'            => 'AI',
         'layout_heading'    => 'Ustawienia układu',
@@ -372,7 +372,7 @@ return [
 
     // ── Help guide (forms/help.php) ─────────────────────────────────
     'help' => [
-        'page_title'   => 'Service Desk - Przewodnik po formularzach',
+        'page_title'   => 'Domus Desk - Przewodnik po formularzach',
         'guide'        => 'Przewodnik',
         'nav_overview'    => 'Przegląd',
         'nav_building'    => 'Budowanie formularzy',

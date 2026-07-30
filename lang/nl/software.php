@@ -20,7 +20,7 @@ return [
 
     // -- Inventory (index.php) ------------------------------------------------
     'inventory' => [
-        'page_title'      => 'Servicedesk - Software',
+        'page_title'      => 'Domus Desk - Software',
         'heading'         => 'Software-inventaris',
         'search'          => 'Zoeken op toepassingsnaam of uitgever...',
         'tab_apps'        => 'Toepassingen',
@@ -54,7 +54,7 @@ return [
 
     // -- Dashboard (dashboard/index.php) -------------------------------------
     'dashboard' => [
-        'page_title'   => 'Servicedesk - Software-dashboard',
+        'page_title'   => 'Domus Desk - Software-dashboard',
         'heading'      => 'Dashboard',
         'add'          => 'Toevoegen',
         'empty_heading'=> 'Nog geen widgets',
@@ -108,7 +108,7 @@ return [
 
     // -- Widget library (dashboard/library.php) ------------------------------
     'library' => [
-        'page_title'   => 'Servicedesk - Software-widgetbibliotheek',
+        'page_title'   => 'Domus Desk - Software-widgetbibliotheek',
         'back'         => 'Dashboard',
         'heading'      => 'Widgetbibliotheek',
         'search'       => 'Widgets zoeken...',
@@ -167,7 +167,7 @@ return [
 
     // -- Licences (licences/index.php) ---------------------------------------
     'licences' => [
-        'page_title'   => 'Servicedesk - Softwarelicenties',
+        'page_title'   => 'Domus Desk - Softwarelicenties',
         'heading'      => 'Softwarelicenties',
         'search'       => 'Licenties zoeken...',
         'export_csv'   => 'CSV exporteren',
@@ -250,7 +250,7 @@ return [
 
     // -- Settings / API keys (settings/index.php) ----------------------------
     'settings' => [
-        'page_title'  => 'Servicedesk - Software-instellingen',
+        'page_title'  => 'Domus Desk - Software-instellingen',
         'tab_api_keys'=> 'API-sleutels',
         'heading'     => 'API-sleutels',
         'label_input' => 'Label (optioneel)',
@@ -293,7 +293,7 @@ return [
 
     // -- Help guide (help.php) -----------------------------------------------
     'help' => [
-        'page_title' => 'Servicedesk - Softwaregids',
+        'page_title' => 'Domus Desk - Softwaregids',
         'guide'      => 'Gids',
 
         'nav_overview'    => 'Overzicht',

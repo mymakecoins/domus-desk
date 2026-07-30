@@ -15,7 +15,7 @@ return [
     // ── Dashboard / list (forms/index.php) ──────────────────────────
     'list' => [
         'title'              => 'Formulir',
-        'page_title'         => 'Service Desk - Formulir',
+        'page_title'         => 'Domus Desk - Formulir',
         'search_placeholder' => 'Cari berdasarkan judul atau deskripsi...',
         'new_form'           => 'Formulir baru',
         'col_title'          => 'Judul',
@@ -70,7 +70,7 @@ return [
 
     // ── Editor / builder (forms/edit/index.php) ─────────────────────
     'editor' => [
-        'page_title'       => 'Service Desk - Edit formulir',
+        'page_title'       => 'Domus Desk - Edit formulir',
         'title_new'        => 'Formulir baru',
         'title_edit'       => 'Edit formulir',
         'unsaved'          => 'Perubahan belum disimpan',
@@ -257,7 +257,7 @@ return [
 
     // ── Fill page (forms/fill.php) ──────────────────────────────────
     'fill' => [
-        'page_title'       => 'Service Desk - Isi Formulir',
+        'page_title'       => 'Domus Desk - Isi Formulir',
         'loading'          => 'Memuat formulir...',
         'no_id'            => 'ID formulir tidak ditentukan',
         'logo_alt'         => 'Logo Perusahaan',
@@ -279,8 +279,8 @@ return [
 
     // ── Submissions page (forms/submissions.php) ────────────────────
     'subs' => [
-        'page_title'        => 'Service Desk - Kiriman Formulir',
-        'page_title_named'  => 'Service Desk - Kiriman {title}',
+        'page_title'        => 'Domus Desk - Kiriman Formulir',
+        'page_title_named'  => 'Domus Desk - Kiriman {title}',
         'back'              => 'Kembali',
         'heading'           => 'Kiriman',
         'heading_named'     => '{title} — Kiriman',
@@ -321,7 +321,7 @@ return [
 
     // ── Settings page (forms/settings/index.php) ────────────────────
     'settings' => [
-        'page_title'        => 'Service Desk - Pengaturan Formulir',
+        'page_title'        => 'Domus Desk - Pengaturan Formulir',
         'tab_layout'        => 'Tata Letak',
         'tab_ai'            => 'AI',
         'layout_heading'    => 'Pengaturan Tata Letak',
@@ -372,7 +372,7 @@ return [
 
     // ── Help guide (forms/help.php) ─────────────────────────────────
     'help' => [
-        'page_title'   => 'Service Desk - Panduan Formulir',
+        'page_title'   => 'Domus Desk - Panduan Formulir',
         'guide'        => 'Panduan',
         'nav_overview'    => 'Ikhtisar',
         'nav_building'    => 'Membuat formulir',

@@ -5,7 +5,7 @@
  */
 return [
     'title'      => 'Contratos',
-    'title_full' => 'Central de Serviços - Contratos',
+    'title_full' => 'Domus Desk - Contratos',
 
     // Header / sidebar navigation
     'nav' => [
@@ -89,7 +89,7 @@ return [
 
     // View contract (view.php)
     'detail' => [
-        'page_title'                => 'Central de Serviços - Ver contrato',
+        'page_title'                => 'Domus Desk - Ver contrato',
         'loading'                   => 'Carregando contrato...',
         'error_prefix'              => 'Erro:',
         'load_failed'               => 'Falha ao carregar contrato',
@@ -163,8 +163,8 @@ return [
 
     // Add/Edit contract (edit.php)
     'edit' => [
-        'page_title_edit'      => 'Central de Serviços - Editar contrato',
-        'page_title_add'       => 'Central de Serviços - Adicionar contrato',
+        'page_title_edit'      => 'Domus Desk - Editar contrato',
+        'page_title_add'       => 'Domus Desk - Adicionar contrato',
         'heading_edit'         => 'Editar contrato',
         'heading_add'          => 'Adicionar contrato',
         'none'                 => 'Nenhum',
@@ -189,7 +189,7 @@ return [
 
     // Settings (settings/index.php)
     'settings' => [
-        'page_title'              => 'Central de Serviços - Configurações de contratos',
+        'page_title'              => 'Domus Desk - Configurações de contratos',
         'tab_supplier_types'      => 'Tipos de fornecedor',
         'tab_supplier_statuses'   => 'Status de fornecedor',
         'tab_contract_statuses'   => 'Status de contrato',
@@ -270,8 +270,8 @@ return [
 
     // Suppliers (suppliers/index.php + suppliers/view/index.php)
     'suppliers' => [
-        'page_title'           => 'Central de Serviços - Fornecedores',
-        'view_page_title'      => 'Central de Serviços - Ver Fornecedor',
+        'page_title'           => 'Domus Desk - Fornecedores',
+        'view_page_title'      => 'Domus Desk - Ver Fornecedor',
         'all_suppliers'        => 'Todos os fornecedores',
         'add_supplier'         => 'Adicionar fornecedor',
         'edit_supplier'        => 'Editar fornecedor',
@@ -317,7 +317,7 @@ return [
 
     // Contacts (contacts/index.php)
     'contacts' => [
-        'page_title'          => 'Central de Serviços - Contatos',
+        'page_title'          => 'Domus Desk - Contatos',
         'all_contacts'        => 'Todos os contatos',
         'add_contact'         => 'Adicionar contato',
         'edit_contact'        => 'Editar contato',
@@ -340,7 +340,7 @@ return [
 
     // Help guide (help.php)
     'help' => [
-        'page_title'    => 'Central de Serviços - Guia de Contratos',
+        'page_title'    => 'Domus Desk - Guia de Contratos',
         'guide'         => 'Guia',
         'nav_overview'  => 'Visão geral',
         'nav_managing'  => 'Gerenciando contratos',
@@ -448,7 +448,7 @@ return [
 
         // List / dashboard (index.php)
         'list' => [
-            'page_title'          => 'Central de Serviços - Construtor de RFP',
+            'page_title'          => 'Domus Desk - Construtor de RFP',
             'rfps'                => 'RFPs',
             'in_progress'         => 'Em andamento',
             'back_to_contracts'   => 'Voltar aos Contratos',
@@ -477,7 +477,7 @@ return [
 
         // Help / user guide (help.php)
         'help' => [
-            'page_title'         => 'Central de Serviços - Ajuda do Construtor de RFP',
+            'page_title'         => 'Domus Desk - Ajuda do Construtor de RFP',
             'heading'            => 'Construtor de RFP — guia do usuário',
             'nav_getting_started'=> 'Primeiros passos',
             'nav_overview'       => 'Visão geral',
@@ -712,7 +712,7 @@ return [
 
         // Scoring (scoring.php)
         'scoring' => [
-            'page_title'          => 'Central de Serviços - Pontuação',
+            'page_title'          => 'Domus Desk - Pontuação',
             'title'               => 'Pontuação',
             'score_by_category'   => 'Pontuação por categoria',
             'my_overall'          => 'Minha geral',
@@ -741,7 +741,7 @@ return [
 
         // Source documents (documents.php)
         'documents' => [
-            'page_title'          => 'Central de Serviços - Documentos de RFP',
+            'page_title'          => 'Domus Desk - Documentos de RFP',
             'rfp'                 => 'RFP',
             'documents'           => 'Documentos',
             'heading'             => 'Documentos de origem',
@@ -763,7 +763,7 @@ return [
             'col_uploaded'        => 'Enviado',
             'extracted_text'      => 'Texto extraído',
             'no_rfp_selected'     => 'Nenhuma RFP selecionada',
-            'title_with_name'     => 'Central de Serviços - Documentos — {name}',
+            'title_with_name'     => 'Domus Desk - Documentos — {name}',
             'could_not_load'      => '(não foi possível carregar a RFP)',
             'empty'               => 'Nenhum documento ainda. Envie um .docx acima para começar.',
             'chars'               => '{n} caracteres',
@@ -798,7 +798,7 @@ return [
 
         // Generated document (document.php)
         'document' => [
-            'page_title'          => 'Central de Serviços - Documento de RFP',
+            'page_title'          => 'Domus Desk - Documento de RFP',
             'heading'             => 'Documento gerado',
             'preview_document'    => 'Pré-visualizar documento',
             'generate_all'        => 'Gerar tudo',
@@ -888,7 +888,7 @@ return [
 
         // Extracted requirements (extracted.php)
         'extracted' => [
-            'page_title'        => 'Central de Serviços - Requisitos extraídos',
+            'page_title'        => 'Domus Desk - Requisitos extraídos',
             'heading'           => 'Requisitos extraídos',
             'total'             => 'Total',
             'requirements'      => 'Requisitos',
@@ -934,7 +934,7 @@ return [
 
         // Compare suppliers (compare.php)
         'compare' => [
-            'page_title'         => 'Central de Serviços - Comparar',
+            'page_title'         => 'Domus Desk - Comparar',
             'compare'            => 'Comparar',
             'heading'            => 'Comparar fornecedores',
             'load_failed'        => 'Falha ao carregar dados de comparação',
@@ -959,7 +959,7 @@ return [
 
         // Coverage heatmap (coverage.php)
         'coverage' => [
-            'page_title'              => 'Central de Serviços - Mapa de cobertura',
+            'page_title'              => 'Domus Desk - Mapa de cobertura',
             'heading'                 => 'Mapa de cobertura',
             'consolidated_requirements' => 'Requisitos consolidados',
             'load_failed'             => 'Falha ao carregar cobertura',
@@ -980,7 +980,7 @@ return [
 
         // AI audit trail (audit.php)
         'audit' => [
-            'page_title'          => 'Central de Serviços - Trilha de auditoria de IA',
+            'page_title'          => 'Domus Desk - Trilha de auditoria de IA',
             'audit_trail'         => 'Trilha de auditoria',
             'heading'             => 'Trilha de auditoria de IA',
             'total_input_tokens'  => 'Total de tokens de entrada',
@@ -998,7 +998,7 @@ return [
 
         // Consolidated requirements (consolidate.php)
         'consolidate' => [
-            'page_title'          => 'Central de Serviços - Requisitos consolidados',
+            'page_title'          => 'Domus Desk - Requisitos consolidados',
             'consolidated'        => 'Consolidados',
             'heading'             => 'Requisitos consolidados',
             'add_custom'          => 'Adicionar personalizado',

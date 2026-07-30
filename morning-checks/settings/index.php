@@ -34,7 +34,7 @@ $translationNamespaces = ['common', 'morning-checks'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Desk - <?php echo htmlspecialchars(t('morning-checks.title') . ' ' . t('morning-checks.nav.settings')); ?></title>
+    <title>Domus Desk - <?php echo htmlspecialchars(t('morning-checks.title') . ' ' . t('morning-checks.nav.settings')); ?></title>
     <link rel="stylesheet" href="../../assets/css/theme.css?v=22">
     <link rel="stylesheet" href="../../assets/css/inbox.css">
     <link rel="stylesheet" href="../style.css?v=2">

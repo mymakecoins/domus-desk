@@ -15,7 +15,7 @@ return [
     // ── Dashboard / list (forms/index.php) ──────────────────────────
     'list' => [
         'title'              => 'Formularios',
-        'page_title'         => 'Service Desk - Formularios',
+        'page_title'         => 'Domus Desk - Formularios',
         'search_placeholder' => 'Buscar por título o descripción...',
         'new_form'           => 'Nuevo formulario',
         'col_title'          => 'Título',
@@ -70,7 +70,7 @@ return [
 
     // ── Editor / builder (forms/edit/index.php) ─────────────────────
     'editor' => [
-        'page_title'       => 'Service Desk - Editar formulario',
+        'page_title'       => 'Domus Desk - Editar formulario',
         'title_new'        => 'Nuevo formulario',
         'title_edit'       => 'Editar formulario',
         'unsaved'          => 'Cambios sin guardar',
@@ -257,7 +257,7 @@ return [
 
     // ── Fill page (forms/fill.php) ──────────────────────────────────
     'fill' => [
-        'page_title'       => 'Service Desk - Rellenar formulario',
+        'page_title'       => 'Domus Desk - Rellenar formulario',
         'loading'          => 'Cargando formulario...',
         'no_id'            => 'No se ha especificado ningún ID de formulario',
         'logo_alt'         => 'Logotipo de la empresa',
@@ -279,8 +279,8 @@ return [
 
     // ── Submissions page (forms/submissions.php) ────────────────────
     'subs' => [
-        'page_title'        => 'Service Desk - Envíos de formularios',
-        'page_title_named'  => 'Service Desk - Envíos de {title}',
+        'page_title'        => 'Domus Desk - Envíos de formularios',
+        'page_title_named'  => 'Domus Desk - Envíos de {title}',
         'back'              => 'Atrás',
         'heading'           => 'Envíos',
         'heading_named'     => '{title} — Envíos',
@@ -321,7 +321,7 @@ return [
 
     // ── Settings page (forms/settings/index.php) ────────────────────
     'settings' => [
-        'page_title'        => 'Service Desk - Ajustes de Formularios',
+        'page_title'        => 'Domus Desk - Ajustes de Formularios',
         'tab_layout'        => 'Diseño',
         'tab_ai'            => 'IA',
         'layout_heading'    => 'Ajustes de diseño',
@@ -372,7 +372,7 @@ return [
 
     // ── Help guide (forms/help.php) ─────────────────────────────────
     'help' => [
-        'page_title'   => 'Service Desk - Guía de Formularios',
+        'page_title'   => 'Domus Desk - Guía de Formularios',
         'guide'        => 'Guía',
         'nav_overview'    => 'Visión general',
         'nav_building'    => 'Crear formularios',

@@ -243,7 +243,7 @@ return [
         'kind_tag' => 'Etiqueta',
     ],
     'help' => [
-        'page_title' => 'Service Desk - Guia de Tarefas',
+        'page_title' => 'Domus Desk - Guia de Tarefas',
         'guide' => 'Guia',
         'nav_overview' => 'Visão geral',
         'nav_board' => 'O quadro',

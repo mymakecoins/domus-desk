@@ -26,7 +26,7 @@ return [
     // ── Dashboard / list (forms/index.php) ──────────────────────────
     'list' => [
         'title'              => 'Форми',
-        'page_title'         => 'Service Desk - Форми',
+        'page_title'         => 'Domus Desk - Форми',
         'search_placeholder' => 'Пошук за назвою або описом...',
         'new_form'           => 'Нова форма',
         'col_title'          => 'Назва',
@@ -81,7 +81,7 @@ return [
 
     // ── Editor / builder (forms/edit/index.php) ─────────────────────
     'editor' => [
-        'page_title'       => 'Service Desk - Редагування форми',
+        'page_title'       => 'Domus Desk - Редагування форми',
         'title_new'        => 'Нова форма',
         'title_edit'       => 'Редагувати форму',
         'unsaved'          => 'Незбережені зміни',
@@ -268,7 +268,7 @@ return [
 
     // ── Fill page (forms/fill.php) ──────────────────────────────────
     'fill' => [
-        'page_title'       => 'Service Desk - Заповнення форми',
+        'page_title'       => 'Domus Desk - Заповнення форми',
         'loading'          => 'Завантаження форми...',
         'no_id'            => 'Не вказано ID форми',
         'logo_alt'         => 'Логотип компанії',
@@ -290,8 +290,8 @@ return [
 
     // ── Submissions page (forms/submissions.php) ────────────────────
     'subs' => [
-        'page_title'        => 'Service Desk - Відповіді на форму',
-        'page_title_named'  => 'Service Desk - Відповіді: {title}',
+        'page_title'        => 'Domus Desk - Відповіді на форму',
+        'page_title_named'  => 'Domus Desk - Відповіді: {title}',
         'back'              => 'Назад',
         'heading'           => 'Відповіді',
         'heading_named'     => '{title} — Відповіді',
@@ -332,7 +332,7 @@ return [
 
     // ── Settings page (forms/settings/index.php) ────────────────────
     'settings' => [
-        'page_title'        => 'Service Desk - Налаштування форм',
+        'page_title'        => 'Domus Desk - Налаштування форм',
         'tab_layout'        => 'Макет',
         'tab_ai'            => 'AI',
         'layout_heading'    => 'Налаштування макету',
@@ -383,7 +383,7 @@ return [
 
     // ── Help guide (forms/help.php) ─────────────────────────────────
     'help' => [
-        'page_title'   => 'Service Desk - Довідник з форм',
+        'page_title'   => 'Domus Desk - Довідник з форм',
         'guide'        => 'Довідник',
         'nav_overview'    => 'Огляд',
         'nav_building'    => 'Створення форм',

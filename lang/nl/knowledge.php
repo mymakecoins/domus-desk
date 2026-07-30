@@ -23,10 +23,10 @@ return [
     ],
 
     'browser_title' => [
-        'main'     => 'Service Desk - Kennisbank',
-        'review'   => 'Service Desk - Kennis beoordelen',
-        'settings' => 'Service Desk - Kennisinstellingen',
-        'help'     => 'Service Desk - Handleiding kennisbank',
+        'main'     => 'Domus Desk - Kennisbank',
+        'review'   => 'Domus Desk - Kennis beoordelen',
+        'settings' => 'Domus Desk - Kennisinstellingen',
+        'help'     => 'Domus Desk - Handleiding kennisbank',
     ],
 
     'sidebar' => [

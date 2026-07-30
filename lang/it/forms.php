@@ -15,7 +15,7 @@ return [
     // ── Dashboard / list (forms/index.php) ──────────────────────────
     'list' => [
         'title'              => 'Moduli',
-        'page_title'         => 'Service Desk - Moduli',
+        'page_title'         => 'Domus Desk - Moduli',
         'search_placeholder' => 'Cerca per titolo o descrizione...',
         'new_form'           => 'Nuovo modulo',
         'col_title'          => 'Titolo',
@@ -70,7 +70,7 @@ return [
 
     // ── Editor / builder (forms/edit/index.php) ─────────────────────
     'editor' => [
-        'page_title'       => 'Service Desk - Modifica modulo',
+        'page_title'       => 'Domus Desk - Modifica modulo',
         'title_new'        => 'Nuovo modulo',
         'title_edit'       => 'Modifica modulo',
         'unsaved'          => 'Modifiche non salvate',
@@ -257,7 +257,7 @@ return [
 
     // ── Fill page (forms/fill.php) ──────────────────────────────────
     'fill' => [
-        'page_title'       => 'Service Desk - Compila modulo',
+        'page_title'       => 'Domus Desk - Compila modulo',
         'loading'          => 'Caricamento modulo...',
         'no_id'            => 'Nessun ID modulo specificato',
         'logo_alt'         => 'Logo aziendale',
@@ -279,8 +279,8 @@ return [
 
     // ── Submissions page (forms/submissions.php) ────────────────────
     'subs' => [
-        'page_title'        => 'Service Desk - Invii dei moduli',
-        'page_title_named'  => 'Service Desk - Invii di {title}',
+        'page_title'        => 'Domus Desk - Invii dei moduli',
+        'page_title_named'  => 'Domus Desk - Invii di {title}',
         'back'              => 'Indietro',
         'heading'           => 'Invii',
         'heading_named'     => '{title} — Invii',
@@ -321,7 +321,7 @@ return [
 
     // ── Settings page (forms/settings/index.php) ────────────────────
     'settings' => [
-        'page_title'        => 'Service Desk - Impostazioni moduli',
+        'page_title'        => 'Domus Desk - Impostazioni moduli',
         'tab_layout'        => 'Layout',
         'tab_ai'            => 'AI',
         'layout_heading'    => 'Impostazioni layout',
@@ -372,7 +372,7 @@ return [
 
     // ── Help guide (forms/help.php) ─────────────────────────────────
     'help' => [
-        'page_title'   => 'Service Desk - Guida ai moduli',
+        'page_title'   => 'Domus Desk - Guida ai moduli',
         'guide'        => 'Guida',
         'nav_overview'    => 'Panoramica',
         'nav_building'    => 'Creazione di moduli',

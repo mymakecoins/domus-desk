@@ -1,8 +1,11 @@
 # Documento de Especificação: De/Para de Cores (Refatoração de Tema)
 
 > **Projeto:** Sistema de Helpdesk / ITSM (Baseado em FreeITSM)  
+
 > **Objetivo:** Mapeamento completo e substituição de cores legadas/padrão do repositório para o Design System baseado na identidade visual da **Rodoind Transportes**.  
+
 > **Data:** Julho de 2026  
+
 > **Status:** Pronto para Implementação  
 
 ---
@@ -12,7 +15,7 @@
 A identidade visual adotada utiliza o **Azul Marinho Corporativo** como cor estrutural de alta confiança, **Cinza Neutro Slate** para fundos e legibilidade de dados densos, e o **Amarelo/Laranja Vibrante** como cor de ação principal (CTA) e destaques funcionais.
 
 | Papel no Sistema | Nome da Cor | Hex / Valor | Uso Principal |
-| :--- | :--- | :--- | :--- |
+| --- | --- | --- | --- |
 | **Primary Brand** | Azul Marinho Profundo | `#0A192F` | Topbar, Sidebar, Headers de Tabela, Modais |
 | **Primary Light / Accent** | Azul Médio Corporativo | `#1E3A8A` | Elementos ativos, hovers de menu, links primários |
 | **Action / CTA** | Amarelo / Laranja Vibrante | `#F59E0B` | Botão "Novo Chamado", ações primárias, destaques |
@@ -32,7 +35,7 @@ Abaixo está o mapeamento exato das classes de utilitários e valores CSS legado
 ### 2.1. Estrutura e NAVEGAÇÃO (Layout & Shell)
 
 | Elemento / Componente | Cor Original / Legada (FreeITSM) | Nova Cor (Rodoind) | Classe CSS / Tailwind Sugerida |
-| :--- | :--- | :--- | :--- |
+| --- | --- | --- | --- |
 | **Header / Topbar** | `#1f2937` ou `#3b82f6` (Azul/Cinza Genérico) | `#0A192F` (Azul Marinho) | `bg-[#0A192F] text-white` |
 | **Sidebar Background** | `#111827` (Preto/Grafite) | `#0A192F` (Azul Marinho) | `bg-[#0A192F] border-r border-slate-800` |
 | **Item Ativo na Sidebar** | `#2563eb` (Azul Primário) | `#1E3A8A` (Azul Médio Accent) | `bg-[#1E3A8A] text-white font-medium` |
@@ -45,8 +48,8 @@ Abaixo está o mapeamento exato das classes de utilitários e valores CSS legado
 ### 2.2. Ações, Botões e Controles (CTAs & Inputs)
 
 | Elemento / Componente | Cor Original / Legada | Nova Cor (Rodoind) | Classe CSS / Tailwind Sugerida |
-| :--- | :--- | :--- | :--- |
-| **Botão Primário / Novo Ticket**| `#2563eb` (Azul Padrão) | `#F59E0B` (Amarelo/Laranja) | `bg-[#F59E0B] hover:bg-[#D97706] text-slate-950 font-semibold` |
+| --- | --- | --- | --- |
+| **Botão Primário / Novo Ticket** | `#2563eb` (Azul Padrão) | `#F59E0B` (Amarelo/Laranja) | `bg-[#F59E0B] hover:bg-[#D97706] text-slate-950 font-semibold` |
 | **Botão Secundário** | `#e5e7eb` (Cinza Neutro) | `#F1F5F9` (Slate 100) | `bg-slate-100 hover:bg-slate-200 text-slate-700` |
 | **Botão de Ação do Agente** | `#3b82f6` (Azul) | `#0A192F` (Azul Marinho) | `bg-[#0A192F] hover:bg-[#1E3A8A] text-white` |
 | **Border de Focus em Input** | `#3b82f6` (Azul) | `#0A192F` (Azul Marinho) | `focus:ring-2 focus:ring-[#0A192F] focus:border-transparent` |
@@ -57,11 +60,11 @@ Abaixo está o mapeamento exato das classes de utilitários e valores CSS legado
 ### 2.3. Status de Chamados, SLAs e Notificações
 
 | Status / Estado | Cor Legada | Nova Cor Rodoind | Aplicação Visual / Badges |
-| :--- | :--- | :--- | :--- |
+| --- | --- | --- | --- |
 | **Status: Novo / Aberto** | `#3b82f6` (Azul) | `#0284C7` (Azul Céu) | `bg-sky-100 text-sky-800 border-sky-300` |
 | **Status: Em Andamento** | `#f59e0b` (Amarelo) | `#F59E0B` (Amarelo/Laranja) | `bg-amber-100 text-amber-900 border-amber-300` |
-| **Status: Pendente / Aguardando**| `#8b5cf6` (Roxo) | `#D97706` (Laranja Fechado) | `bg-orange-100 text-orange-800 border-orange-300` |
-| **Status: Resolvido / Concluído**| `#10b981` (Verde) | `#10B981` (Verde Esmeralda) | `bg-emerald-100 text-emerald-800 border-emerald-300` |
+| **Status: Pendente / Aguardando** | `#8b5cf6` (Roxo) | `#D97706` (Laranja Fechado) | `bg-orange-100 text-orange-800 border-orange-300` |
+| **Status: Resolvido / Concluído** | `#10b981` (Verde) | `#10B981` (Verde Esmeralda) | `bg-emerald-100 text-emerald-800 border-emerald-300` |
 | **Status: Cancelado / Fechado** | `#6b7280` (Cinza) | `#64748B` (Slate Grey) | `bg-slate-100 text-slate-700 border-slate-300` |
 | **SLA: Normal / Ok** | `#10b981` | `#10B981` (Verde) | Badge / Timer Verde |
 | **SLA: Atenção (< 2 horas)** | `#f59e0b` | `#F59E0B` (Amarelo) | Badge / Timer Amarelo |
@@ -74,8 +77,8 @@ Abaixo está o mapeamento exato das classes de utilitários e valores CSS legado
 Para evitar erros operacionais graves no Helpdesk (como enviar notas privadas para o cliente):
 
 | Elemento | Cor / Estilo Anterior | Novo Estilo Rodoind | Objetivo de UX |
-| :--- | :--- | :--- | :--- |
-| **Comentário Público (Cliente)**| Fundo cinza simples | Fundo Branco (`#FFFFFF`) com borda lateral Azul (`#0A192F`) | Destaca mensagens visíveis para o solicitante. |
+| --- | --- | --- | --- |
+| **Comentário Público (Cliente)** | Fundo cinza simples | Fundo Branco (`#FFFFFF`) com borda lateral Azul (`#0A192F`) | Destaca mensagens visíveis para o solicitante. |
 | **Nota Interna (Privada)** | Sem distinção clara | Fundo Amarelado Suave (`#FEF3C7`) com borda Amarela (`#F59E0B`) | Alerta visual imediato de que a nota é **confidencial/privada**. |
 
 ---
@@ -84,7 +87,7 @@ Para evitar erros operacionais graves no Helpdesk (como enviar notas privadas pa
 
 ### 3.1. Variáveis CSS Globais (`variables.css` ou `globals.css`)
 
-```css
+```
 :root {
   /* Brand Colors - Rodoind */
   --color-brand-primary: #0A192F;
@@ -126,7 +129,7 @@ Para evitar erros operacionais graves no Helpdesk (como enviar notas privadas pa
 
 Se o projeto utilizar Tailwind CSS, adicione estas extensões no tema:
 
-```javascript
+```
 module.exports = {
   theme: {
     extend: {

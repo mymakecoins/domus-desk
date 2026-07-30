@@ -207,7 +207,7 @@ $allowed_modules = $_SESSION['allowed_modules'] ?? null;
     <script>function closeWaffleMenu() {}</script>
 
     <div class="landing-container">
-        <img src="assets/images/CompanyLogo.png" alt="Company Logo" class="company-logo">
+        <img src="assets/images/CompanyLogo.png?v=2" alt="Company Logo" class="company-logo">
         <div class="welcome-text">
             <h2><?php echo htmlspecialchars(t('common.home.welcome_heading')); ?></h2>
             <p><?php echo htmlspecialchars(t('common.home.welcome_subtitle')); ?></p>

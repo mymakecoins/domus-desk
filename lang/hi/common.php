@@ -50,16 +50,16 @@ return [
 
     // Home / landing page (index.php)
     'home' => [
-        'header_title'     => 'सेवा डेस्क',
-        'browser_title'    => 'सेवा डेस्क - ITSM',
+        'header_title'     => 'Domus Desk',
+        'browser_title'    => 'Domus Desk',
         'welcome_heading'  => 'आप क्या करना चाहेंगे?',
         'welcome_subtitle' => 'शुरू करने के लिए एक मॉड्यूल चुनें',
-        'footer'           => 'सेवा डेस्क ITSM',
+        'footer'           => 'Domus Desk',
     ],
 
     // Waffle module-switcher panel (shared header)
     'waffle' => [
-        'title' => 'ITSM मॉड्यूल',
+        'title' => 'Domus Desk',
     ],
 
     // Per-module display name + one-line description.
