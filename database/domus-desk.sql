@@ -4048,9 +4048,9 @@ SET FOREIGN_KEY_CHECKS = 1;
 -- ----------------------------------------------------------
 -- Seed: Default admin account
 -- ----------------------------------------------------------
--- Username: admin  |  Password: domus_desk
+-- Username: admin  |  Password: domusadmin
 -- IMPORTANT: Change this password after first login!
 INSERT INTO `analysts` (`username`, `password_hash`, `full_name`, `email`, `is_active`, `is_admin`, `created_datetime`)
-SELECT 'admin', '$2y$12$z9jzs9Sqol4i.ThVE/wwL.EzvbYtZrU0GHpzUJX7UC6ODp5h.q2U2', 'Administrator', 'admin@localhost', 1, 1, UTC_TIMESTAMP()
+SELECT 'admin', '$2y$12$up4cZsuKUPJGmEbK1uQMeu8.SJr8XmvO2iFLZ4YCfe/kX.LaSesfe', 'Administrator', 'admin@localhost', 1, 1, UTC_TIMESTAMP()
 FROM DUAL
 WHERE NOT EXISTS (SELECT 1 FROM `analysts` LIMIT 1);

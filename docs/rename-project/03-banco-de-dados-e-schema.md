@@ -18,7 +18,7 @@ Esta etapa descreve a renomeação do script SQL principal, a atualização dos 
      - Substituir ocorrências em comentários explicativos sobre tenants, webchat e canais de mensageria (`provider='domus_desk'`).
    - **Credenciais e Comentários do Usuário Administrador Inicial**:
      - De: `-- Username: admin | Password: freeitsm`
-     - Para: `-- Username: admin | Password: domusdesk` (ou `domus_desk`)
+     - Para: `-- Username: admin | Password: domusadmin`
 
 ---
 

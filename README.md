@@ -62,7 +62,7 @@ docker compose up -d
 Em seguida, acesse [http://localhost:8080/setup/](http://localhost:8080/setup/) para verificar a instalação e criar sua conta de administrador.
 
 - **Instalação manual** (WAMP / XAMPP / LAMP): siga o **[Guia de Instalação](https://github.com/mymakecoins/domus-desk/wiki/Installation)** — pré-requisitos, configuração de banco de dados, chave de criptografia e arquivos de configuração.
-- **Primeiro login**: `admin` / `domus_desk` — altere imediatamente no menu da conta.
+- **Primeiro login**: `admin` / `domusadmin` — altere imediatamente no menu da conta.
 - **Dados de demonstração**: Sistema → Dados de Demonstração preenche todos os módulos com dados amostrais realistas, para que você possa avaliar o sistema em funcionamento.
 
 ## Módulos

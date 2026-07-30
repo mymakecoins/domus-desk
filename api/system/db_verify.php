@@ -377,13 +377,13 @@ try {
     $countStmt = $conn->query("SELECT COUNT(*) FROM analysts");
     $analystCount = (int) $countStmt->fetchColumn();
     if ($analystCount === 0) {
-        $defaultHash = password_hash('domus_desk', PASSWORD_DEFAULT);
+        $defaultHash = password_hash('domusadmin', PASSWORD_DEFAULT);
         $seedStmt = $conn->prepare("INSERT INTO analysts (username, password_hash, full_name, email, is_active, is_admin, created_datetime) VALUES (?, ?, ?, ?, 1, 1, UTC_TIMESTAMP())");
         $seedStmt->execute(['admin', $defaultHash, 'Administrator', 'admin@localhost']);
         $results[] = [
             'table' => 'analysts',
             'status' => 'seeded',
-            'details' => ['Created default admin account (username: admin, password: domus_desk)']
+            'details' => ['Created default admin account (username: admin, password: domusadmin)']
         ];
     }
 
