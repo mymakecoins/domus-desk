@@ -16,33 +16,53 @@
     color-scheme: light;
 
     /* Surfaces */
-    --app-bg:        #f5f5f5;   /* page / app background          */
-    --surface:       #ffffff;   /* panels, cards, reading pane    */
-    --surface-2:     #fafafa;   /* subtle raised/striped surface  */
-    --surface-3:     #f8f8f8;   /* slightly deeper subtle surface */
-    --surface-hover: #f0f0f0;   /* row / item hover               */
-    --row-unread:    #f0f8ff;   /* unread ticket-list row tint    */
+    --app-bg:        #F8FAFC;   /* Slate Light page / app background */
+    --surface:       #FFFFFF;   /* panels, cards, reading pane    */
+    --surface-2:     #f8fafc;   /* subtle raised/striped surface  */
+    --surface-3:     #f1f5f9;   /* slightly deeper subtle surface */
+    --surface-hover: #f1f5f9;   /* row / item hover               */
+    --row-unread:    #f0f9ff;   /* unread ticket-list row tint    */
 
     /* Text */
-    --text:        #333333;     /* primary body text   */
-    --text-muted:  #666666;     /* labels, secondary   */
+    --text:        #0F172A;     /* primary body text (Grafite Escuro) */
+    --text-muted:  #64748B;     /* labels, secondary (Cinza Neutro)   */
     --text-dim:    #888888;     /* tertiary            */
-    --text-faint:  #999999;     /* placeholders, hints */
+    --text-faint:  #94a3b8;     /* placeholders, hints */
 
     /* Lines */
-    --border:      #e0e0e0;     /* default borders/dividers */
-    --border-soft: #eeeeee;     /* faint dividers           */
+    --border:      #E2E8F0;     /* default borders/dividers (Cinza Claro) */
+    --border-soft: #f1f5f9;     /* faint dividers           */
 
-    /* Accent (brand blue) */
-    --accent:        #0078d4;
-    --accent-hover:  #005a9e;
-    --accent-soft:   #e8f4fd;   /* tinted accent background */
-    --on-accent:     #ffffff;   /* text/icons on accent     */
+    /* Primary Brand (Rodoind) & Accent */
+    --color-brand-primary:       #0A192F;   /* Azul Marinho Profundo */
+    --color-brand-primary-hover: #112240;   /* Azul Marinho Intermediário */
+    --color-brand-accent:        #1E3A8A;   /* Azul Médio Corporativo */
+    --accent:                    #0A192F;
+    --accent-hover:              #1E3A8A;
+    --accent-soft:               #e2e8f0;   /* tinted accent background */
+    --on-accent:                 #ffffff;   /* text/icons on accent     */
+
+    /* Action / CTAs */
+    --color-cta-primary:       #F59E0B;   /* Amarelo / Laranja Vibrante */
+    --color-cta-primary-hover: #D97706;   /* Laranja Escuro Hover */
+    --color-cta-text:          #0F172A;   /* Texto escuro no CTA */
+
+    /* Status Indicators */
+    --color-status-new:         #0284C7;
+    --color-status-in-progress: #F59E0B;
+    --color-status-pending:     #D97706;
+    --color-status-resolved:    #10B981;
+    --color-status-closed:      #64748B;
+    --color-status-urgent:      #EF4444;
+
+    /* Notes / Atendimento */
+    --color-note-internal-bg:     #FEF3C7;
+    --color-note-internal-border: #F59E0B;
 
     /* Status / semantic pairs (badges, pills) */
-    --success-bg:     #dcfce7;  --success-text: #166534;  --success-accent: #16a34a;  --success-border: #b7e1c4;
-    --danger-bg:      #fee2e2;  --danger-text:  #991b1b;  --danger-accent:  #d13438;  --danger-border:  #f0c2c2;
-    --warning-bg:     #fef3c7;  --warning-text: #92400e;  --warning-border: #f0d9a8;
+    --success-bg:     #dcfce7;  --success-text: #166534;  --success-accent: #10b981;  --success-border: #b7e1c4;
+    --danger-bg:      #fee2e2;  --danger-text:  #991b1b;  --danger-accent:  #ef4444;  --danger-border:  #f0c2c2;
+    --warning-bg:     #fef3c7;  --warning-text: #92400e;  --warning-border: #f59e0b;
 
     /* Problem Management (purple) accents — the problem strip + badges */
     --problem-bg:        #faf7fd;  --problem-border: #e6d8f2;

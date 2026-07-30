@@ -1,53 +1,53 @@
 <h1 align="center">Domus Desk</h1>
 
-<p align="center"><strong>Free, open-source IT Service Management — self-hosted, AI-included, no per-seat fees. Ever.</strong></p>
+<p align="center"><strong>Gestão de Serviços de TI (ITSM) gratuita e de código aberto — auto-hospedada, com IA inclusa, sem taxas por usuário. Sempre.</strong></p>
 
 <p align="center">
-<a href="https://github.com/mymakecoins/domus-desk/blob/main/LICENSE"><img src="https://img.shields.io/github/license/mymakecoins/domus-desk?style=flat-square&color=blue" alt="MIT License"></a>
+<a href="https://github.com/mymakecoins/domus-desk/blob/main/LICENSE"><img src="https://img.shields.io/github/license/mymakecoins/domus-desk?style=flat-square&color=blue" alt="Licença MIT"></a>
 <img src="https://img.shields.io/badge/PHP-7.4--8.4-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP 7.4–8.4">
 <img src="https://img.shields.io/badge/MySQL-8.0%2B-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL 8.0+">
-<img src="https://img.shields.io/badge/Docker-Ready-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker Ready">
-<a href="https://github.com/mymakecoins/domus-desk/stargazers"><img src="https://img.shields.io/github/stars/mymakecoins/domus-desk?style=flat-square&color=gold" alt="GitHub stars"></a>
+<img src="https://img.shields.io/badge/Docker-Pronto-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Pronto para Docker">
+<a href="https://github.com/mymakecoins/domus-desk/stargazers"><img src="https://img.shields.io/github/stars/mymakecoins/domus-desk?style=flat-square&color=gold" alt="Estrelas no GitHub"></a>
 </p>
 
 <p align="center">
 🌍 <a href="https://domusdesk.com">domusdesk.com</a> &nbsp;·&nbsp;
-📖 <a href="https://github.com/mymakecoins/domus-desk/wiki">Documentation Wiki</a> &nbsp;·&nbsp;
-💬 <a href="https://github.com/mymakecoins/domus-desk/discussions">Discussions</a> &nbsp;·&nbsp;
-🐛 <a href="https://github.com/mymakecoins/domus-desk/issues">Issues</a>
+📖 <a href="https://github.com/mymakecoins/domus-desk/wiki">Wiki de Documentação</a> &nbsp;·&nbsp;
+💬 <a href="https://github.com/mymakecoins/domus-desk/discussions">Discussões</a> &nbsp;·&nbsp;
+🐛 <a href="https://github.com/mymakecoins/domus-desk/issues">Problemas (Issues)</a>
 </p>
 
 ---
 
-Domus Desk is a complete web-based ITSM platform: **21 integrated modules** covering tickets, assets, knowledge, changes, problems, tasks, a CMDB, workflows, an LMS and more — plus a **self-service portal** for your end users. It runs on a plain PHP + MySQL stack (WAMP, XAMPP, LAMP, or Docker), so your data stays on your server.
+O Domus Desk é uma plataforma completa de ITSM baseada em web: **21 módulos integrados** cobrindo chamados, ativos, base de conhecimento, mudanças, problemas, tarefas, CMDB, fluxos de trabalho, LMS e mais — além de um **portal de autoatendimento** para seus usuários finais. Ele roda em uma pilha simples de PHP + MySQL (WAMP, XAMPP, LAMP ou Docker), garantindo que seus dados permaneçam no seu próprio servidor.
 
-**Why teams pick it:**
+**Por que as equipes o escolhem:**
 
-- 🆓 **Genuinely free** — MIT licence, no per-seat/per-agent fees, no "Enterprise tier". Everything ships to everyone.
-- 🏠 **Self-hosted** — your tickets, your customers' conversations and your knowledge base live in your database, under your backups and your privacy policy.
-- 🤖 **AI included, not upsold** — reply cleanup, knowledge Q&A, form generation, course authoring, RCA drafting and more, all bring-your-own-key (Anthropic, OpenAI, or OpenRouter).
-- 📥 **Every channel becomes a ticket** — email (Microsoft 365, Gmail, IMAP), WhatsApp, an embeddable web chat widget, and a portal that even staff **without a company email address** can use.
+- 🆓 **Verdadeiramente gratuito** — licença MIT, sem custos por assento/agente, sem planos "Enterprise". Tudo é entregue para todos.
+- 🏠 **Auto-hospedado** — seus chamados, as conversas dos seus clientes e sua base de conhecimento residem no seu banco de dados, sob suas políticas de privacidade e backup.
+- 🤖 **IA incluída, sem custos adicionais** — limpeza de respostas, Q&A na base de conhecimento, geração de formulários, autoria de cursos, rascunho de RCA e mais; tudo no modelo "traga sua própria chave" (Anthropic, OpenAI ou OpenRouter).
+- 📥 **Qualquer canal vira um chamado** — e-mail (Microsoft 365, Gmail, IMAP), WhatsApp, widget de chat web incorporável e um portal que funciona até para colaboradores **sem endereço de e-mail corporativo**.
 
-## Screenshots
+## Capturas de Tela
 
 <table>
 <tr>
 <td align="center"><strong>Watchtower</strong><br><img src="https://domusdesk.com/images/screenshots/watchtower_1.png" width="350" alt="Watchtower"></td>
-<td align="center"><strong>Tickets</strong><br><img src="https://domusdesk.com/images/screenshots/tickets_1.png" width="350" alt="Tickets"></td>
-<td align="center"><strong>Assets</strong><br><img src="https://domusdesk.com/images/screenshots/assets_1.png" width="350" alt="Assets"></td>
+<td align="center"><strong>Chamados (Tickets)</strong><br><img src="https://domusdesk.com/images/screenshots/tickets_1.png" width="350" alt="Tickets"></td>
+<td align="center"><strong>Ativos (Assets)</strong><br><img src="https://domusdesk.com/images/screenshots/assets_1.png" width="350" alt="Assets"></td>
 </tr>
 <tr>
-<td align="center"><strong>Knowledge</strong><br><img src="https://domusdesk.com/images/screenshots/knowledge_1.png" width="350" alt="Knowledge"></td>
-<td align="center"><strong>Changes</strong><br><img src="https://domusdesk.com/images/screenshots/changes_1.png" width="350" alt="Changes"></td>
-<td align="center"><strong>Calendar</strong><br><img src="https://domusdesk.com/images/screenshots/calendar_1.png" width="350" alt="Calendar"></td>
+<td align="center"><strong>Base de Conhecimento</strong><br><img src="https://domusdesk.com/images/screenshots/knowledge_1.png" width="350" alt="Knowledge"></td>
+<td align="center"><strong>Mudanças</strong><br><img src="https://domusdesk.com/images/screenshots/changes_1.png" width="350" alt="Changes"></td>
+<td align="center"><strong>Calendário</strong><br><img src="https://domusdesk.com/images/screenshots/calendar_1.png" width="350" alt="Calendar"></td>
 </tr>
 </table>
 
-<p align="center"><a href="https://domusdesk.com/screenshots.html"><strong>View all 57 screenshots →</strong></a></p>
+<p align="center"><a href="https://domusdesk.com/screenshots.html"><strong>Ver todas as 57 capturas de tela →</strong></a></p>
 
-## 🚀 Quick Start
+## 🚀 Início Rápido
 
-The fastest route is Docker — no PHP, MySQL or web server setup required:
+A rota mais rápida é via Docker — sem necessidade de configurar PHP, MySQL ou servidor web manualmente:
 
 ```bash
 git clone https://github.com/mymakecoins/domus-desk.git
@@ -55,76 +55,76 @@ cd domus-desk
 docker compose up -d
 ```
 
-Then open [http://localhost:8080/setup/](http://localhost:8080/setup/) to verify the installation and create your admin account.
+Em seguida, acesse [http://localhost:8080/setup/](http://localhost:8080/setup/) para verificar a instalação e criar sua conta de administrador.
 
-- **Manual install** (WAMP / XAMPP / LAMP): follow the **[Installation guide](https://github.com/mymakecoins/domus-desk/wiki/Installation)** — prerequisites, database setup, encryption key, and configuration files.
-- **First login**: `admin` / `domus-desk` — change it immediately via the account menu.
-- **Demo data**: System → Demo Data populates every module with realistic sample data, so you can evaluate with the system feeling alive.
+- **Instalação manual** (WAMP / XAMPP / LAMP): siga o **[Guia de Instalação](https://github.com/mymakecoins/domus-desk/wiki/Installation)** — pré-requisitos, configuração de banco de dados, chave de criptografia e arquivos de configuração.
+- **Primeiro login**: `admin` / `domus_desk` — altere imediatamente no menu da conta.
+- **Dados de demonstração**: Sistema → Dados de Demonstração preenche todos os módulos com dados amostrais realistas, para que você possa avaliar o sistema em funcionamento.
 
-## Modules
+## Módulos
 
-| Module | What it does |
-|--------|--------------|
-| [Watchtower](https://github.com/mymakecoins/domus-desk/wiki/Watchtower) | Unified attention dashboard — one glance shows what needs you across every module |
-| [Tickets](https://github.com/mymakecoins/domus-desk/wiki/Tickets) | Outlook-style inbox with email, WhatsApp and web chat channels, SLAs, CSAT, canned responses, multi-select bulk actions, snooze, collision detection, AI reply cleanup |
-| [Self-Service Portal](https://github.com/mymakecoins/domus-desk/wiki/Self-Service-Portal) | End-user portal — request catalogue, knowledge, replies, screen recording; works even with no email address |
-| [Tasks](https://github.com/mymakecoins/domus-desk/wiki/Tasks) | Kanban board, list, calendar and timeline views for internal work |
-| [Assets](https://github.com/mymakecoins/domus-desk/wiki/Assets) | Asset register with custody tracking, locations, warranties, [QR labels and an in-app camera scanner for stocktakes](https://github.com/mymakecoins/domus-desk/wiki/Asset-QR-Labels), vCenter and Intune sync |
-| [Knowledge](https://github.com/mymakecoins/domus-desk/wiki/Knowledge) | Rich-text articles with AI chat, vector search, review workflow and per-audience visibility |
-| [Change Management](https://github.com/mymakecoins/domus-desk/wiki/Change-Management) | ITIL changes with CAB voting, risk matrix and post-implementation review |
-| [Problem Management](https://github.com/mymakecoins/domus-desk/wiki/Problem-Management) | Root causes behind recurring incidents, known errors, AI-assisted RCA |
-| [Workflows](https://github.com/mymakecoins/domus-desk/wiki/Workflows) | Cross-module automation — visual canvas, 138+ triggers, outbound webhooks, AI co-author |
-| [CMDB](https://github.com/mymakecoins/domus-desk/wiki/CMDB) | Typed configuration items with relationships, impact analysis and AI summaries |
-| [Network Mapper](https://github.com/mymakecoins/domus-desk/wiki/Network-Mapper) | Architecture diagrams where every node is bound to a real CMDB object |
-| [Calendar](https://github.com/mymakecoins/domus-desk/wiki/Calendar) | Team calendar with categories, and an iCal feed for your phone |
-| [Morning Checks](https://github.com/mymakecoins/domus-desk/wiki/Morning-Checks) | Daily infrastructure health checks with trend charts and PDF export |
-| [Reporting](https://github.com/mymakecoins/domus-desk/wiki/Reporting) | System logs, audit trails, and an Intune device dashboard with drill-down |
-| [Software](https://github.com/mymakecoins/domus-desk/wiki/Software) | Software inventory from an agent script, plus licence management |
-| [Forms](https://github.com/mymakecoins/domus-desk/wiki/Forms) | Dynamic form builder with AI assist, versioning and submissions reporting |
-| [Contracts](https://github.com/mymakecoins/domus-desk/wiki/Contracts) | Supplier and contract lifecycle, plus an AI-powered RFP Builder |
-| [Service Status](https://github.com/mymakecoins/domus-desk/wiki/Service-Status) | Service health dashboard driven by incident tracking |
-| [LMS](https://github.com/mymakecoins/domus-desk/wiki/LMS) | Author courses in-app (with AI) or upload SCORM; assign, take and track them |
-| [Process Mapper](https://github.com/mymakecoins/domus-desk/wiki/Process-Mapper) | Flowchart builder with swimlanes, custom step types and Mermaid export |
-| [System](https://github.com/mymakecoins/domus-desk/wiki/System) | Administration — analysts, teams, roles, encryption, database verify, demo data |
+| Módulo | O que faz |
+|--------|-----------|
+| [Watchtower](https://github.com/mymakecoins/domus-desk/wiki/Watchtower) | Painel unificado de atenção — com um olhar veja o que precisa da sua ação em todos os módulos |
+| [Tickets (Chamados)](https://github.com/mymakecoins/domus-desk/wiki/Tickets) | Caixa de entrada estilo Outlook com canais de e-mail, WhatsApp e chat web, SLAs, CSAT, respostas prontas, ações em massa, adiamento (snooze), detecção de colisão e limpeza de respostas com IA |
+| [Portal de Autoatendimento](https://github.com/mymakecoins/domus-desk/wiki/Self-Service-Portal) | Portal do usuário final — catálogo de solicitações, conhecimento, respostas, gravação de tela; funciona mesmo sem e-mail |
+| [Tarefas (Tasks)](https://github.com/mymakecoins/domus-desk/wiki/Tasks) | Quadro Kanban, lista, calendário e visualização de linha do tempo para trabalho interno |
+| [Ativos (Assets)](https://github.com/mymakecoins/domus-desk/wiki/Assets) | Registro de ativos com rastreamento de custódia, localizações, garantias, [etiquetas QR e leitor por câmera no app para inventário](https://github.com/mymakecoins/domus-desk/wiki/Asset-QR-Labels), sincronização com vCenter e Intune |
+| [Base de Conhecimento](https://github.com/mymakecoins/domus-desk/wiki/Knowledge) | Artigos em texto rico com chat IA, busca vetorial, fluxo de revisão e visibilidade por público-alvo |
+| [Gestão de Mudanças](https://github.com/mymakecoins/domus-desk/wiki/Change-Management) | Mudanças no padrão ITIL com votação do CAB, matriz de risco e revisão pós-implementação |
+| [Gestão de Problemas](https://github.com/mymakecoins/domus-desk/wiki/Problem-Management) | Análise de causa raiz para incidentes recorrentes, erros conhecidos e elaboração de RCA auxiliada por IA |
+| [Workflows (Fluxos)](https://github.com/mymakecoins/domus-desk/wiki/Workflows) | Automação entre módulos — tela visual, mais de 138 gatilhos, webhooks de saída e coautor com IA |
+| [CMDB](https://github.com/mymakecoins/domus-desk/wiki/CMDB) | Itens de configuração tipados com relacionamentos, análise de impacto e resumos por IA |
+| [Mapeador de Rede](https://github.com/mymakecoins/domus-desk/wiki/Network-Mapper) | Diagramas de arquitetura onde cada nó está vinculado a um objeto real do CMDB |
+| [Calendário](https://github.com/mymakecoins/domus-desk/wiki/Calendar) | Calendário da equipe com categorias e feed iCal para seu smartphone |
+| [Checagens Matinais](https://github.com/mymakecoins/domus-desk/wiki/Morning-Checks) | Checagens diárias da saúde da infraestrutura com gráficos de tendência e exportação em PDF |
+| [Relatórios (Reporting)](https://github.com/mymakecoins/domus-desk/wiki/Reporting) | Logs do sistema, trilha de auditoria e painel de dispositivos Intune com detalhamento (drill-down) |
+| [Software](https://github.com/mymakecoins/domus-desk/wiki/Software) | Inventário de softwares via script agente, além de gestão de licenças |
+| [Formulários](https://github.com/mymakecoins/domus-desk/wiki/Forms) | Construtor de formulários dinâmicos com assistência de IA, versionamento e relatórios de envios |
+| [Contratos](https://github.com/mymakecoins/domus-desk/wiki/Contracts) | Ciclo de vida de fornecedores e contratos, além de construtor de RFP impulsionado por IA |
+| [Status dos Serviços](https://github.com/mymakecoins/domus-desk/wiki/Service-Status) | Painel da saúde dos serviços alimentado pelo rastreamento de incidentes |
+| [LMS (Treinamentos)](https://github.com/mymakecoins/domus-desk/wiki/LMS) | Crie cursos no app (com IA) ou envie arquivos SCORM; atribua, faça e acompanhe treinamentos |
+| [Mapeador de Processos](https://github.com/mymakecoins/domus-desk/wiki/Process-Mapper) | Construtor de fluxogramas com raias (swimlanes), tipos de etapas customizados e exportação para Mermaid |
+| [Sistema](https://github.com/mymakecoins/domus-desk/wiki/System) | Administração — analistas, equipes, papéis (RBAC), criptografia, verificação de banco de dados, dados demo |
 
-A **System Wiki** module also auto-documents the codebase from within the app, and a [browser extension](https://github.com/mymakecoins/domus-desk/wiki/Browser-Extension) puts the Watchtower badge count in your Chrome/Edge toolbar.
+Um módulo de **Wiki do Sistema** também documenta automaticamente o código-fonte dentro do aplicativo, e uma [extensão de navegador](https://github.com/mymakecoins/domus-desk/wiki/Browser-Extension) coloca o contador do Watchtower na barra de ferramentas do Chrome/Edge.
 
-## Highlights
+## Destaques
 
-- **[REST API](https://github.com/mymakecoins/domus-desk/wiki/REST-API)** — 200+ key-authenticated endpoints with granular per-key permissions, a live OpenAPI spec, and interactive in-app docs with code samples in seven languages.
-- **[Single Sign-On](https://github.com/mymakecoins/domus-desk/wiki/Single-Sign-On) & [LDAP / Active Directory](https://github.com/mymakecoins/domus-desk/wiki/LDAP-and-Active-Directory)** — OIDC providers side by side (Keycloak, Entra, Okta, …), or bind straight to your on-prem directory with group-gated just-in-time provisioning. Local login always remains as break-glass.
-- **[Security](https://github.com/mymakecoins/domus-desk/wiki/Security)** — AES-256-GCM encryption at rest for secrets, TOTP MFA, brute-force protection, role-based permissions down to individual settings tabs, and audit trails throughout.
-- **[Multi-tenancy](https://github.com/mymakecoins/domus-desk/wiki/Multi-Tenancy)** — host multiple client companies in one install (built for MSPs), each walled off from the others. Invisible until you add a second company.
-- **[Webhooks](https://github.com/mymakecoins/domus-desk/wiki/Webhooks)** — push any event to Slack, Teams, Discord or any endpoint, with HMAC signing, retries and a delivery dashboard.
-- **Command palette** — press **⌘K / Ctrl-K** anywhere to jump to any module, search across tickets, changes, problems, knowledge, contracts, assets and CMDB items by name or reference, or run a quick action, all from the keyboard. Results respect your module access and active company.
-- **Internationalisation** — [21 languages](https://github.com/mymakecoins/domus-desk/wiki/Internationalisation) with per-analyst locale, plus [per-analyst timezones](https://github.com/mymakecoins/domus-desk/wiki/Timezones-and-Time-Handling), [theming and dark mode](https://github.com/mymakecoins/domus-desk/wiki/Theming-and-Dark-Mode), and a [mobile-friendly](https://github.com/mymakecoins/domus-desk/wiki/Mobile-Friendly) core flow — the [ticket inbox](https://github.com/mymakecoins/domus-desk/wiki/Mobile-Friendly-Tickets) and [Assets](https://github.com/mymakecoins/domus-desk/wiki/Mobile-Friendly-Assets) are built to work properly on a phone, without changing anything on the desktop.
+- **[API REST](https://github.com/mymakecoins/domus-desk/wiki/REST-API)** — Mais de 200 endpoints autenticados por chave com permissões granulares, especificação OpenAPI ao vivo e documentação interativa com exemplos de código em 7 linguagens.
+- **[Single Sign-On (SSO)](https://github.com/mymakecoins/domus-desk/wiki/Single-Sign-On) & [LDAP / Active Directory](https://github.com/mymakecoins/domus-desk/wiki/LDAP-and-Active-Directory)** — Provedores OIDC lado a lado (Keycloak, Entra, Okta, …), ou conexão direta ao seu diretório local com provisionamento Just-in-Time regulado por grupos. Login local sempre mantido como contingência.
+- **[Segurança](https://github.com/mymakecoins/domus-desk/wiki/Security)** — Criptografia AES-256-GCM em repouso para segredos, MFA via TOTP, proteção contra força bruta, permissões baseadas em funções (RBAC) até abas individuais de configurações e trilhas de auditoria em todo o sistema.
+- **[Multi-tenancy](https://github.com/mymakecoins/domus-desk/wiki/Multi-Tenancy)** — Hospede múltiplas empresas clientes em uma única instalação (projetado para MSPs), cada uma isolada das demais. Invisível até que você adicione uma segunda empresa.
+- **[Webhooks](https://github.com/mymakecoins/domus-desk/wiki/Webhooks)** — Envie qualquer evento para o Slack, Teams, Discord ou qualquer endpoint, com assinatura HMAC, tentativas de reenvio e painel de entregas.
+- **Paleta de comandos** — Pressione **⌘K / Ctrl-K** em qualquer lugar para ir para qualquer módulo, buscar por chamados, mudanças, problemas, conhecimento, contratos, ativos e itens do CMDB por nome ou referência, ou executar uma ação rápida, tudo pelo teclado. Os resultados respeitam seu acesso de módulo e empresa ativa.
+- **Internacionalização** — [21 idiomas](https://github.com/mymakecoins/domus-desk/wiki/Internationalisation) com localidade por analista, além de [fusos horários por analista](https://github.com/mymakecoins/domus-desk/wiki/Timezones-and-Time-Handling), [temas e modo escuro](https://github.com/mymakecoins/domus-desk/wiki/Theming-and-Dark-Mode), e fluxo principal [adaptado para dispositivos móveis](https://github.com/mymakecoins/domus-desk/wiki/Mobile-Friendly) — a [caixa de entrada de chamados](https://github.com/mymakecoins/domus-desk/wiki/Mobile-Friendly-Tickets) e [Ativos](https://github.com/mymakecoins/domus-desk/wiki/Mobile-Friendly-Assets) foram desenvolvidos para funcionar perfeitamente no celular sem alterar nada no desktop.
 
-## Documentation
+## Documentação
 
-Everything lives in the **[Documentation Wiki](https://github.com/mymakecoins/domus-desk/wiki)**:
+Tudo está disponível na **[Wiki de Documentação](https://github.com/mymakecoins/domus-desk/wiki)**:
 
-| Guide | Covers |
-|-------|--------|
-| [Installation](https://github.com/mymakecoins/domus-desk/wiki/Installation) | Docker and manual setup, prerequisites, configuration files |
-| [Architecture](https://github.com/mymakecoins/domus-desk/wiki/Architecture) | Technology stack, directory layout, shared components, database conventions |
-| [Security](https://github.com/mymakecoins/domus-desk/wiki/Security) | Authentication, authorisation layers, encryption, going-live checklist |
-| [REST API](https://github.com/mymakecoins/domus-desk/wiki/REST-API) | How the public API works, plus per-module endpoint guides |
-| [API Reference](https://github.com/mymakecoins/domus-desk/wiki/API-Reference) | The internal session-based endpoints behind the UI |
+| Guia | Conteúdo |
+|------|----------|
+| [Instalação](https://github.com/mymakecoins/domus-desk/wiki/Installation) | Setup em Docker e manual, pré-requisitos, arquivos de configuração |
+| [Arquitetura](https://github.com/mymakecoins/domus-desk/wiki/Architecture) | Stack tecnológica, estrutura de diretórios, componentes compartilhados, convenções de BD |
+| [Segurança](https://github.com/mymakecoins/domus-desk/wiki/Security) | Autenticação, camadas de autorização, criptografia, checklist para produção |
+| [API REST](https://github.com/mymakecoins/domus-desk/wiki/REST-API) | Como a API pública funciona, além de guias de endpoints por módulo |
+| [Referência da API](https://github.com/mymakecoins/domus-desk/wiki/API-Reference) | Endpoints internos baseados em sessão por trás da UI |
 
-There are also long-form **[deep-dive articles](https://domusdesk.com/deep-dive/)** on the website covering individual features, and a **[release history](https://domusdesk.com/updates.php)**.
+Existem também **[artigos aprofundados](https://domusdesk.com/deep-dive/)** no site cobrindo recursos individuais e o **[histórico de versões](https://domusdesk.com/updates.php)**.
 
-**Technology stack:** PHP 7.4–8.4 · MySQL 8.0+ · vanilla JavaScript (no frameworks) · TinyMCE · Apache or any PHP-capable server.
+**Tecnologias utilizadas:** PHP 7.4–8.4 · MySQL 8.0+ · JavaScript vanilla (sem frameworks) · TinyMCE · Apache ou qualquer servidor compatível com PHP.
 
-## 👋 From the maintainer
+## 👋 Mensagem do Mantenedor
 
-Domus Desk is a one-developer project — your engagement is what keeps it moving:
+O Domus Desk é um projeto desenvolvido por uma única pessoa — seu engajamento é o que o mantém em movimento:
 
-- ⭐ **If you use Domus Desk, please [star the repo](https://github.com/mymakecoins/domus-desk/stargazers)** — it's the single biggest signal that the work is landing.
-- 📬 **Feedback, ideas, bugs?** Email me directly at [ed@domusdesk.com](mailto:ed@domusdesk.com) — I read every message — or use [Discussions](https://github.com/mymakecoins/domus-desk/discussions) and [Issues](https://github.com/mymakecoins/domus-desk/issues).
-- 🌍 Mentioning [domusdesk.com](https://domusdesk.com) on Reddit, Hacker News, Spiceworks or LinkedIn genuinely helps and means a lot.
+- ⭐ **Se você usa o Domus Desk, por favor [deixe uma estrela no repositório](https://github.com/mymakecoins/domus-desk/stargazers)** — é o maior sinal de que o trabalho está ajudando a comunidade.
+- 📬 **Feedback, ideias, bugs?** Envie um e-mail diretamente para mim em [ed@domusdesk.com](mailto:ed@domusdesk.com) — leio todas as mensagens — ou use as [Discussões](https://github.com/mymakecoins/domus-desk/discussions) e [Issues](https://github.com/mymakecoins/domus-desk/issues).
+- 🌍 Mencioná-lo em [domusdesk.com](https://domusdesk.com) no Reddit, Hacker News, Spiceworks ou LinkedIn ajuda imensamente.
 
-Contributions are welcome — the first external pull request was merged in 2026 and more are encouraged.
+Contribuições são muito bem-vindas — o primeiro pull request externo foi aceito em 2026 e novos são incentivados!
 
-## License
+## Licença
 
-[MIT](LICENSE) — free for commercial and personal use.
+[MIT](LICENSE) — gratuito para uso comercial e pessoal.

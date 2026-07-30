@@ -64,7 +64,7 @@ body {
 .nav-btn:hover,
 .nav-btn:link:hover,
 .nav-btn:visited:hover {
-    background: rgba(255,255,255,0.2);
+    background: var(--color-brand-primary-hover, #112240);
     color: var(--on-accent, #fff) !important;
 }
 
@@ -77,9 +77,10 @@ body {
 .nav-btn.active:link,
 .nav-btn.active:visited,
 .nav-btn.active:active {
-    background: rgba(255,255,255,0.25);
+    background: var(--color-brand-accent, #1E3A8A);
     color: var(--on-accent, #fff) !important;
     border-color: rgba(255,255,255,0.4);
+    font-weight: 500;
 }
 
 .nav-btn.logout {
@@ -1216,12 +1217,28 @@ body.ticket-popout .ticket-toolbar {
     align-items: center;
 }
 
-.note-item {
+.note-item,
+.ticket-message-public {
     padding: 16px;
-    background: var(--surface-2, #f9f9f9);
-    border-left: 3px solid var(--accent, #0078d4);
+    background: var(--surface, #ffffff);
+    border-left: 4px solid var(--color-brand-primary, #0A192F);
     margin-bottom: 12px;
     border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.note-item.internal,
+.note-item.private,
+.ticket-message-internal {
+    background: var(--color-note-internal-bg, #FEF3C7);
+    border-left: 4px solid var(--color-note-internal-border, #F59E0B);
+    color: #78350F;
+}
+
+.note-item.internal .note-text,
+.note-item.private .note-text,
+.ticket-message-internal .note-text {
+    color: #78350F;
 }
 
 .note-header {
@@ -1803,22 +1820,38 @@ body.ticket-popout .ticket-toolbar {
     text-decoration: none;
 }
 
-.btn-primary {
-    background: var(--accent, #0078d4);
-    color: var(--on-accent, #fff);
+.btn-primary,
+.btn-cta {
+    background: var(--color-cta-primary, #F59E0B);
+    color: var(--color-cta-text, #0F172A);
+    font-weight: 600;
 }
 
-.btn-primary:hover {
-    background: var(--accent-hover, #005a9e);
+.btn-primary:hover,
+.btn-cta:hover {
+    background: var(--color-cta-primary-hover, #D97706);
+    color: var(--color-cta-text, #0F172A);
 }
 
 .btn-secondary {
-    background: var(--border, #e0e0e0);
-    color: var(--text, #333);
+    background: #F1F5F9;
+    color: #334155;
+    border: 1px solid #E2E8F0;
 }
 
 .btn-secondary:hover {
-    background: #d0d0d0;
+    background: #E2E8F0;
+    color: #0F172A;
+}
+
+.btn-agent {
+    background: var(--color-brand-primary, #0A192F);
+    color: #FFFFFF;
+}
+
+.btn-agent:hover {
+    background: var(--color-brand-accent, #1E3A8A);
+    color: #FFFFFF;
 }
 
 /* Reply Cleanup AI button — subtle violet so it reads as "AI assist" */

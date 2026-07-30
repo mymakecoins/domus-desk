@@ -7,7 +7,7 @@
 
 $defaultModuleColors = [
     'watchtower'     => ['#1e293b', '#0f172a'],
-    'tickets'        => ['#0078d4', '#106ebe'],
+    'tickets'        => ['#0A192F', '#1E3A8A'],
     'assets'         => ['#107c10', '#0b5c0b'],
     'knowledge'      => ['#8764b8', '#6b4fa2'],
     'changes'        => ['#00897b', '#00695c'],
