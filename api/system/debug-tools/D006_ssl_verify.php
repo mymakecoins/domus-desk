@@ -5,7 +5,7 @@
  * Answers one question end to end: "can this server actually make a
  * certificate-verified HTTPS request, and if not, why?"
  *
- * FreeITSM makes a lot of outbound HTTPS calls (mailboxes, AI providers, SSO,
+ * Domus Desk makes a lot of outbound HTTPS calls (mailboxes, AI providers, SSO,
  * Intune/vCenter, webhooks, email). Since #919 verification is ON by default
  * (SSL_VERIFY_PEER) and every handle goes through sslApplyCurl(), which attaches
  * a CA bundle. This tool shows the whole chain — the global switch, the php.ini
@@ -84,7 +84,7 @@ addSection($sections, "PHP.INI CA CONFIGURATION", [
     "curl.cainfo     : " . ($curlCa !== '' ? $curlCa . '  [' . ($curlCaReadable ? 'readable' : 'NOT READABLE — file missing!') . ']' : '(not set)'),
     "openssl.cafile  : " . ($osslCa !== '' ? $osslCa . '  [' . ($osslCaReadable ? 'readable' : 'NOT READABLE — file missing!') . ']' : '(not set)'),
     "",
-    "Note: these are optional. FreeITSM ships its own bundle and does not need",
+    "Note: these are optional. Domus Desk ships its own bundle and does not need",
     "them set. A path that IS set but points at a missing file is a real problem,",
     "though — it overrides the fallback and breaks verification.",
 ]);
@@ -106,7 +106,7 @@ addSection($sections, "SHIPPED CA BUNDLE (includes/cacert.pem)", [
     "Certificates    : " . ($bundledReadable ? $certCount : "-"),
     "",
     ($bundledExists
-        ? "This is the fallback FreeITSM uses on Windows when php.ini has no bundle."
+        ? "This is the fallback Domus Desk uses on Windows when php.ini has no bundle."
         : "MISSING. If php.ini has no bundle either, verification will fail. Fix: download"),
     ($bundledExists ? "" : "https://curl.se/ca/cacert.pem and save it as includes/cacert.pem (no restart needed)."),
 ]);

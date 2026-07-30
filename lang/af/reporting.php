@@ -198,7 +198,7 @@ return [
 
         // Section 3: System logs
         's3_heading' => 'Stelsellogboeke',
-        's3_intro'   => 'Die Logboeke-area vang alles vas wat agter die skerms in jou FreeITSM-instansie gebeur. Elke aanmeldpoging, e-posinvoer en stelselgebeurtenis word aangeteken met \'n tydstempel en status sodat jy altyd \'n volledige beeld van platformaktiwiteit het.',
+        's3_intro'   => 'Die Logboeke-area vang alles vas wat agter die skerms in jou Domus Desk-instansie gebeur. Elke aanmeldpoging, e-posinvoer en stelselgebeurtenis word aangeteken met \'n tydstempel en status sodat jy altyd \'n volledige beeld van platformaktiwiteit het.',
         's3_badge_login'  => 'AANMELD',
         's3_badge_email'  => 'E-POS',
         's3_badge_system' => 'STELSEL',

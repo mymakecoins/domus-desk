@@ -32,7 +32,7 @@ function getHelpTopics() {
     return [
         'encryption' => [
             'hero' => 'Encryption',
-            'sub'  => 'Generate and look after the AES-256-GCM key that encrypts the sensitive credentials FreeITSM stores — vCenter logins, AI API keys and mailbox OAuth secrets.',
+            'sub'  => 'Generate and look after the AES-256-GCM key that encrypts the sensitive credentials Domus Desk stores — vCenter logins, AI API keys and mailbox OAuth secrets.',
             'sections' => [
                 ['id' => 'overview', 'label' => 'Overview'],
                 ['id' => 'status',   'label' => 'Key status'],
@@ -44,7 +44,7 @@ function getHelpTopics() {
         ],
         'analysts' => [
             'hero' => 'Analysts',
-            'sub'  => 'Create the people who work in FreeITSM, decide who is an administrator, control which companies and modules each of them can reach, put them into teams and reset their passwords.',
+            'sub'  => 'Create the people who work in Domus Desk, decide who is an administrator, control which companies and modules each of them can reach, put them into teams and reset their passwords.',
             'sections' => [
                 ['id' => 'overview',  'label' => 'Overview'],
                 ['id' => 'adding',    'label' => 'Adding an analyst'],
@@ -99,7 +99,7 @@ function getHelpTopics() {
         ],
         'db-verify' => [
             'hero' => 'Database verification',
-            'sub'  => 'Check that every table, column, key and index FreeITSM expects is present — and create anything that is missing — without touching your existing data.',
+            'sub'  => 'Check that every table, column, key and index Domus Desk expects is present — and create anything that is missing — without touching your existing data.',
             'sections' => [
                 ['id' => 'overview', 'label' => 'Overview'],
                 ['id' => 'checks',   'label' => 'What it checks'],
@@ -111,7 +111,7 @@ function getHelpTopics() {
         ],
         'colours' => [
             'hero' => 'Module colours',
-            'sub'  => 'Give each module its own colour so its icon and headers stand out at a glance across FreeITSM.',
+            'sub'  => 'Give each module its own colour so its icon and headers stand out at a glance across Domus Desk.',
             'sections' => [
                 ['id' => 'overview', 'label' => 'Overview'],
                 ['id' => 'change',   'label' => 'Changing a colour'],
@@ -167,7 +167,7 @@ function getHelpTopics() {
         ],
         'api' => [
             'hero' => 'API',
-            'sub'  => 'FreeITSM has a REST API so other systems — monitoring tools, scripts, portals, RMM platforms — can create and work tickets programmatically. You create keys here in System, decide exactly what each key may do, and test everything from the built-in documentation page.',
+            'sub'  => 'Domus Desk has a REST API so other systems — monitoring tools, scripts, portals, RMM platforms — can create and work tickets programmatically. You create keys here in System, decide exactly what each key may do, and test everything from the built-in documentation page.',
             'sections' => [
                 ['id' => 'overview',    'label' => 'Overview'],
                 ['id' => 'keys',        'label' => 'Creating keys'],
@@ -181,7 +181,7 @@ function getHelpTopics() {
         ],
         'webhooks' => [
             'hero' => 'Webhooks',
-            'sub'  => 'Push events out of FreeITSM to Slack, Teams, Discord or any URL. You build a webhook as an action inside a workflow — this page is the control room that shows whether they are actually being delivered.',
+            'sub'  => 'Push events out of Domus Desk to Slack, Teams, Discord or any URL. You build a webhook as an action inside a workflow — this page is the control room that shows whether they are actually being delivered.',
             'sections' => [
                 ['id' => 'overview',  'label' => 'Overview'],
                 ['id' => 'building',  'label' => 'Building a webhook'],
@@ -208,7 +208,7 @@ function getHelpTopics() {
         ],
         'demo-data' => [
             'hero' => 'Demo data',
-            'sub'  => 'Fill a fresh FreeITSM with realistic sample data — analysts, tickets, assets, software, a CMDB and more — so you can evaluate every module without typing in your own records. Import each module on its own, and remove it again just as easily.',
+            'sub'  => 'Fill a fresh Domus Desk with realistic sample data — analysts, tickets, assets, software, a CMDB and more — so you can evaluate every module without typing in your own records. Import each module on its own, and remove it again just as easily.',
             'sections' => [
                 ['id' => 'overview', 'label' => 'Overview'],
                 ['id' => 'whats',    'label' => "What's included"],
@@ -231,7 +231,7 @@ function getHelpTopics() {
         ],
         'companies' => [
             'hero' => 'Companies',
-            'sub'  => 'Run several separate client companies from one FreeITSM install — keeping each one\'s people, tickets and inbound email apart — or just one, invisibly, if that\'s all you need.',
+            'sub'  => 'Run several separate client companies from one Domus Desk install — keeping each one\'s people, tickets and inbound email apart — or just one, invisibly, if that\'s all you need.',
             'sections' => [
                 ['id' => 'overview', 'label' => 'Overview'],
                 ['id' => 'adding',   'label' => 'Adding companies'],

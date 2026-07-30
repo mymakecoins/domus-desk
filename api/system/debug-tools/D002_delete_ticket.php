@@ -57,7 +57,7 @@ addSection($sections, "REPORT HEADER", [
 // ---- 2. AUTH GATE ------------------------------------------------------
 
 if (!isset($_SESSION['analyst_id'])) {
-    addSection($sections, "AUTH", "FAIL: not logged in. Log into FreeITSM in the same browser, then re-run.");
+    addSection($sections, "AUTH", "FAIL: not logged in. Log into Domus Desk in the same browser, then re-run.");
     emit_and_exit($sections);
 }
 
@@ -243,7 +243,7 @@ if ($targetFk) {
 } else {
     $fkOut[] = "  present    : NO";
     $fkOut[] = "  meaning    : this database has no FK from email_attachments to emails, so the delete cannot fail on it here.";
-    $fkOut[] = "               (A fresh install from freeitsm.sql has this FK; installs grown via Database Verify";
+    $fkOut[] = "               (A fresh install from domus-desk.sql has this FK; installs grown via Database Verify";
     $fkOut[] = "                may not — which is why the bug appears on some installs but not others.)";
 }
 $fkOut[] = "";

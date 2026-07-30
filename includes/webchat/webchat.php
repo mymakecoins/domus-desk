@@ -3,7 +3,7 @@
  * Web chat widgets — shared helpers.
  *
  * A web chat widget is the self-hosted twin of a WhatsApp number: it drives one
- * `messaging_channels` row (channel_type='webchat', provider='freeitsm') so that
+ * `messaging_channels` row (channel_type='webchat', provider='domus_desk') so that
  * once a visitor's message is ingested it flows through the same ticket membrane,
  * inbox and reply pipeline as every other channel. This file holds the helpers the
  * config screen and (later) the public widget endpoints share.
@@ -66,7 +66,7 @@ function webchatEmbedSnippet(PDO $conn, string $widgetKey): string
         . "    var s=d.createElement('script');\n"
         . "    s.src=" . json_encode($src) . ";\n"
         . "    s.async=true;\n"
-        . "    s.setAttribute('data-freeitsm-widget'," . json_encode($widgetKey) . ");\n"
+        . "    s.setAttribute('data-domus-desk-widget'," . json_encode($widgetKey) . ");\n"
         . "    d.head.appendChild(s);\n"
         . "  })(document);\n"
         . "</script>";

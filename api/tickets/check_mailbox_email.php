@@ -748,7 +748,7 @@ function extractTicketReference($subject) {
 /**
  * Find existing ticket by number.
  *
- * FOLLOWS MERGES. Every notification FreeITSM has ever sent carries [SDREF:ABC-…] in
+ * FOLLOWS MERGES. Every notification Domus Desk has ever sent carries [SDREF:ABC-…] in
  * its subject, and those emails live in customers' inboxes forever. When ABC is later
  * merged into DEF, a reply to any of them still quotes ABC — and without this it would
  * append to a ticket that is closed, flagged as merged, and which nobody is watching.

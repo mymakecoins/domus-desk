@@ -178,7 +178,7 @@ return [
     ],
 
     'help' => [
-        'page_title' => 'FreeITSM — LMS-gids',
+        'page_title' => 'Domus Desk — LMS-gids',
         'nav_label'  => 'Gids',
 
         'nav_overview'     => 'Oorsig',

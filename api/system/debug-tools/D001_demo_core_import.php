@@ -68,7 +68,7 @@ addSection($sections, "REPORT HEADER", [
 // ---- 2. AUTH GATE ------------------------------------------------------
 
 if (!isset($_SESSION['analyst_id'])) {
-    addSection($sections, "AUTH", "FAIL: not logged in. Log into FreeITSM in the same browser, then re-run this diagnostic.");
+    addSection($sections, "AUTH", "FAIL: not logged in. Log into Domus Desk in the same browser, then re-run this diagnostic.");
     header('Content-Type: text/plain; charset=utf-8');
     echo implode("\n\n", $sections) . "\n";
     exit;

@@ -14,11 +14,11 @@ require_once($db_config_path);
 // Encryption key file location (optional override).
 // The AES key that protects sensitive values lives in a file outside the web
 // root. By default it is c:\wamp64\encryption_keys\sdtickets.key on Windows or
-// /var/www/encryption_keys/freeitsm.key on Linux. To store it elsewhere (e.g.
+// /var/www/encryption_keys/domus_desk.key on Linux. To store it elsewhere (e.g.
 // your web root isn't /var/www), uncomment the line below and set an absolute
 // path. This can also be set via the ENCRYPTION_KEY_PATH environment variable,
 // which Docker uses; the setting here takes precedence when both are present.
-// define('ENCRYPTION_KEY_PATH', '/your/path/encryption_keys/freeitsm.key');
+// define('ENCRYPTION_KEY_PATH', '/your/path/encryption_keys/domus_desk.key');
 
 // Timezone
 // Fallback timezone for bare date() calls. Datetimes are stored in UTC and
@@ -51,7 +51,7 @@ ini_set('display_errors', 1);
  * BASE_URL — absolute URL path prefix for the app's deployment root.
  *
  * Examples:
- *   App served at http://localhost/freeitsm-app/ → BASE_URL = '/freeitsm-app/'
+ *   App served at http://localhost/domus-desk-app/ → BASE_URL = '/domus-desk-app/'
  *   App served at https://itsm.company.com/      → BASE_URL = '/'
  *
  * Used everywhere we build internal links so we don't have to fiddle with

@@ -211,7 +211,7 @@ $__extrasJson = $__spec ? json_encode($__spec['extras']) : '{}';
     const esc = s => { const d = document.createElement('div'); d.textContent = s == null ? '' : String(s); return d.innerHTML; };
 
     // Section -> GitHub wiki usage guide.
-    const WIKI_BASE = 'https://github.com/edmozley/freeitsm/wiki/';
+    const WIKI_BASE = 'https://github.com/mymakecoins/domus-desk/wiki/';
     const WIKI = {
         'Getting started': 'REST-API', 'Tickets': 'REST-API-Tickets',
         'Ticket notes, conversation & history': 'REST-API-Tickets', 'Time tracking': 'REST-API-Tickets',
@@ -294,8 +294,8 @@ $__extrasJson = $__spec ? json_encode($__spec['extras']) : '{}';
 
     // --- State ----------------------------------------------------------------
     let current = null;          // the selected endpoint (null = overview)
-    let lang = localStorage.getItem('freeitsm_api_docs_lang') || 'curl';
-    let apiKey = localStorage.getItem('freeitsm_api_test_key') || '';
+    let lang = localStorage.getItem('domus_desk_api_docs_lang') || 'curl';
+    let apiKey = localStorage.getItem('domus_desk_api_test_key') || '';
     const respCache = {};        // url -> {status, ok, text, remaining}
     let fireTimer = null;
     let fireSeq = 0;             // guards against out-of-order async responses
@@ -352,7 +352,7 @@ $__extrasJson = $__spec ? json_encode($__spec['extras']) : '{}';
         const wikiLinks = [...new Set(Object.values(WIKI))].map(w =>
             '<a href="' + WIKI_BASE + w + '" target="_blank" rel="noopener">' + esc(w.replace(/-/g, ' ')) + '</a>').join(' · ');
         document.getElementById('docsMain').innerHTML = `
-            <div class="ep-title"><code style="font-size:20px;">FreeITSM REST API v1</code></div>
+            <div class="ep-title"><code style="font-size:20px;">Domus Desk REST API v1</code></div>
             <p class="ep-desc">Pick an endpoint on the left (or press <code>/</code> to search). The middle pane documents it —
                fill in the parameter fields or click an example, and the right pane rewrites the code sample in your
                language and shows the live response from this install.</p>
@@ -571,7 +571,7 @@ $__extrasJson = $__spec ? json_encode($__spec['extras']) : '{}';
                 </div>`;
             document.querySelectorAll('.lang-tab').forEach(t => t.addEventListener('click', () => {
                 lang = t.dataset.lang;
-                localStorage.setItem('freeitsm_api_docs_lang', lang);
+                localStorage.setItem('domus_desk_api_docs_lang', lang);
                 document.querySelectorAll('.lang-tab').forEach(x => x.classList.toggle('active', x.dataset.lang === lang));
                 refreshCode();
             }));
@@ -582,7 +582,7 @@ $__extrasJson = $__spec ? json_encode($__spec['extras']) : '{}';
         const ki = document.getElementById('apiKeyInput');
         ki.addEventListener('change', () => {
             apiKey = ki.value.trim();
-            localStorage.setItem('freeitsm_api_test_key', apiKey);
+            localStorage.setItem('domus_desk_api_test_key', apiKey);
             checkKey();
             if (current) onChange(true);
         });

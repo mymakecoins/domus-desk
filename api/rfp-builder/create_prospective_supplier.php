@@ -2,7 +2,7 @@
 /**
  * Create a new "prospective" supplier inline from the RFP suppliers
  * page and immediately invite them to the current RFP. Used when the
- * supplier the analyst wants to evaluate isn't yet in FreeITSM's
+ * supplier the analyst wants to evaluate isn't yet in Domus Desk's
  * suppliers list.
  *
  * The supplier is created with just legal_name (and optional trading_name

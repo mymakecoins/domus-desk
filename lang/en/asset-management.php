@@ -492,7 +492,7 @@ return [
         'secret_saved_placeholder'    => 'Saved (enter new secret to change)',
         'verify_ssl'                  => 'Verify SSL',
         'verify_ssl_hint'             => 'Disable only for testing against environments with self-signed certificates',
-        'verify_ssl_warning'          => '<strong>Warning:</strong> SSL verification is turned off. FreeITSM will accept any TLS certificate from Microsoft\'s servers without checking it. Anyone with access to your network (or your DNS, or a compromised certificate authority) could pose as Microsoft, intercept the traffic, and steal your tenant ID, client ID, client secret, and the access tokens that follow. Only leave this off in test environments with self-signed certificates &mdash; never in production.',
+        'verify_ssl_warning'          => '<strong>Warning:</strong> SSL verification is turned off. Domus Desk will accept any TLS certificate from Microsoft\'s servers without checking it. Anyone with access to your network (or your DNS, or a compromised certificate authority) could pose as Microsoft, intercept the traffic, and steal your tenant ID, client ID, client secret, and the access tokens that follow. Only leave this off in test environments with self-signed certificates &mdash; never in production.',
         'batch_size_label'            => 'Software sync batch size',
         'batch_size_hint'             => 'Number of devices included in a single software-sync job (1–500). Smaller batches finish quicker but need more clicks to cover the estate.',
         'sync'                        => 'Sync',

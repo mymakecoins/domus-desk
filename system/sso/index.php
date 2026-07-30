@@ -277,7 +277,7 @@ $redirectUri = $scheme . '://' . ($_SERVER['HTTP_HOST'] ?? 'localhost') . BASE_U
                     <div class="form-field">
                         <label><?php echo htmlspecialchars(t('system.sso.field_ldap_bind_dn')); ?></label>
                         <div class="hint"><?php echo htmlspecialchars(t('system.sso.field_ldap_bind_dn_hint')); ?></div>
-                        <input type="text" id="fLdapBindDn" placeholder="svc-freeitsm@example.local">
+                        <input type="text" id="fLdapBindDn" placeholder="svc-domusdesk@example.local">
                     </div>
                     <div class="form-field">
                         <label><?php echo htmlspecialchars(t('system.sso.field_ldap_bind_password')); ?></label>
@@ -361,7 +361,7 @@ $redirectUri = $scheme . '://' . ($_SERVER['HTTP_HOST'] ?? 'localhost') . BASE_U
                 <div class="form-field">
                     <label><?php echo htmlspecialchars(t('system.sso.field_client_id')); ?></label>
                     <div class="hint"><?php echo htmlspecialchars(t('system.sso.field_client_id_hint')); ?></div>
-                    <input type="text" id="fClientId" placeholder="freeitsm-app">
+                    <input type="text" id="fClientId" placeholder="domus-desk-app">
                 </div>
                 <div class="form-field">
                     <label><?php echo htmlspecialchars(t('system.sso.field_client_secret')); ?></label>

@@ -29,7 +29,7 @@ return [
         'verify_ssl_label'        => 'Weryfikuj SSL',
         'verify_ssl_hint'         => 'Wyłącz tylko podczas testów w środowiskach z certyfikatami z podpisem własnym (np. za serwerem proxy inspekcyjnym).',
         'ssl_warning_title'       => 'Ostrzeżenie',
-        'ssl_warning_body'        => 'Weryfikacja SSL jest wyłączona. FreeITSM zaakceptuje dowolny certyfikat TLS od dostawcy AI bez jego sprawdzania. Każdy, kto ma dostęp do Twojej sieci, mógłby podszyć się pod dostawcę, przechwycić ruch i wykraść Twój klucz API — wraz z każdym kolejnym promptem i odpowiedzią. Pozostawiaj to wyłączone wyłącznie w środowiskach testowych z certyfikatami z podpisem własnym — nigdy w środowisku produkcyjnym.',
+        'ssl_warning_body'        => 'Weryfikacja SSL jest wyłączona. Domus Desk zaakceptuje dowolny certyfikat TLS od dostawcy AI bez jego sprawdzania. Każdy, kto ma dostęp do Twojej sieci, mógłby podszyć się pod dostawcę, przechwycić ruch i wykraść Twój klucz API — wraz z każdym kolejnym promptem i odpowiedzią. Pozostawiaj to wyłączone wyłącznie w środowiskach testowych z certyfikatami z podpisem własnym — nigdy w środowisku produkcyjnym.',
         'test_btn'                => 'Testuj',
         'testing'                 => 'Testowanie…',
     ],

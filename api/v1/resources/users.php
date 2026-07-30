@@ -1,6 +1,6 @@
 <?php
 /**
- * FreeITSM REST API v1 — requesters (the `users` table: end users who raise
+ * Domus Desk REST API v1 — requesters (the `users` table: end users who raise
  * tickets, distinct from analysts).
  */
 

@@ -29,7 +29,7 @@ try {
     } else {
         $accountName = $_SESSION['ss_user_email'] ?? 'user';
     }
-    $uri = getTotpUri($secret, $accountName, 'FreeITSM');
+    $uri = getTotpUri($secret, $accountName, 'Domus Desk');
 
     // Store in session pending verification (not in DB yet)
     $_SESSION['pending_totp_secret'] = $secret;

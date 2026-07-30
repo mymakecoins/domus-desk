@@ -15,7 +15,7 @@ require __DIR__ . '/_top.php';
 <!-- 1. Overview -->
 <div class="syshelp-section" id="overview">
     <div class="syshelp-section-header"><h3>What this page is</h3></div>
-    <p class="syshelp-lead">A webhook pushes an event out of FreeITSM to somewhere else — a Slack channel, a Teams channel, Discord, or any URL that accepts an HTTP POST. &ldquo;Ticket P1 raised&rdquo; lands in the channel your team already watches.</p>
+    <p class="syshelp-lead">A webhook pushes an event out of Domus Desk to somewhere else — a Slack channel, a Teams channel, Discord, or any URL that accepts an HTTP POST. &ldquo;Ticket P1 raised&rdquo; lands in the channel your team already watches.</p>
     <div class="syshelp-callout info"><strong>You don't create webhooks on this page.</strong> There is no list of webhooks to add or delete here, because a webhook isn't a thing you configure separately — it's the <strong>Send a webhook</strong> action inside a <strong>workflow</strong>. This page is the control room: it tells you whether the ones you built are actually being delivered, and lets you look at, diagnose and replay individual deliveries.</div>
     <p>It has four cards, top to bottom:</p>
     <div class="syshelp-cards">
@@ -57,7 +57,7 @@ require __DIR__ . '/_top.php';
 <!-- 3. The delivery worker -->
 <div class="syshelp-section highlight" id="worker">
     <div class="syshelp-section-header"><h3>The delivery worker — do this first</h3></div>
-    <p class="syshelp-lead">FreeITSM never sends a webhook while you wait. The workflow drops it into a queue and returns instantly; a background worker picks it up and sends it. That keeps a slow or dead endpoint from hanging up the app — but it has one consequence you cannot ignore:</p>
+    <p class="syshelp-lead">Domus Desk never sends a webhook while you wait. The workflow drops it into a queue and returns instantly; a background worker picks it up and sends it. That keeps a slow or dead endpoint from hanging up the app — but it has one consequence you cannot ignore:</p>
     <div class="syshelp-callout warn"><strong>If the worker isn't scheduled, nothing is ever sent.</strong> Webhooks queue up silently and for ever. No error appears anywhere else in the app. This is the single most common reason for &ldquo;my webhooks don't work&rdquo;.</div>
     <p>The status pill at the top of the page tells you where you stand — <strong>running</strong>, <strong>stale</strong>, <strong>down</strong>, or <strong>never run</strong>. If it is anything but running, the card shows you the exact command to schedule, with a copy button. There are two ways to run it:</p>
     <table class="syshelp-table">
@@ -81,7 +81,7 @@ require __DIR__ . '/_top.php';
         <tr><td><strong>Retrying</strong></td><td>An attempt failed, but more are scheduled. It will sort itself out, or become Failed. No action needed yet.</td></tr>
         <tr><td><strong>Failed</strong></td><td><strong>Given up on.</strong> All six attempts are used. It will <em>never</em> retry on its own — the only way it is ever sent is if you Replay it.</td></tr>
     </table>
-    <p>Opening a row shows the full request FreeITSM sent — method, URL, headers, body — the response that came back, and a plain-English <strong>diagnosis</strong> of the failure where it can work one out (a certificate problem, a DNS failure, a refused connection, a timeout). Take the diagnosis seriously; it usually names the fix.</p>
+    <p>Opening a row shows the full request Domus Desk sent — method, URL, headers, body — the response that came back, and a plain-English <strong>diagnosis</strong> of the failure where it can work one out (a certificate problem, a DNS failure, a refused connection, a timeout). Take the diagnosis seriously; it usually names the fix.</p>
 </div>
 
 <!-- 5. Replay -->
@@ -106,11 +106,11 @@ require __DIR__ . '/_top.php';
 <div class="syshelp-section" id="security">
     <div class="syshelp-section-header"><h3>Signing &amp; encryption</h3></div>
     <h4>Signing secret</h4>
-    <p>If you set a signing secret on the action, every request carries an <code>X-FreeITSM-Signature</code> header — an HMAC-SHA256 of the exact body, keyed with your secret. The receiving end recomputes it and compares. That's how it knows the POST genuinely came from your FreeITSM and not from somebody who guessed the URL. Worth doing for any endpoint you've written yourself; Slack, Teams and Discord don't use it (their URL is the secret).</p>
+    <p>If you set a signing secret on the action, every request carries an <code>X-Domus Desk-Signature</code> header — an HMAC-SHA256 of the exact body, keyed with your secret. The receiving end recomputes it and compares. That's how it knows the POST genuinely came from your Domus Desk and not from somebody who guessed the URL. Worth doing for any endpoint you've written yourself; Slack, Teams and Discord don't use it (their URL is the secret).</p>
 
     <h4>Encryption at rest</h4>
-    <p>A webhook URL <em>is</em> a credential — anyone holding a Slack webhook URL can post to that channel. So FreeITSM encrypts both the URL and the signing secret in the database, using the key you set up under System &rarr; Encryption.</p>
-    <div class="syshelp-callout warn"><strong>No encryption key means plain text.</strong> If no key is configured, FreeITSM stores these values unencrypted rather than refusing to work — and the red banner on the Data protection card says so. Set a key up on the Encryption page. Note that doing so does <em>not</em> retro-encrypt what's already saved: you must open and re-save each workflow that sends a webhook.</div>
+    <p>A webhook URL <em>is</em> a credential — anyone holding a Slack webhook URL can post to that channel. So Domus Desk encrypts both the URL and the signing secret in the database, using the key you set up under System &rarr; Encryption.</p>
+    <div class="syshelp-callout warn"><strong>No encryption key means plain text.</strong> If no key is configured, Domus Desk stores these values unencrypted rather than refusing to work — and the red banner on the Data protection card says so. Set a key up on the Encryption page. Note that doing so does <em>not</em> retro-encrypt what's already saved: you must open and re-save each workflow that sends a webhook.</div>
     <p>In the delivery log, URLs are shown with their last segment masked, so the channel token isn't casually readable.</p>
 </div>
 

@@ -516,7 +516,7 @@ return [
         'hierarchy_body'    => 'Verwenden Sie die Über-/Unterordnungsverknüpfung, wenn das Entfernen des übergeordneten Objekts das untergeordnete bedeutungslos macht. Klassisches Beispiel: eine SQL-Kette.',
         'hierarchy_diagram_n1' => 'Server (SQLSVR01)',
         'hierarchy_diagram_n2' => 'SQL-Instanz (MSSQLSERVER)',
-        'hierarchy_diagram_n3' => 'Datenbank (FREEITSM)',
+        'hierarchy_diagram_n3' => 'Datenbank (DOMUS_DESK)',
         'hierarchy_diagram_n4' => 'Gespeicherte Prozedur (sp_archive)',
         'hierarchy_diagram_n5' => 'SQL-Auftrag (Nächtliche Archivierung)',
         'hierarchy_body2'   => 'Jede Ebene kann wirklich nicht ohne ihr übergeordnetes Objekt existieren &mdash; löschen Sie den Server, geht jede Ebene darunter mit. <strong>Kaskadenlöschung wird erzwungen</strong>; die Bestätigung sagt Ihnen genau, wie viele Nachkommen mitgehen.',
@@ -529,7 +529,7 @@ return [
         'relationships_step1'   => 'Klicken Sie im Abschnitt <strong>Beziehungen</strong> der Objektdetailseite auf <strong>+ Beziehung hinzufügen</strong>.',
         'relationships_step2'   => 'Wählen Sie ein Verb aus dem Dropdown (ein Hinweis zeigt das Umkehrverb, sodass Sie sehen können, wie es sich von der anderen Seite liest).',
         'relationships_step3'   => 'Tippen Sie, um das verknüpfte Objekt zu suchen &mdash; die Autovervollständigung durchsucht jede Klasse. Auswählen und speichern.',
-        'relationships_body2'   => 'Die Beziehung ist symmetrisch: Wenn Sie das verknüpfte Objekt betrachten, erscheint sie in <em>dessen</em> eingehender Spalte mit dem Umkehrverb. So zeigt sich <em>"FREEITSM hängt ab von AD"</em> an der Datenbank als <em>"FREEITSM wird benötigt von AD"</em>, wenn Sie AD betrachten.',
+        'relationships_body2'   => 'Die Beziehung ist symmetrisch: Wenn Sie das verknüpfte Objekt betrachten, erscheint sie in <em>dessen</em> eingehender Spalte mit dem Umkehrverb. So zeigt sich <em>"DOMUS_DESK hängt ab von AD"</em> an der Datenbank als <em>"DOMUS_DESK wird benötigt von AD"</em>, wenn Sie AD betrachten.',
         'relationships_tip'     => 'Fügen Sie neue Verben in <strong>Einstellungen &rarr; Beziehungstypen</strong> hinzu &mdash; jedes Verb hat eine Umkehrung. Drei werden beim ersten Start angelegt: <em>hängt ab von</em>, <em>verbindet sich mit</em>, <em>verwaltet von</em>.',
 
         // 8. When to use which

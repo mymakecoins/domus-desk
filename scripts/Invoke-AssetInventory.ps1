@@ -1,18 +1,18 @@
 <#
 .SYNOPSIS
     Collects hardware, software, and system inventory from the local machine and
-    posts it to FreeITSM.
+    posts it to Domus Desk.
 
 .DESCRIPTION
     Gathers hostname, manufacturer, model, CPU, memory, OS, BIOS, disk, network,
     GPU, TPM, BitLocker, and installed software information then sends the data as
-    a JSON payload to the FreeITSM asset inventory API.
+    a JSON payload to the Domus Desk asset inventory API.
 
     Run as Administrator for full results (BitLocker, TPM, and some disk details
     require elevation).
 
 .PARAMETER ApiUrl
-    The base URL of your FreeITSM instance (e.g. https://itsm.yourcompany.com).
+    The base URL of your Domus Desk instance (e.g. https://itsm.yourcompany.com).
 
 .PARAMETER ApiKey
     API key for authentication.
@@ -38,7 +38,7 @@ param(
 # Require at least one output destination
 if (-not $ApiUrl -and -not $OutputFile) {
     Write-Host ""
-    Write-Host "FreeITSM Asset Inventory Collector" -ForegroundColor Cyan
+    Write-Host "Domus Desk Asset Inventory Collector" -ForegroundColor Cyan
     Write-Host "-----------------------------------" -ForegroundColor Cyan
     Write-Host ""
     Write-Host "Usage:" -ForegroundColor Yellow

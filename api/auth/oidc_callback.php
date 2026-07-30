@@ -138,7 +138,7 @@ try {
         } else {
             // --- 3) Just-in-time provisioning (only if the provider allows it) ---
             if ((int)$provider['auto_create_users'] !== 1) {
-                ssoBail('No FreeITSM account exists for ' . ($email ?: 'this user') . '. Ask an administrator to create one.');
+                ssoBail('No Domus Desk account exists for ' . ($email ?: 'this user') . '. Ask an administrator to create one.');
             }
             if ($email === '') {
                 ssoBail('Cannot auto-create an account without an email from the provider.');

@@ -1,6 +1,6 @@
 <?php
 /**
- * FreeITSM REST API v1 — tickets resource.
+ * Domus Desk REST API v1 — tickets resource.
  *
  * Mirrors the behaviour of the internal ticket endpoints so a ticket touched
  * via the API is indistinguishable from one touched in the UI:

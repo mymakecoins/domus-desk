@@ -1,6 +1,6 @@
 <?php
 /**
- * FreeITSM REST API v1 — permission catalog.
+ * Domus Desk REST API v1 — permission catalog.
  *
  * The single source of truth for every permission an API key can carry, used
  * by three consumers: the v1 auth layer (enforcement), the System > API admin

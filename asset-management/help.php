@@ -606,12 +606,12 @@ $translationNamespaces = ['common', 'asset-management'];
                         <span class="am-help-section-num highlight">4</span>
                         <h3><?php echo htmlspecialchars(t('asset-management.help.inventory_script_heading')); ?></h3>
                     </div>
-                    <p class="am-help-intro">Assets are discovered automatically using a PowerShell script that runs on each Windows machine. It collects hardware, software, and device information, then posts it to your FreeITSM instance via the API.</p>
+                    <p class="am-help-intro">Assets are discovered automatically using a PowerShell script that runs on each Windows machine. It collects hardware, software, and device information, then posts it to your Domus Desk instance via the API.</p>
 
-                    <p>The script is located at <strong>scripts/Invoke-AssetInventory.ps1</strong> in your FreeITSM installation. It takes two parameters:</p>
+                    <p>The script is located at <strong>scripts/Invoke-AssetInventory.ps1</strong> in your Domus Desk installation. It takes two parameters:</p>
 
                     <div class="am-help-code">
-                        <span class="comment"># Basic usage &mdash; post inventory to FreeITSM</span><br>
+                        <span class="comment"># Basic usage &mdash; post inventory to Domus Desk</span><br>
                         .\Invoke-AssetInventory.ps1 <span class="flag">-ApiUrl</span> <span class="string">"https://itsm.yourcompany.com"</span> <span class="flag">-ApiKey</span> <span class="string">"your-api-key"</span><br><br>
                         <span class="comment"># Save to a file (useful for testing)</span><br>
                         .\Invoke-AssetInventory.ps1 <span class="flag">-OutputFile</span> <span class="string">"C:\Temp\asset.json"</span><br><br>
@@ -706,7 +706,7 @@ $translationNamespaces = ['common', 'asset-management'];
                         <div class="am-help-step-item">
                             <div class="am-help-step-num">1</div>
                             <div>
-                                <strong>Get your API key</strong> &mdash; go to Admin &gt; API Keys and generate a key. This authenticates the script against FreeITSM.
+                                <strong>Get your API key</strong> &mdash; go to Admin &gt; API Keys and generate a key. This authenticates the script against Domus Desk.
                             </div>
                         </div>
                         <div class="am-help-step-item">
@@ -753,7 +753,7 @@ $translationNamespaces = ['common', 'asset-management'];
                         <span class="am-help-section-num">7</span>
                         <h3><?php echo htmlspecialchars(t('asset-management.help.nav_servers')); ?></h3>
                     </div>
-                    <p>If you run VMware vCenter, FreeITSM can sync your entire virtual machine estate with a single click.</p>
+                    <p>If you run VMware vCenter, Domus Desk can sync your entire virtual machine estate with a single click.</p>
                     <div class="am-help-steps">
                         <div class="am-help-step-item">
                             <div class="am-help-step-num">1</div>
@@ -764,7 +764,7 @@ $translationNamespaces = ['common', 'asset-management'];
                         <div class="am-help-step-item">
                             <div class="am-help-step-num">2</div>
                             <div>
-                                <strong>Click Sync vCenter</strong> &mdash; on the Servers tab, click the sync button. FreeITSM connects to vCenter's REST API and imports all VMs.
+                                <strong>Click Sync vCenter</strong> &mdash; on the Servers tab, click the sync button. Domus Desk connects to vCenter's REST API and imports all VMs.
                             </div>
                         </div>
                         <div class="am-help-step-item">

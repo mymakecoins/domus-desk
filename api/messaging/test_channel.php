@@ -3,7 +3,7 @@
  * API Endpoint: test a messaging channel. Three read-mostly checks, each safe to run:
  *
  *   credentials   — validate the stored credentials against the provider (read-only API call).
- *   reachability  — FreeITSM calls the channel's OWN public webhook URL and confirms it
+ *   reachability  — Domus Desk calls the channel's OWN public webhook URL and confirms it
  *                   round-trips back to this script (catches a down tunnel / wrong base URL).
  *   simulate      — run a synthetic inbound message through the real ingest, confirm a
  *                   ticket is created, then delete the test ticket/message/user.
@@ -101,7 +101,7 @@ function testReachability(PDO $conn, int $channelId): array
     if ($code === 200 && is_array($json) && ($json['pong'] ?? '') === $nonce) {
         return ['ok' => true, 'detail' => "Reachable — the public webhook URL responded correctly ($host)."];
     }
-    return ['ok' => false, 'detail' => "Reached $host but got HTTP $code with an unexpected response — a proxy, firewall or login page may be intercepting the URL before it reaches FreeITSM."];
+    return ['ok' => false, 'detail' => "Reached $host but got HTTP $code with an unexpected response — a proxy, firewall or login page may be intercepting the URL before it reaches Domus Desk."];
 }
 
 /** Run a synthetic inbound message through ingest, then clean up everything it created. */
@@ -121,7 +121,7 @@ function testSimulation(PDO $conn, array $channel): array
         $msg = [
             'from'            => $sender,
             'to'              => $channel['phone_number'] ?? '',
-            'body'            => 'FreeITSM webhook self-test — please ignore.',
+            'body'            => 'Domus Desk webhook self-test — please ignore.',
             'profile_name'    => 'Webhook Self-Test',
             'provider_msg_id' => 'SELFTEST-' . bin2hex(random_bytes(6)),
             'media'           => [],

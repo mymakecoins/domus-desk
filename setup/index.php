@@ -1,6 +1,6 @@
 <?php
 /**
- * FreeITSM Setup Verification
+ * Domus Desk Setup Verification
  * Checks that the system is correctly configured before going live.
  * DELETE THIS FOLDER once your system is in production.
  */
@@ -79,7 +79,7 @@ if (file_exists($configPath)) {
     // through the same sslApplyCurl() path the app uses, and tell cert failures
     // (actionable — configure a bundle) apart from no-network (inconclusive).
     // Any problem state links to the HTTPS-certificates wiki page for the fix.
-    $sslHelp = 'https://github.com/edmozley/freeitsm/wiki/HTTPS-Certificates-and-CA-Bundles';
+    $sslHelp = 'https://github.com/mymakecoins/domus-desk/wiki/HTTPS-Certificates-and-CA-Bundles';
     if (!defined('SSL_VERIFY_PEER')) {
         $checks[] = ['name' => t('setup.checks.ssl_verify'), 'status' => 'warn', 'detail' => t('setup.detail.ssl_undefined'), 'help' => $sslHelp];
     } elseif (!SSL_VERIFY_PEER) {
@@ -117,7 +117,7 @@ if (file_exists($configPath)) {
     }
 
     // 5b. CA bundle configured in php.ini (curl.cainfo / openssl.cafile). Now that
-    // FreeITSM ships its own bundle this is optional, but it's useful to see the
+    // Domus Desk ships its own bundle this is optional, but it's useful to see the
     // state — especially a path that IS set but points at a missing file, the
     // classic silent misconfiguration. Reflects the WEB SERVER's PHP; the
     // background worker runs under a separate CLI php.ini that this can't see.
@@ -390,7 +390,7 @@ $translationNamespaces = ['common', 'setup'];
 <body>
     <div class="setup-container">
         <div class="setup-header">
-            <img src="../assets/images/CompanyLogo.png" alt="FreeITSM">
+            <img src="../assets/images/CompanyLogo.png" alt="Domus Desk">
             <h1><?= htmlspecialchars(t('setup.heading')) ?></h1>
         </div>
 
@@ -436,7 +436,7 @@ $translationNamespaces = ['common', 'setup'];
             <p><?= htmlspecialchars(t('setup.login.intro')) ?></p>
             <div class="credentials">
                 <?= htmlspecialchars(t('setup.login.username')) ?> <strong>admin</strong><br>
-                <?= htmlspecialchars(t('setup.login.password')) ?> <strong>freeitsm</strong>
+                <?= htmlspecialchars(t('setup.login.password')) ?> <strong>domus_desk</strong>
             </div>
         </div>
         <?php endif; ?>

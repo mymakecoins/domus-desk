@@ -1,6 +1,6 @@
 # Outbound Webhook Delivery Cron — Setup Guide
 
-FreeITSM sends outbound webhooks (the **Send a webhook** workflow action) *asynchronously*: when a workflow fires, the webhook is added to a queue and returned instantly, so a slow or dead endpoint never delays the ticket save or the workflow run. A scheduled task then delivers the queue with automatic retries.
+Domus Desk sends outbound webhooks (the **Send a webhook** workflow action) *asynchronously*: when a workflow fires, the webhook is added to a queue and returned instantly, so a slow or dead endpoint never delays the ticket save or the workflow run. A scheduled task then delivers the queue with automatic retries.
 
 This document describes how to set up that schedule on Windows and Linux.
 
@@ -25,7 +25,7 @@ Review every delivery — status, retries, the response, and a **Replay** button
 ### A. CLI (recommended)
 
 ```
-php c:\wamp64\www\freeitsm-app\cron\webhook_deliveries.php
+php c:\wamp64\www\domus-desk-app\cron\webhook_deliveries.php
 ```
 
 No auth needed — filesystem permissions gate who can run it.
@@ -33,7 +33,7 @@ No auth needed — filesystem permissions gate who can run it.
 ### B. HTTP
 
 ```
-curl "http://your-host/freeitsm-app/cron/webhook_deliveries.php?token=<TOKEN>"
+curl "http://your-host/domus-desk-app/cron/webhook_deliveries.php?token=<TOKEN>"
 ```
 
 The token is auto-generated on first install (or by Database Verification) and stored in `system_settings` under `webhook_cron_token`:
@@ -54,12 +54,12 @@ Create a task (`taskschd.msc`):
 
 | Field | Value |
 |-------|-------|
-| Name | `FreeITSM — Webhook Deliveries` |
+| Name | `Domus Desk — Webhook Deliveries` |
 | Trigger | Daily, recur every **1 day**, repeat every **1 minute** for **1 day** |
 | Action | Start a program |
 | Program/script | `C:\wamp64\bin\php\php8.2.x\php.exe` |
-| Add arguments | `C:\wamp64\www\freeitsm-app\cron\webhook_deliveries.php` |
-| Start in | `C:\wamp64\www\freeitsm-app` |
+| Add arguments | `C:\wamp64\www\domus-desk-app\cron\webhook_deliveries.php` |
+| Start in | `C:\wamp64\www\domus-desk-app` |
 
 (Adjust the PHP path to your WAMP version.) To capture output, point the action at a `.bat` that redirects to a log file, as in the SLA cron guide.
 
@@ -68,7 +68,7 @@ Create a task (`taskschd.msc`):
 ## Linux — cron
 
 ```cron
-* * * * * /usr/bin/php /var/www/freeitsm-app/cron/webhook_deliveries.php >> /var/log/freeitsm-webhook-cron.log 2>&1
+* * * * * /usr/bin/php /var/www/domus-desk-app/cron/webhook_deliveries.php >> /var/log/domus_desk-webhook-cron.log 2>&1
 ```
 
 Adjust the `php` binary path (`which php`) and the install path. The cron user needs read access to `config.php` and the PHP `pdo_mysql`, `curl` and `mbstring` extensions.
@@ -77,13 +77,13 @@ Adjust the `php` binary path (`which php`) and the install path. The cron user n
 
 ## Verifying the signature (for webhook receivers)
 
-If you set a signing **secret** on the action, each request carries `X-FreeITSM-Signature: sha256=<hex>`, where the hex is `HMAC-SHA256(raw_request_body, secret)`. Recompute it over the exact bytes received and compare:
+If you set a signing **secret** on the action, each request carries `X-Domus Desk-Signature: sha256=<hex>`, where the hex is `HMAC-SHA256(raw_request_body, secret)`. Recompute it over the exact bytes received and compare:
 
 ```php
 $expected = 'sha256=' . hash_hmac('sha256', file_get_contents('php://input'), $secret);
-if (hash_equals($expected, $_SERVER['HTTP_X_FREEITSM_SIGNATURE'] ?? '')) {
+if (hash_equals($expected, $_SERVER['HTTP_X_DOMUS_DESK_SIGNATURE'] ?? '')) {
     // authentic — process it
 }
 ```
 
-A match proves the call came from your FreeITSM install and the body wasn't altered.
+A match proves the call came from your Domus Desk install and the body wasn't altered.

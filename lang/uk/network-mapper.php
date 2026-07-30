@@ -23,7 +23,7 @@ return [
 
     // Diagrams landing page (index.php)
     'index' => [
-        'browser_title'    => 'FreeITSM — Network Mapper',
+        'browser_title'    => 'Domus Desk — Network Mapper',
         'heading'          => 'Мережеві діаграми',
         'filter_placeholder' => 'Фільтр за назвою…',
         'new'              => 'Нова діаграма',
@@ -60,8 +60,8 @@ return [
 
     // Diagram editor shell (diagram.php)
     'editor' => [
-        'browser_title'    => 'FreeITSM — Мережева діаграма',
-        'browser_title_named' => 'FreeITSM — {title}',
+        'browser_title'    => 'Domus Desk — Мережева діаграма',
+        'browser_title_named' => 'Domus Desk — {title}',
         'back'             => '← Усі діаграми',
         'loading'          => 'Завантаження…',
         'load_failed'      => 'Помилка завантаження діаграми',
@@ -308,7 +308,7 @@ return [
 
     // Help guide (help.php)
     'help' => [
-        'browser_title'    => 'FreeITSM — Посібник Network Mapper',
+        'browser_title'    => 'Domus Desk — Посібник Network Mapper',
         'sidebar_title'    => 'Посібник',
         'hero_title'       => 'Посібник Network Mapper',
         'hero_subtitle'    => 'Малюйте мережеві та архітектурні діаграми поверх CMDB — кожен розміщений блок є реальним об\'єктом, відомим усій платформі.',

@@ -6,7 +6,7 @@
  * Built for the classic "I bulk-imported users with password hashes but they
  * can't log in" case: PHP's password_verify() only understands bcrypt/argon, so
  * an imported MD5/SHA-1/phpass/Django/etc. hash ALWAYS fails — until the
- * password is re-set in FreeITSM (which re-hashes with bcrypt).
+ * password is re-set in Domus Desk (which re-hashes with bcrypt).
  *
  * Pick the account type, enter the username/email, and OPTIONALLY the password.
  *   - No password  -> account-readiness checks (hash format, lockout, SSO pin…).
@@ -51,18 +51,18 @@ function emit_and_exit($sections) {
 function classifyHash($h) {
     $h = (string)$h;
     if ($h === '') return ['label' => '(empty — no password set)', 'php_native' => false, 'note' => 'No hash stored. This is a passwordless account.', 'raw_algo' => null];
-    if (preg_match('/^\$2[aby]\$(\d{2})\$/', $h, $m)) return ['label' => 'bcrypt (' . substr($h, 0, 4) . ', cost ' . $m[1] . ')', 'php_native' => true, 'note' => 'FreeITSM-native — password_verify() can check this.', 'raw_algo' => null];
+    if (preg_match('/^\$2[aby]\$(\d{2})\$/', $h, $m)) return ['label' => 'bcrypt (' . substr($h, 0, 4) . ', cost ' . $m[1] . ')', 'php_native' => true, 'note' => 'Domus Desk-native — password_verify() can check this.', 'raw_algo' => null];
     if (preg_match('/^\$argon2(id|i|d)\$/', $h, $m)) return ['label' => 'argon2' . $m[1], 'php_native' => true, 'note' => 'Argon2 — password_verify() can check this.', 'raw_algo' => null];
-    if (strpos($h, '$1$') === 0)  return ['label' => 'md5crypt ($1$)', 'php_native' => 'maybe', 'note' => 'Unix md5crypt. Verifiable only if the host crypt() supports it — NOT what FreeITSM creates (bcrypt).', 'raw_algo' => null];
-    if (strpos($h, '$5$') === 0)  return ['label' => 'sha256crypt ($5$)', 'php_native' => 'maybe', 'note' => 'Unix sha256crypt — platform-dependent; NOT what FreeITSM creates.', 'raw_algo' => null];
-    if (strpos($h, '$6$') === 0)  return ['label' => 'sha512crypt ($6$)', 'php_native' => 'maybe', 'note' => 'Unix sha512crypt — platform-dependent; NOT what FreeITSM creates.', 'raw_algo' => null];
+    if (strpos($h, '$1$') === 0)  return ['label' => 'md5crypt ($1$)', 'php_native' => 'maybe', 'note' => 'Unix md5crypt. Verifiable only if the host crypt() supports it — NOT what Domus Desk creates (bcrypt).', 'raw_algo' => null];
+    if (strpos($h, '$5$') === 0)  return ['label' => 'sha256crypt ($5$)', 'php_native' => 'maybe', 'note' => 'Unix sha256crypt — platform-dependent; NOT what Domus Desk creates.', 'raw_algo' => null];
+    if (strpos($h, '$6$') === 0)  return ['label' => 'sha512crypt ($6$)', 'php_native' => 'maybe', 'note' => 'Unix sha512crypt — platform-dependent; NOT what Domus Desk creates.', 'raw_algo' => null];
     if (preg_match('/^\$P\$|^\$H\$/', $h)) return ['label' => 'phpass portable ($P$/$H$)', 'php_native' => false, 'note' => 'WordPress/phpBB portable hash. password_verify() CANNOT check this — login will always fail.', 'raw_algo' => null];
     if (preg_match('/^pbkdf2_sha256\$|^pbkdf2_sha1\$|^bcrypt_sha256\$|^sha1\$|^md5\$|^argon2\$/', $h)) return ['label' => 'Django (' . substr($h, 0, strpos($h, '$')) . '$…)', 'php_native' => false, 'note' => 'Django/Werkzeug-style hash. password_verify() CANNOT check this — login will always fail.', 'raw_algo' => null];
     if (preg_match('/^\{(SSHA|SHA|SSHA256|SHA256|MD5)\}/i', $h, $m)) return ['label' => 'LDAP ' . $m[1], 'php_native' => false, 'note' => 'LDAP-style hash. password_verify() CANNOT check this — login will always fail.', 'raw_algo' => null];
-    if (preg_match('/^[0-9a-f]{32}$/i', $h)) return ['label' => 'raw MD5 (32 hex)', 'php_native' => false, 'note' => 'Unsalted MD5. password_verify() CANNOT check this — login will always fail. FreeITSM needs bcrypt.', 'raw_algo' => 'md5'];
-    if (preg_match('/^[0-9a-f]{40}$/i', $h)) return ['label' => 'raw SHA-1 (40 hex)', 'php_native' => false, 'note' => 'Unsalted SHA-1. password_verify() CANNOT check this — login will always fail. FreeITSM needs bcrypt.', 'raw_algo' => 'sha1'];
-    if (preg_match('/^[0-9a-f]{64}$/i', $h)) return ['label' => 'raw SHA-256 (64 hex)', 'php_native' => false, 'note' => 'Unsalted SHA-256. password_verify() CANNOT check this — login will always fail. FreeITSM needs bcrypt.', 'raw_algo' => 'sha256'];
-    if (preg_match('/^[0-9a-f]{128}$/i', $h)) return ['label' => 'raw SHA-512 (128 hex)', 'php_native' => false, 'note' => 'Unsalted SHA-512. password_verify() CANNOT check this — login will always fail. FreeITSM needs bcrypt.', 'raw_algo' => 'sha512'];
+    if (preg_match('/^[0-9a-f]{32}$/i', $h)) return ['label' => 'raw MD5 (32 hex)', 'php_native' => false, 'note' => 'Unsalted MD5. password_verify() CANNOT check this — login will always fail. Domus Desk needs bcrypt.', 'raw_algo' => 'md5'];
+    if (preg_match('/^[0-9a-f]{40}$/i', $h)) return ['label' => 'raw SHA-1 (40 hex)', 'php_native' => false, 'note' => 'Unsalted SHA-1. password_verify() CANNOT check this — login will always fail. Domus Desk needs bcrypt.', 'raw_algo' => 'sha1'];
+    if (preg_match('/^[0-9a-f]{64}$/i', $h)) return ['label' => 'raw SHA-256 (64 hex)', 'php_native' => false, 'note' => 'Unsalted SHA-256. password_verify() CANNOT check this — login will always fail. Domus Desk needs bcrypt.', 'raw_algo' => 'sha256'];
+    if (preg_match('/^[0-9a-f]{128}$/i', $h)) return ['label' => 'raw SHA-512 (128 hex)', 'php_native' => false, 'note' => 'Unsalted SHA-512. password_verify() CANNOT check this — login will always fail. Domus Desk needs bcrypt.', 'raw_algo' => 'sha512'];
     return ['label' => 'unrecognised format', 'php_native' => false, 'note' => 'Not a recognised hash format. password_verify() will almost certainly fail.', 'raw_algo' => null];
 }
 
@@ -88,7 +88,7 @@ addSection($sections, "REPORT HEADER", [
 // ---- 2. AUTH GATE ------------------------------------------------------
 
 if (!isset($_SESSION['analyst_id'])) {
-    addSection($sections, "AUTH", "FAIL: not logged in. Log into FreeITSM in the same browser, then re-run.");
+    addSection($sections, "AUTH", "FAIL: not logged in. Log into Domus Desk in the same browser, then re-run.");
     emit_and_exit($sections);
 }
 if ($type === '') {
@@ -229,11 +229,11 @@ if ($hasPwInput) {
                 $vLines[] = "";
                 $vLines[] = "*** ROOT CAUSE FOUND ***";
                 $vLines[] = "The stored hash EQUALS " . strtoupper($foreignMatch) . "(the supplied password).";
-                $vLines[] = "So the import stored a raw " . strtoupper($foreignMatch) . " hash, but FreeITSM signs in with";
+                $vLines[] = "So the import stored a raw " . strtoupper($foreignMatch) . " hash, but Domus Desk signs in with";
                 $vLines[] = "bcrypt via password_verify(), which cannot read a raw " . strtoupper($foreignMatch) . " digest — hence every";
                 $vLines[] = "login fails until the password is re-set (which re-hashes it with bcrypt).";
                 $vLines[] = "FIX: on import, hash with password_hash(\$plain, PASSWORD_BCRYPT) — not " . strtoupper($foreignMatch) . " —";
-                $vLines[] = "or have these users use 'forgot password' / set a new password so FreeITSM re-hashes.";
+                $vLines[] = "or have these users use 'forgot password' / set a new password so Domus Desk re-hashes.";
             } else {
                 $vLines[] = "";
                 if ($cls['php_native'] === true) {
@@ -242,7 +242,7 @@ if ($hasPwInput) {
                 } else {
                     $vLines[] = "The stored hash isn't bcrypt/argon AND isn't a plain MD5/SHA digest of this password,";
                     $vLines[] = "so password_verify() can't read it. It was almost certainly produced by another system";
-                    $vLines[] = "(" . $cls['label'] . "). These users must reset their password so FreeITSM re-hashes with bcrypt.";
+                    $vLines[] = "(" . $cls['label'] . "). These users must reset their password so Domus Desk re-hashes with bcrypt.";
                 }
             }
         }
@@ -348,7 +348,7 @@ $verdict = [];
 if ($hasPwInput && $verifyResult === true && !$blockers) {
     $verdict[] = "The supplied password VERIFIES against the stored hash and no blockers were found → this login should succeed" . ($totpOn ? " (after the TOTP step)." : ".");
 } elseif ($foreignMatch) {
-    $verdict[] = "ROOT CAUSE: the stored hash is a raw " . strtoupper($foreignMatch) . " of the password (wrong hash type from import). FreeITSM needs bcrypt — re-hash on import, or have users reset their password. See the PASSWORD VERIFICATION section.";
+    $verdict[] = "ROOT CAUSE: the stored hash is a raw " . strtoupper($foreignMatch) . " of the password (wrong hash type from import). Domus Desk needs bcrypt — re-hash on import, or have users reset their password. See the PASSWORD VERIFICATION section.";
 } else {
     if ($blockers) {
         $verdict[] = "Login is blocked. Most likely cause(s):";

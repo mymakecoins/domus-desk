@@ -1,5 +1,5 @@
 /**
- * FreeITSM Tasks — Calendar View
+ * Domus Desk Tasks — Calendar View
  *
  * Renders parent tasks onto a month grid. How a task that spans several days
  * (start_date earlier than due_date) is drawn depends on the calendar span

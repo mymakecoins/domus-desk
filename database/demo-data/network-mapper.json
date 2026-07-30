@@ -29,7 +29,7 @@
                 "paper_size": "A4",
                 "paper_orientation": "landscape",
                 "header_center": "Core Network Topology",
-                "footer_right": "FreeITSM demo data",
+                "footer_right": "Domus Desk demo data",
                 "created_datetime": "__RELATIVE_DATE:-20d__"
             }
         ]

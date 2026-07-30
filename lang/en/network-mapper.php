@@ -23,7 +23,7 @@ return [
 
     // Diagrams landing page (index.php)
     'index' => [
-        'browser_title'    => 'FreeITSM — Network Mapper',
+        'browser_title'    => 'Domus Desk — Network Mapper',
         'heading'          => 'Network Diagrams',
         'filter_placeholder' => 'Filter by title…',
         'new'              => 'New diagram',
@@ -60,8 +60,8 @@ return [
 
     // Diagram editor shell (diagram.php)
     'editor' => [
-        'browser_title'    => 'FreeITSM — Network Diagram',
-        'browser_title_named' => 'FreeITSM — {title}',
+        'browser_title'    => 'Domus Desk — Network Diagram',
+        'browser_title_named' => 'Domus Desk — {title}',
         'back'             => '← All diagrams',
         'loading'          => 'Loading…',
         'load_failed'      => 'Failed to load diagram',
@@ -308,7 +308,7 @@ return [
 
     // Help guide (help.php)
     'help' => [
-        'browser_title'    => 'FreeITSM — Network Mapper Guide',
+        'browser_title'    => 'Domus Desk — Network Mapper Guide',
         'sidebar_title'    => 'Guide',
         'hero_title'       => 'Network Mapper guide',
         'hero_subtitle'    => 'Draw your network and architecture diagrams over the top of the CMDB — every box you place is a real object the rest of the platform knows about.',

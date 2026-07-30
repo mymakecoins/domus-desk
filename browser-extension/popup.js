@@ -1,5 +1,5 @@
 /**
- * FreeITSM Watchtower — Popup Script
+ * Domus Desk Watchtower — Popup Script
  */
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (local.lastError && !local.dashboardData) {
         showError(local.lastError);
-        document.getElementById('content').innerHTML = '<div class="not-configured"><p>Unable to connect to your FreeITSM instance.</p></div>';
+        document.getElementById('content').innerHTML = '<div class="not-configured"><p>Unable to connect to your Domus Desk instance.</p></div>';
     } else if (local.dashboardData) {
         renderDashboard(local.dashboardData);
         if (local.lastError) showError(local.lastError);
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 function showNotConfigured() {
     document.getElementById('content').innerHTML = `
         <div class="not-configured">
-            <p>Welcome to FreeITSM Watchtower.<br>Configure your server URL and API key to get started.</p>
+            <p>Welcome to Domus Desk Watchtower.<br>Configure your server URL and API key to get started.</p>
             <button class="setup-btn" id="setupBtn">Setup</button>
         </div>
     `;

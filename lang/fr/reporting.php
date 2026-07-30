@@ -198,7 +198,7 @@ return [
 
         // Section 3: System logs
         's3_heading' => 'Journaux système',
-        's3_intro'   => 'La zone Journaux capture tout ce qui se passe en coulisses dans votre instance FreeITSM. Chaque tentative de connexion, import d\'e-mail et événement système est enregistré avec un horodatage et un statut, pour que vous ayez toujours une vue complète de l\'activité de la plateforme.',
+        's3_intro'   => 'La zone Journaux capture tout ce qui se passe en coulisses dans votre instance Domus Desk. Chaque tentative de connexion, import d\'e-mail et événement système est enregistré avec un horodatage et un statut, pour que vous ayez toujours une vue complète de l\'activité de la plateforme.',
         's3_badge_login'  => 'CONNEXION',
         's3_badge_email'  => 'E-MAIL',
         's3_badge_system' => 'SYSTÈME',

@@ -1,6 +1,6 @@
 <?php
 /**
- * API: resolve a scanned FreeITSM asset label to the asset it names.
+ * API: resolve a scanned Domus Desk asset label to the asset it names.
  *
  * GET ?token=<qr_token>  ->  { success, asset|null, matches }
  *

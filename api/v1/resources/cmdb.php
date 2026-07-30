@@ -1,6 +1,6 @@
 <?php
 /**
- * FreeITSM REST API v1 — CMDB resource (configuration items).
+ * Domus Desk REST API v1 — CMDB resource (configuration items).
  *
  * Mirrors the module's internal endpoints so an object touched via the API is
  * indistinguishable from one touched in the UI:

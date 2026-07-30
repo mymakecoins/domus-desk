@@ -1,21 +1,21 @@
 <?php
 /**
- * Docker Configuration for FreeITSM
+ * Docker Configuration for Domus Desk
  * Credentials are read from environment variables set in docker-compose.yml
  */
 
 // Database credentials from environment
 define('DB_SERVER',   getenv('DB_SERVER')   ?: 'db');
-define('DB_NAME',     getenv('DB_NAME')     ?: 'freeitsm');
-define('DB_USERNAME', getenv('DB_USERNAME') ?: 'freeitsm');
-define('DB_PASSWORD', getenv('DB_PASSWORD') ?: 'freeitsm');
+define('DB_NAME',     getenv('DB_NAME')     ?: 'domus_desk');
+define('DB_USERNAME', getenv('DB_USERNAME') ?: 'domus_desk');
+define('DB_PASSWORD', getenv('DB_PASSWORD') ?: 'domus_desk');
 
 // Point to the placeholder db_config.php (keeps setup page compatible)
 $db_config_path = '/var/www/html/db_config.php';
 require_once($db_config_path);
 
 // Encryption key file location: set via the ENCRYPTION_KEY_PATH environment
-// variable in docker-compose.yml (defaults to /var/www/encryption_keys/freeitsm.key,
+// variable in docker-compose.yml (defaults to /var/www/encryption_keys/domus_desk.key,
 // stored on a persistent volume). Leave it to the env var here — do NOT define
 // ENCRYPTION_KEY_PATH in this file, or it would override the compose setting.
 

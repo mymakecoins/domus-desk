@@ -371,7 +371,7 @@ return [
 
         'collection_heading' => 'Cara data dikumpulkan',
         'collection_intro'   => 'Modul Perangkat Lunak tidak mengumpulkan data sendiri. Sebaliknya, ia mengandalkan skrip PowerShell Asset Management ({script}) yang berjalan di setiap mesin Windows terkelola dan melaporkan perangkat lunak yang terinstal sebagai bagian dari inventaris perangkat keras dan perangkat lunak yang lebih luas.',
-        'collection_p2'      => 'Saat skrip PowerShell berjalan di sebuah mesin, ia membaca entri registri Add/Remove Programs dan mengumpulkan setiap aplikasi serta komponen sistem yang terinstal. Data ini dikirim ke API FreeITSM, tempat data tersebut disimpan terhadap catatan aset. Modul Perangkat Lunak kemudian mengagregasikan data ini di seluruh mesin untuk memberi Anda tampilan seluruh lingkungan.',
+        'collection_p2'      => 'Saat skrip PowerShell berjalan di sebuah mesin, ia membaca entri registri Add/Remove Programs dan mengumpulkan setiap aplikasi serta komponen sistem yang terinstal. Data ini dikirim ke API Domus Desk, tempat data tersebut disimpan terhadap catatan aset. Modul Perangkat Lunak kemudian mengagregasikan data ini di seluruh mesin untuk memberi Anda tampilan seluruh lingkungan.',
         'flow_script' => 'Skrip PowerShell',
         'flow_api'    => 'API system-info',
         'flow_db'     => 'Basis Data',
@@ -390,7 +390,7 @@ return [
         'settings_heading' => 'Pengaturan',
         'settings_intro'   => 'Halaman Pengaturan memungkinkan Anda mengonfigurasi cara modul Perangkat Lunak berperilaku. Dari sini Anda dapat mengelola API key yang mengautentikasi skrip inventaris dan mengontrol entri perangkat lunak mana yang muncul di daftar utama.',
         'settings_s1_b'    => 'Manajemen API key',
-        'settings_s1_t'    => 'hasilkan dan kelola API key yang mengautentikasi skrip inventaris PowerShell terhadap instans FreeITSM Anda. Anda dapat membuat beberapa kunci, menonaktifkannya tanpa menghapus, dan melacak kapan setiap kunci terakhir digunakan.',
+        'settings_s1_t'    => 'hasilkan dan kelola API key yang mengautentikasi skrip inventaris PowerShell terhadap instans Domus Desk Anda. Anda dapat membuat beberapa kunci, menonaktifkannya tanpa menghapus, dan melacak kapan setiap kunci terakhir digunakan.',
         'settings_s2_b'    => 'Perangkat lunak yang diabaikan',
         'settings_s2_t'    => 'beberapa komponen sistem atau entri yang tidak diinginkan mengacaukan daftar perangkat lunak. Gunakan fitur abaikan untuk menyembunyikan judul tertentu dari tampilan inventaris. Item yang diabaikan tetap dikumpulkan dan disimpan, tetapi disembunyikan dari daftar utama dan perhitungan dasbor.',
         'settings_s3_b'    => 'Kategori perangkat lunak',

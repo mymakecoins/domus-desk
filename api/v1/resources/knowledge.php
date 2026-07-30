@@ -1,6 +1,6 @@
 <?php
 /**
- * FreeITSM REST API v1 — knowledge resource (Knowledge Base).
+ * Domus Desk REST API v1 — knowledge resource (Knowledge Base).
  *
  * Mirrors the module's internal endpoints so an article touched via the API
  * is indistinguishable from one touched in the UI:

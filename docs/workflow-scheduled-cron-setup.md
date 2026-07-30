@@ -45,7 +45,7 @@ window_days  equals  30
 
 ```
 Program:    C:\wamp64\bin\php\php8.4.0\php.exe
-Arguments:  C:\wamp64\www\freeitsm-app\cron\workflow_scheduled.php
+Arguments:  C:\wamp64\www\domus-desk-app\cron\workflow_scheduled.php
 Trigger:    Daily, repeat every 1 hour, indefinitely
 ```
 
@@ -54,14 +54,14 @@ Do the same for `cron/sla_breach_check.php` at **every 5 minutes** if you want t
 ### Linux (crontab)
 
 ```cron
-*/5 * * * *  /usr/bin/php /var/www/freeitsm-app/cron/sla_breach_check.php    >/dev/null 2>&1
-0   * * * *  /usr/bin/php /var/www/freeitsm-app/cron/workflow_scheduled.php  >/dev/null 2>&1
+*/5 * * * *  /usr/bin/php /var/www/domus-desk-app/cron/sla_breach_check.php    >/dev/null 2>&1
+0   * * * *  /usr/bin/php /var/www/domus-desk-app/cron/workflow_scheduled.php  >/dev/null 2>&1
 ```
 
 ### HTTP (if you can't run CLI)
 
 ```
-https://your-host/freeitsm-app/cron/workflow_scheduled.php?token=<workflow_cron_token>
+https://your-host/domus-desk-app/cron/workflow_scheduled.php?token=<workflow_cron_token>
 ```
 
 The token is seeded by **Database Verification** into `system_settings.workflow_cron_token`. CLI invocation needs no token — there's no untrusted caller.

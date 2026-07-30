@@ -3,7 +3,7 @@
  * RFP Builder — invited suppliers (Phase 5 step 5a).
  * Lists every supplier invited to evaluate this RFP, with a picker
  * over the existing suppliers table for adding more, and an inline
- * "create prospective" form for suppliers not yet in FreeITSM.
+ * "create prospective" form for suppliers not yet in Domus Desk.
  * Demo dates and notes editable per row. Removing an invitation
  * also clears any submitted scores for that supplier (the scoring
  * page lands in 5b).

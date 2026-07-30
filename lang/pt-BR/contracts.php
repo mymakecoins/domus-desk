@@ -246,7 +246,7 @@ return [
         'ai_openai_keys'          => 'Chaves OpenAI:',
         'ai_verify_ssl'           => 'Verificar SSL',
         'ai_verify_ssl_help'      => 'Desative apenas para testes em ambientes com certificados autoassinados (ex. atrás de um proxy de inspeção).',
-        'ai_ssl_warning'          => '<strong>Aviso:</strong> a verificação SSL está desativada. O FreeITSM aceitará qualquer certificado TLS do provedor de IA sem verificá-lo. Qualquer pessoa com acesso à sua rede (ou ao seu DNS, ou uma autoridade certificadora comprometida) poderia se passar pelo provedor, interceptar o tráfego e roubar sua chave de API &mdash; junto com cada prompt e resposta que vier a seguir. Só deixe isto desativado em ambientes de teste com certificados autoassinados &mdash; nunca em produção.',
+        'ai_ssl_warning'          => '<strong>Aviso:</strong> a verificação SSL está desativada. O Domus Desk aceitará qualquer certificado TLS do provedor de IA sem verificá-lo. Qualquer pessoa com acesso à sua rede (ou ao seu DNS, ou uma autoridade certificadora comprometida) poderia se passar pelo provedor, interceptar o tráfego e roubar sua chave de API &mdash; junto com cada prompt e resposta que vier a seguir. Só deixe isto desativado em ambientes de teste com certificados autoassinados &mdash; nunca em produção.',
         'ai_style_guide'          => 'Guia de estilo padrão',
         'ai_style_guide_ph'       => 'Opcional. Usado como o guia de estilo padrão para qualquer RFP que não tenha sua própria substituição. Exemplos: tom de voz, inglês britânico vs americano, títulos em caixa de frase vs caixa de título, preferências de terminologia específicas.',
         'ai_style_guide_help'     => 'Aplicado em cada etapa de geração de IA que produz texto de documento (geração de seções da Passagem 3, reestilização da Passagem 4, geração de seções de enquadramento). Cada RFP individual pode substituir isto em suas próprias configurações.',
@@ -499,7 +499,7 @@ return [
             'nav_faq'            => 'Perguntas frequentes',
 
             'overview_p1'  => 'O Construtor de RFP pega documentos de feedback departamentais (um por departamento contribuinte), usa IA para extrair cada requisito individual, deduplica e categoriza-os, redige um documento de RFP profissional que você pode enviar aos fornecedores e, em seguida, pontua as respostas dos fornecedores requisito por requisito para conduzir uma decisão.',
-            'overview_p2'  => 'A ferramenta é <strong>somente interna</strong>. Os fornecedores nunca fazem login — você compartilha o PDF gerado com eles por meio do seu canal de compras habitual (e-mail, plataforma de sourcing, etc.) e eles respondem fora do FreeITSM. Você mesmo insere as pontuações deles com base na leitura de suas respostas.',
+            'overview_p2'  => 'A ferramenta é <strong>somente interna</strong>. Os fornecedores nunca fazem login — você compartilha o PDF gerado com eles por meio do seu canal de compras habitual (e-mail, plataforma de sourcing, etc.) e eles respondem fora do Domus Desk. Você mesmo insere as pontuações deles com base na leitura de suas respostas.',
             'overview_tip' => '<strong>A etapa diferenciadora é a consolidação.</strong> Cinco departamentos pedindo "a mesma coisa" raramente usam as mesmas palavras — a Passagem 2 (consolidação) mescla essas duplicatas preservando cada citação original para cobertura política, e sinaliza contradições genuínas entre departamentos para você resolver.',
 
             'wf_source'      => 'Docs de origem',
@@ -557,7 +557,7 @@ return [
             'p4_preview'   => '<strong>Pré-visualizar documento</strong> no cabeçalho da página abre uma visualização renderizada limpa de página única. Use Ctrl+P / Cmd+P para imprimir ou salvar como PDF — esse é o artefato que você compartilha com os fornecedores.',
 
             'p5_title' => 'Fornecedores e pontuação',
-            'p5_p1'    => 'Adicione fornecedores à lista restrita pela página de Fornecedores — escolha entre os fornecedores existentes do FreeITSM ou crie um novo prospecto inline. Acompanhe datas de demonstração e notas por RFP de cada fornecedor.',
+            'p5_p1'    => 'Adicione fornecedores à lista restrita pela página de Fornecedores — escolha entre os fornecedores existentes do Domus Desk ou crie um novo prospecto inline. Acompanhe datas de demonstração e notas por RFP de cada fornecedor.',
             'p5_p2'    => '<strong>Pontuar</strong> em cada fornecedor abre a página de pontuação. Clique nas caixas de pontuação 0–5 (gradiente vermelho→verde) para cada requisito consolidado, adicione notas para evidências e observe as médias correntes atualizarem ao vivo no painel "Pontuação por categoria" à esquerda e na barra inferior. O botão <strong>Radar</strong> abre um gráfico de radar em tela cheia das suas médias por categoria.',
             'p5_tip'   => 'Vários analistas podem pontuar o mesmo fornecedor independentemente. A ferramenta consolida esses resultados — veja <a href="#multi-analyst">pontuação multi-analista</a>.',
 

@@ -15,8 +15,8 @@ php tests/knowledge-visibility/run.php
 Configure with env vars if your install isn't at the default:
 
 ```bash
-FREEITSM_TEST_URL=http://localhost/freeitsm-app   # where the app is served
-FREEITSM_SESS_DIR=C:/wamp64/tmp                   # where PHP writes sessions
+DOMUS_DESK_TEST_URL=http://localhost/domus-desk-app   # where the app is served
+DOMUS_DESK_SESS_DIR=C:/wamp64/tmp                   # where PHP writes sessions
 ```
 
 Best run on a **multi-company** install with at least "Ed Mozley Ltd" and "Dream

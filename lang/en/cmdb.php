@@ -535,7 +535,7 @@ return [
         'hierarchy_body'    => 'Use the parent/child link when removing the parent makes the child meaningless. Classic example: a SQL chain.',
         'hierarchy_diagram_n1' => 'Server (SQLSVR01)',
         'hierarchy_diagram_n2' => 'SQL Instance (MSSQLSERVER)',
-        'hierarchy_diagram_n3' => 'Database (FREEITSM)',
+        'hierarchy_diagram_n3' => 'Database (DOMUS_DESK)',
         'hierarchy_diagram_n4' => 'Stored Procedure (sp_archive)',
         'hierarchy_diagram_n5' => 'SQL Job (Nightly archive)',
         'hierarchy_body2'   => 'Each level genuinely can\'t exist without its parent &mdash; delete the Server, every layer below goes with it. <strong>Cascade delete is enforced</strong>; the confirmation tells you exactly how many descendants will go.',
@@ -548,7 +548,7 @@ return [
         'relationships_step1'   => 'On the object detail page\'s <strong>Relationships</strong> section, click <strong>+ Add relationship</strong>.',
         'relationships_step2'   => 'Pick a verb from the dropdown (a hint shows the inverse verb so you can see how it\'ll read from the other side).',
         'relationships_step3'   => 'Type to search the linked object &mdash; the autocomplete searches every class. Pick and save.',
-        'relationships_body2'   => 'The relationship is symmetric: when you view the linked object, it appears in <em>its</em> incoming column with the inverse verb. So <em>"FREEITSM depends on AD"</em> on the database shows as <em>"FREEITSM is depended on by AD"</em> when you\'re viewing AD.',
+        'relationships_body2'   => 'The relationship is symmetric: when you view the linked object, it appears in <em>its</em> incoming column with the inverse verb. So <em>"DOMUS_DESK depends on AD"</em> on the database shows as <em>"DOMUS_DESK is depended on by AD"</em> when you\'re viewing AD.',
         'relationships_tip'     => 'Add new verbs in <strong>Settings &rarr; Relationship Types</strong> &mdash; each verb has an inverse. Three are seeded on first run: <em>depends on</em>, <em>connects to</em>, <em>managed by</em>.',
 
         // 8. When to use which

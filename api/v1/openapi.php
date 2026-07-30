@@ -1,6 +1,6 @@
 <?php
 /**
- * FreeITSM REST API v1 — serves the OpenAPI description document.
+ * Domus Desk REST API v1 — serves the OpenAPI description document.
  *
  *   GET /api/v1/openapi.json   (or .../openapi.php)
  *   GET /api/v1/openapi.yaml   (or .../openapi.php?format=yaml)

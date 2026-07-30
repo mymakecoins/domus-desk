@@ -381,7 +381,7 @@ let attachments = [];
         if (typeof tinymce === 'undefined') {
             // Editor unavailable — the plain textarea underneath still works, and
             // the server escapes plain text, so the form degrades rather than breaks.
-            console.error('FreeITSM: TinyMCE did not load — using the plain text box.');
+            console.error('Domus Desk: TinyMCE did not load — using the plain text box.');
             return;
         }
         const isDark = document.documentElement.getAttribute('data-theme-mode') === 'dark';

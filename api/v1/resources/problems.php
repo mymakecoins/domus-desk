@@ -1,6 +1,6 @@
 <?php
 /**
- * FreeITSM REST API v1 — problems resource (Problem Management).
+ * Domus Desk REST API v1 — problems resource (Problem Management).
  *
  * Mirrors the module's internal endpoints so a problem touched via the API is
  * indistinguishable from one touched in the UI:

@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 # Re-seed the Samba AD DC test directory.
-# Usage: bash seed-ad.sh      (container freeitsm-samba-ad must be running)
+# Usage: bash seed-ad.sh      (container domusdesk-samba-ad must be running)
 set -e
-D=freeitsm-samba-ad
+D=domusdesk-samba-ad
 
 docker exec $D samba-tool user create alice 'Passw0rd!alice' \
-  --given-name=Alice --surname=Analyst --mail-address=alice@ad.freeitsm.test
+  --given-name=Alice --surname=Analyst --mail-address=alice@ad.domusdesk.test
 docker exec $D samba-tool user create bob 'Passw0rd!bob' \
-  --given-name=Bob --surname=Tech --mail-address=bob@ad.freeitsm.test
+  --given-name=Bob --surname=Tech --mail-address=bob@ad.domusdesk.test
 docker exec $D samba-tool user create carol 'Passw0rd!carol' \
-  --given-name=Carol --surname=Customer --mail-address=carol@ad.freeitsm.test
-docker exec $D samba-tool user create svc-freeitsm 'Passw0rd!svc' \
-  --description="FreeITSM read-only service account"
+  --given-name=Carol --surname=Customer --mail-address=carol@ad.domusdesk.test
+docker exec $D samba-tool user create svc-domusdesk 'Passw0rd!svc' \
+  --description="Domus Desk read-only service account"
 
 docker exec $D samba-tool group add "ITSM Analysts"
 docker exec $D samba-tool group add "ITSM Admins"
@@ -25,4 +25,4 @@ docker exec $D samba-tool group addmembers "ITSM Admins" alice
 # that gap is deliberate, it is what the nested-group code must handle.
 docker exec $D samba-tool group addmembers "IT Department" "ITSM Analysts" --object-types=group
 
-echo "Seeded. Base DN: DC=ad,DC=freeitsm,DC=test"
+echo "Seeded. Base DN: DC=ad,DC=domus_desk,DC=test"

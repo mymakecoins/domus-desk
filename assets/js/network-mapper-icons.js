@@ -20,7 +20,7 @@
  * Category metadata drives the per-node icon picker UI — icons grouped under
  * their category in the modal. Adding a new icon: append to ICONS + META, and
  * (if it should also be class-pickable) add to the cmdb_icons seed in
- * api/system/db_verify.php and database/freeitsm.sql.
+ * api/system/db_verify.php and database/domus-desk.sql.
  */
 (function () {
     'use strict';

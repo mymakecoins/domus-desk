@@ -2,10 +2,10 @@
 /**
  * GENERATED — do not edit by hand.
  *
- * Every named secondary index in database/freeitsm.sql: [table, name, isUnique,
+ * Every named secondary index in database/domus-desk.sql: [table, name, isUnique,
  * columns]. Consumed by api/system/db_verify.php to restore indexes a grown
  * install is missing. Regenerate with scripts/gen_db_verify_indexes.php after
- * changing an index in freeitsm.sql.
+ * changing an index in domus-desk.sql.
  */
 return [
     ['analysts', 'uq_analysts_username', true, '(`username`)'],

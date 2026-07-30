@@ -1,6 +1,6 @@
 <?php
 /**
- * FreeITSM REST API v1 — reference data: the lookups an integration needs to
+ * Domus Desk REST API v1 — reference data: the lookups an integration needs to
  * build valid ticket writes (statuses, priorities, ticket types, origins,
  * departments), plus analysts and companies.
  */

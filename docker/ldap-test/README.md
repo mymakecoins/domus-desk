@@ -1,10 +1,10 @@
 # LDAP test directories
 
-Throwaway directory servers for developing and testing FreeITSM's LDAP sign-in
+Throwaway directory servers for developing and testing Domus Desk's LDAP sign-in
 (System → Authentication → Type: *LDAP / Active Directory*). **Development only
 — never run these anywhere real.** The passwords below are public.
 
-> **Full walkthrough:** [Setting up OpenLDAP & Samba AD in Docker](https://github.com/edmozley/freeitsm/wiki/Setting-up-LDAP-with-Docker)
+> **Full walkthrough:** [Setting up OpenLDAP & Samba AD in Docker](https://github.com/mymakecoins/domus-desk/wiki/Setting-up-LDAP-with-Docker)
 > on the wiki takes you from nothing to a working LDAP login, step by step. This
 > file is the quick reference for people who already have the repo checked out.
 
@@ -12,8 +12,8 @@ Two servers, deliberately:
 
 | Service | Port | Base DN | What it's for |
 |---|---|---|---|
-| `samba-ad` | 3891 | `DC=ad,DC=freeitsm,DC=test` | **Real Active Directory semantics** — `sAMAccountName`, `memberOf`, nested groups, referrals, binary `objectGUID`, disabled accounts. This is what most users actually have. |
-| `openldap` | 3890 | `dc=freeitsm,dc=test` | A genuinely different flavour — `uid`, `entryUUID`, `groupOfNames`, no nested groups. |
+| `samba-ad` | 3891 | `DC=ad,DC=domus_desk,DC=test` | **Real Active Directory semantics** — `sAMAccountName`, `memberOf`, nested groups, referrals, binary `objectGUID`, disabled accounts. This is what most users actually have. |
+| `openldap` | 3890 | `dc=domus_desk,dc=test` | A genuinely different flavour — `uid`, `entryUUID`, `groupOfNames`, no nested groups. |
 | `phpldapadmin` | [8091](http://localhost:8091) | — | Browse **either** directory in a GUI — pick the server from the dropdown on the login page. |
 
 Testing against **both** is the point. Build against one and the code silently
@@ -31,11 +31,11 @@ Then seed:
 
 ```bash
 # OpenLDAP: entries, then the ACL that lets the service account read them
-docker cp docker/ldap-test/seed.ldif freeitsm-ldap:/tmp/seed.ldif
-docker exec freeitsm-ldap ldapadd -x -H ldap://localhost \
-  -D "cn=admin,dc=freeitsm,dc=test" -w adminpass -f /tmp/seed.ldif
-docker cp docker/ldap-test/acl.ldif freeitsm-ldap:/tmp/acl.ldif
-docker exec freeitsm-ldap ldapmodify -Y EXTERNAL -H ldapi:/// -f /tmp/acl.ldif
+docker cp docker/ldap-test/seed.ldif domusdesk-ldap:/tmp/seed.ldif
+docker exec domusdesk-ldap ldapadd -x -H ldap://localhost \
+  -D "cn=admin,dc=domus_desk,dc=test" -w adminpass -f /tmp/seed.ldif
+docker cp docker/ldap-test/acl.ldif domusdesk-ldap:/tmp/acl.ldif
+docker exec domusdesk-ldap ldapmodify -Y EXTERNAL -H ldapi:/// -f /tmp/acl.ldif
 
 # Samba AD: simple users, then a realistic company
 bash docker/ldap-test/seed-ad.sh
@@ -51,31 +51,31 @@ Open **<http://localhost:8091>**, choose the server in the dropdown, and log in:
 
 | Server | Login DN | Password |
 |---|---|---|
-| `openldap` | `cn=admin,dc=freeitsm,dc=test` | `adminpass` |
-| `samba-ad` | `Administrator@AD.FREEITSM.TEST` | `Passw0rd!2026` |
+| `openldap` | `cn=admin,dc=domus_desk,dc=test` | `adminpass` |
+| `samba-ad` | `Administrator@AD.DOMUS_DESK.TEST` | `Passw0rd!2026` |
 
 Active Directory accepts a UPN (`user@domain`) for a simple bind, which is why
-the AD login isn't a DN. Expand `DC=ad,DC=freeitsm,DC=test` → `OU=Northwind` to
+the AD login isn't a DN. Expand `DC=ad,DC=domus_desk,DC=test` → `OU=Northwind` to
 see the seeded company.
 
 Prefer the command line? No GUI needed:
 
 ```bash
 # every person and group in the company
-docker exec freeitsm-samba-ad ldapsearch -x -H ldap://localhost \
-  -D "Administrator@AD.FREEITSM.TEST" -w 'Passw0rd!2026' \
-  -b "OU=Northwind,DC=ad,DC=freeitsm,DC=test" \
+docker exec domusdesk-samba-ad ldapsearch -x -H ldap://localhost \
+  -D "Administrator@AD.DOMUS_DESK.TEST" -w 'Passw0rd!2026' \
+  -b "OU=Northwind,DC=ad,DC=domus_desk,DC=test" \
   "(|(objectClass=user)(objectClass=group))" dn
 
-# who is in a group, walking nested membership like FreeITSM does
-docker exec freeitsm-samba-ad ldapsearch -x -H ldap://localhost \
-  -D "Administrator@AD.FREEITSM.TEST" -w 'Passw0rd!2026' \
-  -b "OU=Northwind,DC=ad,DC=freeitsm,DC=test" \
-  "(&(objectClass=group)(member:1.2.840.113556.1.4.1941:=CN=Raj Patel,OU=IT,OU=Staff,OU=Northwind,DC=ad,DC=freeitsm,DC=test))" cn
+# who is in a group, walking nested membership like Domus Desk does
+docker exec domusdesk-samba-ad ldapsearch -x -H ldap://localhost \
+  -D "Administrator@AD.DOMUS_DESK.TEST" -w 'Passw0rd!2026' \
+  -b "OU=Northwind,DC=ad,DC=domus_desk,DC=test" \
+  "(&(objectClass=group)(member:1.2.840.113556.1.4.1941:=CN=Raj Patel,OU=IT,OU=Staff,OU=Northwind,DC=ad,DC=domus_desk,DC=test))" cn
 
 # samba-tool is the admin CLI: list users, add one, disable one
-docker exec freeitsm-samba-ad samba-tool user list
-docker exec freeitsm-samba-ad samba-tool group listmembers "NW-IT-Support"
+docker exec domusdesk-samba-ad samba-tool user list
+docker exec domusdesk-samba-ad samba-tool group listmembers "NW-IT-Support"
 ```
 
 > **Changing a phpLDAPadmin env var appears to do nothing.** The osixia image
@@ -91,17 +91,17 @@ docker exec freeitsm-samba-ad samba-tool group listmembers "NW-IT-Support"
 
 ## Credentials
 
-**OpenLDAP** (`127.0.0.1:3890`, base `dc=freeitsm,dc=test`)
-- admin: `cn=admin,dc=freeitsm,dc=test` / `adminpass`
-- service account: `cn=svc-freeitsm,dc=freeitsm,dc=test` / `svcpass`
+**OpenLDAP** (`127.0.0.1:3890`, base `dc=domus_desk,dc=test`)
+- admin: `cn=admin,dc=domus_desk,dc=test` / `adminpass`
+- service account: `cn=svc-domusdesk,dc=domus_desk,dc=test` / `svcpass`
 - users: `alice`/`alicepass`, `bob`/`bobpass`, `carol`/`carolpass`
 
-**Samba AD** (`127.0.0.1:3891`, realm `AD.FREEITSM.TEST`)
-- admin: `Administrator@AD.FREEITSM.TEST` / `Passw0rd!2026`
-- simple users (base `DC=ad,DC=freeitsm,DC=test`): `alice`/`Passw0rd!alice`, `bob`, `carol`;
-  service account `svc-freeitsm@AD.FREEITSM.TEST` / `Passw0rd!svc`
-- **Northwind company** (base `OU=Northwind,DC=ad,DC=freeitsm,DC=test`):
-  service account `svc-ldap@AD.FREEITSM.TEST` / `Nw!Svc2026`
+**Samba AD** (`127.0.0.1:3891`, realm `AD.DOMUS_DESK.TEST`)
+- admin: `Administrator@AD.DOMUS_DESK.TEST` / `Passw0rd!2026`
+- simple users (base `DC=ad,DC=domus_desk,DC=test`): `alice`/`Passw0rd!alice`, `bob`, `carol`;
+  service account `svc-domusdesk@AD.DOMUS_DESK.TEST` / `Passw0rd!svc`
+- **Northwind company** (base `OU=Northwind,DC=ad,DC=domus_desk,DC=test`):
+  service account `svc-ldap@AD.DOMUS_DESK.TEST` / `Nw!Svc2026`
 
 ## The Northwind company — why it exists
 
@@ -138,5 +138,5 @@ chain-matching rule finds it. Gate on it to test nested groups.
   proven by these containers and must never be removed on the strength of a
   green test run.
 
-See the [LDAP Developer Guide](https://github.com/edmozley/freeitsm/wiki/LDAP-Developer-Guide)
+See the [LDAP Developer Guide](https://github.com/mymakecoins/domus-desk/wiki/LDAP-Developer-Guide)
 on the wiki for the implementation and the full list of traps.

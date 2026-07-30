@@ -18,7 +18,7 @@ require __DIR__ . '/_top.php';
 <!-- 2. Two layers -->
 <div class="syshelp-section" id="two-layers">
     <div class="syshelp-section-header"><h3>Access vs administration — two separate questions</h3></div>
-    <p class="syshelp-lead">FreeITSM now answers two questions about a person and a module, not one:</p>
+    <p class="syshelp-lead">Domus Desk now answers two questions about a person and a module, not one:</p>
     <div class="syshelp-cards">
         <div class="syshelp-card">
             <h4>Can they use it?</h4>

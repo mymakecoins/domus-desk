@@ -1,5 +1,5 @@
 /**
- * FreeITSM Asset Management — table view config
+ * Domus Desk Asset Management — table view config
  *
  * Supplies the asset-specific pieces to the shared data-table engine
  * (assets/js/data-table.js): the COLUMNS catalogue and asset loading. The table

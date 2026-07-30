@@ -1,6 +1,6 @@
 <?php
 /**
- * FreeITSM REST API v1 — response + input helpers.
+ * Domus Desk REST API v1 — response + input helpers.
  *
  * Every success body is  { "data": ..., "meta": {...}? }
  * Every error body is    { "error": { "code": "...", "message": "..." } }

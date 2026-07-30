@@ -1,8 +1,8 @@
 /*
- * FreeITSM web chat widget loader.
+ * Domus Desk web chat widget loader.
  *
  * Dropped onto any website via the embed snippet:
- *   <script src=".../api/webchat/widget.js" data-freeitsm-widget="wc_..."></script>
+ *   <script src=".../api/webchat/widget.js" data-domus-desk-widget="wc_..."></script>
  *
  * It reads its own key + API base from the script tag, pulls the widget's look-and-feel
  * from config.php, and renders a floating launcher + chat panel inside a Shadow DOM (so
@@ -15,16 +15,16 @@
 (function () {
     'use strict';
 
-    var self = document.currentScript || document.querySelector('script[data-freeitsm-widget]');
-    if (!self || self.__freeitsmInit) { return; }
-    self.__freeitsmInit = true;
+    var self = document.currentScript || document.querySelector('script[data-domus-desk-widget]');
+    if (!self || self.__domus_deskInit) { return; }
+    self.__domus_deskInit = true;
 
-    var KEY = self.getAttribute('data-freeitsm-widget');
+    var KEY = self.getAttribute('data-domus-desk-widget');
     if (!KEY) { return; }
 
     // .../api/webchat/widget.js  ->  .../api/webchat/
     var BASE = self.src.replace(/widget\.js(\?.*)?$/, '');
-    var STORE_KEY = 'freeitsm_wc_' + KEY;
+    var STORE_KEY = 'domus_desk_wc_' + KEY;
 
     var cfg = null;
     var token = null;
@@ -48,7 +48,7 @@
 
     // ---- shadow-DOM shell + styles ---------------------------------------
     var host = document.createElement('div');
-    host.setAttribute('data-freeitsm-webchat', KEY);
+    host.setAttribute('data-domus_desk-webchat', KEY);
     var root = host.attachShadow ? host.attachShadow({ mode: 'open' }) : host;
     document.body.appendChild(host);
 

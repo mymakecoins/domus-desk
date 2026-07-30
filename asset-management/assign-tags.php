@@ -4,7 +4,7 @@
  *
  * WHY THIS EXISTS
  * ---------------
- * Printing labels assumes FreeITSM decides the numbers. Plenty of companies
+ * Printing labels assumes Domus Desk decides the numbers. Plenty of companies
  * don't work that way: they buy a box of durable pre-printed sequential tags
  * (polyester or anodised aluminium — which matters far more than the encoding
  * once a laptop has been knocked about for three years), stick them on, and
@@ -40,7 +40,7 @@ $ready = assetLabelsSchemaReady($conn);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assign asset tags · FreeITSM</title>
+    <title>Assign asset tags · Domus Desk</title>
     <link rel="stylesheet" href="../assets/css/theme.css?v=22">
     <style>
         /* Narrow-first: this is a job done standing up, on a phone or a laptop

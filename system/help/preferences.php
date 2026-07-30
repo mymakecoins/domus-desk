@@ -17,7 +17,7 @@ require __DIR__ . '/_top.php';
 <!-- 2. Language -->
 <div class="syshelp-section" id="language">
     <div class="syshelp-section-header"><h3>Interface language</h3></div>
-    <p class="syshelp-lead">Pick the language the interface is shown in. The dropdown lists every language FreeITSM ships translations for, with its language code alongside.</p>
+    <p class="syshelp-lead">Pick the language the interface is shown in. The dropdown lists every language Domus Desk ships translations for, with its language code alongside.</p>
     <p>When you choose a new language the page <strong>reloads</strong> so everything re-renders in your selection. Ticket content and other data you've entered are not translated — only the interface labels, menus and messages.</p>
 </div>
 

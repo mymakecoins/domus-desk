@@ -31,13 +31,13 @@ a useful window, sparse enough that you're not hammering the mailbox API.
 
 ### A. CLI (recommended)
 
-`php c:\wamp64\www\freeitsm-app\cron\sla_breach_check.php`
+`php c:\wamp64\www\domus-desk-app\cron\sla_breach_check.php`
 
 No auth needed — filesystem permissions already gate who can run it.
 
 ### B. HTTP
 
-`curl http://your-host/freeitsm-app/cron/sla_breach_check.php?token=<TOKEN>`
+`curl http://your-host/domus-desk-app/cron/sla_breach_check.php?token=<TOKEN>`
 
 The token is auto-generated on first install and stored in `system_settings` under
 the key `sla_cron_token`. Look it up with:
@@ -82,14 +82,14 @@ Open Task Scheduler (`taskschd.msc`) and create a new task:
 
 | Field | Value |
 |-------|-------|
-| Name | `FreeITSM — SLA Breach Check` |
+| Name | `Domus Desk — SLA Breach Check` |
 | Run whether user is logged in or not | ✓ |
 | Run with highest privileges | optional |
 | Trigger | Daily, recur every **1 day**, repeat every **5 minutes** for **1 day** |
 | Action | Start a program |
 | Program/script | `C:\wamp64\bin\php\php8.2.x\php.exe` |
-| Add arguments | `C:\wamp64\www\freeitsm-app\cron\sla_breach_check.php` |
-| Start in | `C:\wamp64\www\freeitsm-app` |
+| Add arguments | `C:\wamp64\www\domus-desk-app\cron\sla_breach_check.php` |
+| Start in | `C:\wamp64\www\domus-desk-app` |
 
 (Adjust the PHP path to match your WAMP version — `C:\wamp64\bin\php\` lists what's installed.)
 
@@ -98,7 +98,7 @@ output, wrap the action in a tiny `.bat` file:
 
 ```bat
 @echo off
-"C:\wamp64\bin\php\php8.2.x\php.exe" "C:\wamp64\www\freeitsm-app\cron\sla_breach_check.php" >> "C:\wamp64\logs\sla_cron.log" 2>&1
+"C:\wamp64\bin\php\php8.2.x\php.exe" "C:\wamp64\www\domus-desk-app\cron\sla_breach_check.php" >> "C:\wamp64\logs\sla_cron.log" 2>&1
 ```
 
 …and point Task Scheduler at the `.bat` instead.
@@ -110,10 +110,10 @@ output, wrap the action in a tiny `.bat` file:
 Add one line to your crontab (`crontab -e`):
 
 ```cron
-*/5 * * * * /usr/bin/php /var/www/freeitsm-app/cron/sla_breach_check.php >> /var/log/freeitsm-sla-cron.log 2>&1
+*/5 * * * * /usr/bin/php /var/www/domus-desk-app/cron/sla_breach_check.php >> /var/log/domus_desk-sla-cron.log 2>&1
 ```
 
-Adjust the `php` binary path (`which php`) and the FreeITSM install path to match your install.
+Adjust the `php` binary path (`which php`) and the Domus Desk install path to match your install.
 
 Make sure the cron user has read access to `config.php` (DB credentials) and the
 PHP install has the required extensions (`pdo_mysql`, `curl`, `mbstring`).
@@ -143,7 +143,7 @@ After setting up the schedule:
    notification rule that matches.
 3. Run the script manually once:
    ```
-   php c:\wamp64\www\freeitsm-app\cron\sla_breach_check.php --verbose
+   php c:\wamp64\www\domus-desk-app\cron\sla_breach_check.php --verbose
    ```
 4. Look at the output. It will tell you which tickets it considered, which rules
    matched, and what was sent / skipped / errored.

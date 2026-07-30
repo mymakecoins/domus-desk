@@ -38,7 +38,7 @@ const AI_OPENROUTER_MODELS_TTL = 86400; // 24h
  * @param array $cfg  ['provider','model','api_key','verify_ssl'(bool),'base_url'?]
  * @param array $opts ['system','user','max_tokens'?=1024,'temperature'?=0.0,
  *                     'referer'?,'title'?]  (referer/title attribute the call on
- *                     OpenRouter's dashboard — defaults to FreeITSM)
+ *                     OpenRouter's dashboard — defaults to Domus Desk)
  * @return array ['content','tokens_in','tokens_out','provider','model','duration_ms']
  * @throws RuntimeException on misconfiguration or API/network failure.
  */
@@ -74,8 +74,8 @@ function aiProviderChat(array $cfg, array $opts): array
         $extraHeaders = [];
         if ($provider === 'openrouter') {
             // Optional attribution headers — surface the app on the OpenRouter dashboard.
-            $extraHeaders[] = 'HTTP-Referer: ' . ($opts['referer'] ?? 'https://freeitsm.co.uk');
-            $extraHeaders[] = 'X-Title: ' . ($opts['title'] ?? 'FreeITSM');
+            $extraHeaders[] = 'HTTP-Referer: ' . ($opts['referer'] ?? 'https://domusdesk.com');
+            $extraHeaders[] = 'X-Title: ' . ($opts['title'] ?? 'Domus Desk');
         }
         $result = aiProviderCallOpenAICompatible($base, $model, $apiKey, $verify, $opts, $extraHeaders);
     }

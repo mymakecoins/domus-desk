@@ -1,6 +1,6 @@
 <?php
 /**
- * FreeITSM REST API v1 — front controller.
+ * Domus Desk REST API v1 — front controller.
  *
  * Routing: the path comes from mod_rewrite (see .htaccess) or directly via
  * PATH_INFO, so both of these are equivalent:
@@ -95,7 +95,7 @@ apiError(404, 'not_found', "Unknown endpoint: {$method} {$path}. See System > AP
 /** GET / — version + endpoint index. */
 function apiHandleRoot(PDO $conn, array $apiKey, array $params, array $body): void {
     apiRespond([
-        'name'      => 'FreeITSM API',
+        'name'      => 'Domus Desk API',
         'version'   => 1,
         'endpoints' => [
             'GET /ping', 'GET /tickets', 'POST /tickets', 'GET /tickets/{id}', 'PATCH /tickets/{id}',

@@ -32,7 +32,7 @@ require __DIR__ . '/_top.php';
         <tr><td><strong>Expand all</strong> / <strong>Collapse all</strong></td><td>Opens or closes everything at once. Expand all then Ctrl-F is a good way to hunt for a specific address.</td></tr>
         <tr><td><strong>Filter companies</strong></td><td>Narrows the tree to companies whose name matches what you type.</td></tr>
     </table>
-    <p>Watch the tags on a company row. <strong>default</strong> marks the company that unmatched email falls back to. An amber <strong>no sendable mailbox</strong> is the one that should stop you: it means that company has no active, signed-in mailbox — pinned or shared — so FreeITSM has nothing to send its replies from.</p>
+    <p>Watch the tags on a company row. <strong>default</strong> marks the company that unmatched email falls back to. An amber <strong>no sendable mailbox</strong> is the one that should stop you: it means that company has no active, signed-in mailbox — pinned or shared — so Domus Desk has nothing to send its replies from.</p>
 </div>
 
 <!-- 3. What's under a company -->

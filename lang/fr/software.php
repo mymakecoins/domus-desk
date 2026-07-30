@@ -371,7 +371,7 @@ return [
 
         'collection_heading' => 'Comment les données sont collectées',
         'collection_intro'   => 'Le module Logiciels ne collecte pas de données par lui-même. Il s\'appuie plutôt sur le script PowerShell de gestion des actifs ({script}) qui s\'exécute sur chaque machine Windows gérée et signale les logiciels installés dans le cadre de l\'inventaire matériel et logiciel plus large.',
-        'collection_p2'      => 'Lorsque le script PowerShell s\'exécute sur une machine, il lit les entrées du registre Ajout/Suppression de programmes et collecte chaque application et composant système installés. Ces données sont transmises à l\'API FreeITSM, où elles sont stockées dans l\'enregistrement de l\'actif. Le module Logiciels agrège ensuite ces données sur toutes les machines pour vous donner la vue à l\'échelle du parc.',
+        'collection_p2'      => 'Lorsque le script PowerShell s\'exécute sur une machine, il lit les entrées du registre Ajout/Suppression de programmes et collecte chaque application et composant système installés. Ces données sont transmises à l\'API Domus Desk, où elles sont stockées dans l\'enregistrement de l\'actif. Le module Logiciels agrège ensuite ces données sur toutes les machines pour vous donner la vue à l\'échelle du parc.',
         'flow_script' => 'Script PowerShell',
         'flow_api'    => 'API system-info',
         'flow_db'     => 'Base de données',
@@ -390,7 +390,7 @@ return [
         'settings_heading' => 'Paramètres',
         'settings_intro'   => 'La page Paramètres vous permet de configurer le comportement du module Logiciels. Vous pouvez y gérer les clés API qui authentifient le script d\'inventaire et contrôler quelles entrées logicielles apparaissent dans la liste principale.',
         'settings_s1_b'    => 'Gestion des clés API',
-        'settings_s1_t'    => 'générez et gérez les clés API qui authentifient le script d\'inventaire PowerShell auprès de votre instance FreeITSM. Vous pouvez créer plusieurs clés, les désactiver sans les supprimer et suivre la dernière utilisation de chaque clé.',
+        'settings_s1_t'    => 'générez et gérez les clés API qui authentifient le script d\'inventaire PowerShell auprès de votre instance Domus Desk. Vous pouvez créer plusieurs clés, les désactiver sans les supprimer et suivre la dernière utilisation de chaque clé.',
         'settings_s2_b'    => 'Logiciels ignorés',
         'settings_s2_t'    => 'certains composants système ou entrées indésirables encombrent la liste des logiciels. Utilisez la fonction d\'exclusion pour masquer des titres spécifiques de la vue d\'inventaire. Les éléments ignorés sont toujours collectés et stockés, mais ils sont masqués de la liste principale et des calculs du tableau de bord.',
         'settings_s3_b'    => 'Catégories de logiciels',

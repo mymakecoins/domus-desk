@@ -1,6 +1,6 @@
 <?php
 /**
- * FreeITSM REST API v1 — bootstrap.
+ * Domus Desk REST API v1 — bootstrap.
  *
  * Shared boot for every v1 request: config + core includes, JSON/CORS headers,
  * and a last-resort exception handler so an unexpected error still returns a
@@ -21,7 +21,7 @@ header('Content-Type: application/json; charset=utf-8');
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Headers: Authorization, Content-Type, X-Api-Key');
 header('Access-Control-Allow-Methods: GET, POST, PATCH, DELETE, OPTIONS');
-header('X-FreeITSM-Api-Version: 1');
+header('X-Domus-Desk-Api-Version: 1');
 
 // CORS preflight — answer before any auth.
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'OPTIONS') {

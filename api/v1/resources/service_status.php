@@ -1,6 +1,6 @@
 <?php
 /**
- * FreeITSM REST API v1 — service-status resource (services + incidents).
+ * Domus Desk REST API v1 — service-status resource (services + incidents).
  *
  * Mirrors the module's internal endpoints:
  *   - a service's state is DERIVED, not stored: the worst impact level

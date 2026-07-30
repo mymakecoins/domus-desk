@@ -5,7 +5,7 @@
  * Node/Python. Handles the constructs the OAS 3.0 schema actually uses.
  *
  * Usage (CLI only):
- *   curl -s http://localhost/freeitsm-app/api/v1/openapi.json > /tmp/o.json
+ *   curl -s http://localhost/domus-desk-app/api/v1/openapi.json > /tmp/o.json
  *   php api/v1/dev/jsonschema4.php /tmp/o.json api/v1/dev/oas-3.0-schema.json
  *
  * Proven to reject malformed documents (missing openapi/responses, bad version

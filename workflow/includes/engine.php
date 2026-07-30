@@ -1816,7 +1816,7 @@ class WorkflowEngine
      *     any target's exact payload can be produced with {{template}} vars.
      *
      * If a signing `secret` is set, the raw body is HMAC-SHA256 signed and the
-     * hex digest sent as X-FreeITSM-Signature so the receiver can verify the
+     * hex digest sent as X-Domus Desk-Signature so the receiver can verify the
      * call really came from this install. Delivery is synchronous with a short
      * timeout (a dead URL fails fast rather than hanging the host request); a
      * non-2xx response or transport error marks the step failed and is visible
@@ -1878,7 +1878,7 @@ class WorkflowEngine
      * message, invalid JSON).
      *
      * The optional HMAC-SHA256 signature is computed here so the secret itself
-     * is never stored — only the resulting X-FreeITSM-Signature header travels
+     * is never stored — only the resulting X-Domus Desk-Signature header travels
      * on (retries reuse it: same body → same signature).
      *
      * @return array{preset:string,url:string,body:string,headers:array<int,string>,signed:bool}
@@ -1928,10 +1928,10 @@ class WorkflowEngine
             }
         }
 
-        $headers = ['Content-Type: application/json', 'User-Agent: FreeITSM-Webhook/1'];
+        $headers = ['Content-Type: application/json', 'User-Agent: Domus Desk-Webhook/1'];
         $secret = trim((string)($args['secret'] ?? ''));
         if ($secret !== '') {
-            $headers[] = 'X-FreeITSM-Signature: sha256=' . hash_hmac('sha256', $bodyJson, $secret);
+            $headers[] = 'X-Domus Desk-Signature: sha256=' . hash_hmac('sha256', $bodyJson, $secret);
         }
 
         return ['preset' => $preset, 'url' => $url, 'body' => $bodyJson, 'headers' => $headers, 'signed' => $secret !== ''];

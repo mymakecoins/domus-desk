@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "FreeITSM Watchtower",
+  "name": "Domus Desk Watchtower",
   "version": "1.0.0",
-  "description": "Watchtower dashboard summary from your FreeITSM instance",
+  "description": "Watchtower dashboard summary from your Domus Desk instance",
   "permissions": ["storage", "alarms"],
   "host_permissions": ["https://*/*", "http://*/*"],
   "action": {

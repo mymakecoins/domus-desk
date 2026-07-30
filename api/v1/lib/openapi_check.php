@@ -1,6 +1,6 @@
 <?php
 /**
- * FreeITSM REST API v1 — OpenAPI self-check (CLI).
+ * Domus Desk REST API v1 — OpenAPI self-check (CLI).
  *
  *   php api/v1/lib/openapi_check.php
  *

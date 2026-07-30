@@ -229,7 +229,7 @@ return [
         'checking' => 'Verificando o status da criptografia...',
 
         'how_heading'   => 'Como funciona a criptografia',
-        'how_point1'    => 'O FreeITSM usa criptografia autenticada {strong} para proteger dados sensíveis armazenados no banco de dados, como chaves de API, credenciais do vCenter e detalhes de conexão de caixas de correio.',
+        'how_point1'    => 'O Domus Desk usa criptografia autenticada {strong} para proteger dados sensíveis armazenados no banco de dados, como chaves de API, credenciais do vCenter e detalhes de conexão de caixas de correio.',
         'how_point1_strong' => 'AES-256-GCM',
         'how_point2'    => 'A chave de criptografia é uma string hexadecimal de 64 caracteres (256 bits) armazenada em um arquivo {strong} para que não possa ser acessada por um navegador.',
         'how_point2_strong' => 'fora do diretório raiz da web',
@@ -285,7 +285,7 @@ return [
         'subtitle' => 'Definições pessoais salvas na sua conta — elas acompanham você em todos os navegadores.',
 
         'language_heading' => 'Idioma da interface',
-        'language_desc'    => 'O idioma usado em toda a interface do FreeITSM. As traduções recorrem ao inglês para quaisquer textos ainda não cobertos no idioma escolhido. Recarrega a página ao alterar.',
+        'language_desc'    => 'O idioma usado em toda a interface do Domus Desk. As traduções recorrem ao inglês para quaisquer textos ainda não cobertos no idioma escolhido. Recarrega a página ao alterar.',
         'saving'           => 'Salvando…',
 
         'position_heading' => 'Posição das notificações',
@@ -428,11 +428,11 @@ return [
         'field_display_name_hint' => 'Exibido no botão de login, ex. "Entrar com Keycloak"',
         'field_display_name_placeholder' => 'Entrar com Keycloak',
         'field_issuer'     => 'URL do emissor',
-        'field_issuer_hint'=> 'A URL base do provedor. ex. http://localhost:8080/realms/freeitsm',
+        'field_issuer_hint'=> 'A URL base do provedor. ex. http://localhost:8080/realms/domus_desk',
         'field_issuer_placeholder' => 'https://your-idp/realms/your-realm',
         'test'             => 'Testar',
         'field_client_id'  => 'Client ID',
-        'field_client_id_hint' => 'O identificador do cliente/app criado no provedor, ex. freeitsm-app',
+        'field_client_id_hint' => 'O identificador do cliente/app criado no provedor, ex. domus-desk-app',
         'field_client_secret' => 'Client secret',
         'field_client_secret_hint' => 'O secret do cliente, obtido no provedor. Armazenado criptografado.',
         'field_scopes'     => 'Escopos',
@@ -488,12 +488,12 @@ return [
         'field_ldap_filter_hint' => 'Como localizamos a pessoa que está entrando. {token} é substituído pelo que ela digitou, então listar vários atributos permite usar o nome de usuário OU o e-mail.',
 
         'ldap_attrs_heading'   => 'Atributos',
-        'ldap_attrs_desc'      => 'Quais campos do diretório correspondem a uma conta do FreeITSM. As predefinições acima servem para a maioria dos casos.',
+        'ldap_attrs_desc'      => 'Quais campos do diretório correspondem a uma conta do Domus Desk. As predefinições acima servem para a maioria dos casos.',
         'field_ldap_attr_username' => 'Nome de usuário',
         'field_ldap_attr_email'    => 'E-mail',
         'field_ldap_attr_name'     => 'Nome completo',
         'field_ldap_attr_guid'     => 'ID único',
-        'field_ldap_attr_guid_hint'=> 'Um atributo que nunca muda, usado para manter o vínculo com a conta do FreeITSM quando alguém é renomeado ou movido. {ad} no Active Directory, {openldap} no OpenLDAP.',
+        'field_ldap_attr_guid_hint'=> 'Um atributo que nunca muda, usado para manter o vínculo com a conta do Domus Desk quando alguém é renomeado ou movido. {ad} no Active Directory, {openldap} no OpenLDAP.',
 
         'ldap_groups_heading'  => 'Acesso por grupo',
         'ldap_groups_desc'     => 'Informe os grupos do diretório que concedem acesso. {strong} Quem não estiver em nenhum dos grupos não consegue entrar, mesmo com a senha correta — é isso que impede que a criação automática transforme cada funcionário do diretório em um analista.',

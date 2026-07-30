@@ -371,7 +371,7 @@ return [
 
         'collection_heading' => 'Jak zbierane są dane',
         'collection_intro'   => 'Moduł Oprogramowanie nie zbiera danych samodzielnie. Zamiast tego opiera się na skrypcie PowerShell Zarządzania zasobami ({script}), który działa na każdej zarządzanej maszynie z systemem Windows i zgłasza zainstalowane oprogramowanie w ramach szerszego spisu sprzętu i oprogramowania.',
-        'collection_p2'      => 'Gdy skrypt PowerShell uruchamia się na maszynie, odczytuje wpisy rejestru Dodaj/Usuń programy i zbiera każdą zainstalowaną aplikację oraz składnik systemowy. Dane te są wysyłane do API FreeITSM, gdzie są przechowywane przy rekordzie zasobu. Moduł Oprogramowanie agreguje następnie te dane ze wszystkich maszyn, aby zapewnić widok obejmujący całe środowisko.',
+        'collection_p2'      => 'Gdy skrypt PowerShell uruchamia się na maszynie, odczytuje wpisy rejestru Dodaj/Usuń programy i zbiera każdą zainstalowaną aplikację oraz składnik systemowy. Dane te są wysyłane do API Domus Desk, gdzie są przechowywane przy rekordzie zasobu. Moduł Oprogramowanie agreguje następnie te dane ze wszystkich maszyn, aby zapewnić widok obejmujący całe środowisko.',
         'flow_script' => 'Skrypt PowerShell',
         'flow_api'    => 'API system-info',
         'flow_db'     => 'Baza danych',
@@ -390,7 +390,7 @@ return [
         'settings_heading' => 'Ustawienia',
         'settings_intro'   => 'Strona Ustawienia pozwala skonfigurować zachowanie modułu Oprogramowanie. Stąd możesz zarządzać kluczami API uwierzytelniającymi skrypt spisu oraz kontrolować, które wpisy oprogramowania pojawiają się na głównej liście.',
         'settings_s1_b'    => 'Zarządzanie kluczami API',
-        'settings_s1_t'    => 'generuj klucze API uwierzytelniające skrypt spisu PowerShell względem Twojej instancji FreeITSM i zarządzaj nimi. Możesz tworzyć wiele kluczy, dezaktywować je bez usuwania oraz śledzić, kiedy każdy klucz był ostatnio używany.',
+        'settings_s1_t'    => 'generuj klucze API uwierzytelniające skrypt spisu PowerShell względem Twojej instancji Domus Desk i zarządzaj nimi. Możesz tworzyć wiele kluczy, dezaktywować je bez usuwania oraz śledzić, kiedy każdy klucz był ostatnio używany.',
         'settings_s2_b'    => 'Ignorowane oprogramowanie',
         'settings_s2_t'    => 'niektóre składniki systemowe lub niechciane wpisy zaśmiecają listę oprogramowania. Użyj funkcji ignorowania, aby ukryć konkretne tytuły z widoku spisu. Ignorowane elementy są nadal zbierane i przechowywane, ale są ukryte z głównej listy i obliczeń pulpitu.',
         'settings_s3_b'    => 'Kategorie oprogramowania',

@@ -1,4 +1,4 @@
-# FreeITSM - Git Ignore File
+# Domus Desk - Git Ignore File
 # Prevents sensitive and unnecessary files from being pushed to GitHub
 
 # ============================================
@@ -25,6 +25,7 @@ database/backups/
 
 # Claude Code settings
 .claude/
+.tokensave/
 CLAUDE.local.md
 CHANGELOG.local.md
 

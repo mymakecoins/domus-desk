@@ -516,7 +516,7 @@ return [
         'hierarchy_body'    => 'Gebruik de bovenliggende/onderliggende koppeling wanneer het verwijderen van het bovenliggende object het onderliggende betekenisloos maakt. Klassiek voorbeeld: een SQL-keten.',
         'hierarchy_diagram_n1' => 'Server (SQLSVR01)',
         'hierarchy_diagram_n2' => 'SQL-instantie (MSSQLSERVER)',
-        'hierarchy_diagram_n3' => 'Database (FREEITSM)',
+        'hierarchy_diagram_n3' => 'Database (DOMUS_DESK)',
         'hierarchy_diagram_n4' => 'Opgeslagen procedure (sp_archive)',
         'hierarchy_diagram_n5' => 'SQL-taak (Nachtelijke archivering)',
         'hierarchy_body2'   => 'Elk niveau kan echt niet zonder zijn bovenliggende object bestaan &mdash; verwijder de Server en elke laag eronder gaat mee. <strong>Cascade-verwijdering wordt afgedwongen</strong>; de bevestiging vertelt je precies hoeveel afstammelingen meegaan.',
@@ -529,7 +529,7 @@ return [
         'relationships_step1'   => 'Klik in de sectie <strong>Relaties</strong> van de objectdetailpagina op <strong>+ Relatie toevoegen</strong>.',
         'relationships_step2'   => 'Kies een werkwoord uit de keuzelijst (een hint toont het omgekeerde werkwoord zodat je ziet hoe het vanaf de andere kant leest).',
         'relationships_step3'   => 'Typ om het gekoppelde object te zoeken &mdash; de automatische aanvulling doorzoekt elke klasse. Kies en sla op.',
-        'relationships_body2'   => 'De relatie is symmetrisch: wanneer je het gekoppelde object bekijkt, verschijnt het in <em>zijn</em> inkomende kolom met het omgekeerde werkwoord. Dus <em>"FREEITSM is afhankelijk van AD"</em> op de database wordt getoond als <em>"FREEITSM is waar AD afhankelijk van is"</em> wanneer je AD bekijkt.',
+        'relationships_body2'   => 'De relatie is symmetrisch: wanneer je het gekoppelde object bekijkt, verschijnt het in <em>zijn</em> inkomende kolom met het omgekeerde werkwoord. Dus <em>"DOMUS_DESK is afhankelijk van AD"</em> op de database wordt getoond als <em>"DOMUS_DESK is waar AD afhankelijk van is"</em> wanneer je AD bekijkt.',
         'relationships_tip'     => 'Voeg nieuwe werkwoorden toe in <strong>Instellingen &rarr; Relatietypen</strong> &mdash; elk werkwoord heeft een omgekeerde. Drie worden bij de eerste keer uitvoeren toegevoegd: <em>is afhankelijk van</em>, <em>maakt verbinding met</em>, <em>beheerd door</em>.',
 
         // 8. When to use which

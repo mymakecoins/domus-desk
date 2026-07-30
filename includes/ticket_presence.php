@@ -8,7 +8,7 @@
  * service-desk annoyance there is: both write a reply, the customer gets two
  * answers that may contradict each other, and one analyst's ten minutes are
  * gone. It happens most on a busy morning, and most of all in Unassigned, where
- * several people triage the same list at once. Nothing in FreeITSM warned you.
+ * several people triage the same list at once. Nothing in Domus Desk warned you.
  *
  * PRESENCE IS A HEARTBEAT, NOT A SESSION
  * --------------------------------------

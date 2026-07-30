@@ -1,5 +1,5 @@
 /**
- * FreeITSM Calendar — table view config
+ * Domus Desk Calendar — table view config
  *
  * Supplies the calendar-specific pieces to the shared data-table engine
  * (assets/js/data-table.js): the COLUMNS catalogue, event loading, and

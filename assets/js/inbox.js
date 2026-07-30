@@ -38,7 +38,7 @@ let folderGrouping = 'department'; // 'department' or 'analyst' — persisted vi
  */
 function safeEmailHtml(html) {
     if (typeof safeHtmlFragment !== 'function') {
-        console.error('FreeITSM: assets/js/safe-html.js did not load — email bodies are being shown as plain text.');
+        console.error('Domus Desk: assets/js/safe-html.js did not load — email bodies are being shown as plain text.');
         return typeof escapeHtmlText === 'function' ? escapeHtmlText(html) : '';
     }
     return safeHtmlFragment(html, { attachmentBase: API_BASE });
@@ -77,7 +77,7 @@ function emailBodyHost(rawHtml, cls, bodyType) {
         cleaned = messageBodyHtml(rawHtml, bodyType, { attachmentBase: API_BASE });
     } else {
         // safe-html.js missing → fail closed, never render raw.
-        console.error('FreeITSM: assets/js/safe-html.js did not load — message bodies are being shown as plain text.');
+        console.error('Domus Desk: assets/js/safe-html.js did not load — message bodies are being shown as plain text.');
         cleaned = safeEmailHtml(rawHtml);
     }
     _emailBodyPending.set(token, cleaned);

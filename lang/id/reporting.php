@@ -198,7 +198,7 @@ return [
 
         // Section 3: System logs
         's3_heading' => 'Log sistem',
-        's3_intro'   => 'Area Log menangkap semua yang terjadi di balik layar pada instans FreeITSM Anda. Setiap upaya login, impor email, dan peristiwa sistem dicatat dengan stempel waktu dan status sehingga Anda selalu memiliki gambaran lengkap tentang aktivitas platform.',
+        's3_intro'   => 'Area Log menangkap semua yang terjadi di balik layar pada instans Domus Desk Anda. Setiap upaya login, impor email, dan peristiwa sistem dicatat dengan stempel waktu dan status sehingga Anda selalu memiliki gambaran lengkap tentang aktivitas platform.',
         's3_badge_login'  => 'LOGIN',
         's3_badge_email'  => 'EMAIL',
         's3_badge_system' => 'SISTEM',

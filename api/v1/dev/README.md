@@ -39,13 +39,13 @@ step and prove the result is valid and accurate.
    ```
 6. Confirm conformance to the official OpenAPI 3.0 meta-schema:
    ```
-   curl -s http://localhost/freeitsm-app/api/v1/openapi.json > /tmp/o.json
+   curl -s http://localhost/domus-desk-app/api/v1/openapi.json > /tmp/o.json
    php jsonschema4.php /tmp/o.json oas-3.0-schema.json
    ```
 7. For the authoritative linter pass (optional, needs Node):
    ```
-   npx @stoplight/spectral-cli lint http://localhost/freeitsm-app/api/v1/openapi.json
-   npx swagger-cli validate http://localhost/freeitsm-app/api/v1/openapi.json
+   npx @stoplight/spectral-cli lint http://localhost/domus-desk-app/api/v1/openapi.json
+   npx swagger-cli validate http://localhost/domus-desk-app/api/v1/openapi.json
    ```
 
 The drift-guard in step 5 fails if a route has no catalogue entry (or vice

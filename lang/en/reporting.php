@@ -205,7 +205,7 @@ return [
 
         // Section 3: System logs
         's3_heading' => 'System logs',
-        's3_intro'   => 'The Logs area captures everything happening behind the scenes in your FreeITSM instance. Every login attempt, email import, and system event is recorded with a timestamp and status so you always have a complete picture of platform activity.',
+        's3_intro'   => 'The Logs area captures everything happening behind the scenes in your Domus Desk instance. Every login attempt, email import, and system event is recorded with a timestamp and status so you always have a complete picture of platform activity.',
         's3_badge_login'  => 'LOGIN',
         's3_badge_email'  => 'EMAIL',
         's3_badge_system' => 'SYSTEM',

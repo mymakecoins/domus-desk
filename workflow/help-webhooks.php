@@ -106,18 +106,18 @@ $translationNamespaces = ['common', 'workflow'];
         <main class="wfh-main">
             <div class="tab-content active wf-help">
             <h2>Webhooks</h2>
-            <p class="lede">A webhook is how FreeITSM tells <strong>other systems</strong> that something happened &mdash; post to Slack when a P1 is raised, ping a monitoring tool when a change is approved, kick off a provisioning script when a new starter form is submitted. This guide takes you from &ldquo;what is a webhook?&rdquo; all the way to signing, retries and the delivery dashboard.</p>
+            <p class="lede">A webhook is how Domus Desk tells <strong>other systems</strong> that something happened &mdash; post to Slack when a P1 is raised, ping a monitoring tool when a change is approved, kick off a provisioning script when a new starter form is submitted. This guide takes you from &ldquo;what is a webhook?&rdquo; all the way to signing, retries and the delivery dashboard.</p>
 
             <!-- 1 -->
             <h3 id="what">1. What is a webhook? (the 101)</h3>
-            <p>Most integrations you know work by <em>pulling</em> &mdash; a program asks an API &ldquo;anything new?&rdquo; over and over. A webhook flips that around: instead of others polling FreeITSM, <strong>FreeITSM pushes to them the instant something happens</strong>. It&rsquo;s a plain HTTP <code>POST</code> carrying a small JSON body, sent to a URL you control (a &ldquo;receiver&rdquo;).</p>
+            <p>Most integrations you know work by <em>pulling</em> &mdash; a program asks an API &ldquo;anything new?&rdquo; over and over. A webhook flips that around: instead of others polling Domus Desk, <strong>Domus Desk pushes to them the instant something happens</strong>. It&rsquo;s a plain HTTP <code>POST</code> carrying a small JSON body, sent to a URL you control (a &ldquo;receiver&rdquo;).</p>
             <ul>
                 <li><strong>Event</strong> &mdash; something happened (a ticket was raised, a change approved).</li>
                 <li><strong>Payload</strong> &mdash; a JSON description of that event.</li>
                 <li><strong>Endpoint</strong> &mdash; the URL that receives the POST (a Slack incoming-webhook URL, an automation platform like Zapier/Make, or your own server).</li>
             </ul>
-            <p>If you&rsquo;ve ever set up a &ldquo;post to Slack when X happens&rdquo; rule, you&rsquo;ve used a webhook. FreeITSM is the sender; Slack is the receiver.</p>
-            <div class="tip"><strong>Inbound vs outbound.</strong> Webhooks here are <em>outbound</em> &mdash; FreeITSM makes other systems do things. The <em>inbound</em> direction (other systems making FreeITSM do things) is covered by the REST API, the email pipeline, and messaging ingest.</div>
+            <p>If you&rsquo;ve ever set up a &ldquo;post to Slack when X happens&rdquo; rule, you&rsquo;ve used a webhook. Domus Desk is the sender; Slack is the receiver.</p>
+            <div class="tip"><strong>Inbound vs outbound.</strong> Webhooks here are <em>outbound</em> &mdash; Domus Desk makes other systems do things. The <em>inbound</em> direction (other systems making Domus Desk do things) is covered by the REST API, the email pipeline, and messaging ingest.</div>
 
             <!-- 2 -->
             <h3 id="how">2. How webhooks work here &mdash; a workflow action</h3>
@@ -134,7 +134,7 @@ $translationNamespaces = ['common', 'workflow'];
             <h3 id="quickstart">3. Quick start &mdash; Slack in five steps</h3>
             <ol class="steps-num">
                 <li>In Slack, create an <strong>Incoming Webhook</strong> and copy its URL (it looks like <code>https://hooks.slack.com/services/&hellip;</code>).</li>
-                <li>In FreeITSM, open <strong>Workflows &rarr; New workflow</strong> and pick a trigger &mdash; e.g. <code>ticket.created</code>.</li>
+                <li>In Domus Desk, open <strong>Workflows &rarr; New workflow</strong> and pick a trigger &mdash; e.g. <code>ticket.created</code>.</li>
                 <li><em>(Optional)</em> Add a condition, e.g. <em>priority is Critical</em>, so you only ping Slack for P1s.</li>
                 <li>Add action &rarr; <strong>Send a webhook</strong>. Choose the <strong>Slack</strong> preset, paste the URL, and write a message like <code>P1 raised: {{ticket.subject}}</code>.</li>
                 <li>Click <strong>Send test</strong> to see it arrive in Slack, then <strong>Save</strong> and toggle the workflow <em>Active</em>.</li>
@@ -176,12 +176,12 @@ $translationNamespaces = ['common', 'workflow'];
 
             <!-- 7 -->
             <h3 id="signing">7. Signing payloads (HMAC)</h3>
-            <p>Anyone who learns your endpoint URL could POST fake events to it. To prove a delivery genuinely came from your FreeITSM instance, set a <strong>signing secret</strong> on the action. Each request is then signed:</p>
-            <pre><code>X-FreeITSM-Signature: sha256=&lt;HMAC-SHA256(body, your_secret)&gt;</code></pre>
+            <p>Anyone who learns your endpoint URL could POST fake events to it. To prove a delivery genuinely came from your Domus Desk instance, set a <strong>signing secret</strong> on the action. Each request is then signed:</p>
+            <pre><code>X-Domus Desk-Signature: sha256=&lt;HMAC-SHA256(body, your_secret)&gt;</code></pre>
             <p>Your receiver recomputes the same signature with the same secret and rejects anything that doesn&rsquo;t match. A tiny PHP receiver:</p>
-            <pre><code>$secret = getenv('FREEITSM_WEBHOOK_SECRET');
+            <pre><code>$secret = getenv('DOMUS_DESK_WEBHOOK_SECRET');
 $body   = file_get_contents('php://input');
-$sig    = $_SERVER['HTTP_X_FREEITSM_SIGNATURE'] ?? '';
+$sig    = $_SERVER['HTTP_X_DOMUS_DESK_SIGNATURE'] ?? '';
 $expected = 'sha256=' . hash_hmac('sha256', $body, $secret);
 
 if (!hash_equals($expected, $sig)) {
@@ -189,11 +189,11 @@ if (!hash_equals($expected, $sig)) {
     exit('bad signature');   // not from us — drop it
 }
 $event = json_decode($body, true);   // trusted from here</code></pre>
-            <div class="callout"><strong>The secret is never stored.</strong> FreeITSM computes the signature at the moment a delivery is queued and keeps only the resulting header &mdash; so your secret never lands in the database or the delivery log. Keep it out of source control and treat it like a password.</div>
+            <div class="callout"><strong>The secret is never stored.</strong> Domus Desk computes the signature at the moment a delivery is queued and keeps only the resulting header &mdash; so your secret never lands in the database or the delivery log. Keep it out of source control and treat it like a password.</div>
 
             <!-- 8 -->
             <h3 id="reliability">8. Reliable delivery &mdash; the async engine</h3>
-            <p>Networks fail. Receivers go down or rate-limit you. A naive &ldquo;POST and hope&rdquo; would silently lose those events &mdash; FreeITSM doesn&rsquo;t. Every send is <strong>queued</strong> and handed to a background worker, which gives you:</p>
+            <p>Networks fail. Receivers go down or rate-limit you. A naive &ldquo;POST and hope&rdquo; would silently lose those events &mdash; Domus Desk doesn&rsquo;t. Every send is <strong>queued</strong> and handed to a background worker, which gives you:</p>
             <ul>
                 <li><strong>Retries with backoff</strong> &mdash; a failed delivery is retried on an increasing delay (1m &rarr; 5m &rarr; 15m &rarr; 1h &rarr; 6h), not hammered.</li>
                 <li><strong>Dead-letter</strong> &mdash; after the retry budget is spent, the delivery is parked as <em>failed</em> rather than lost or retried forever.</li>
@@ -221,18 +221,18 @@ $event = json_decode($body, true);   // trusted from here</code></pre>
                 <li><strong>Create / update / delete events</strong> &mdash; every reusable record and settings lookup emits <code>&lt;entity&gt;.created</code> / <code>.updated</code> / <code>.deleted</code>: tickets, assets, changes, problems, tasks, CMDB, contracts &amp; suppliers, calendar, software licences, network diagrams, and all their settings lists (statuses, priorities, types, tags&hellip;).</li>
             </ul>
             <p>Because the list is dozens deep, the workflow editor&rsquo;s <strong>trigger picker is searchable</strong> &mdash; start typing (<code>resolved</code>, <code>contract</code>, <code>delete</code>&hellip;) to filter it. Each event carries a typed payload, so conditions get real dropdowns of values rather than opaque numbers.</p>
-            <div class="tip">Every event fires from a <strong>single</strong> shared write path, so it behaves identically whether the change was made by an analyst in the browser, by a script hitting the REST API, or by another workflow &mdash; it can&rsquo;t drift. The full, always-current list lives in the <a href="https://github.com/edmozley/freeitsm/wiki/Webhooks#event-catalogue" target="_blank" rel="noopener">Webhooks wiki</a>.</div>
+            <div class="tip">Every event fires from a <strong>single</strong> shared write path, so it behaves identically whether the change was made by an analyst in the browser, by a script hitting the REST API, or by another workflow &mdash; it can&rsquo;t drift. The full, always-current list lives in the <a href="https://github.com/mymakecoins/domus-desk/wiki/Webhooks#event-catalogue" target="_blank" rel="noopener">Webhooks wiki</a>.</div>
 
             <!-- 11 -->
-            <h3 id="dataprotection">What FreeITSM stores, and for how long</h3>
+            <h3 id="dataprotection">What Domus Desk stores, and for how long</h3>
             <p>Three things about a webhook end up on disk, and it&rsquo;s worth knowing what happens to each.</p>
             <h4>The URL and the signing secret &mdash; encrypted</h4>
             <p>A webhook URL is a <strong>credential in its own right</strong>: anyone holding your Discord or Slack URL can post into that channel. The signing secret is a true secret &mdash; its whole job is proving a message really came from you, which anyone who could read it could forge. Both are <strong>encrypted at rest</strong> (AES-256-GCM), in the workflow itself and in the delivery queue, and the URL is <strong>redacted in the delivery log</strong> so the token isn&rsquo;t sitting in a screen any analyst can open.</p>
-            <p>This depends on an encryption key being configured. If your install has none, FreeITSM stores them as-is rather than breaking your webhooks &mdash; and says so plainly, in a warning at the top of <strong>System &rarr; Webhooks</strong>. It never pretends to a protection it isn&rsquo;t providing.</p>
+            <p>This depends on an encryption key being configured. If your install has none, Domus Desk stores them as-is rather than breaking your webhooks &mdash; and says so plainly, in a warning at the top of <strong>System &rarr; Webhooks</strong>. It never pretends to a protection it isn&rsquo;t providing.</p>
             <h4>The payload &mdash; kept only as long as you choose</h4>
             <p>The delivery log stores <em>the exact payload that was sent</em>, so you can see what went out. With the <strong>Full record</strong> format that is an <strong>entire ticket</strong> &mdash; subject, requester, the lot &mdash; copied into the queue table in plain text. That is a real data-at-rest question, so it gets an explicit answer rather than an accidental one: <strong>System &rarr; Webhooks &rarr; Data protection</strong> sets how long payload bodies are kept (default <strong>7 days</strong>; you can also choose never to store them at all).</p>
             <p>When the window passes, the payload and response bodies are scrubbed but the <strong>delivery record is kept</strong> &mdash; endpoint, status, timing, errors &mdash; so your dashboard and your audit trail survive intact. The whole row is eventually removed by the separate log-retention setting.</p>
-            <div class="callout"><strong>The trade-off, stated plainly.</strong> <em>Replay</em> re-sends the stored payload. Once a payload has been scrubbed there is nothing left to re-send, so that delivery can no longer be replayed &mdash; FreeITSM tells you exactly that, rather than quietly POSTing an empty body to a live endpoint. In practice you replay a webhook within hours of it failing, not weeks, which is why the payload window is shorter than the record&rsquo;s.</div>
+            <div class="callout"><strong>The trade-off, stated plainly.</strong> <em>Replay</em> re-sends the stored payload. Once a payload has been scrubbed there is nothing left to re-send, so that delivery can no longer be replayed &mdash; Domus Desk tells you exactly that, rather than quietly POSTing an empty body to a live endpoint. In practice you replay a webhook within hours of it failing, not weeks, which is why the payload window is shorter than the record&rsquo;s.</div>
 
             <h3 id="troubleshoot">11. Troubleshooting</h3>
             <table>

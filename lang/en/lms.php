@@ -313,7 +313,7 @@ return [
     ],
 
     'help' => [
-        'page_title' => 'FreeITSM — LMS Guide',
+        'page_title' => 'Domus Desk — LMS Guide',
         'nav_label'  => 'Guide',
 
         'nav_overview'     => 'Overview',

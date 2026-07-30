@@ -10,7 +10,7 @@ require __DIR__ . '/_top.php';
 <!-- 1. Overview -->
 <div class="syshelp-section" id="overview">
     <div class="syshelp-section-header"><h3>What this tool does</h3></div>
-    <p class="syshelp-lead">Database verification compares your live database against the schema this version of FreeITSM expects. Where something is missing it adds it; where everything already matches it simply reports a clean bill of health. You run it on demand from System &rarr; Database verification and watch the results appear in a table.</p>
+    <p class="syshelp-lead">Database verification compares your live database against the schema this version of Domus Desk expects. Where something is missing it adds it; where everything already matches it simply reports a clean bill of health. You run it on demand from System &rarr; Database verification and watch the results appear in a table.</p>
     <p>It is the same routine that runs during first-time setup, so it doubles as a repair and upgrade step you can run at any time.</p>
     <div class="syshelp-callout ok"><strong>Non-destructive by design.</strong> Verification only ever <em>adds</em> structure — it creates missing tables, columns, keys and indexes. It never deletes your rows. The one case where data could be removed (clearing orphaned rows that block a foreign key) is never automatic: it is offered as a separate <strong>Fix</strong> button that asks you to confirm first.</div>
 </div>
@@ -18,7 +18,7 @@ require __DIR__ . '/_top.php';
 <!-- 2. What it checks -->
 <div class="syshelp-section" id="checks">
     <div class="syshelp-section-header"><h3>What it checks and creates</h3></div>
-    <p>The tool walks the full schema for every FreeITSM module and reconciles it with your database.</p>
+    <p>The tool walks the full schema for every Domus Desk module and reconciles it with your database.</p>
     <div class="syshelp-cards">
         <div class="syshelp-card">
             <h4>Tables</h4>
@@ -44,7 +44,7 @@ require __DIR__ . '/_top.php';
 <!-- 3. Running a check -->
 <div class="syshelp-section" id="running">
     <div class="syshelp-section-header"><h3>Running a check</h3></div>
-    <p class="syshelp-lead">When to run it: after applying a FreeITSM update, after restoring or migrating a database, or whenever something looks like a column or table might be missing.</p>
+    <p class="syshelp-lead">When to run it: after applying a Domus Desk update, after restoring or migrating a database, or whenever something looks like a column or table might be missing.</p>
     <div class="syshelp-steps">
         <div class="syshelp-step"><div class="syshelp-step-num">1</div><div>Open <strong>System &rarr; Database verification</strong>.</div></div>
         <div class="syshelp-step"><div class="syshelp-step-num">2</div><div>Click <strong>Run verification</strong>. The button shows a spinner while the check runs against the database.</div></div>
@@ -66,7 +66,7 @@ require __DIR__ . '/_top.php';
         <tr><td><strong>Error</strong></td><td>A statement failed. The detail text explains why so you can address it and re-run.</td></tr>
     </table>
     <p>You may also see <strong>Seeded</strong> (default rows inserted into a new lookup table) and <strong>Migrated</strong> (values backfilled from an old column into a new one).</p>
-    <div class="syshelp-callout ok">A run where every row is <strong>OK</strong> means your database is fully in step with this version of FreeITSM.</div>
+    <div class="syshelp-callout ok">A run where every row is <strong>OK</strong> means your database is fully in step with this version of Domus Desk.</div>
 </div>
 
 <!-- 5. Pending & Fix -->

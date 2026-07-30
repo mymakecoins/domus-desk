@@ -1,6 +1,6 @@
 <?php
 /**
- * FreeITSM REST API v1 — calendar resource (the standalone team calendar).
+ * Domus Desk REST API v1 — calendar resource (the standalone team calendar).
  *
  * Mirrors the module's internal endpoints:
  *   - the list uses get_events.php's exact three-branch window-overlap logic

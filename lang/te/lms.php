@@ -178,7 +178,7 @@ return [
     ],
 
     'help' => [
-        'page_title' => 'FreeITSM — LMS గైడ్',
+        'page_title' => 'Domus Desk — LMS గైడ్',
         'nav_label'  => 'గైడ్',
 
         'nav_overview'     => 'అవలోకనం',

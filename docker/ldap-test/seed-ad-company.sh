@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Build a realistic small-company structure in the Samba AD test DC.
 #
-# "Northwind Trading Ltd" — ~40 staff, one IT team running FreeITSM.
+# "Northwind Trading Ltd" — ~40 staff, one IT team running Domus Desk.
 # Deliberately includes the awkward cases a real directory has and a flat
 # test fixture never does:
 #   - people nested in per-department OUs (not all in CN=Users)
@@ -11,10 +11,10 @@
 #   - names with an apostrophe and an umlaut  -> filter escaping / UTF-8
 #   - nested groups (All-Staff contains the dept groups, not the people)
 #
-# Usage: bash seed-ad-company.sh    (container freeitsm-samba-ad must be running)
+# Usage: bash seed-ad-company.sh    (container domusdesk-samba-ad must be running)
 set -e
-D=freeitsm-samba-ad
-BASE="DC=ad,DC=freeitsm,DC=test"
+D=domusdesk-samba-ad
+BASE="DC=ad,DC=domus_desk,DC=test"
 PW='Passw0rd!2026'
 
 st() { docker exec "$D" samba-tool "$@"; }
@@ -42,7 +42,7 @@ mkuser() { # username password ou given surname mail title dept
   echo "  + $u"
 }
 
-echo "--- IT team (these are the FreeITSM analysts) ---"
+echo "--- IT team (these are the Domus Desk analysts) ---"
 mkuser a.chen     'Nw!Chen2026'    "OU=IT,OU=Staff,OU=Northwind" \
        "Amy"     "Chen"     "a.chen@northwind.test"     "IT Manager"           "IT"
 mkuser r.patel    'Nw!Patel2026'   "OU=IT,OU=Staff,OU=Northwind" \
@@ -74,7 +74,7 @@ echo "  ! x.leaver disabled"
 
 echo "--- service account ---"
 st user create svc-ldap 'Nw!Svc2026' --userou="OU=Service Accounts,OU=Northwind" \
-   --description="FreeITSM read-only directory lookup account" >/dev/null || true
+   --description="Domus Desk read-only directory lookup account" >/dev/null || true
 st user setexpiry svc-ldap --noexpiry >/dev/null 2>&1 || true
 echo "  + svc-ldap"
 
@@ -101,4 +101,4 @@ st group addmembers "NW-All-Staff" NW-IT-Support,NW-IT-Admins,NW-Sales,NW-Financ
 
 echo
 echo "Done. Base DN for Northwind: OU=Northwind,$BASE"
-echo "Service account: svc-ldap@AD.FREEITSM.TEST / Nw!Svc2026"
+echo "Service account: svc-ldap@AD.DOMUS_DESK.TEST / Nw!Svc2026"

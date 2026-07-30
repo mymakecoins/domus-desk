@@ -46,7 +46,7 @@ require __DIR__ . '/_top.php';
 <div class="syshelp-section" id="single">
     <div class="syshelp-section-header"><h3>Single-company installs</h3></div>
     <p class="syshelp-lead">If you've only ever had one company, this tool has nothing to decide.</p>
-    <p>FreeITSM works out whether you're multi-company by counting companies. With a single company, all inbound mail simply goes to that company — there's no domain or sender routing to apply. The page will tell you this rather than running a meaningful test.</p>
+    <p>Domus Desk works out whether you're multi-company by counting companies. With a single company, all inbound mail simply goes to that company — there's no domain or sender routing to apply. The page will tell you this rather than running a meaningful test.</p>
     <div class="syshelp-callout ok">To make routing matter, add a second company under <a href="companies.php">Companies</a> and give each company its email domains. The routing test then becomes a useful way to confirm your mappings before real mail starts arriving.</div>
 </div>
 

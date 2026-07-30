@@ -198,7 +198,7 @@ return [
 
         // Section 3: System logs
         's3_heading' => 'Systemprotokolle',
-        's3_intro'   => 'Der Protokollbereich erfasst alles, was im Hintergrund Ihrer FreeITSM-Instanz passiert. Jeder Anmeldeversuch, E-Mail-Import und jedes Systemereignis wird mit einem Zeitstempel und Status aufgezeichnet, sodass Sie stets ein vollständiges Bild der Plattformaktivität haben.',
+        's3_intro'   => 'Der Protokollbereich erfasst alles, was im Hintergrund Ihrer Domus Desk-Instanz passiert. Jeder Anmeldeversuch, E-Mail-Import und jedes Systemereignis wird mit einem Zeitstempel und Status aufgezeichnet, sodass Sie stets ein vollständiges Bild der Plattformaktivität haben.',
         's3_badge_login'  => 'ANMELDUNG',
         's3_badge_email'  => 'E-MAIL',
         's3_badge_system' => 'SYSTEM',

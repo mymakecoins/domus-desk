@@ -1,47 +1,47 @@
-dn: ou=people,dc=freeitsm,dc=test
+dn: ou=people,dc=domus_desk,dc=test
 objectClass: organizationalUnit
 ou: people
 
-dn: ou=groups,dc=freeitsm,dc=test
+dn: ou=groups,dc=domus_desk,dc=test
 objectClass: organizationalUnit
 ou: groups
 
-dn: cn=svc-freeitsm,dc=freeitsm,dc=test
+dn: cn=svc-domusdesk,dc=domus_desk,dc=test
 objectClass: organizationalRole
 objectClass: simpleSecurityObject
-cn: svc-freeitsm
-description: Read-only service account used by FreeITSM to search for users
+cn: svc-domusdesk
+description: Read-only service account used by Domus Desk to search for users
 userPassword: svcpass
 
-dn: uid=alice,ou=people,dc=freeitsm,dc=test
+dn: uid=alice,ou=people,dc=domus_desk,dc=test
 objectClass: inetOrgPerson
 uid: alice
 cn: Alice Analyst
 sn: Analyst
 givenName: Alice
-mail: alice@freeitsm.test
+mail: alice@domusdesk.test
 userPassword: alicepass
 
-dn: uid=bob,ou=people,dc=freeitsm,dc=test
+dn: uid=bob,ou=people,dc=domus_desk,dc=test
 objectClass: inetOrgPerson
 uid: bob
 cn: Bob Tech
 sn: Tech
 givenName: Bob
-mail: bob@freeitsm.test
+mail: bob@domusdesk.test
 userPassword: bobpass
 
-dn: uid=carol,ou=people,dc=freeitsm,dc=test
+dn: uid=carol,ou=people,dc=domus_desk,dc=test
 objectClass: inetOrgPerson
 uid: carol
 cn: Carol Customer
 sn: Customer
 givenName: Carol
-mail: carol@freeitsm.test
+mail: carol@domusdesk.test
 userPassword: carolpass
 
-dn: cn=itsm-analysts,ou=groups,dc=freeitsm,dc=test
+dn: cn=itsm-analysts,ou=groups,dc=domus_desk,dc=test
 objectClass: groupOfNames
 cn: itsm-analysts
-member: uid=alice,ou=people,dc=freeitsm,dc=test
-member: uid=bob,ou=people,dc=freeitsm,dc=test
+member: uid=alice,ou=people,dc=domus_desk,dc=test
+member: uid=bob,ou=people,dc=domus_desk,dc=test

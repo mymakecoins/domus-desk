@@ -29,7 +29,7 @@ return [
         'verify_ssl_label'        => 'Vérifier le SSL',
         'verify_ssl_hint'         => 'À désactiver uniquement pour les tests dans des environnements à certificats auto-signés (p. ex. derrière un proxy d\'inspection).',
         'ssl_warning_title'       => 'Avertissement',
-        'ssl_warning_body'        => 'La vérification SSL est désactivée. FreeITSM acceptera n\'importe quel certificat TLS du fournisseur d\'IA sans le contrôler. Toute personne ayant accès à votre réseau pourrait se faire passer pour le fournisseur, intercepter le trafic et voler votre API key — ainsi que chaque requête et réponse qui suit. Ne laissez ceci désactivé que dans des environnements de test à certificats auto-signés — jamais en production.',
+        'ssl_warning_body'        => 'La vérification SSL est désactivée. Domus Desk acceptera n\'importe quel certificat TLS du fournisseur d\'IA sans le contrôler. Toute personne ayant accès à votre réseau pourrait se faire passer pour le fournisseur, intercepter le trafic et voler votre API key — ainsi que chaque requête et réponse qui suit. Ne laissez ceci désactivé que dans des environnements de test à certificats auto-signés — jamais en production.',
         'test_btn'                => 'Tester',
         'testing'                 => 'Test en cours…',
     ],

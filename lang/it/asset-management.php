@@ -463,7 +463,7 @@ return [
         'secret_saved_placeholder'    => 'Salvato (inserisci un nuovo secret per modificarlo)',
         'verify_ssl'                  => 'Verifica SSL',
         'verify_ssl_hint'             => 'Disabilita solo per i test in ambienti con certificati autofirmati',
-        'verify_ssl_warning'          => '<strong>Attenzione:</strong> la verifica SSL è disattivata. FreeITSM accetterà qualsiasi certificato TLS dai server di Microsoft senza verificarlo. Chiunque abbia accesso alla tua rete (o al tuo DNS, o un\'autorità di certificazione compromessa) potrebbe spacciarsi per Microsoft, intercettare il traffico e rubare il tuo ID tenant, l\'ID client, il client secret e i token di accesso che ne seguono. Lascia questa opzione disattivata solo in ambienti di test con certificati autofirmati &mdash; mai in produzione.',
+        'verify_ssl_warning'          => '<strong>Attenzione:</strong> la verifica SSL è disattivata. Domus Desk accetterà qualsiasi certificato TLS dai server di Microsoft senza verificarlo. Chiunque abbia accesso alla tua rete (o al tuo DNS, o un\'autorità di certificazione compromessa) potrebbe spacciarsi per Microsoft, intercettare il traffico e rubare il tuo ID tenant, l\'ID client, il client secret e i token di accesso che ne seguono. Lascia questa opzione disattivata solo in ambienti di test con certificati autofirmati &mdash; mai in produzione.',
         'batch_size_label'            => 'Dimensione batch sincronizzazione software',
         'batch_size_hint'             => 'Numero di dispositivi inclusi in un singolo processo di sincronizzazione software (1–500). I batch più piccoli terminano più rapidamente ma richiedono più clic per coprire l\'intero parco.',
         'sync'                        => 'Sincronizza',

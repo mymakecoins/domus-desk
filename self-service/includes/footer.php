@@ -35,7 +35,7 @@ $pageData    = $pageData ?? [];
     <!-- The app-wide toast. Self-contained (injects its own CSS) and falls back
          to sensible defaults for position/animation, which are analyst
          preferences the portal has no equivalent of. Using it here means portal
-         confirmations look and behave exactly like the rest of FreeITSM instead
+         confirmations look and behave exactly like the rest of Domus Desk instead
          of each page inventing its own little message strip. -->
     <script src="../assets/js/toast.js"></script>
     <?php if (!empty($needsRecorder)): ?>
@@ -52,7 +52,7 @@ $pageData    = $pageData ?? [];
     <?php /* Fail LOUD. A PHP tag in here never ran (see the note above) and would
              otherwise take the page's entire script block down with a syntax error
              that says nothing about the cause. */ ?>
-    <script>console.error('FreeITSM: $pageScripts contains a raw PHP tag. Nowdoc blocks are not parsed by PHP — pass the value through $pageData/window.PAGE instead.');</script>
+    <script>console.error('Domus Desk: $pageScripts contains a raw PHP tag. Nowdoc blocks are not parsed by PHP — pass the value through $pageData/window.PAGE instead.');</script>
     <?php endif; ?>
     <script><?php echo $pageScripts; ?></script>
     <?php endif; ?>

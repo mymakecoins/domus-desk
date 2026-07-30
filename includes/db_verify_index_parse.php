@@ -2,10 +2,10 @@
 /**
  * Shared parser + drift self-check for the index backfill list.
  *
- * `database/freeitsm.sql` is the source of truth for the schema;
+ * `database/domus-desk.sql` is the source of truth for the schema;
  * `includes/db_verify_indexes.php` is a GENERATED mirror of its indexes that
  * Database Verification uses to restore missing ones. The risk is the classic
- * one: someone adds an index to freeitsm.sql and forgets to regenerate, so the
+ * one: someone adds an index to domus-desk.sql and forgets to regenerate, so the
  * mirror goes stale and grown installs silently miss the new index — the very
  * drift the backfill was built to end.
  *
@@ -16,7 +16,7 @@
  */
 
 /**
- * Extract every named secondary index from freeitsm.sql text:
+ * Extract every named secondary index from domus-desk.sql text:
  * [table, name, isUnique, columns]. Skips PRIMARY KEY, FOREIGN KEY, CONSTRAINT.
  */
 function dbVerifyParseIndexesFromSql(string $sql): array {
@@ -36,14 +36,14 @@ function dbVerifyParseIndexesFromSql(string $sql): array {
 }
 
 /**
- * Compare the committed generated list against a fresh parse of freeitsm.sql.
+ * Compare the committed generated list against a fresh parse of domus-desk.sql.
  * Returns human-readable problem strings; an empty array means they're in sync.
  *
- * Skips silently if freeitsm.sql isn't present (a trimmed deployment may not ship
+ * Skips silently if domus-desk.sql isn't present (a trimmed deployment may not ship
  * it) — we never cry drift when we can't see the source of truth.
  */
 function dbVerifyIndexListSelfCheck(?string $sqlPath = null, ?string $listPath = null): array {
-    $sqlPath  = $sqlPath  ?? __DIR__ . '/../database/freeitsm.sql';
+    $sqlPath  = $sqlPath  ?? __DIR__ . '/../database/domus-desk.sql';
     $listPath = $listPath ?? __DIR__ . '/db_verify_indexes.php';
 
     if (!is_readable($sqlPath)) return [];
@@ -62,11 +62,11 @@ function dbVerifyIndexListSelfCheck(?string $sqlPath = null, ?string $listPath =
 
     $problems = [];
     foreach ($freshMap as $k => $v) {
-        if (!isset($commMap[$k]))       $problems[] = "Index $k is in freeitsm.sql but missing from the backfill list.";
-        elseif ($commMap[$k] !== $v)    $problems[] = "Index $k differs — freeitsm.sql has [$v], the list has [{$commMap[$k]}].";
+        if (!isset($commMap[$k]))       $problems[] = "Index $k is in domus-desk.sql but missing from the backfill list.";
+        elseif ($commMap[$k] !== $v)    $problems[] = "Index $k differs — domus-desk.sql has [$v], the list has [{$commMap[$k]}].";
     }
     foreach ($commMap as $k => $v) {
-        if (!isset($freshMap[$k]))      $problems[] = "Index $k is in the backfill list but no longer in freeitsm.sql.";
+        if (!isset($freshMap[$k]))      $problems[] = "Index $k is in the backfill list but no longer in domus-desk.sql.";
     }
     return $problems;
 }

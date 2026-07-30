@@ -515,11 +515,11 @@ $translationNamespaces = ['common', 'tickets'];
                 <p><?php echo t('tickets.help_sla.cron.p2'); ?></p>
 
                 <h4><?php echo t('tickets.help_sla.cron.cli_heading'); ?></h4>
-                <div class="tk-help-code-block">php c:\wamp64\www\freeitsm-app\cron\sla_breach_check.php</div>
+                <div class="tk-help-code-block">php c:\wamp64\www\domus-desk-app\cron\sla_breach_check.php</div>
                 <p><?php echo t('tickets.help_sla.cron.cli_note'); ?></p>
 
                 <h4><?php echo t('tickets.help_sla.cron.http_heading'); ?></h4>
-                <div class="tk-help-code-block">curl http://your-host/freeitsm-app/cron/sla_breach_check.php?token=&lt;TOKEN&gt;</div>
+                <div class="tk-help-code-block">curl http://your-host/domus-desk-app/cron/sla_breach_check.php?token=&lt;TOKEN&gt;</div>
                 <p><?php echo t('tickets.help_sla.cron.http_note'); ?></p>
                 <div class="tk-help-code-block">SELECT setting_value FROM system_settings WHERE setting_key = 'sla_cron_token';</div>
 
@@ -538,7 +538,7 @@ $translationNamespaces = ['common', 'tickets'];
 
                 <h4><?php echo t('tickets.help_sla.cron.linux_heading'); ?></h4>
                 <p><?php echo t('tickets.help_sla.cron.linux_intro'); ?></p>
-                <div class="tk-help-code-block">*/5 * * * * /usr/bin/php /var/www/freeitsm-app/cron/sla_breach_check.php &gt;&gt; /var/log/freeitsm-sla-cron.log 2&gt;&amp;1</div>
+                <div class="tk-help-code-block">*/5 * * * * /usr/bin/php /var/www/domus-desk-app/cron/sla_breach_check.php &gt;&gt; /var/log/domus_desk-sla-cron.log 2&gt;&amp;1</div>
 
                 <h4><?php echo t('tickets.help_sla.cron.sec_heading'); ?></h4>
                 <p><?php echo t('tickets.help_sla.cron.sec_intro'); ?></p>

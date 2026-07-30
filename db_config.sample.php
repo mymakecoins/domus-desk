@@ -10,7 +10,7 @@
 
 // MySQL Connection Settings
 define('DB_SERVER', 'localhost');                     // MySQL server hostname
-define('DB_NAME', 'freeitsm');                       // Database name
+define('DB_NAME', 'domus_desk');                       // Database name
 define('DB_USERNAME', 'your_mysql_username');         // MySQL username
 define('DB_PASSWORD', 'your_secure_password');        // MySQL password
 ?>
