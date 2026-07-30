@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/logo-domus-desk.png" alt="Domus Desk Logo" width="320">
+</p>
+
 <h1 align="center">Domus Desk</h1>
 
 <p align="center"><strong>Gestão de Serviços de TI (ITSM) gratuita e de código aberto — auto-hospedada, com IA inclusa, sem taxas por usuário. Sempre.</strong></p>
