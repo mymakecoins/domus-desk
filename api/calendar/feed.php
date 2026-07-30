@@ -82,16 +82,16 @@ function ics_fold($line) {
     return $out;
 }
 
-$host   = $_SERVER['HTTP_HOST'] ?? 'freeitsm';
-$domain = preg_replace('/[^a-zA-Z0-9.\-]/', '', $host) ?: 'freeitsm';
+$host   = $_SERVER['HTTP_HOST'] ?? 'domus-desk';
+$domain = preg_replace('/[^a-zA-Z0-9.\-]/', '', $host) ?: 'domus-desk';
 
 $lines = [];
 $lines[] = 'BEGIN:VCALENDAR';
 $lines[] = 'VERSION:2.0';
-$lines[] = 'PRODID:-//FreeITSM//Calendar//EN';
+$lines[] = 'PRODID:-//DomusDesk//Calendar//EN';
 $lines[] = 'CALSCALE:GREGORIAN';
 $lines[] = 'METHOD:PUBLISH';
-$lines[] = 'X-WR-CALNAME:FreeITSM';
+$lines[] = 'X-WR-CALNAME:Domus Desk';
 $lines[] = 'X-WR-TIMEZONE:' . $tz;
 $lines[] = 'REFRESH-INTERVAL;VALUE=DURATION:PT6H';
 $lines[] = 'X-PUBLISHED-TTL:PT6H';
@@ -148,6 +148,6 @@ foreach ($events as $ev) {
 $lines[] = 'END:VCALENDAR';
 
 header('Content-Type: text/calendar; charset=utf-8');
-header('Content-Disposition: inline; filename="freeitsm.ics"');
+header('Content-Disposition: inline; filename="domus-desk.ics"');
 header('Cache-Control: private, max-age=300');
 echo implode("\r\n", $lines) . "\r\n";

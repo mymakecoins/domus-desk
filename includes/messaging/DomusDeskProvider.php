@@ -1,9 +1,9 @@
 <?php
 /**
- * FreeitsmProvider — the "provider" for the self-hosted website chat channel.
+ * DomusDeskProvider — the "provider" for the self-hosted website chat channel.
  *
  * Unlike Twilio/Meta there is no third party to call: a web chat conversation lives
- * entirely inside FreeITSM. Inbound arrives through the public widget endpoints
+ * entirely inside Domus Desk. Inbound arrives through the public widget endpoints
  * (api/webchat/*), not the shared provider webhook, and "sending" a reply is simply
  * persisting the outbound message — the visitor's browser polls poll.php and picks it
  * up. So sendMessage does no network I/O; it just hands back a synthetic message id
@@ -17,7 +17,7 @@
 
 require_once __DIR__ . '/MessagingProvider.php';
 
-class FreeitsmProvider extends MessagingProvider
+class DomusDeskProvider extends MessagingProvider
 {
     /** Webchat has its own public endpoints, so the shared webhook never routes here. */
     public function verifyWebhook(string $rawBody, array $headers, array $params, string $url): bool

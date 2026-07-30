@@ -377,13 +377,13 @@ try {
     $countStmt = $conn->query("SELECT COUNT(*) FROM analysts");
     $analystCount = (int) $countStmt->fetchColumn();
     if ($analystCount === 0) {
-        $defaultHash = password_hash('freeitsm', PASSWORD_DEFAULT);
+        $defaultHash = password_hash('domus_desk', PASSWORD_DEFAULT);
         $seedStmt = $conn->prepare("INSERT INTO analysts (username, password_hash, full_name, email, is_active, is_admin, created_datetime) VALUES (?, ?, ?, ?, 1, 1, UTC_TIMESTAMP())");
         $seedStmt->execute(['admin', $defaultHash, 'Administrator', 'admin@localhost']);
         $results[] = [
             'table' => 'analysts',
             'status' => 'seeded',
-            'details' => ['Created default admin account (username: admin, password: freeitsm)']
+            'details' => ['Created default admin account (username: admin, password: domus_desk)']
         ];
     }
 
@@ -776,7 +776,7 @@ try {
     // scoped; classes/properties/relationship types stay install-wide config, and
     // the child tables inherit through their object.
     // (The backing index ix_cmdb_objects_tenant_id comes from the generated index
-    // list, which is parsed out of freeitsm.sql — no manual add needed here.)
+    // list, which is parsed out of domus-desk.sql — no manual add needed here.)
     if ($tableExists('cmdb_objects') && $tableExists('tenants') && $colExists('cmdb_objects', 'tenant_id')) {
         if (!$fkExists('cmdb_objects', 'fk_cmdb_objects_tenant')) {
             try { $conn->exec("ALTER TABLE cmdb_objects ADD CONSTRAINT fk_cmdb_objects_tenant FOREIGN KEY (tenant_id) REFERENCES tenants (id) ON DELETE SET NULL"); } catch (Exception $e) {}
@@ -984,7 +984,7 @@ try {
 
     // Seed a default Mon-Fri 09:00-17:00 calendar in Europe/London if no
     // calendars exist yet. Detected installs that pre-date the SLA module
-    // will pick this up on first verify; the freeitsm.sql seed handles fresh.
+    // will pick this up on first verify; the domus-desk.sql seed handles fresh.
     if ($tableExists('sla_calendars')) {
         $cnt = (int) $conn->query("SELECT COUNT(*) FROM sla_calendars")->fetchColumn();
         if ($cnt === 0) {
@@ -1426,7 +1426,7 @@ try {
             } catch (Exception $e) { /* shrug — possibly mismatched engine */ }
         }
 
-        // Step 4: the check FK (fk_results_checks in freeitsm.sql) was never
+        // Step 4: the check FK (fk_results_checks in domus-desk.sql) was never
         // backfilled here, so installs grown via Database Verification could
         // hold results pointing at deleted checks. Remove any such orphans
         // (a result without its check is meaningless — the UI deletes a
@@ -1652,7 +1652,7 @@ try {
 
     // Knowledge foreign keys (db_verify $schema only builds columns + PK; a
     // grown install was missing all of these, which orphaned tag links on
-    // hard delete). Names + delete rules match freeitsm.sql. The article-tags
+    // hard delete). Names + delete rules match domus-desk.sql. The article-tags
     // FKs won't add while orphaned junction rows exist (MySQL refuses); the
     // endpoints now clean children explicitly, so orphans stop accumulating.
     $knowledgeFks = [
@@ -1675,7 +1675,7 @@ try {
 
     // CMDB foreign keys (db_verify $schema only builds columns + PK; grown
     // installs had NONE of these, so the module's cascade-delete design
-    // silently didn't apply there). Names + delete rules match freeitsm.sql.
+    // silently didn't apply there). Names + delete rules match domus-desk.sql.
     $cmdbFks = [
         ['cmdb_classes',                'fk_cmdb_classes_icon',    "ALTER TABLE cmdb_classes ADD CONSTRAINT fk_cmdb_classes_icon FOREIGN KEY (icon_id) REFERENCES cmdb_icons (id) ON DELETE SET NULL"],
         ['cmdb_class_properties',       'fk_cmdb_cp_class',        "ALTER TABLE cmdb_class_properties ADD CONSTRAINT fk_cmdb_cp_class FOREIGN KEY (class_id) REFERENCES cmdb_classes (id) ON DELETE CASCADE"],
@@ -1699,7 +1699,7 @@ try {
     }
 
     // Software-module foreign keys (db_verify $schema only builds columns +
-    // PK). Names + rules match freeitsm.sql; note the RESTRICT (no rule) FKs
+    // PK). Names + rules match domus-desk.sql; note the RESTRICT (no rule) FKs
     // deliberately block deleting an app while installs/licences reference it.
     $softwareFks = [
         ['software_inventory_detail',        'fk_software_detail_app',      "ALTER TABLE software_inventory_detail ADD CONSTRAINT fk_software_detail_app FOREIGN KEY (app_id) REFERENCES software_inventory_apps (id)"],
@@ -1715,7 +1715,7 @@ try {
     }
 
     // Calendar foreign keys (db_verify $schema only builds columns + PK) —
-    // names + rules match freeitsm.sql. The category FK has no delete rule
+    // names + rules match domus-desk.sql. The category FK has no delete rule
     // (RESTRICT), backstopping delete_category.php's in-use guard.
     $calendarFks = [
         ['calendar_events', 'fk_calendar_events_category', "ALTER TABLE calendar_events ADD CONSTRAINT fk_calendar_events_category FOREIGN KEY (category_id) REFERENCES calendar_categories (id)"],
@@ -1728,8 +1728,8 @@ try {
 
     // Contracts-domain foreign keys (db_verify $schema only builds columns +
     // PK; this domain historically had NO FKs anywhere — not even in
-    // freeitsm.sql — so contract deletes orphaned term values). Names + rules
-    // match the constraints now in freeitsm.sql. Lookups use SET NULL to
+    // domus-desk.sql — so contract deletes orphaned term values). Names + rules
+    // match the constraints now in domus-desk.sql. Lookups use SET NULL to
     // preserve the existing delete-freely settings behaviour.
     $contractFks = [
         ['suppliers',            'fk_suppliers_type',             "ALTER TABLE suppliers ADD CONSTRAINT fk_suppliers_type FOREIGN KEY (supplier_type_id) REFERENCES supplier_types (id) ON DELETE SET NULL"],
@@ -1748,7 +1748,7 @@ try {
     }
 
     // Forms-module foreign keys (db_verify $schema only builds columns + PK;
-    // grown installs had NONE of the four freeitsm.sql constraints, and
+    // grown installs had NONE of the four domus-desk.sql constraints, and
     // parent_form_id — the #442 version chain — never had one anywhere).
     // Orphans are cleaned first so the constraints can attach: fields /
     // submissions / data of deleted parents go, dangling version-chain
@@ -1880,7 +1880,7 @@ try {
     }
 
     // Network Mapper foreign keys (db_verify $schema only builds columns + PK;
-    // freeitsm.sql has had 7 of these 8 since the module shipped but grown
+    // domus-desk.sql has had 7 of these 8 since the module shipped but grown
     // installs got NONE — so delete_diagram.php's reliance on CASCADE orphaned
     // nodes/connectors there, and deleting a CMDB object left its diagram
     // nodes dangling). Orphans are cleaned first so the constraints attach:
@@ -1937,7 +1937,7 @@ try {
     }
 
     // Ticket child foreign keys (db_verify $schema only builds columns + PK; FKs
-    // added here so installs grown via db_verify match a fresh freeitsm.sql).
+    // added here so installs grown via db_verify match a fresh domus-desk.sql).
     // These have NO cascade, so delete_ticket.php removes the children explicitly.
     // NON-DESTRUCTIVE: db_verify never deletes rows. MySQL refuses to add a FK
     // while orphaned child rows exist (e.g. attachments left behind when a
@@ -2118,7 +2118,7 @@ try {
         } catch (Exception $e) { /* leave the legacy column in place if migration fails */ }
     }
 
-    // FKs and indexes for tasks (full set matching freeitsm.sql — grown
+    // FKs and indexes for tasks (full set matching domus-desk.sql — grown
     // installs were missing the parent/comments cascades, which orphaned
     // subtasks and comments on delete)
     foreach ([
@@ -2485,24 +2485,24 @@ try {
     }
 
     // ---- Comprehensive named-index backfill --------------------------------
-    // freeitsm.sql creates every secondary index at CREATE TABLE time, but a
+    // domus-desk.sql creates every secondary index at CREATE TABLE time, but a
     // GROWN install only ever received the indexes db_verify was explicitly told
     // to add — so an index that was dropped, or never existed on an older
     // install, stays missing, and for a UNIQUE key that silently permits
     // duplicate data (e.g. two users sharing one email). This pass is the
-    // backstop: it restores EVERY named index in freeitsm.sql, idempotently —
+    // backstop: it restores EVERY named index in domus-desk.sql, idempotently —
     // present -> skip, missing -> add. It runs LAST, after the feature-specific
     // FK/index groups above, so anything they added is simply skipped here.
     //
     // A UNIQUE key that can't be added because duplicate rows already exist is
     // REPORTED, never forced: unlike orphaned FK child rows (which have a Fix
     // button), we can't know which duplicate the admin wants to keep — so they
-    // resolve it and re-run. The list is generated from freeitsm.sql by
+    // resolve it and re-run. The list is generated from domus-desk.sql by
     // scripts/gen_db_verify_indexes.php.
-    // Drift guard: the backfill list is a GENERATED mirror of freeitsm.sql, and
-    // the failure mode is someone adding an index to freeitsm.sql but forgetting
+    // Drift guard: the backfill list is a GENERATED mirror of domus-desk.sql, and
+    // the failure mode is someone adding an index to domus-desk.sql but forgetting
     // to regenerate — so the mirror silently omits it and grown installs miss it
-    // again. Re-parse freeitsm.sql and compare; if they've drifted, say so loudly
+    // again. Re-parse domus-desk.sql and compare; if they've drifted, say so loudly
     // right here (this page is the ritual after a schema change). Silent when in
     // sync, which is every shipped install (both files ship from one commit), so
     // this only ever fires for a developer mid-change. Mirrors capSelfCheck().
@@ -2513,19 +2513,19 @@ try {
             'table'   => 'index backfill list',
             'status'  => 'error',
             'details' => array_merge(
-                ['The index list is out of date vs freeitsm.sql — run scripts/gen_db_verify_indexes.php and commit both files.'],
+                ['The index list is out of date vs domus-desk.sql — run scripts/gen_db_verify_indexes.php and commit both files.'],
                 array_slice($indexListDrift, 0, 12)
             ),
         ];
     }
 
     // The same idea for COLUMNS. Indexes are the easy case — their list is
-    // GENERATED, so drift only means "you forgot to regenerate". freeitsm.sql and
+    // GENERATED, so drift only means "you forgot to regenerate". domus-desk.sql and
     // includes/db_verify_schema.php are BOTH hand-maintained, so they can
     // disagree in either direction, and each direction breaks a different
     // install: a column only in Verification leaves a FRESH install missing it
     // (this shipped once — asset_locations.tenant_id), while a column only in
-    // freeitsm.sql means an EXISTING install never gains it. Silent when in sync.
+    // domus-desk.sql means an EXISTING install never gains it. Silent when in sync.
     require_once '../../includes/db_verify_column_parse.php';
     $columnDrift = dbVerifyColumnSelfCheck();
     if (!empty($columnDrift)) {
@@ -2533,8 +2533,8 @@ try {
             'table'   => 'schema column drift',
             'status'  => 'error',
             'details' => array_merge(
-                ['freeitsm.sql and Database Verification disagree about which columns exist. '
-                 . 'Both are sources of truth — freeitsm.sql builds a NEW install, Verification upgrades an EXISTING one — '
+                ['domus-desk.sql and Database Verification disagree about which columns exist. '
+                 . 'Both are sources of truth — domus-desk.sql builds a NEW install, Verification upgrades an EXISTING one — '
                  . 'so make them match and commit both.'],
                 array_slice($columnDrift, 0, 12)
             ),

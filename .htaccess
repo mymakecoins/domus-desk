@@ -1,14 +1,14 @@
-# FreeITSM root URL routing
+# Domus Desk root URL routing
 # ------------------------------------------------------------------
 # This file is the compatibility layer for the root-folder tidy: the
 # auth pages moved into auth/, the CSAT survey into tickets/csat/, and
 # the pretty URLs below became canonical. Full documentation (what
 # moved where, and why each rule exists) lives on the wiki:
-#   https://github.com/edmozley/freeitsm/wiki/Root-Folder-Tidy
+#   https://github.com/mymakecoins/domus-desk/wiki/Root-Folder-Tidy
 #
 # All substitutions are RELATIVE (no RewriteBase, no leading slash) so
 # the same rules work whether the app is served from a subfolder
-# (http://localhost/freeitsm-app/) or a domain root (Docker).
+# (http://localhost/domus-desk-app/) or a domain root (Docker).
 # ------------------------------------------------------------------
 
 # MultiViews was what made /login "work" by accident (mapping it onto
@@ -40,7 +40,7 @@ RewriteRule ^a/([A-Za-z0-9]+)$   asset-management/scan.php?token=$1 [L,QSA]
 
 # --- Phantom-folder forms of the pretty URLs (the old MultiViews bug):
 #     /login/, /login/index.php, /login/anything -> the pretty URL.
-#     %1 captures the URL base ("/freeitsm-app/" locally, "/" in Docker)
+#     %1 captures the URL base ("/domus-desk-app/" locally, "/" in Docker)
 #     from REQUEST_URI — a bare relative substitution in an R= rule
 #     would leak the filesystem path into the redirect.
 RewriteCond %{REQUEST_URI} ^(.*/)login/

@@ -16,7 +16,7 @@ require __DIR__ . '/_top.php';
 <!-- 1. Overview -->
 <div class="syshelp-section" id="overview">
     <div class="syshelp-section-header"><h3>What SSO does here</h3></div>
-    <p class="syshelp-lead">Instead of a FreeITSM password, a person is sent to their own identity provider (IdP) to sign in. FreeITSM never sees their password — it receives a signed token proving who they are. Multi-factor is handled by the provider, so SSO users aren't asked for a separate code.</p>
+    <p class="syshelp-lead">Instead of a Domus Desk password, a person is sent to their own identity provider (IdP) to sign in. Domus Desk never sees their password — it receives a signed token proving who they are. Multi-factor is handled by the provider, so SSO users aren't asked for a separate code.</p>
     <p>It works in two places, independently:</p>
     <div class="syshelp-cards">
         <div class="syshelp-card">
@@ -38,12 +38,12 @@ require __DIR__ . '/_top.php';
     <p>This is the only thing you need to get straight before you start. Everything else follows from it.</p>
     <table class="syshelp-table">
         <tr><th></th><th>Single-company</th><th>Multi-company (MSP)</th></tr>
-        <tr><td><strong>You are…</strong></td><td>One organisation running FreeITSM for your own staff and users.</td><td>An MSP (or group) supporting several separate client companies from one install.</td></tr>
+        <tr><td><strong>You are…</strong></td><td>One organisation running Domus Desk for your own staff and users.</td><td>An MSP (or group) supporting several separate client companies from one install.</td></tr>
         <tr><td><strong>How many companies?</strong></td><td>Just one (the silent “Default”).</td><td>Two or more (System &rarr; Companies).</td></tr>
         <tr><td><strong>Identity providers</strong></td><td>Your own IdP(s), shared by everyone.</td><td>Each client brings <em>their own</em> IdP.</td></tr>
         <tr><td><strong>Portal login shows…</strong></td><td>Provider buttons up front.</td><td>Email first, then that person's company's provider(s).</td></tr>
     </table>
-    <div class="syshelp-callout"><strong>How FreeITSM decides which you are:</strong> it counts companies. With one company it behaves as a single-company install; the moment you add a second company in System &rarr; Companies, the multi-company behaviour switches on automatically. You don't toggle a setting.</div>
+    <div class="syshelp-callout"><strong>How Domus Desk decides which you are:</strong> it counts companies. With one company it behaves as a single-company install; the moment you add a second company in System &rarr; Companies, the multi-company behaviour switches on automatically. You don't toggle a setting.</div>
     <p>Pick your section below.</p>
 </div>
 
@@ -97,18 +97,18 @@ require __DIR__ . '/_top.php';
 <!-- 4b. LDAP / Active Directory -->
 <div class="syshelp-section" id="ldap">
     <div class="syshelp-section-header"><h3>LDAP / Active Directory</h3></div>
-    <p>If your people already exist in Active Directory (or OpenLDAP, FreeIPA, 389 Directory Server), FreeITSM can check their password against it directly. They keep the username and password they already use everywhere else, and you don't create an account here for every new starter.</p>
-    <div class="syshelp-callout"><strong>This is not single sign-on.</strong> With SSO the browser bounces to your identity provider and back. With LDAP people type their directory password into <em>FreeITSM's own</em> login form, and we check it with the directory. Both live on this page because both answer the same question — how do people sign in — but they behave differently, and only SSO gives you one shared session across apps.</div>
+    <p>If your people already exist in Active Directory (or OpenLDAP, FreeIPA, 389 Directory Server), Domus Desk can check their password against it directly. They keep the username and password they already use everywhere else, and you don't create an account here for every new starter.</p>
+    <div class="syshelp-callout"><strong>This is not single sign-on.</strong> With SSO the browser bounces to your identity provider and back. With LDAP people type their directory password into <em>Domus Desk's own</em> login form, and we check it with the directory. Both live on this page because both answer the same question — how do people sign in — but they behave differently, and only SSO gives you one shared session across apps.</div>
     <h4>How it works</h4>
-    <p>Someone types <code>r.patel</code>, not their full directory path, so FreeITSM does this on every sign-in:</p>
+    <p>Someone types <code>r.patel</code>, not their full directory path, so Domus Desk does this on every sign-in:</p>
     <ol>
         <li>Connects to your directory and signs in as a <strong>read-only service account</strong>, so it is allowed to look people up.</li>
         <li><strong>Searches</strong> for the person to find their full entry.</li>
         <li>Tries to sign in <strong>as that person</strong> with the password they typed. If the directory accepts it, the password was right.</li>
         <li>Checks their <strong>groups</strong> to decide what, if anything, they're allowed to be.</li>
     </ol>
-    <p>That's why the setup form asks for a server, a service account and a base DN — they're the ingredients for those steps. FreeITSM never reads or stores anyone's directory password.</p>
-    <div class="syshelp-callout ok"><strong>Leavers are handled for you.</strong> Disable someone in the directory and they can no longer sign in here, immediately — the directory refuses the sign-in, so there is nothing to remember to switch off in FreeITSM.</div>
+    <p>That's why the setup form asks for a server, a service account and a base DN — they're the ingredients for those steps. Domus Desk never reads or stores anyone's directory password.</p>
+    <div class="syshelp-callout ok"><strong>Leavers are handled for you.</strong> Disable someone in the directory and they can no longer sign in here, immediately — the directory refuses the sign-in, so there is nothing to remember to switch off in Domus Desk.</div>
 </div>
 
 <!-- 4c. LDAP setup -->
@@ -117,7 +117,7 @@ require __DIR__ . '/_top.php';
     <p>Go to <strong>System → Authentication</strong>, click <strong>+ Add</strong>, and set <strong>Type</strong> to <em>LDAP / Active Directory</em>. Then pick the <strong>Active Directory</strong> or <strong>OpenLDAP</strong> preset — it fills in the filter and attribute names that are right for that kind of directory, so you only need to supply the four things that are specific to you:</p>
     <ul>
         <li><strong>Server</strong> — a domain controller's hostname or IP, e.g. <code>dc1.example.local</code>.</li>
-        <li><strong>Service account</strong> — a <em>read-only</em> account used only to look people up. Active Directory accepts <code>svc-freeitsm@example.local</code>; OpenLDAP wants a full DN like <code>cn=svc-freeitsm,dc=example,dc=com</code>. It never needs write access.</li>
+        <li><strong>Service account</strong> — a <em>read-only</em> account used only to look people up. Active Directory accepts <code>svc-domusdesk@example.local</code>; OpenLDAP wants a full DN like <code>cn=svc-domusdesk,dc=example,dc=com</code>. It never needs write access.</li>
         <li><strong>Base DN</strong> — where to search from, e.g. <code>DC=example,DC=local</code>, or narrow it to <code>OU=Staff,DC=example,DC=local</code>.</li>
         <li><strong>Encryption</strong> — see the warning below.</li>
     </ul>
@@ -133,7 +133,7 @@ require __DIR__ . '/_top.php';
     <table class="syshelp-table">
         <thead><tr><th>Setting</th><th>What it does</th></tr></thead>
         <tbody>
-            <tr><td><strong>Analyst group</strong></td><td>Members get an analyst account and can use the main FreeITSM login.</td></tr>
+            <tr><td><strong>Analyst group</strong></td><td>Members get an analyst account and can use the main Domus Desk login.</td></tr>
             <tr><td><strong>Self-service user group</strong></td><td>Members get a self-service account — they can raise and track their own tickets, but cannot sign in as an analyst.</td></tr>
             <tr><td><strong>Neither</strong></td><td>They cannot sign in at all, even with a correct password.</td></tr>
             <tr><td><strong>Both boxes blank</strong></td><td>No gate: anyone the directory recognises becomes an analyst. Fine for a small single-team install; risky anywhere else.</td></tr>
@@ -141,7 +141,7 @@ require __DIR__ . '/_top.php';
     </table>
     <p>Type either the group's plain name (<code>ITSM-Analysts</code>) or its full DN — both work, and case doesn't matter.</p>
     <div class="syshelp-callout ok"><strong>Nested groups work on Active Directory.</strong> If your analyst group contains other groups rather than people directly, members of those inner groups still get in. The AD preset handles this for you. OpenLDAP has no equivalent, so there you must name a group that contains the people themselves.</div>
-    <div class="syshelp-callout"><strong>It fails safely.</strong> If FreeITSM can't read your groups for any reason, nobody is let in by accident — an unreadable group list denies access rather than granting it. So if <em>everyone</em> is suddenly refused, suspect the group settings, not people's passwords.</div>
+    <div class="syshelp-callout"><strong>It fails safely.</strong> If Domus Desk can't read your groups for any reason, nobody is let in by accident — an unreadable group list denies access rather than granting it. So if <em>everyone</em> is suddenly refused, suspect the group settings, not people's passwords.</div>
 </div>
 
 <!-- 4e. LDAP troubleshooting -->
@@ -191,7 +191,7 @@ require __DIR__ . '/_top.php';
         <li><strong>Master kill switch</strong> — turning off <em>Enable single sign-on</em> instantly reverts everyone to local login.</li>
         <li><strong>Allow local login</strong> — when off, the local form is hidden for a clean SSO-only experience, but it's still reachable.</li>
         <li><strong>The <code>?local=1</code> escape hatch</strong> — adding <code>?local=1</code> to a login URL always brings the password form back, even in SSO-only mode. Keep at least one local admin account for this.</li>
-        <li><strong>Single logout</strong> — signing out of FreeITSM also ends the session at the provider, so the next visit isn't silently waved through.</li>
+        <li><strong>Single logout</strong> — signing out of Domus Desk also ends the session at the provider, so the next visit isn't silently waved through.</li>
     </ul>
     <div class="syshelp-callout ok"><strong>Recommended:</strong> keep one local-password admin account as your break-glass, and confirm <code>?local=1</code> works, before you switch <em>Allow local login</em> off.</div>
 </div>

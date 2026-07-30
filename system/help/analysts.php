@@ -10,7 +10,7 @@ require __DIR__ . '/_top.php';
 <!-- 1. Overview -->
 <div class="syshelp-section" id="overview">
     <div class="syshelp-section-header"><h3>What this page controls</h3></div>
-    <p class="syshelp-lead">An <strong>analyst</strong> is someone who works <em>in</em> FreeITSM — takes tickets, updates assets, writes knowledge. (The people who <em>raise</em> tickets are requesters, and they are created automatically from inbound email or the self-service portal; you don't add them here.)</p>
+    <p class="syshelp-lead">An <strong>analyst</strong> is someone who works <em>in</em> Domus Desk — takes tickets, updates assets, writes knowledge. (The people who <em>raise</em> tickets are requesters, and they are created automatically from inbound email or the self-service portal; you don't add them here.)</p>
     <p>System &rarr; Analysts is the one place you create those accounts and decide, for each of them, four separate things:</p>
     <div class="syshelp-cards">
         <div class="syshelp-card">
@@ -58,7 +58,7 @@ require __DIR__ . '/_top.php';
     <div class="syshelp-section-header"><h3>Administrators</h3></div>
     <p class="syshelp-lead">The <strong>Administrator</strong> toggle is the single key to the System module — this whole area: analysts, teams, company access, SSO, security, encryption, the API and the rest. An analyst without it cannot open System, cannot see it in the waffle menu, and cannot call its endpoints even by typing the URL directly.</p>
     <p>It is deliberately separate from module access. You cannot grant &ldquo;System&rdquo; as a module on System &rarr; Modules; the admin flag is the only route in. The one exception is <strong>Preferences</strong>, which every analyst can always reach because it only changes their own settings.</p>
-    <div class="syshelp-callout warn"><strong>The last administrator is protected.</strong> FreeITSM will refuse to delete, demote or deactivate the only remaining active admin — you'd lock yourself out of System with no way back. Grant admin to someone else first, then change the original.</div>
+    <div class="syshelp-callout warn"><strong>The last administrator is protected.</strong> Domus Desk will refuse to delete, demote or deactivate the only remaining active admin — you'd lock yourself out of System with no way back. Grant admin to someone else first, then change the original.</div>
     <div class="syshelp-callout info"><strong>Grant it sparingly.</strong> An administrator can see and change every company's configuration, read the topology, mint API keys and reset anyone's password. Most analysts, including senior ones, never need it.</div>
 </div>
 
@@ -114,7 +114,7 @@ require __DIR__ . '/_top.php';
         <tr><td><strong>Delete</strong></td><td>The account row is removed outright. There is no undo, and no warning if they still have tickets or tasks assigned to them.</td></tr>
     </table>
     <div class="syshelp-callout warn"><strong>Delete does not check for assigned work.</strong> Reassign anything that belongs to the person before you delete them — nothing will stop you otherwise.</div>
-    <div class="syshelp-callout">FreeITSM won't let you delete <strong>your own account</strong>, or the <strong>last active administrator</strong>. Everything else is fair game, so pause before you press it.</div>
+    <div class="syshelp-callout">Domus Desk won't let you delete <strong>your own account</strong>, or the <strong>last active administrator</strong>. Everything else is fair game, so pause before you press it.</div>
     <div class="syshelp-callout ok"><strong>Done.</strong> Add the person, set admin only if they need System, tick their companies and modules, and put them in the right teams — then check the chips on their row read the way you expect.</div>
 </div>
 

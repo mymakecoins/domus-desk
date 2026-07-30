@@ -10,7 +10,7 @@
  * passed in via {placeholder} params rather than translated.
  */
 return [
-    'title'   => 'FreeITSM Setup',
+    'title'   => 'Domus Desk Setup',
     'heading' => 'Setup Verification',
 
     'summary' => [
@@ -52,7 +52,7 @@ return [
         'ca_ini_none'              => 'not set',
         'ca_ini_missing'           => '{path} (file missing!)',
         'ca_ini_note_fix'          => ' — fix the path or comment the setting out in php.ini.',
-        'ca_ini_note_fallback'     => ' — optional: FreeITSM falls back to its bundled CA list (Windows) or the OS trust store (Linux). Note: this reflects the web server\'s PHP; the background worker uses a separate CLI php.ini.',
+        'ca_ini_note_fallback'     => ' — optional: Domus Desk falls back to its bundled CA list (Windows) or the OS trust store (Linux). Note: this reflects the web server\'s PHP; the background worker uses a separate CLI php.ini.',
         'ssl_disabled'             => 'Disabled — enable for production (set SSL_VERIFY_PEER to true in config.php)',
         'ssl_undefined'            => 'SSL_VERIFY_PEER not defined in config.php',
         'display_errors_enabled'   => 'Enabled — disable for production (set display_errors to 0 in config.php)',
@@ -81,7 +81,7 @@ return [
 
     'footer' => [
         'warning'   => 'Once your system is in production, delete the {folder} folder for security.',
-        'signature' => 'FreeITSM Setup Verification',
+        'signature' => 'Domus Desk Setup Verification',
     ],
 
     'js' => [

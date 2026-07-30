@@ -148,7 +148,7 @@ $apiBaseUrl = $scheme . '://' . ($_SERVER['HTTP_HOST'] ?? 'localhost') . BASE_UR
 
     <div class="api-container">
         <h1 class="page-title">API</h1>
-        <p class="page-subtitle">Create and manage keys for the FreeITSM REST API, with granular permissions per key.</p>
+        <p class="page-subtitle">Create and manage keys for the Domus Desk REST API, with granular permissions per key.</p>
 
         <div class="settings-card">
             <h3>Base URL</h3>
@@ -168,7 +168,7 @@ $apiBaseUrl = $scheme . '://' . ($_SERVER['HTTP_HOST'] ?? 'localhost') . BASE_UR
             <p class="card-desc">
                 A machine-readable description of the whole API. Import it into <strong>Postman</strong> or <strong>Insomnia</strong>,
                 generate a client library, or feed it to any OpenAPI tool &mdash; so you don't have to wire up each endpoint by hand.
-                New to this? See <a href="https://github.com/edmozley/freeitsm/wiki/REST-API-OpenAPI" target="_blank" rel="noopener">the guide</a>.
+                New to this? See <a href="https://github.com/mymakecoins/domus-desk/wiki/REST-API-OpenAPI" target="_blank" rel="noopener">the guide</a>.
             </p>
             <div class="base-url-box">
                 <code><?php echo htmlspecialchars($apiBaseUrl); ?>/openapi.json</code>

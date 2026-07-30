@@ -371,7 +371,7 @@ return [
 
         'collection_heading' => 'Hoe data versamel word',
         'collection_intro'   => 'Die Sagteware-module versamel nie op sy eie data nie. In plaas daarvan steun dit op die Bate-bestuur PowerShell-skrip ({script}) wat op elke bestuurde Windows-masjien loop en geïnstalleerde sagteware as deel van die breër hardeware- en sagteware-inventaris rapporteer.',
-        'collection_p2'      => 'Wanneer die PowerShell-skrip op \'n masjien loop, lees dit die Voeg by/Verwyder Programme-registerinskrywings en versamel elke geïnstalleerde toepassing en stelselkomponent. Hierdie data word na die FreeITSM-API gepos, waar dit teen die baterekord gestoor word. Die Sagteware-module voeg dan hierdie data oor alle masjiene saam om jou die landgoedwye aansig te gee.',
+        'collection_p2'      => 'Wanneer die PowerShell-skrip op \'n masjien loop, lees dit die Voeg by/Verwyder Programme-registerinskrywings en versamel elke geïnstalleerde toepassing en stelselkomponent. Hierdie data word na die Domus Desk-API gepos, waar dit teen die baterekord gestoor word. Die Sagteware-module voeg dan hierdie data oor alle masjiene saam om jou die landgoedwye aansig te gee.',
         'flow_script' => 'PowerShell-skrip',
         'flow_api'    => 'system-info-API',
         'flow_db'     => 'Databasis',
@@ -390,7 +390,7 @@ return [
         'settings_heading' => 'Instellings',
         'settings_intro'   => 'Die Instellings-bladsy laat jou toe om te konfigureer hoe die Sagteware-module optree. Hiervandaan kan jy API-sleutels bestuur wat die inventarisskrip staaf en beheer watter sagteware-inskrywings in die hooflys verskyn.',
         'settings_s1_b'    => 'API-sleutelbestuur',
-        'settings_s1_t'    => 'genereer en bestuur API-sleutels wat die PowerShell-inventarisskrip teen jou FreeITSM-instansie staaf. Jy kan veelvuldige sleutels skep, hulle deaktiveer sonder om te skrap, en dophou wanneer elke sleutel laas gebruik is.',
+        'settings_s1_t'    => 'genereer en bestuur API-sleutels wat die PowerShell-inventarisskrip teen jou Domus Desk-instansie staaf. Jy kan veelvuldige sleutels skep, hulle deaktiveer sonder om te skrap, en dophou wanneer elke sleutel laas gebruik is.',
         'settings_s2_b'    => 'Geïgnoreerde sagteware',
         'settings_s2_t'    => 'sommige stelselkomponente of ongewenste inskrywings rommel die sagtewarelys op. Gebruik die ignoreer-funksie om spesifieke titels van die inventarisaansig te versteek. Geïgnoreerde items word steeds versamel en gestoor, maar hulle word van die hooflys en paneelbordberekeninge versteek.',
         'settings_s3_b'    => 'Sagtewarekategorieë',

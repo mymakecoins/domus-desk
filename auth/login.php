@@ -256,7 +256,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $error = ($role === 'user')
                         // Correct credentials, wrong portal: point them somewhere useful.
                         ? 'Your account does not have analyst access. Please use the self-service portal.'
-                        : 'Your account is not a member of a group that grants access to FreeITSM.';
+                        : 'Your account is not a member of a group that grants access to Domus Desk.';
                     logLoginAttempt($conn, null, $username, false);
                     break;
                 }

@@ -418,7 +418,7 @@ function whAgo($s) {
                     <li>
                         <strong>Watch this page.</strong> Once the worker runs, the status above turns green and deliveries appear below.
                         Full setup notes (Windows &amp; Linux, signature verification) are in
-                        <a href="https://github.com/edmozley/freeitsm/wiki/Workflows" target="_blank" rel="noopener">the Workflows wiki</a>.
+                        <a href="https://github.com/mymakecoins/domus-desk/wiki/Workflows" target="_blank" rel="noopener">the Workflows wiki</a>.
                     </li>
                 </ol>
             <?php endif; ?>
@@ -436,7 +436,7 @@ function whAgo($s) {
         <!-- ============ DATA PROTECTION ============ -->
         <div class="card">
             <h3>Data protection</h3>
-            <p class="desc">What FreeITSM keeps on disk about your webhooks, and for how long.</p>
+            <p class="desc">What Domus Desk keeps on disk about your webhooks, and for how long.</p>
 
             <?php if ($encryptionOn): ?>
                 <div class="wf-diagnosis" style="background:var(--success-bg,#e6f4ea); color:var(--success-text,#1e7e34); border-color:var(--success-border,#b7e1c4);">
@@ -451,7 +451,7 @@ function whAgo($s) {
                 <div class="wf-diagnosis">
                     <strong>No encryption key is configured &mdash; webhook URLs and signing secrets are stored in plain text</strong>
                     <div class="wf-diagnosis-body">
-                        FreeITSM encrypts these when an encryption key file is present, but this install has none, so
+                        Domus Desk encrypts these when an encryption key file is present, but this install has none, so
                         they are being saved as-is rather than failing your webhooks outright. Anyone who can read the
                         database or a backup of it can post to your channels and forge your signatures. Configure the
                         encryption key (<code>ENCRYPTION_KEY_PATH</code>) and re-save each webhook workflow to encrypt

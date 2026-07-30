@@ -379,7 +379,7 @@ return [
 
         'collection_heading' => 'How data gets collected',
         'collection_intro'   => 'The Software module does not collect data on its own. Instead, it relies on the Asset Management PowerShell script ({script}) which runs on each managed Windows machine and reports installed software as part of the broader hardware and software inventory.',
-        'collection_p2'      => 'When the PowerShell script runs on a machine, it reads the Add/Remove Programs registry entries and collects every installed application and system component. This data is posted to the FreeITSM API, where it is stored against the asset record. The Software module then aggregates this data across all machines to give you the estate-wide view.',
+        'collection_p2'      => 'When the PowerShell script runs on a machine, it reads the Add/Remove Programs registry entries and collects every installed application and system component. This data is posted to the Domus Desk API, where it is stored against the asset record. The Software module then aggregates this data across all machines to give you the estate-wide view.',
         'flow_script' => 'PowerShell script',
         'flow_api'    => 'system-info API',
         'flow_db'     => 'Database',
@@ -398,7 +398,7 @@ return [
         'settings_heading' => 'Settings',
         'settings_intro'   => 'The Settings page lets you configure how the Software module behaves. From here you can manage API keys that authenticate the inventory script and control which software entries appear in the main list.',
         'settings_s1_b'    => 'API key management',
-        'settings_s1_t'    => 'generate and manage API keys that authenticate the PowerShell inventory script against your FreeITSM instance. You can create multiple keys, deactivate them without deleting, and track when each key was last used.',
+        'settings_s1_t'    => 'generate and manage API keys that authenticate the PowerShell inventory script against your Domus Desk instance. You can create multiple keys, deactivate them without deleting, and track when each key was last used.',
         'settings_s2_b'    => 'Ignored software',
         'settings_s2_t'    => 'some system components or unwanted entries clutter the software list. Use the ignore feature to hide specific titles from the inventory view. Ignored items are still collected and stored, but they are hidden from the main list and dashboard calculations.',
         'settings_s3_b'    => 'Software categories',

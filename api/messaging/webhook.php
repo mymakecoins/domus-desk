@@ -13,7 +13,7 @@
  *   - 'direct' : the provider hits this URL directly (install exposes HTTPS, e.g.
  *                via ngrok in dev). Verified by the provider signature.
  *   - 'relay'  : a hosted relay forwards the verbatim request. Verified by the
- *                X-FreeITSM-Relay-Secret header matching the channel's relay_secret.
+ *                X-Domus-Desk-Relay-Secret header matching the channel's relay_secret.
  *                (The relay itself is Phase 2; this endpoint already accepts it.)
  *
  * Always responds 200 quickly on success so the provider doesn't retry; auth
@@ -70,7 +70,7 @@ if ($channelId <= 0) {
     webhookFail(400, 'Missing channel');
 }
 
-// Liveness echo for the reachability self-test (FreeITSM → its own public URL).
+// Liveness echo for the reachability self-test (Domus Desk → its own public URL).
 // Unauthenticated and side-effect-free: it only confirms this script is reachable
 // at this URL by echoing the caller's nonce. No message processing happens here.
 if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'GET' && isset($_GET['ping'])) {
@@ -123,7 +123,7 @@ $params  = $_POST;
 // Authenticate the request per ingress mode.
 $ingress = $channel['ingress_mode'] ?? 'direct';
 if ($ingress === 'relay') {
-    $presented = $headers['x-freeitsm-relay-secret'] ?? '';
+    $presented = $headers['x-domus-desk-relay-secret'] ?? '';
     $expected  = (string) ($channel['relay_secret'] ?? '');
     if ($expected === '' || !hash_equals($expected, $presented)) {
         webhookFail(403, 'Relay authentication failed');

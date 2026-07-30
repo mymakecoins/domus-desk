@@ -245,7 +245,7 @@ return [
         'checking' => 'Checking encryption status...',
 
         'how_heading'   => 'How Encryption Works',
-        'how_point1'    => 'FreeITSM uses {strong} authenticated encryption to protect sensitive data stored in the database, such as API keys, vCenter credentials, and mailbox connection details.',
+        'how_point1'    => 'Domus Desk uses {strong} authenticated encryption to protect sensitive data stored in the database, such as API keys, vCenter credentials, and mailbox connection details.',
         'how_point1_strong' => 'AES-256-GCM',
         'how_point2'    => 'The encryption key is a 64-character hex string (256 bits) stored in a file {strong} so it cannot be accessed via a browser.',
         'how_point2_strong' => 'outside the web root',
@@ -301,11 +301,11 @@ return [
         'subtitle' => 'Personal settings saved to your account — they follow you across browsers.',
 
         'language_heading' => 'Interface language',
-        'language_desc'    => 'The language used across the FreeITSM UI. Translations fall back to English for any strings not yet covered in your chosen language. Reloads the page on change.',
+        'language_desc'    => 'The language used across the Domus Desk UI. Translations fall back to English for any strings not yet covered in your chosen language. Reloads the page on change.',
         'saving'           => 'Saving…',
 
         'timezone_heading' => 'Timezone',
-        'timezone_desc'    => 'Dates and times across FreeITSM are shown in this timezone. Defaults to the server timezone until you choose one.',
+        'timezone_desc'    => 'Dates and times across Domus Desk are shown in this timezone. Defaults to the server timezone until you choose one.',
         'timezone_saved'   => 'Timezone saved',
 
         'position_heading' => 'Notification position',
@@ -448,11 +448,11 @@ return [
         'field_display_name_hint' => 'Shown on the login button, e.g. "Sign in with Keycloak"',
         'field_display_name_placeholder' => 'Sign in with Keycloak',
         'field_issuer'     => 'Issuer URL',
-        'field_issuer_hint'=> "The provider's base URL. e.g. http://localhost:8080/realms/freeitsm",
+        'field_issuer_hint'=> "The provider's base URL. e.g. http://localhost:8080/realms/domus_desk",
         'field_issuer_placeholder' => 'https://your-idp/realms/your-realm',
         'test'             => 'Test',
         'field_client_id'  => 'Client ID',
-        'field_client_id_hint' => 'The client/app identifier created in the provider, e.g. freeitsm-app',
+        'field_client_id_hint' => 'The client/app identifier created in the provider, e.g. domus-desk-app',
         'field_client_secret' => 'Client secret',
         'field_client_secret_hint' => "The client's secret from the provider. Stored encrypted.",
         'field_scopes'     => 'Scopes',
@@ -508,12 +508,12 @@ return [
         'field_ldap_filter_hint' => 'How we find the person who is signing in. {token} is replaced by whatever they typed, so listing several attributes lets them use their username OR their email address.',
 
         'ldap_attrs_heading'   => 'Attributes',
-        'ldap_attrs_desc'      => 'Which directory fields map to a FreeITSM account. The presets above are right for most sites.',
+        'ldap_attrs_desc'      => 'Which directory fields map to a Domus Desk account. The presets above are right for most sites.',
         'field_ldap_attr_username' => 'Username',
         'field_ldap_attr_email'    => 'Email',
         'field_ldap_attr_name'     => 'Full name',
         'field_ldap_attr_guid'     => 'Unique ID',
-        'field_ldap_attr_guid_hint'=> 'An attribute that never changes, used to keep the link to the FreeITSM account when someone is renamed or moved. {ad} on Active Directory, {openldap} on OpenLDAP.',
+        'field_ldap_attr_guid_hint'=> 'An attribute that never changes, used to keep the link to the Domus Desk account when someone is renamed or moved. {ad} on Active Directory, {openldap} on OpenLDAP.',
 
         'ldap_groups_heading'  => 'Access by group',
         'ldap_groups_desc'     => 'Name the directory groups that grant access. {strong} Someone in neither group cannot sign in, even with a correct password — which is what stops auto-create turning every employee in the directory into an analyst.',

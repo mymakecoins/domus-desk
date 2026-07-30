@@ -198,7 +198,7 @@ return [
 
         // Section 3: System logs
         's3_heading' => 'Logs do sistema',
-        's3_intro'   => 'A área de Logs captura tudo o que acontece nos bastidores da sua instância do FreeITSM. Cada tentativa de login, importação de e-mail e evento do sistema é registrado com um carimbo de data/hora e status, para que você sempre tenha uma visão completa da atividade da plataforma.',
+        's3_intro'   => 'A área de Logs captura tudo o que acontece nos bastidores da sua instância do Domus Desk. Cada tentativa de login, importação de e-mail e evento do sistema é registrado com um carimbo de data/hora e status, para que você sempre tenha uma visão completa da atividade da plataforma.',
         's3_badge_login'  => 'LOGIN',
         's3_badge_email'  => 'E-MAIL',
         's3_badge_system' => 'SISTEMA',

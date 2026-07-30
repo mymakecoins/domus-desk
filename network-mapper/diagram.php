@@ -447,7 +447,7 @@ $translationNamespaces = ['common', 'network-mapper'];
             line-height: 1.2;
             /* Wider than the icon so multi-word names like "Production Database"
                sit on one line. overflow-wrap (not word-break: break-word) means
-               whole words stay intact — "FREEITSM" stays whole rather than
+               whole words stay intact — "DOMUS_DESK" stays whole rather than
                splitting mid-character to "FREEIT / SM". Single tokens that
                genuinely don't fit fall back to breaking; the 2-line clamp +
                ellipsis catches anything still too long. Hover tooltip shows

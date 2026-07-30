@@ -29,7 +29,7 @@ return [
         'verify_ssl_label'        => 'Verifikasi SSL',
         'verify_ssl_hint'         => 'Nonaktifkan hanya untuk pengujian terhadap lingkungan dengan sertifikat yang ditandatangani sendiri (mis. di belakang proxy pemeriksa).',
         'ssl_warning_title'       => 'Peringatan',
-        'ssl_warning_body'        => 'Verifikasi SSL dinonaktifkan. FreeITSM akan menerima sertifikat TLS apa pun dari penyedia AI tanpa memeriksanya. Siapa pun yang memiliki akses ke jaringan Anda dapat menyamar sebagai penyedia, menyadap lalu lintas, dan mencuri API key Anda — beserta setiap prompt dan respons yang menyertainya. Biarkan ini nonaktif hanya di lingkungan pengujian dengan sertifikat yang ditandatangani sendiri — jangan pernah di produksi.',
+        'ssl_warning_body'        => 'Verifikasi SSL dinonaktifkan. Domus Desk akan menerima sertifikat TLS apa pun dari penyedia AI tanpa memeriksanya. Siapa pun yang memiliki akses ke jaringan Anda dapat menyamar sebagai penyedia, menyadap lalu lintas, dan mencuri API key Anda — beserta setiap prompt dan respons yang menyertainya. Biarkan ini nonaktif hanya di lingkungan pengujian dengan sertifikat yang ditandatangani sendiri — jangan pernah di produksi.',
         'test_btn'                => 'Uji',
         'testing'                 => 'Menguji…',
     ],

@@ -198,7 +198,7 @@ return [
 
         // Section 3: System logs
         's3_heading' => 'Registros del sistema',
-        's3_intro'   => 'El área de Registros captura todo lo que ocurre entre bastidores en tu instancia de FreeITSM. Cada intento de inicio de sesión, importación de correo y evento del sistema se registra con una marca de tiempo y un estado, de modo que siempre tengas una imagen completa de la actividad de la plataforma.',
+        's3_intro'   => 'El área de Registros captura todo lo que ocurre entre bastidores en tu instancia de Domus Desk. Cada intento de inicio de sesión, importación de correo y evento del sistema se registra con una marca de tiempo y un estado, de modo que siempre tengas una imagen completa de la actividad de la plataforma.',
         's3_badge_login'  => 'INICIO DE SESIÓN',
         's3_badge_email'  => 'CORREO',
         's3_badge_system' => 'SISTEMA',

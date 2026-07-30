@@ -1,6 +1,6 @@
 <?php
 /**
- * FreeITSM REST API v1 — tasks resource (kanban Tasks module).
+ * Domus Desk REST API v1 — tasks resource (kanban Tasks module).
  *
  * Mirrors the module's internal endpoints so a task touched via the API is
  * indistinguishable from one touched in the UI:

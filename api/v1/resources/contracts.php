@@ -1,6 +1,6 @@
 <?php
 /**
- * FreeITSM REST API v1 — contracts resource (contracts, suppliers, contacts,
+ * Domus Desk REST API v1 — contracts resource (contracts, suppliers, contacts,
  * contract terms). The RFP Builder is deliberately NOT exposed (internal-only
  * by design).
  *

@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Create a report to help me make FreeITSM even better
+about: Create a report to help me make Domus Desk even better
 title: ''
 labels: ''
 assignees: ''

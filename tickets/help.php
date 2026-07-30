@@ -1285,7 +1285,7 @@ try {
                     <p class="tk-help-tip">
                         Testing on a laptop? Providers can only reach a public address, so run a tunnel
                         (e.g. <code>ngrok http 80</code>) and use the HTTPS URL it gives you as the webhook host. See the
-                        <a href="https://github.com/edmozley/freeitsm/wiki/WhatsApp" target="_blank" rel="noopener">WhatsApp wiki page</a> for a full walkthrough.
+                        <a href="https://github.com/mymakecoins/domus-desk/wiki/WhatsApp" target="_blank" rel="noopener">WhatsApp wiki page</a> for a full walkthrough.
                     </p>
                 </div>
             </div>

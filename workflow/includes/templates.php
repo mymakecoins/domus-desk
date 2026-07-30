@@ -3,7 +3,7 @@
  * Workflow starter templates — the "recipe library".
  *
  * A template is a workflow definition with the install-specific bits left
- * abstract, so the same recipe can be cloned into any FreeITSM install.
+ * abstract, so the same recipe can be cloned into any Domus Desk install.
  *
  * Two abstraction markers may appear anywhere an action arg or a condition
  * value would normally hold a literal:

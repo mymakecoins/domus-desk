@@ -1,6 +1,6 @@
 <?php
 /**
- * FreeITSM REST API v1 — network-mapper resource (diagrams, nodes, connectors,
+ * Domus Desk REST API v1 — network-mapper resource (diagrams, nodes, connectors,
  * versions, suggestions).
  *
  * Built for programmatic diagram maintenance — the target consumer is a

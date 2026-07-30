@@ -4,7 +4,7 @@
  *
  * WHY A PRINT PAGE AND NOT A PDF
  * ------------------------------
- * FreeITSM ships no PDF library, and adding one to print a grid of squares
+ * Domus Desk ships no PDF library, and adding one to print a grid of squares
  * would be a dependency for nothing: `@page` plus millimetre units gives the
  * same result through the browser's own print dialog, on any printer, with a
  * live preview. The QR codes are drawn client-side by the qrcode library the
@@ -139,7 +139,7 @@ if ($ready && $ids) {
 <html lang="<?php echo htmlspecialchars(I18n::getLocale()); ?>">
 <head>
     <meta charset="UTF-8">
-    <title>Asset labels · FreeITSM</title>
+    <title>Asset labels · Domus Desk</title>
     <script src="../assets/js/qrcode.min.js"></script>
     <style>
         /* Screen chrome — everything here disappears for the printer. */

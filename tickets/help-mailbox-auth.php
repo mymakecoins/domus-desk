@@ -298,7 +298,7 @@ $translationNamespaces = ['common', 'tickets'];
     <div class="tk-help-main" id="helpMain">
         <div class="tk-help-hero">
             <h2>Mailbox Authentication</h2>
-            <p>Connecting FreeITSM to a mailbox to turn email into tickets — safely, from the right inbox.</p>
+            <p>Connecting Domus Desk to a mailbox to turn email into tickets — safely, from the right inbox.</p>
         </div>
 
         <div class="tk-help-content">
@@ -312,10 +312,10 @@ $translationNamespaces = ['common', 'tickets'];
                         <p>What a mailbox connection does, and the choices you'll make setting one up.</p>
                     </div>
                 </div>
-                <p>FreeITSM reads inbound email into tickets and sends replies by connecting to a mailbox. Two providers are supported: <strong>Microsoft 365</strong> (via the Microsoft Graph API) and <strong>Google Workspace</strong> (via the Gmail API). Both use OAuth 2.0 — no plaintext mailbox passwords are ever stored.</p>
+                <p>Domus Desk reads inbound email into tickets and sends replies by connecting to a mailbox. Two providers are supported: <strong>Microsoft 365</strong> (via the Microsoft Graph API) and <strong>Google Workspace</strong> (via the Gmail API). Both use OAuth 2.0 — no plaintext mailbox passwords are ever stored.</p>
                 <p>For Microsoft 365 there are two ways to authenticate, chosen per mailbox with the <strong>Authentication</strong> dropdown in the mailbox modal:</p>
                 <div class="tk-help-fields">
-                    <div><strong>Delegated</strong> — you sign in once <em>as the mailbox account</em>; FreeITSM then acts as that user and reads their inbox (Graph <span class="tk-help-code">/me</span>).</div>
+                    <div><strong>Delegated</strong> — you sign in once <em>as the mailbox account</em>; Domus Desk then acts as that user and reads their inbox (Graph <span class="tk-help-code">/me</span>).</div>
                     <div><strong>App-only</strong> — no sign-in; the app authenticates itself with its own client ID + secret and reads the configured mailbox directly (Graph <span class="tk-help-code">/users/&lt;address&gt;</span>).</div>
                 </div>
                 <p>Configure everything below under <strong>Tickets &rarr; Settings &rarr; Mailboxes</strong>.</p>
@@ -359,12 +359,12 @@ $translationNamespaces = ['common', 'tickets'];
                     <span class="tk-help-section-num">3</span>
                     <div>
                         <h3>"Reading from the right inbox" safeguards</h3>
-                        <p>How FreeITSM stops a delegated mailbox quietly reading the wrong account.</p>
+                        <p>How Domus Desk stops a delegated mailbox quietly reading the wrong account.</p>
                     </div>
                 </div>
-                <p>Delegated mode has a sharp edge: the token belongs to <em>whoever signed in</em>, and it reads <em>their</em> inbox. If you sign in as the wrong account — or change a mailbox's target address without re-authenticating — FreeITSM could read the wrong mail while the label says otherwise. These safeguards prevent that:</p>
+                <p>Delegated mode has a sharp edge: the token belongs to <em>whoever signed in</em>, and it reads <em>their</em> inbox. If you sign in as the wrong account — or change a mailbox's target address without re-authenticating — Domus Desk could read the wrong mail while the label says otherwise. These safeguards prevent that:</p>
                 <ol>
-                    <li><strong>It records who actually signed in.</strong> On authentication, FreeITSM captures the signed-in account's full set of addresses (primary, UPN and aliases). The primary is shown in the UI; the whole set is kept for matching.</li>
+                    <li><strong>It records who actually signed in.</strong> On authentication, Domus Desk captures the signed-in account's full set of addresses (primary, UPN and aliases). The primary is shown in the UI; the whole set is kept for matching.</li>
                     <li><strong>It checks before every read and send.</strong> If the configured target isn't one of the signed-in account's addresses, the operation is <strong>blocked</strong> with a clear message rather than silently reading the wrong inbox.</li>
                     <li><strong>Changing the address invalidates the sign-in.</strong> Edit a mailbox's target (or switch its auth mode) and the stored identity is cleared, forcing a fresh sign-in — a stale token can't keep reading the old inbox.</li>
                     <li><strong>The list shows you the truth.</strong> Each mailbox row carries a plain-language status (see below).</li>
@@ -396,12 +396,12 @@ $translationNamespaces = ['common', 'tickets'];
                     <div><strong>Primary SMTP / alias</strong> — your actual email address(es), e.g. <span class="tk-help-code">ed@contoso.com</span> as a friendlier alias</div>
                 </div>
                 <p>The access token only carries the account's <strong>UPN / primary</strong> address — not its aliases. So if a mailbox's target is an <em>alias</em> (e.g. <span class="tk-help-code">ed@</span> on the <span class="tk-help-code">edmozley@</span> mailbox), a naive exact-match would wrongly cry "Wrong account" even though it's the same inbox.</p>
-                <p>FreeITSM avoids that: on sign-in it reads the mailbox's <strong>full address list</strong> (primary, UPN and every alias, via Graph <span class="tk-help-code">proxyAddresses</span>) and accepts the target if it matches <strong>any</strong> of them. So:</p>
+                <p>Domus Desk avoids that: on sign-in it reads the mailbox's <strong>full address list</strong> (primary, UPN and every alias, via Graph <span class="tk-help-code">proxyAddresses</span>) and accepts the target if it matches <strong>any</strong> of them. So:</p>
                 <div class="tk-help-fields">
                     <div>Target <span class="tk-help-code">ed@</span> while signed in as <span class="tk-help-code">edmozley@</span> &rarr; <span class="badge green">allowed</span> (alias of the same mailbox)</div>
                     <div>Target <span class="tk-help-code">support@</span> while signed in as <span class="tk-help-code">edmozley@</span> &rarr; <span class="badge red">blocked</span> (genuinely different mailbox)</div>
                 </div>
-                <p>Reading the alias list needs the lightweight <span class="tk-help-code">User.Read</span> scope (see next section). Without it, FreeITSM falls back to matching the primary address only — everything still works, you just can't use a non-primary alias as the target.</p>
+                <p>Reading the alias list needs the lightweight <span class="tk-help-code">User.Read</span> scope (see next section). Without it, Domus Desk falls back to matching the primary address only — everything still works, you just can't use a non-primary alias as the target.</p>
                 <p class="tk-help-warn">If you point a mailbox at an alias and it still says &#9888; Wrong account, it was almost certainly authenticated <strong>without</strong> <span class="tk-help-code">User.Read</span>. Add it to the scopes and re-authenticate, or use the mailbox's primary address as the target instead.</p>
             </div>
 
@@ -416,7 +416,7 @@ $translationNamespaces = ['common', 'tickets'];
                 </div>
 
                 <h4>What's a scope?</h4>
-                <p>A <strong>scope</strong> (or permission) is a single capability you ask Microsoft for, like <span class="tk-help-code">Mail.Read</span>. The token Microsoft issues is stamped with exactly the scopes you requested and nothing more — like a backstage pass listing which doors it opens. FreeITSM asks for <span class="tk-help-code">Mail.Read</span>, <span class="tk-help-code">Mail.ReadWrite</span>, <span class="tk-help-code">Mail.Send</span>, the lightweight <span class="tk-help-code">User.Read</span>, plus <span class="tk-help-code">openid</span> / <span class="tk-help-code">email</span> / <span class="tk-help-code">offline_access</span> (sign-in plumbing).</p>
+                <p>A <strong>scope</strong> (or permission) is a single capability you ask Microsoft for, like <span class="tk-help-code">Mail.Read</span>. The token Microsoft issues is stamped with exactly the scopes you requested and nothing more — like a backstage pass listing which doors it opens. Domus Desk asks for <span class="tk-help-code">Mail.Read</span>, <span class="tk-help-code">Mail.ReadWrite</span>, <span class="tk-help-code">Mail.Send</span>, the lightweight <span class="tk-help-code">User.Read</span>, plus <span class="tk-help-code">openid</span> / <span class="tk-help-code">email</span> / <span class="tk-help-code">offline_access</span> (sign-in plumbing).</p>
 
                 <h4>Delegated permission vs Application permission</h4>
                 <p>Same-sounding permission, two very different flavours — this is where everyone trips up:</p>
@@ -430,7 +430,7 @@ $translationNamespaces = ['common', 'tickets'];
                 <p>Some permissions are powerful enough that an ordinary user can't approve them for the whole organisation — a <strong>Global Administrator</strong> must click <strong>"Grant admin consent"</strong> in Azure. <strong>All application permissions</strong> need admin consent (there's no user to consent, so an admin must). Many delegated permissions a user can consent to themselves at sign-in.</p>
 
                 <h4>What about <span class="tk-help-code">User.Read</span>?</h4>
-                <p><span class="tk-help-code">User.Read</span> is the single lowest-privilege delegated scope: it reads the <strong>signed-in user's own</strong> basic profile (name, email, alias list) and nothing about anyone else or the directory. A user can self-consent — no admin needed. FreeITSM uses it for exactly one thing: reading that account's own aliases so an alias target is recognised (see the Aliases section).</p>
+                <p><span class="tk-help-code">User.Read</span> is the single lowest-privilege delegated scope: it reads the <strong>signed-in user's own</strong> basic profile (name, email, alias list) and nothing about anyone else or the directory. A user can self-consent — no admin needed. Domus Desk uses it for exactly one thing: reading that account's own aliases so an alias target is recognised (see the Aliases section).</p>
                 <p class="tk-help-tip"><strong>Prefer not to grant <span class="tk-help-code">User.Read</span>?</strong> It's optional. Two zero-permission alternatives: (1) point the mailbox at its <strong>primary</strong> address rather than an alias, so exact-match works off the token alone; or (2) use <strong>App-only</strong> mode, which sidesteps the "who signed in" question entirely.</p>
             </div>
 
@@ -448,14 +448,14 @@ $translationNamespaces = ['common', 'tickets'];
                 <ol>
                     <li><strong>Entra ID &rarr; App registrations &rarr; New registration.</strong> Note the <strong>Application (client) ID</strong> and <strong>Directory (tenant) ID</strong>.</li>
                     <li><strong>Certificates &amp; secrets &rarr; New client secret.</strong> Copy the secret <strong>value</strong> immediately — you can't see it again.</li>
-                    <li>Enter the tenant ID, client ID and secret into the FreeITSM mailbox modal.</li>
+                    <li>Enter the tenant ID, client ID and secret into the Domus Desk mailbox modal.</li>
                 </ol>
 
                 <h4>For Delegated</h4>
                 <ol>
-                    <li><strong>Authentication &rarr; Add a platform &rarr; Web</strong>, and set the <strong>Redirect URI</strong> to your install's <span class="tk-help-code">oauth_callback.php</span> (FreeITSM pre-fills this).</li>
+                    <li><strong>Authentication &rarr; Add a platform &rarr; Web</strong>, and set the <strong>Redirect URI</strong> to your install's <span class="tk-help-code">oauth_callback.php</span> (Domus Desk pre-fills this).</li>
                     <li><strong>API permissions &rarr; Microsoft Graph &rarr; Delegated</strong>: add <span class="tk-help-code">Mail.Read</span>, <span class="tk-help-code">Mail.ReadWrite</span>, <span class="tk-help-code">Mail.Send</span>, <span class="tk-help-code">User.Read</span>, <span class="tk-help-code">offline_access</span>, <span class="tk-help-code">openid</span>, <span class="tk-help-code">email</span>.</li>
-                    <li>Save, then in FreeITSM click <strong>Authenticate</strong> and <strong>sign in as the target mailbox</strong>.</li>
+                    <li>Save, then in Domus Desk click <strong>Authenticate</strong> and <strong>sign in as the target mailbox</strong>.</li>
                 </ol>
 
                 <h4>For App-only</h4>
@@ -463,9 +463,9 @@ $translationNamespaces = ['common', 'tickets'];
                     <li><strong>API permissions &rarr; Microsoft Graph &rarr; Application</strong>: add <span class="tk-help-code">Mail.ReadWrite</span> and <span class="tk-help-code">Mail.Send</span>.</li>
                     <li>Click <strong>Grant admin consent</strong> (requires a Global Admin).</li>
                     <li><em>Recommended:</em> lock the app to just the mailboxes it should touch with an <strong>Application Access Policy</strong> — otherwise an app-only app can in principle read every mailbox in the tenant.</li>
-                    <li>In FreeITSM, set <strong>Authentication = App-only</strong>. There's no sign-in step — it works on the next check.</li>
+                    <li>In Domus Desk, set <strong>Authentication = App-only</strong>. There's no sign-in step — it works on the next check.</li>
                 </ol>
-                <p class="tk-help-warn">App-only with no Application Access Policy grants the app access to <em>all</em> mailboxes in the tenant. For least privilege, scope it down to the specific mailbox(es) FreeITSM should read.</p>
+                <p class="tk-help-warn">App-only with no Application Access Policy grants the app access to <em>all</em> mailboxes in the tenant. For least privilege, scope it down to the specific mailbox(es) Domus Desk should read.</p>
             </div>
 
             <!-- 7. Add & verify a mailbox -->
@@ -473,7 +473,7 @@ $translationNamespaces = ['common', 'tickets'];
                 <div class="tk-help-section-header">
                     <span class="tk-help-section-num">7</span>
                     <div>
-                        <h3>Adding &amp; verifying a mailbox in FreeITSM</h3>
+                        <h3>Adding &amp; verifying a mailbox in Domus Desk</h3>
                         <p>The end-to-end flow once the Azure app exists.</p>
                     </div>
                 </div>
@@ -498,7 +498,7 @@ $translationNamespaces = ['common', 'tickets'];
                         <p>Briefly — Gmail mailboxes behave like delegated mode.</p>
                     </div>
                 </div>
-                <p>Google mailboxes use the <strong>Gmail API</strong> with OAuth 2.0 and behave like delegated mode — you authorise once and FreeITSM reads/sends as that account. There's no app-only equivalent in the FreeITSM UI for Google; the redirect URI uses <span class="tk-help-code">google_oauth_callback.php</span> instead of <span class="tk-help-code">oauth_callback.php</span>.</p>
+                <p>Google mailboxes use the <strong>Gmail API</strong> with OAuth 2.0 and behave like delegated mode — you authorise once and Domus Desk reads/sends as that account. There's no app-only equivalent in the Domus Desk UI for Google; the redirect URI uses <span class="tk-help-code">google_oauth_callback.php</span> instead of <span class="tk-help-code">oauth_callback.php</span>.</p>
             </div>
 
             <!-- 9. Troubleshooting -->
@@ -520,7 +520,7 @@ $translationNamespaces = ['common', 'tickets'];
                     <tr><td>Delegated: "Mailbox is not authenticated"</td><td>No stored token — click <strong>Authenticate</strong> and sign in.</td></tr>
                     <tr><td>Replies fail: "Could not determine mailbox for this ticket"</td><td>Manual ticket with no mailbox. Use the <strong>Send replies from</strong> dropdown when raising manual tickets.</td></tr>
                 </table>
-                <p class="tk-help-tip">For a deeper, regularly-updated write-up, see the <a href="https://github.com/edmozley/freeitsm/wiki/Mailbox-Authentication" target="_blank" rel="noopener">Mailbox Authentication wiki page</a>.</p>
+                <p class="tk-help-tip">For a deeper, regularly-updated write-up, see the <a href="https://github.com/mymakecoins/domus-desk/wiki/Mailbox-Authentication" target="_blank" rel="noopener">Mailbox Authentication wiki page</a>.</p>
             </div>
 
         </div>

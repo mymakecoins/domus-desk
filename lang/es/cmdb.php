@@ -516,7 +516,7 @@ return [
         'hierarchy_body'    => 'Usa el enlace padre/hijo cuando eliminar el padre deja al hijo sin sentido. Ejemplo clásico: una cadena SQL.',
         'hierarchy_diagram_n1' => 'Servidor (SQLSVR01)',
         'hierarchy_diagram_n2' => 'Instancia SQL (MSSQLSERVER)',
-        'hierarchy_diagram_n3' => 'Base de datos (FREEITSM)',
+        'hierarchy_diagram_n3' => 'Base de datos (DOMUS_DESK)',
         'hierarchy_diagram_n4' => 'Procedimiento almacenado (sp_archive)',
         'hierarchy_diagram_n5' => 'Trabajo SQL (Archivado nocturno)',
         'hierarchy_body2'   => 'Cada nivel realmente no puede existir sin su padre &mdash; elimina el Servidor y cada capa inferior desaparece con él. <strong>La eliminación en cascada se aplica</strong>; la confirmación te indica exactamente cuántos descendientes desaparecerán.',
@@ -529,7 +529,7 @@ return [
         'relationships_step1'   => 'En la sección <strong>Relaciones</strong> de la página de detalle del objeto, haz clic en <strong>+ Añadir relación</strong>.',
         'relationships_step2'   => 'Elige un verbo del desplegable (una pista muestra el verbo inverso para que veas cómo se leerá desde el otro lado).',
         'relationships_step3'   => 'Escribe para buscar el objeto vinculado &mdash; el autocompletado busca en todas las clases. Elige y guarda.',
-        'relationships_body2'   => 'La relación es simétrica: cuando ves el objeto vinculado, aparece en <em>su</em> columna de entrantes con el verbo inverso. Así, <em>"FREEITSM depende de AD"</em> en la base de datos se muestra como <em>"FREEITSM es dependencia de AD"</em> cuando estás viendo AD.',
+        'relationships_body2'   => 'La relación es simétrica: cuando ves el objeto vinculado, aparece en <em>su</em> columna de entrantes con el verbo inverso. Así, <em>"DOMUS_DESK depende de AD"</em> en la base de datos se muestra como <em>"DOMUS_DESK es dependencia de AD"</em> cuando estás viendo AD.',
         'relationships_tip'     => 'Añade nuevos verbos en <strong>Configuración &rarr; Tipos de relación</strong> &mdash; cada verbo tiene un inverso. Se inicializan tres en la primera ejecución: <em>depende de</em>, <em>se conecta a</em>, <em>gestionado por</em>.',
 
         // 8. When to use which

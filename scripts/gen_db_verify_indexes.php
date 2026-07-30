@@ -1,22 +1,22 @@
 <?php
 /**
- * Generator: rebuild includes/db_verify_indexes.php from database/freeitsm.sql.
+ * Generator: rebuild includes/db_verify_indexes.php from database/domus-desk.sql.
  *
- * freeitsm.sql is the source of truth for the schema. This script extracts every
+ * domus-desk.sql is the source of truth for the schema. This script extracts every
  * named secondary index (UNIQUE KEY / KEY / INDEX — not PRIMARY, not FOREIGN KEY)
  * with its columns, and writes them as a PHP array the Database Verification
  * endpoint uses to restore any index a grown install is missing.
  *
- * Run after adding or changing an index in freeitsm.sql:
+ * Run after adding or changing an index in domus-desk.sql:
  *   php scripts/gen_db_verify_indexes.php
  *
  * Then review the diff and commit both files together. Keeping this list in step
- * with freeitsm.sql is the same discipline as db_verify's $schema (see the
+ * with domus-desk.sql is the same discipline as db_verify's $schema (see the
  * Database-Verification-Developer-Guide wiki page).
  */
 
 $root = dirname(__DIR__);
-$sqlPath = $root . '/database/freeitsm.sql';
+$sqlPath = $root . '/database/domus-desk.sql';
 $outPath = $root . '/includes/db_verify_indexes.php';
 
 // The parse lives in one place, shared with db_verify's drift self-check, so the
@@ -35,10 +35,10 @@ $out  = "<?php\n";
 $out .= "/**\n";
 $out .= " * GENERATED — do not edit by hand.\n";
 $out .= " *\n";
-$out .= " * Every named secondary index in database/freeitsm.sql: [table, name, isUnique,\n";
+$out .= " * Every named secondary index in database/domus-desk.sql: [table, name, isUnique,\n";
 $out .= " * columns]. Consumed by api/system/db_verify.php to restore indexes a grown\n";
 $out .= " * install is missing. Regenerate with scripts/gen_db_verify_indexes.php after\n";
-$out .= " * changing an index in freeitsm.sql.\n";
+$out .= " * changing an index in domus-desk.sql.\n";
 $out .= " */\n";
 $out .= "return [\n";
 foreach ($rows as $r) {

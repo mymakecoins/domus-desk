@@ -1,5 +1,5 @@
 /**
- * FreeITSM Tasks — Shared right-side quick-look detail panel
+ * Domus Desk Tasks — Shared right-side quick-look detail panel
  *
  * Used by the calendar and the timeline (any view where the full dashboard
  * editor would be overkill but the user still wants to peek-and-edit

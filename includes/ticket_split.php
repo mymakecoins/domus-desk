@@ -305,7 +305,7 @@ function splitLeaveMarker(PDO $conn, int $ticketId, string $newNumber, array $mo
         "INSERT INTO emails
             (subject, from_address, from_name, received_datetime, body_content, body_type,
              has_attachments, is_read, ticket_id, direction, channel, is_initial, processed_datetime, ticket_created)
-         VALUES (?, '', 'FreeITSM', COALESCE(?, UTC_TIMESTAMP()), ?, 'html', 0, 1, ?, 'Manual', 'email', 0, UTC_TIMESTAMP(), 1)"
+         VALUES (?, '', 'Domus Desk', COALESCE(?, UTC_TIMESTAMP()), ?, 'html', 0, 1, ?, 'Manual', 'email', 0, UTC_TIMESTAMP(), 1)"
     );
     $stmt->execute(['Split to ' . $newNumber, $when, $body, $ticketId]);
     return (int)$conn->lastInsertId();
@@ -384,7 +384,7 @@ function undoSplit(PDO $conn, int $actorId, int $splitId): array {
 
     $ids = json_decode((string)$split['moved_email_ids'], true);
     if (!is_array($ids) || !$ids) {
-        throw new Exception('This split was made before FreeITSM recorded which messages moved, so it cannot be undone automatically');
+        throw new Exception('This split was made before Domus Desk recorded which messages moved, so it cannot be undone automatically');
     }
     $ids = array_values(array_filter(array_map('intval', $ids)));
     $in  = implode(',', $ids);

@@ -1,4 +1,4 @@
-# FreeITSM REST API v1 — route /api/v1/<anything> into the front controller.
+# Domus Desk REST API v1 — route /api/v1/<anything> into the front controller.
 # Wrapped in IfModule so servers without mod_rewrite don't 500; on those,
 # the API is still fully usable at /api/v1/index.php/<path> (PATH_INFO).
 <IfModule mod_rewrite.c>

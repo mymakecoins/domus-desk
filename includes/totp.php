@@ -82,7 +82,7 @@ function verifyTotpCode($base32Secret, $code, $window = 1) {
  * @param string $issuer Application name
  * @return string otpauth URI
  */
-function getTotpUri($base32Secret, $accountName, $issuer = 'FreeITSM') {
+function getTotpUri($base32Secret, $accountName, $issuer = 'Domus Desk') {
     $label = rawurlencode($issuer) . ':' . rawurlencode($accountName);
     $params = http_build_query([
         'secret' => $base32Secret,

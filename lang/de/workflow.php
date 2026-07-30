@@ -29,7 +29,7 @@ return [
         'verify_ssl_label'        => 'SSL überprüfen',
         'verify_ssl_hint'         => 'Nur zum Testen gegen Umgebungen mit selbstsignierten Zertifikaten deaktivieren (z. B. hinter einem prüfenden Proxy).',
         'ssl_warning_title'       => 'Warnung',
-        'ssl_warning_body'        => 'Die SSL-Überprüfung ist deaktiviert. FreeITSM akzeptiert jedes TLS-Zertifikat des KI-Anbieters, ohne es zu prüfen. Jeder mit Zugriff auf Ihr Netzwerk könnte sich als der Anbieter ausgeben, den Datenverkehr abfangen und Ihren API key stehlen — zusammen mit jedem darauf folgenden Prompt und jeder Antwort. Lassen Sie dies nur in Testumgebungen mit selbstsignierten Zertifikaten deaktiviert — niemals im Produktivbetrieb.',
+        'ssl_warning_body'        => 'Die SSL-Überprüfung ist deaktiviert. Domus Desk akzeptiert jedes TLS-Zertifikat des KI-Anbieters, ohne es zu prüfen. Jeder mit Zugriff auf Ihr Netzwerk könnte sich als der Anbieter ausgeben, den Datenverkehr abfangen und Ihren API key stehlen — zusammen mit jedem darauf folgenden Prompt und jeder Antwort. Lassen Sie dies nur in Testumgebungen mit selbstsignierten Zertifikaten deaktiviert — niemals im Produktivbetrieb.',
         'test_btn'                => 'Testen',
         'testing'                 => 'Test läuft…',
     ],

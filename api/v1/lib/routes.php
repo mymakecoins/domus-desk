@@ -1,6 +1,6 @@
 <?php
 /**
- * FreeITSM REST API v1 — the route table, extracted so both the front
+ * Domus Desk REST API v1 — the route table, extracted so both the front
  * controller (index.php) and the OpenAPI generator (lib/openapi.php) read one
  * authoritative list. [method, pattern, [resource, action] | null, handler].
  */

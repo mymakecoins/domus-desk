@@ -4,7 +4,7 @@
  * Every palette is just a set of CSS custom properties. Module stylesheets use
  * the tokens (var(--…)) instead of hardcoded colours; the active palette is set
  * by <html data-theme="<id>">. The :root / [data-theme="default"] block IS the
- * conventional FreeITSM look, so converting a module to tokens leaves light mode
+ * conventional Domus Desk look, so converting a module to tokens leaves light mode
  * pixel-identical and dark (or any future palette) "just works".
  *
  * To add a palette: add a [data-theme="<id>"] block here + an entry in

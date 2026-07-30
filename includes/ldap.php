@@ -611,7 +611,7 @@ function ldapResolveAnalyst(PDO $conn, array $provider, array $ldapUser): array 
     } else {
         // 3) Just-in-time create.
         if ((int)$provider['auto_create_users'] !== 1) {
-            return ['ok' => false, 'error' => 'No FreeITSM account exists for that user. Ask an administrator to create one.'];
+            return ['ok' => false, 'error' => 'No Domus Desk account exists for that user. Ask an administrator to create one.'];
         }
         // No email is allowed: plenty of directories hold staff who were never
         // given a mailbox. The bind already proved who they are, so there is

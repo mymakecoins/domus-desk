@@ -371,7 +371,7 @@ return [
 
         'collection_heading' => 'Wie Daten erfasst werden',
         'collection_intro'   => 'Das Software-Modul erfasst keine Daten von sich aus. Stattdessen stützt es sich auf das PowerShell-Skript des Asset-Managements ({script}), das auf jedem verwalteten Windows-Rechner läuft und installierte Software als Teil des umfassenderen Hardware- und Software-Inventars meldet.',
-        'collection_p2'      => 'Wenn das PowerShell-Skript auf einem Rechner läuft, liest es die Registrierungseinträge von Programme hinzufügen/entfernen und erfasst jede installierte Anwendung und Systemkomponente. Diese Daten werden an die FreeITSM-API gesendet, wo sie im Asset-Datensatz gespeichert werden. Das Software-Modul aggregiert diese Daten dann über alle Rechner hinweg, um Ihnen die bestandsweite Ansicht zu geben.',
+        'collection_p2'      => 'Wenn das PowerShell-Skript auf einem Rechner läuft, liest es die Registrierungseinträge von Programme hinzufügen/entfernen und erfasst jede installierte Anwendung und Systemkomponente. Diese Daten werden an die Domus Desk-API gesendet, wo sie im Asset-Datensatz gespeichert werden. Das Software-Modul aggregiert diese Daten dann über alle Rechner hinweg, um Ihnen die bestandsweite Ansicht zu geben.',
         'flow_script' => 'PowerShell-Skript',
         'flow_api'    => 'system-info-API',
         'flow_db'     => 'Datenbank',
@@ -390,7 +390,7 @@ return [
         'settings_heading' => 'Einstellungen',
         'settings_intro'   => 'Die Seite Einstellungen ermöglicht es Ihnen, das Verhalten des Software-Moduls zu konfigurieren. Von hier aus können Sie API-Schlüssel verwalten, die das Inventar-Skript authentifizieren, und steuern, welche Software-Einträge in der Hauptliste erscheinen.',
         'settings_s1_b'    => 'API-Schlüssel-Verwaltung',
-        'settings_s1_t'    => 'Erstellen und verwalten Sie API-Schlüssel, die das PowerShell-Inventar-Skript gegenüber Ihrer FreeITSM-Instanz authentifizieren. Sie können mehrere Schlüssel erstellen, sie deaktivieren, ohne sie zu löschen, und verfolgen, wann jeder Schlüssel zuletzt verwendet wurde.',
+        'settings_s1_t'    => 'Erstellen und verwalten Sie API-Schlüssel, die das PowerShell-Inventar-Skript gegenüber Ihrer Domus Desk-Instanz authentifizieren. Sie können mehrere Schlüssel erstellen, sie deaktivieren, ohne sie zu löschen, und verfolgen, wann jeder Schlüssel zuletzt verwendet wurde.',
         'settings_s2_b'    => 'Ignorierte Software',
         'settings_s2_t'    => 'Manche Systemkomponenten oder unerwünschte Einträge überladen die Software-Liste. Verwenden Sie die Ignorieren-Funktion, um bestimmte Titel aus der Inventaransicht auszublenden. Ignorierte Elemente werden weiterhin erfasst und gespeichert, aber sie sind in der Hauptliste und den Dashboard-Berechnungen ausgeblendet.',
         'settings_s3_b'    => 'Software-Kategorien',

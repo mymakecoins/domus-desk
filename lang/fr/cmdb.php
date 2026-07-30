@@ -516,7 +516,7 @@ return [
         'hierarchy_body'    => 'Utilisez le lien parent/enfant lorsque la suppression du parent rend l\'enfant dénué de sens. Exemple classique : une chaîne SQL.',
         'hierarchy_diagram_n1' => 'Serveur (SQLSVR01)',
         'hierarchy_diagram_n2' => 'Instance SQL (MSSQLSERVER)',
-        'hierarchy_diagram_n3' => 'Base de données (FREEITSM)',
+        'hierarchy_diagram_n3' => 'Base de données (DOMUS_DESK)',
         'hierarchy_diagram_n4' => 'Procédure stockée (sp_archive)',
         'hierarchy_diagram_n5' => 'Tâche SQL (Archivage nocturne)',
         'hierarchy_body2'   => 'Chaque niveau ne peut véritablement pas exister sans son parent &mdash; supprimez le Serveur, et chaque couche en dessous disparaît avec lui. <strong>La suppression en cascade est appliquée</strong> ; la confirmation vous indique exactement combien de descendants disparaîtront.',
@@ -529,7 +529,7 @@ return [
         'relationships_step1'   => 'Dans la section <strong>Relations</strong> de la page de détail de l\'objet, cliquez sur <strong>+ Ajouter une relation</strong>.',
         'relationships_step2'   => 'Choisissez un verbe dans la liste déroulante (une indication montre le verbe inverse afin que vous voyiez comment cela se lira de l\'autre côté).',
         'relationships_step3'   => 'Saisissez pour rechercher l\'objet lié &mdash; la saisie semi-automatique recherche dans toutes les classes. Choisissez et enregistrez.',
-        'relationships_body2'   => 'La relation est symétrique : lorsque vous consultez l\'objet lié, elle apparaît dans <em>sa</em> colonne entrante avec le verbe inverse. Ainsi <em>« FREEITSM dépend de AD »</em> sur la base de données s\'affiche comme <em>« FREEITSM est utilisé par AD »</em> lorsque vous consultez AD.',
+        'relationships_body2'   => 'La relation est symétrique : lorsque vous consultez l\'objet lié, elle apparaît dans <em>sa</em> colonne entrante avec le verbe inverse. Ainsi <em>« DOMUS_DESK dépend de AD »</em> sur la base de données s\'affiche comme <em>« DOMUS_DESK est utilisé par AD »</em> lorsque vous consultez AD.',
         'relationships_tip'     => 'Ajoutez de nouveaux verbes dans <strong>Paramètres &rarr; Types de relation</strong> &mdash; chaque verbe a un inverse. Trois sont initialisés au premier lancement : <em>dépend de</em>, <em>se connecte à</em>, <em>géré par</em>.',
 
         // 8. When to use which

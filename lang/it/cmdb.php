@@ -516,7 +516,7 @@ return [
         'hierarchy_body'    => 'Usa il collegamento genitore/figlio quando rimuovere il genitore rende il figlio privo di significato. Esempio classico: una catena SQL.',
         'hierarchy_diagram_n1' => 'Server (SQLSVR01)',
         'hierarchy_diagram_n2' => 'Istanza SQL (MSSQLSERVER)',
-        'hierarchy_diagram_n3' => 'Database (FREEITSM)',
+        'hierarchy_diagram_n3' => 'Database (DOMUS_DESK)',
         'hierarchy_diagram_n4' => 'Stored Procedure (sp_archive)',
         'hierarchy_diagram_n5' => 'Job SQL (Archiviazione notturna)',
         'hierarchy_body2'   => 'Ogni livello davvero non può esistere senza il suo genitore &mdash; elimina il Server e ogni livello sottostante se ne va con esso. <strong>L\'eliminazione a cascata è applicata</strong>; la conferma ti dice esattamente quanti discendenti spariranno.',
@@ -529,7 +529,7 @@ return [
         'relationships_step1'   => 'Nella sezione <strong>Relazioni</strong> della pagina di dettaglio dell\'oggetto, clicca <strong>+ Aggiungi relazione</strong>.',
         'relationships_step2'   => 'Scegli un verbo dal menu a tendina (un suggerimento mostra il verbo inverso così puoi vedere come apparirà dall\'altro lato).',
         'relationships_step3'   => 'Digita per cercare l\'oggetto collegato &mdash; il completamento automatico cerca in ogni classe. Scegli e salva.',
-        'relationships_body2'   => 'La relazione è simmetrica: quando visualizzi l\'oggetto collegato, appare nella <em>sua</em> colonna in entrata con il verbo inverso. Così <em>"FREEITSM dipende da AD"</em> sul database appare come <em>"FREEITSM è dipeso da AD"</em> quando stai visualizzando AD.',
+        'relationships_body2'   => 'La relazione è simmetrica: quando visualizzi l\'oggetto collegato, appare nella <em>sua</em> colonna in entrata con il verbo inverso. Così <em>"DOMUS_DESK dipende da AD"</em> sul database appare come <em>"DOMUS_DESK è dipeso da AD"</em> quando stai visualizzando AD.',
         'relationships_tip'     => 'Aggiungi nuovi verbi in <strong>Impostazioni &rarr; Tipi di relazione</strong> &mdash; ogni verbo ha un inverso. Tre sono precaricati al primo avvio: <em>dipende da</em>, <em>si connette a</em>, <em>gestito da</em>.',
 
         // 8. When to use which

@@ -11,7 +11,7 @@
  * deleting real rows (all prefixed ZZ-). Point it at a DEV install only.
  */
 
-define('BASE_TEST_URL', rtrim(getenv('FREEITSM_TEST_URL') ?: 'http://localhost/freeitsm-app', '/') . '/');
+define('BASE_TEST_URL', rtrim(getenv('DOMUS_DESK_TEST_URL') ?: 'http://localhost/domus-desk-app', '/') . '/');
 
 /** Where PHP writes its sessions — the harnesses forge one to act as an analyst. */
-define('SESS_DIR', rtrim(getenv('FREEITSM_SESS_DIR') ?: (ini_get('session.save_path') ?: sys_get_temp_dir()), '/\\'));
+define('SESS_DIR', rtrim(getenv('DOMUS_DESK_SESS_DIR') ?: (ini_get('session.save_path') ?: sys_get_temp_dir()), '/\\'));

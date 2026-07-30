@@ -707,7 +707,7 @@
        scroll container, so you can swipe sideways WITHIN a message to see
        the rest — the isolated email CSS is untouched (this is the light-DOM
        host, outside the shadow), the whole thread and the page never scroll
-       sideways, and FreeITSM replies that already wrap have nothing to
+       sideways, and Domus Desk replies that already wrap have nothing to
        scroll. overflow-y stays hidden (inherited from the desktop rule), so
        vertical containment is preserved.
        ==================================================================== */

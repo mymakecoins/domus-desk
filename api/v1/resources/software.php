@@ -1,6 +1,6 @@
 <?php
 /**
- * FreeITSM REST API v1 — software resource (inventory + licences).
+ * Domus Desk REST API v1 — software resource (inventory + licences).
  *
  * Inventory (apps + per-host installs) is 100% agent-owned in the product —
  * analysts can't edit any of it — so the API exposes it READ-ONLY, mirroring

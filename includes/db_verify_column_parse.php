@@ -4,21 +4,21 @@
  *
  * The schema has TWO hand-maintained sources of truth and they must agree:
  *
- *   database/freeitsm.sql        what a FRESH install is built from
+ *   database/domus-desk.sql        what a FRESH install is built from
  *   includes/db_verify_schema.php   what Database Verification ALTERs an
  *                                   EXISTING install up to
  *
  * Indexes already have a guard, but they're the easy case: the index list is
- * GENERATED from freeitsm.sql, so drift only ever means "you forgot to
+ * GENERATED from domus-desk.sql, so drift only ever means "you forgot to
  * regenerate". Columns are harder — both files are written by hand, so they can
  * disagree in either direction, and each direction breaks a different install:
  *
- *   in db_verify but NOT freeitsm.sql → a NEW install is missing the column
+ *   in db_verify but NOT domus-desk.sql → a NEW install is missing the column
  *                                       until someone runs Verification
- *   in freeitsm.sql but NOT db_verify → an EXISTING install never gains it
+ *   in domus-desk.sql but NOT db_verify → an EXISTING install never gains it
  *
  * The first of those shipped as a real bug: `asset_locations.tenant_id` was
- * added to Verification but not to freeitsm.sql, so a fresh install fell over on
+ * added to Verification but not to domus-desk.sql, so a fresh install fell over on
  * the asset-locations screen while every upgraded install was fine.
  *
  * ⚠️ WHY THIS IS EASY TO MISS: while developing you only ever exercise the
@@ -33,7 +33,7 @@
  */
 
 /**
- * Extract the declared COLUMNS of every table in freeitsm.sql:
+ * Extract the declared COLUMNS of every table in domus-desk.sql:
  *   ['table' => ['column' => 'NORMALISED TYPE', ...], ...]
  *
  * Skips key/constraint lines (PRIMARY KEY, KEY, UNIQUE KEY, INDEX, CONSTRAINT,
@@ -90,17 +90,17 @@ function dbVerifyNormaliseColumnType(string $def): string {
 }
 
 /**
- * Compare includes/db_verify_schema.php against a fresh parse of freeitsm.sql.
+ * Compare includes/db_verify_schema.php against a fresh parse of domus-desk.sql.
  * Returns human-readable problem strings; empty means they're in sync.
  *
- * Skips silently if freeitsm.sql isn't present (a trimmed deployment may not
+ * Skips silently if domus-desk.sql isn't present (a trimmed deployment may not
  * ship it) — never cry drift when the source of truth isn't visible.
  *
  * $maxPerKind caps each category so one systemic mistake can't produce a
  * hundred-line card.
  */
 function dbVerifyColumnSelfCheck(?string $sqlPath = null, ?string $schemaPath = null, int $maxPerKind = 6): array {
-    $sqlPath    = $sqlPath    ?? __DIR__ . '/../database/freeitsm.sql';
+    $sqlPath    = $sqlPath    ?? __DIR__ . '/../database/domus-desk.sql';
     $schemaPath = $schemaPath ?? __DIR__ . '/db_verify_schema.php';
 
     if (!is_readable($sqlPath)) return [];
@@ -126,7 +126,7 @@ function dbVerifyColumnSelfCheck(?string $sqlPath = null, ?string $schemaPath = 
             $want = dbVerifyNormaliseColumnType($def);
             $have = $sqlTables[$table][$col];
             if ($want !== $have) {
-                $typeDiff[] = "$table.$col (freeitsm.sql has $have, Verification expects $want)";
+                $typeDiff[] = "$table.$col (domus-desk.sql has $have, Verification expects $want)";
             }
         }
     }
@@ -149,13 +149,13 @@ function dbVerifyColumnSelfCheck(?string $sqlPath = null, ?string $schemaPath = 
 
     // Ordered worst-first: a fresh install being broken is the loudest failure.
     $add($missingInSql,
-        '🔴 In Database Verification but MISSING from freeitsm.sql — a NEW install will not have:');
+        '🔴 In Database Verification but MISSING from domus-desk.sql — a NEW install will not have:');
     $add($tableOnlyVerify,
-        '🔴 Whole table in Database Verification but not in freeitsm.sql:');
+        '🔴 Whole table in Database Verification but not in domus-desk.sql:');
     $add($missingInVerify,
-        '🟠 In freeitsm.sql but MISSING from Database Verification — an EXISTING install will never gain:');
+        '🟠 In domus-desk.sql but MISSING from Database Verification — an EXISTING install will never gain:');
     $add($tableOnlySql,
-        '🟠 Whole table in freeitsm.sql but not in Database Verification:');
+        '🟠 Whole table in domus-desk.sql but not in Database Verification:');
     $add($typeDiff,
         '🟡 Declared differently in the two files:');
 

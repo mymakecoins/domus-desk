@@ -16,7 +16,7 @@
 if (PHP_SAPI !== 'cli') { http_response_code(403); exit("CLI only.\n"); }
 
 $KEY  = $argv[1] ?? getenv('FITSM_API_KEY') ?: '';
-$BASE = $argv[2] ?? getenv('FITSM_API_BASE') ?: 'http://localhost/freeitsm-app/api/v1/index.php';
+$BASE = $argv[2] ?? getenv('FITSM_API_BASE') ?: 'http://localhost/domus-desk-app/api/v1/index.php';
 if ($KEY === '') { fwrite(STDERR, "Provide an API key: php openapi_fix.php <key> [base_url]\n"); exit(2); }
 
 $SCHEMA_FILE = __DIR__ . '/../lib/openapi_schemas.php';
@@ -103,7 +103,7 @@ foreach ($doc['paths'] as $tmpl => $ops) {
     if ($code !== 200 || !array_key_exists('data', $json)) continue;
     oaf_patch($responses[$key], $json['data'], $schemas);
 }
-$body = "<?php\n/**\n * FreeITSM REST API v1 — typed component schemas + per-endpoint response bindings\n"
+$body = "<?php\n/**\n * Domus Desk REST API v1 — typed component schemas + per-endpoint response bindings\n"
       . " * for the OpenAPI generator. Derived from the resource serializers and verified\n"
       . " * against live responses (api/v1/dev/openapi_verify.php). Consumed by lib/openapi.php.\n */\n"
       . "return " . var_export(['schemas'=>$schemas, 'responses'=>$responses, 'requestBodies'=>$reqBodies], true) . ";\n";

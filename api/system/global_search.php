@@ -10,7 +10,7 @@
  * analyst couldn't otherwise reach:
  *   1. Module access — skipped entirely unless the module is in the analyst's
  *      allowed_modules (the same list the waffle launcher honours). Reads aren't
- *      capability-gated in FreeITSM, so module membership is the right gate here.
+ *      capability-gated in Domus Desk, so module membership is the right gate here.
  *   2. Company scope — each query runs through the module's own tenancy filter
  *      (ticketTenantFilter / activeTenantFilter), exactly as that module's own
  *      list endpoint does, so results respect the active company.

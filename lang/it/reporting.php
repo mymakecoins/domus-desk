@@ -198,7 +198,7 @@ return [
 
         // Section 3: System logs
         's3_heading' => 'Log di sistema',
-        's3_intro'   => 'L\'area Log cattura tutto ciò che accade dietro le quinte nella tua istanza di FreeITSM. Ogni tentativo di accesso, importazione email ed evento di sistema viene registrato con una marca temporale e uno stato, così da avere sempre un quadro completo dell\'attività della piattaforma.',
+        's3_intro'   => 'L\'area Log cattura tutto ciò che accade dietro le quinte nella tua istanza di Domus Desk. Ogni tentativo di accesso, importazione email ed evento di sistema viene registrato con una marca temporale e uno stato, così da avere sempre un quadro completo dell\'attività della piattaforma.',
         's3_badge_login'  => 'ACCESSO',
         's3_badge_email'  => 'EMAIL',
         's3_badge_system' => 'SISTEMA',

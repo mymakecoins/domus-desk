@@ -108,7 +108,7 @@ rfp_processing_log                   [AI cost/audit trail]
   action: extract | consolidate | detect_conflicts | generate_section | restyle_section
 ```
 
-Goes into `database/freeitsm.sql` and `api/system/db_verify.php` per the mandatory checklist. Two new keys in `system_settings`: `rfp_default_style_guide` (TEXT) and `rfp_anthropic_model` (varchar).
+Goes into `database/domus-desk.sql` and `api/system/db_verify.php` per the mandatory checklist. Two new keys in `system_settings`: `rfp_default_style_guide` (TEXT) and `rfp_anthropic_model` (varchar).
 
 **Things explicitly NOT in this schema** (and why):
 
@@ -163,7 +163,7 @@ Each phase is self-contained and shippable. The user can use what's built so far
 ### Phase 1 — Foundation (≈3-5 days)
 *Goal: empty shell with DB and routing in place.*
 
-- Schema in `freeitsm.sql` + `db_verify.php`
+- Schema in `domus-desk.sql` + `db_verify.php`
 - New "RFP Builder" entry-point inside the Contracts module
 - RFP list page, create/edit/delete RFP, status transitions
 - Departments lookup CRUD (under Contracts settings)
@@ -205,7 +205,7 @@ Each phase is self-contained and shippable. The user can use what's built so far
 - Pass 4 prompt + per-section Restyle action
 - Output sections page:
   - Progress modal pattern lifted from prototype (sequential AI calls with row state animations)
-  - Per-section manual edit (TinyMCE — already in use elsewhere in FreeITSM)
+  - Per-section manual edit (TinyMCE — already in use elsewhere in Domus Desk)
   - Version history sidebar with restore-to-version
 - Full-document preview with TOC sidebar
 - PDF export (browser print, lifted from prototype)
@@ -226,7 +226,7 @@ Each phase is self-contained and shippable. The user can use what's built so far
 *Goal: decision support and ship-ready.*
 
 - Compare page — multi-supplier overlapped radar, big-number cards, category winners table
-- In-app help page (lift the prototype's help.php as a starting point, rewrite for FreeITSM context)
+- In-app help page (lift the prototype's help.php as a starting point, rewrite for Domus Desk context)
 - Settings tab under Contracts settings: default style guide, default model, departments lookup
 - Audit trail page surfacing `rfp_processing_log` (cumulative tokens spent, when, by whom)
 - **Demo:** complete end-to-end — upload, extract, consolidate, generate, score, compare, decide.
@@ -253,4 +253,4 @@ This plan was locked after a design conversation covering:
 - **Priority tiers** — Critical / High / Medium / Low (vs the prototype's high/med/low)
 - **Audit trail** — captured from day one in `rfp_processing_log`
 - **AI prompt caching** — added throughout (prototype had none)
-- **Authentication** — the prototype was no-auth single-tenant; the FreeITSM build uses the existing analyst session and FK every table to `rfp_id`
+- **Authentication** — the prototype was no-auth single-tenant; the Domus Desk build uses the existing analyst session and FK every table to `rfp_id`

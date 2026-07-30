@@ -3,7 +3,7 @@
  * Workflows — HTTPS / SSL certificate verification help page.
  *
  * Written because the failure it documents is (a) extremely common on a fresh
- * Windows/WAMP install, (b) not FreeITSM's fault, and (c) reported by cURL in
+ * Windows/WAMP install, (b) not Domus Desk's fault, and (c) reported by cURL in
  * language that tells you what broke but not what to do:
  *
  *     SSL certificate problem: unable to get local issuer certificate
@@ -118,11 +118,11 @@ $translationNamespaces = ['common', 'workflow'];
             <p>In the workflow editor&rsquo;s <strong>Send test</strong> panel, or in the <strong>System &rarr; Webhooks</strong> delivery log, the failure reads something like:</p>
             <pre><code>Transport error: SSL certificate problem: unable to get local issuer certificate</code></pre>
             <p>Variations mean the same thing: <code>certificate verify failed</code>, <code>self-signed certificate in certificate chain</code>, <code>unable to get issuer certificate</code>.</p>
-            <div class="callout"><strong>Read the rest of the panel before you change anything.</strong> If FreeITSM showed you the JSON it built under <em>Sent (sample data)</em>, then your workflow, your variables and your payload format all worked. Only the final network hop failed. You are much closer than the error makes it sound.</div>
+            <div class="callout"><strong>Read the rest of the panel before you change anything.</strong> If Domus Desk showed you the JSON it built under <em>Sent (sample data)</em>, then your workflow, your variables and your payload format all worked. Only the final network hop failed. You are much closer than the error makes it sound.</div>
 
             <!-- 2 -->
             <h3 id="what">2. What &ldquo;certificate verification&rdquo; actually is</h3>
-            <p>When FreeITSM posts a webhook to <code>https://discord.com/…</code>, two separate things have to happen:</p>
+            <p>When Domus Desk posts a webhook to <code>https://discord.com/…</code>, two separate things have to happen:</p>
             <ul>
                 <li><strong>Encryption</strong> &mdash; scramble the traffic so nobody in between can read it.</li>
                 <li><strong>Verification</strong> &mdash; make sure the server on the other end <em>really is</em> Discord, and not someone impersonating it.</li>
@@ -138,7 +138,7 @@ $translationNamespaces = ['common', 'workflow'];
             <p>Some important reassurance about what it is <em>not</em>:</p>
             <ul>
                 <li>It contains <strong>no secrets</strong>. These are public certificates. The file is safe to read, copy and back up.</li>
-                <li>It is <strong>not specific to FreeITSM</strong>, or to webhooks, or to Discord. It&rsquo;s the same list every other program on your machine uses.</li>
+                <li>It is <strong>not specific to Domus Desk</strong>, or to webhooks, or to Discord. It&rsquo;s the same list every other program on your machine uses.</li>
                 <li>It is <strong>not a licence or an account</strong>. It&rsquo;s free, and you just download it.</li>
             </ul>
             <p>It does go stale slowly &mdash; authorities are occasionally added or withdrawn &mdash; so re-downloading it once a year or so is good hygiene. Nothing breaks immediately if you don&rsquo;t.</p>
@@ -147,7 +147,7 @@ $translationNamespaces = ['common', 'workflow'];
             <h3 id="why">4. Why this happens (and why it isn&rsquo;t your fault)</h3>
             <p>On Linux, the operating system maintains a CA bundle and PHP finds it automatically. Most people never learn any of this exists.</p>
             <p><strong>On Windows, PHP ships with no CA bundle and no pointer to one.</strong> The two settings that would tell it where to look &mdash; <code>curl.cainfo</code> and <code>openssl.cafile</code> &mdash; are commented out in the default <code>php.ini</code>, and WAMP doesn&rsquo;t supply the file. So a stock Windows/WAMP install cannot make a verified HTTPS request <em>to anything</em>, out of the box.</p>
-            <div class="callout"><strong>This is bigger than webhooks.</strong> The same missing bundle breaks every outbound HTTPS call FreeITSM makes: Slack and Teams webhooks, the AI provider calls, OAuth token refreshes, remote email APIs. Fixing it once fixes all of them &mdash; which is why it&rsquo;s worth doing properly rather than working around.</div>
+            <div class="callout"><strong>This is bigger than webhooks.</strong> The same missing bundle breaks every outbound HTTPS call Domus Desk makes: Slack and Teams webhooks, the AI provider calls, OAuth token refreshes, remote email APIs. Fixing it once fixes all of them &mdash; which is why it&rsquo;s worth doing properly rather than working around.</div>
 
             <!-- 5 -->
             <h3 id="fix">5. The fix</h3>
@@ -185,7 +185,7 @@ openssl.cafile = "C:/wamp64/cacert.pem"</code></pre>
 
             <!-- 6 -->
             <h3 id="verify">6. Check it worked</h3>
-            <p>Easiest check, in FreeITSM: open the workflow, select the <strong>Send a webhook</strong> action and press <strong>Send test</strong> again. You want <em>Delivered</em>, an <code>HTTP 204</code> (Discord) or <code>HTTP 200</code>, and the message to actually appear in your channel.</p>
+            <p>Easiest check, in Domus Desk: open the workflow, select the <strong>Send a webhook</strong> action and press <strong>Send test</strong> again. You want <em>Delivered</em>, an <code>HTTP 204</code> (Discord) or <code>HTTP 200</code>, and the message to actually appear in your channel.</p>
             <p>To confirm the underlying setting rather than the symptom, drop this in your web root as <code>catest.php</code>, load it in a browser, and delete it afterwards:</p>
             <pre><code>&lt;?php
 header('Content-Type: text/plain');
@@ -203,12 +203,12 @@ echo curl_exec($ch) === false
             <!-- 7 -->
             <h3 id="offswitch">7. Turning verification off &mdash; and why you shouldn&rsquo;t</h3>
             <p>Sooner or later, searching this error online will suggest &ldquo;just disable SSL verification&rdquo;. It does make the error go away. Here is exactly what it costs.</p>
-            <div class="danger"><strong>Disabling verification means FreeITSM stops checking who it is talking to.</strong> It will still encrypt the connection &mdash; but it will happily hand your ticket data, your customers&rsquo; email addresses and your webhook signing secret to <em>anyone</em> who manages to intercept the connection and claim to be Discord. That is precisely the attack (a &ldquo;man-in-the-middle&rdquo;) that certificate verification exists to prevent. You would be turning off the lock because you couldn&rsquo;t find the key.</div>
-            <p>So, concretely, in FreeITSM:</p>
+            <div class="danger"><strong>Disabling verification means Domus Desk stops checking who it is talking to.</strong> It will still encrypt the connection &mdash; but it will happily hand your ticket data, your customers&rsquo; email addresses and your webhook signing secret to <em>anyone</em> who manages to intercept the connection and claim to be Discord. That is precisely the attack (a &ldquo;man-in-the-middle&rdquo;) that certificate verification exists to prevent. You would be turning off the lock because you couldn&rsquo;t find the key.</div>
+            <p>So, concretely, in Domus Desk:</p>
             <h4>Webhooks: there is no off switch, deliberately</h4>
             <p>The webhook transport always verifies (<code>CURLOPT_SSL_VERIFYPEER =&gt; true</code>, in <code>includes/webhook_delivery.php</code>) and offers no setting to change that. Webhooks carry record data out to third parties over the public internet; that is the worst possible place to stop checking identities. Install the CA bundle instead &mdash; it is a five-minute job and it is the actual fix.</p>
             <h4>AI providers, mailboxes, everything else: one global switch</h4>
-            <p>There are <strong>no per-module &ldquo;Verify SSL&rdquo; toggles</strong>. Certificate verification for every outbound connection FreeITSM makes &mdash; AI providers, mailboxes, single sign-on, asset syncs, share emails and the rest &mdash; is governed by a single setting, <code>SSL_VERIFY_PEER</code>, in <code>config.php</code>. It ships <strong>on</strong>, and to make that work out of the box FreeITSM now bundles its own CA certificate list (<code>includes/cacert.pem</code>) and points cURL at it automatically when your server has none configured. Turning the switch off disables verification <em>everywhere at once</em>, so it is not something to do lightly.</p>
+            <p>There are <strong>no per-module &ldquo;Verify SSL&rdquo; toggles</strong>. Certificate verification for every outbound connection Domus Desk makes &mdash; AI providers, mailboxes, single sign-on, asset syncs, share emails and the rest &mdash; is governed by a single setting, <code>SSL_VERIFY_PEER</code>, in <code>config.php</code>. It ships <strong>on</strong>, and to make that work out of the box Domus Desk now bundles its own CA certificate list (<code>includes/cacert.pem</code>) and points cURL at it automatically when your server has none configured. Turning the switch off disables verification <em>everywhere at once</em>, so it is not something to do lightly.</p>
             <p>If you are behind a corporate network that intercepts outbound TLS with its own inspection proxy &mdash; presenting a certificate signed by an <em>internal</em> authority your server has never heard of &mdash; do <em>not</em> reach for that switch. The correct fix is to add your company&rsquo;s internal root certificate to the CA bundle (append it to your <code>cacert.pem</code>), so your server trusts the proxy legitimately and keeps verifying everything else. Whoever runs your network will have that root certificate ready, because every other application on the network needs it too.</p>
             <div class="callout"><strong>A reasonable rule of thumb.</strong> Turning verification off is only ever defensible for a service <em>inside</em> your own network that you fully control, and even then it&rsquo;s a stopgap. For anything on the public internet &mdash; Slack, Discord, Teams, OpenAI, Anthropic &mdash; it is never the right answer. If it &ldquo;fixed&rdquo; your problem, what it actually did was hide it.</div>
 

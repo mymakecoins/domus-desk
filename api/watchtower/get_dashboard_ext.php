@@ -2,7 +2,7 @@
 /**
  * API: Watchtower Dashboard (Extension) — API-key-authenticated endpoint
  * GET — Returns attention items from every module in a single response
- * Used by the FreeITSM Watchtower browser extension
+ * Used by the Domus Desk Watchtower browser extension
  */
 require_once '../../config.php';
 require_once '../../includes/functions.php';

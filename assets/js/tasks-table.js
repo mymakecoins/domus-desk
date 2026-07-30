@@ -1,5 +1,5 @@
 /**
- * FreeITSM Tasks — table view config
+ * Domus Desk Tasks — table view config
  *
  * Supplies the tasks-specific pieces to the shared data-table engine
  * (assets/js/data-table.js): the COLUMNS catalogue (with inline-edit controls),

@@ -1,5 +1,5 @@
 /**
- * FreeITSM Tasks — Timeline (Gantt) View
+ * Domus Desk Tasks — Timeline (Gantt) View
  *
  * Each parent task with at least one date is drawn as a horizontal bar from
  * its start_date to its due_date (a task with only a due_date is a single-day

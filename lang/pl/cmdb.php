@@ -516,7 +516,7 @@ return [
         'hierarchy_body'    => 'Używaj powiązania nadrzędny/podrzędny, gdy usunięcie elementu nadrzędnego pozbawia element podrzędny sensu. Klasyczny przykład: łańcuch SQL.',
         'hierarchy_diagram_n1' => 'Serwer (SQLSVR01)',
         'hierarchy_diagram_n2' => 'Instancja SQL (MSSQLSERVER)',
-        'hierarchy_diagram_n3' => 'Baza danych (FREEITSM)',
+        'hierarchy_diagram_n3' => 'Baza danych (DOMUS_DESK)',
         'hierarchy_diagram_n4' => 'Procedura składowana (sp_archive)',
         'hierarchy_diagram_n5' => 'Zadanie SQL (Nocna archiwizacja)',
         'hierarchy_body2'   => 'Każdy poziom naprawdę nie może istnieć bez swojego elementu nadrzędnego &mdash; usuń Serwer, a każda warstwa poniżej zniknie wraz z nim. <strong>Kaskadowe usuwanie jest wymuszane</strong>; potwierdzenie informuje dokładnie, ilu potomków zostanie usuniętych.',
@@ -529,7 +529,7 @@ return [
         'relationships_step1'   => 'W sekcji <strong>Relacje</strong> na stronie szczegółów obiektu kliknij <strong>+ Dodaj relację</strong>.',
         'relationships_step2'   => 'Wybierz czasownik z listy rozwijanej (wskazówka pokazuje czasownik odwrotny, abyś widział, jak będzie brzmiało z drugiej strony).',
         'relationships_step3'   => 'Wpisz, aby wyszukać powiązany obiekt &mdash; autouzupełnianie przeszukuje każdą klasę. Wybierz i zapisz.',
-        'relationships_body2'   => 'Relacja jest symetryczna: gdy oglądasz powiązany obiekt, pojawia się ona w <em>jego</em> kolumnie przychodzących z czasownikiem odwrotnym. Tak więc <em>„FREEITSM zależy od AD”</em> na bazie danych pokazuje się jako <em>„FREEITSM jest zależnością dla AD”</em>, gdy oglądasz AD.',
+        'relationships_body2'   => 'Relacja jest symetryczna: gdy oglądasz powiązany obiekt, pojawia się ona w <em>jego</em> kolumnie przychodzących z czasownikiem odwrotnym. Tak więc <em>„DOMUS_DESK zależy od AD”</em> na bazie danych pokazuje się jako <em>„DOMUS_DESK jest zależnością dla AD”</em>, gdy oglądasz AD.',
         'relationships_tip'     => 'Dodawaj nowe czasowniki w <strong>Ustawienia &rarr; Typy relacji</strong> &mdash; każdy czasownik ma odwrotność. Trzy są tworzone przy pierwszym uruchomieniu: <em>zależy od</em>, <em>łączy się z</em>, <em>zarządzane przez</em>.',
 
         // 8. When to use which

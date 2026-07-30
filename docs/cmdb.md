@@ -10,7 +10,7 @@ This document captures the design decisions made during planning so future work 
 
 **Class** — the *type* of thing. e.g. Server, SQL Instance, Database, Stored Procedure, SQL Job. Defined by an analyst in a settings UI.
 
-**Object** — an *instance* of a class. e.g. an object with class `Database` and name `FREEITSM`. Each object belongs to exactly one class.
+**Object** — an *instance* of a class. e.g. an object with class `Database` and name `DOMUS_DESK`. Each object belongs to exactly one class.
 
 **Property** — a named field on a class. All properties are user-defined per class. Property *types* include:
 - Scalar values (text, number, date, boolean, dropdown)
@@ -23,7 +23,7 @@ Worked example:
 ```
 Server (DBPROD01)
 └── SQL Instance (MSSQLSERVER)
-    └── Database (FREEITSM)
+    └── Database (DOMUS_DESK)
         └── Stored Procedure (sp_archive_tickets)
             └── SQL Job (Nightly archive)
 ```
@@ -42,7 +42,7 @@ The point of a CMDB is to *tell you something useful*, not just to record data. 
 
 The top of every object detail page is a **2-3 sentence AI-generated summary** stating what this thing is, where it sits, who owns it, and what depends on it. Structured properties go below. The summary is what tells you something useful in 5 seconds; the fields are for when you need specifics. Example:
 
-> *Production FREEITSM database on MSSQLSERVER / DBPROD01, owned by IT Ops. 3 stored procedures and 2 SQL jobs depend on it, and it's referenced by 4 open tickets.*
+> *Production DOMUS_DESK database on MSSQLSERVER / DBPROD01, owned by IT Ops. 3 stored procedures and 2 SQL jobs depend on it, and it's referenced by 4 open tickets.*
 
 Regenerated on demand (or cached and refreshed when properties/relationships change).
 
@@ -146,7 +146,7 @@ AI settings are stored in the existing `system_settings` table under prefixed ke
 **V1 AI features** (all reusing the existing Anthropic streaming helper):
 - **Object summary** at the top of every detail page — short prose synthesis of class, hierarchy, owner, and what depends on it
 - **Suggest properties for this class** — when creating a new class (e.g. *Firewall*), the AI proposes 6-10 sensible properties with types. Analyst ticks the ones they want.
-- **Suggest a relationship** — on the object detail view, an AI button scans the rest of the CMDB and proposes plausible relationships the analyst may have missed (e.g. "It looks like FREEITSM might also depend on the *Auth Service* — add this relationship?")
+- **Suggest a relationship** — on the object detail view, an AI button scans the rest of the CMDB and proposes plausible relationships the analyst may have missed (e.g. "It looks like DOMUS_DESK might also depend on the *Auth Service* — add this relationship?")
 
 ### V1 explicit non-goals
 
@@ -219,7 +219,7 @@ Audit log of property changes per object, like the existing ticket audit pattern
 
 - Tickets: link a ticket to an affected CMDB object; view "open tickets affecting this object" on the object detail page.
 - Change Management: scope a change to one or more CMDB objects; impact analysis (v2 AI) shows what else might be affected.
-- Knowledge: link a KB article to a class or object ("Runbook for FREEITSM database").
+- Knowledge: link a KB article to a class or object ("Runbook for DOMUS_DESK database").
 
 **Non-breaking** — additive FKs in the consuming modules.
 

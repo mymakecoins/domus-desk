@@ -5,7 +5,7 @@
  * In-app guide covering the six-phase workflow, key concepts (lock
  * gate, multi-analyst scoring, hash-skip, prompt caching), and the
  * cost / time expectations for each AI pass. Static — written for
- * FreeITSM's actual implementation, not lifted from the prototype.
+ * Domus Desk's actual implementation, not lifted from the prototype.
  */
 session_start();
 require_once '../../config.php';

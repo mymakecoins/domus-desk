@@ -1,5 +1,5 @@
 -- ============================================================
--- FreeITSM Database Schema (MySQL 8.0+)
+-- Domus Desk Database Schema (MySQL 8.0+)
 -- ============================================================
 -- Run this script against a fresh MySQL database to create
 -- all tables, constraints, defaults, and the seed admin user.
@@ -733,7 +733,7 @@ CREATE TABLE IF NOT EXISTS `ticket_time_entries` (
 
 -- ----------------------------------------------------------
 -- Multi-tenancy (foundation)
--- A single FreeITSM install can host multiple client companies (tenants).
+-- A single Domus Desk install can host multiple client companies (tenants).
 -- Single-company installs run entirely inside one silent "Default" tenant,
 -- so multi-tenancy stays invisible until a second tenant is created.
 -- ----------------------------------------------------------
@@ -996,7 +996,7 @@ CREATE TABLE IF NOT EXISTS `tenant_channel_senders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Pre-approved provider message templates (the only way to message a customer after
--- the WhatsApp 24-hour window closes). FreeITSM stores the definition so an analyst
+-- the WhatsApp 24-hour window closes). Domus Desk stores the definition so an analyst
 -- can pick one and fill its {{1}},{{2}} placeholders; the template itself must be
 -- created and approved at the provider. `provider_ref` is the provider's identifier:
 -- a Twilio Content SID (HX…) or a Meta template name. `language` is used by Meta.
@@ -1021,7 +1021,7 @@ CREATE TABLE IF NOT EXISTS `messaging_templates` (
 
 -- The public/embed config for one website chat widget. A widget is the self-hosted
 -- twin of a WhatsApp number: it drives exactly one `messaging_channels` row
--- (channel_type='webchat', provider='freeitsm'), so once a visitor's message is
+-- (channel_type='webchat', provider='domus_desk'), so once a visitor's message is
 -- ingested it flows through the same ticket membrane, inbox and reply pipeline as
 -- every other channel. Company routing and the active flag live on that channel row;
 -- this table holds only what the browser widget needs.
@@ -4048,7 +4048,7 @@ SET FOREIGN_KEY_CHECKS = 1;
 -- ----------------------------------------------------------
 -- Seed: Default admin account
 -- ----------------------------------------------------------
--- Username: admin  |  Password: freeitsm
+-- Username: admin  |  Password: domus_desk
 -- IMPORTANT: Change this password after first login!
 INSERT INTO `analysts` (`username`, `password_hash`, `full_name`, `email`, `is_active`, `is_admin`, `created_datetime`)
 SELECT 'admin', '$2y$12$z9jzs9Sqol4i.ThVE/wwL.EzvbYtZrU0GHpzUJX7UC6ODp5h.q2U2', 'Administrator', 'admin@localhost', 1, 1, UTC_TIMESTAMP()

@@ -4,7 +4,7 @@
  * Falls back per-key to lang/en/setup.php for anything missing here.
  */
 return [
-    'title'   => 'Instalação do FreeITSM',
+    'title'   => 'Instalação do Domus Desk',
     'heading' => 'Verificação da instalação',
 
     'summary' => [
@@ -46,7 +46,7 @@ return [
         'ca_ini_none'              => 'não definido',
         'ca_ini_missing'           => '{path} (arquivo ausente!)',
         'ca_ini_note_fix'          => ' — corrija o caminho ou comente a configuração no php.ini.',
-        'ca_ini_note_fallback'     => ' — opcional: o FreeITSM usa sua lista CA integrada (Windows) ou o armazenamento de confiança do SO (Linux). Observação: isto reflete o PHP do servidor web; o worker em segundo plano usa um php.ini de CLI separado.',
+        'ca_ini_note_fallback'     => ' — opcional: o Domus Desk usa sua lista CA integrada (Windows) ou o armazenamento de confiança do SO (Linux). Observação: isto reflete o PHP do servidor web; o worker em segundo plano usa um php.ini de CLI separado.',
         'ssl_disabled'             => 'Desativada — ative para produção (defina SSL_VERIFY_PEER como true em config.php)',
         'ssl_undefined'            => 'SSL_VERIFY_PEER não definida em config.php',
         'display_errors_enabled'   => 'Ativada — desative para produção (defina display_errors como 0 em config.php)',
@@ -75,7 +75,7 @@ return [
 
     'footer' => [
         'warning'   => 'Quando o seu sistema estiver em produção, exclua a pasta {folder} por segurança.',
-        'signature' => 'Verificação da instalação do FreeITSM',
+        'signature' => 'Verificação da instalação do Domus Desk',
     ],
 
     'js' => [

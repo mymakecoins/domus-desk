@@ -1,6 +1,6 @@
 <?php
 /**
- * FreeITSM REST API v1 — OpenAPI 3.0.3 document generator.
+ * Domus Desk REST API v1 — OpenAPI 3.0.3 document generator.
  *
  * Derives the spec at request time from the same sources the product already
  * maintains, so it cannot drift from the live API:
@@ -55,11 +55,11 @@ function apiV1BuildOpenApi(): array {
     $document = [
         'openapi' => '3.0.3',
         'info' => [
-            'title'       => 'FreeITSM REST API',
+            'title'       => 'Domus Desk REST API',
             'version'     => '1.0.0',
             'description' => apiV1OpenApiInfoDescription(),
-            'contact'     => ['name' => 'FreeITSM', 'url' => 'https://freeitsm.co.uk'],
-            'license'     => ['name' => 'MIT', 'url' => 'https://github.com/edmozley/freeitsm/blob/main/LICENSE'],
+            'contact'     => ['name' => 'Domus Desk', 'url' => 'https://domusdesk.com'],
+            'license'     => ['name' => 'MIT', 'url' => 'https://github.com/mymakecoins/domus-desk/blob/main/LICENSE'],
         ],
         // Relative server URL resolves against wherever the document is served
         // from, so the same spec is correct on every install without a hostname.
@@ -85,7 +85,7 @@ function apiV1BuildOpenApi(): array {
 
 /** The document-level description shown at the top of Swagger UI / Redoc. */
 function apiV1OpenApiInfoDescription(): string {
-    return "The FreeITSM REST API. Every request is authenticated with an API key "
+    return "The Domus Desk REST API. Every request is authenticated with an API key "
         . "(`Authorization: Bearer fitsm_...`); keys start with zero permissions and are "
         . "granted granular per-resource, per-action rights, optionally scoped to specific "
         . "companies.\n\n"
@@ -377,7 +377,7 @@ function apiV1HandlerSuccessCodes(): array {
 // ---------------------------------------------------------------------------
 
 function apiV1OpenApiToYaml(array $data): string {
-    return "# FreeITSM REST API — OpenAPI 3.0.3 (generated)\n" . apiV1YamlNode($data, 0);
+    return "# Domus Desk REST API — OpenAPI 3.0.3 (generated)\n" . apiV1YamlNode($data, 0);
 }
 
 function apiV1YamlNode($value, int $indent): string {

@@ -29,7 +29,7 @@ return [
         'verify_ssl_label'        => 'Verifieer SSL',
         'verify_ssl_hint'         => 'Deaktiveer slegs vir toetsing teen omgewings met self-ondertekende sertifikate (bv. agter \'n inspekterende proksi).',
         'ssl_warning_title'       => 'Waarskuwing',
-        'ssl_warning_body'        => 'SSL-verifikasie is afgeskakel. FreeITSM sal enige TLS-sertifikaat van die KI-verskaffer aanvaar sonder om dit te kontroleer. Enigeen met toegang tot jou netwerk kan voorgee dat hulle die verskaffer is, die verkeer onderskep, en jou API key steel — saam met elke prompt en antwoord wat volg. Laat dit net af in toetsomgewings met self-ondertekende sertifikate — nooit in produksie nie.',
+        'ssl_warning_body'        => 'SSL-verifikasie is afgeskakel. Domus Desk sal enige TLS-sertifikaat van die KI-verskaffer aanvaar sonder om dit te kontroleer. Enigeen met toegang tot jou netwerk kan voorgee dat hulle die verskaffer is, die verkeer onderskep, en jou API key steel — saam met elke prompt en antwoord wat volg. Laat dit net af in toetsomgewings met self-ondertekende sertifikate — nooit in produksie nie.',
         'test_btn'                => 'Toets',
         'testing'                 => 'Toets tans…',
     ],

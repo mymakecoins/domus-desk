@@ -4,7 +4,7 @@
  *
  * A widget is stored as two rows kept in step inside one transaction:
  *   messaging_channels  — the channel spine (name, company routing, active flag).
- *                         channel_type='webchat', provider='freeitsm' (no external
+ *                         channel_type='webchat', provider='domus_desk' (no external
  *                         provider, no credentials).
  *   webchat_widgets     — the browser-facing config (public key, origins, greeting,
  *                         colour, launcher text, offline message, email gate).
@@ -147,7 +147,7 @@ try {
         $conn->prepare(
             "INSERT INTO messaging_channels
                  (name, channel_type, provider, tenant_id, is_active)
-             VALUES (?, 'webchat', 'freeitsm', ?, ?)"
+             VALUES (?, 'webchat', 'domus_desk', ?, ?)"
         )->execute([$name, $tenantId, $isActive]);
         $channelId = (int) $conn->lastInsertId();
 

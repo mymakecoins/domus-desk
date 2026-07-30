@@ -198,7 +198,7 @@ return [
 
         // Section 3: System logs
         's3_heading' => 'Dzienniki systemowe',
-        's3_intro'   => 'Obszar Dzienniki rejestruje wszystko, co dzieje się za kulisami Twojej instancji FreeITSM. Każda próba logowania, import e-mail i zdarzenie systemowe jest rejestrowane ze znacznikiem czasu i statusem, dzięki czemu zawsze masz pełny obraz aktywności platformy.',
+        's3_intro'   => 'Obszar Dzienniki rejestruje wszystko, co dzieje się za kulisami Twojej instancji Domus Desk. Każda próba logowania, import e-mail i zdarzenie systemowe jest rejestrowane ze znacznikiem czasu i statusem, dzięki czemu zawsze masz pełny obraz aktywności platformy.',
         's3_badge_login'  => 'LOGOWANIE',
         's3_badge_email'  => 'E-MAIL',
         's3_badge_system' => 'SYSTEM',

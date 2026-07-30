@@ -1,6 +1,6 @@
 <?php
 /**
- * FreeITSM REST API v1 — key authentication, permissions and company scoping.
+ * Domus Desk REST API v1 — key authentication, permissions and company scoping.
  *
  * Keys live in the api_keys table (separate from the legacy plaintext
  * `apikeys` table used by api/external/). Only a SHA-256 hash of the key is

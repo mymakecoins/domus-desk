@@ -9,8 +9,8 @@ require __DIR__ . '/_top.php';
 <!-- 1. Overview -->
 <div class="syshelp-section" id="overview">
     <div class="syshelp-section-header"><h3>What Companies is for</h3></div>
-    <p class="syshelp-lead">A <strong>company</strong> is the user-facing word for a tenant — one of the separate client organisations you support. The Companies page is where you create them, and where you tell FreeITSM how to recognise each one's inbound email so it lands in the right place.</p>
-    <p>You don't switch multi-company mode on. FreeITSM works it out by counting companies:</p>
+    <p class="syshelp-lead">A <strong>company</strong> is the user-facing word for a tenant — one of the separate client organisations you support. The Companies page is where you create them, and where you tell Domus Desk how to recognise each one's inbound email so it lands in the right place.</p>
+    <p>You don't switch multi-company mode on. Domus Desk works it out by counting companies:</p>
     <div class="syshelp-cards">
         <div class="syshelp-card">
             <h4>One company (the default)</h4>
@@ -41,7 +41,7 @@ require __DIR__ . '/_top.php';
 <!-- 3. Routing inbound email -->
 <div class="syshelp-section" id="email">
     <div class="syshelp-section-header"><h3>Routing inbound email by domain</h3></div>
-    <p class="syshelp-lead">When several companies share one inbox, FreeITSM needs to tell whose ticket is whose. An <strong>email domain</strong> is the main key: mail from anyone at that domain is filed under that company.</p>
+    <p class="syshelp-lead">When several companies share one inbox, Domus Desk needs to tell whose ticket is whose. An <strong>email domain</strong> is the main key: mail from anyone at that domain is filed under that company.</p>
     <ul>
         <li>Open a company and add its <strong>email domain(s)</strong> — for example <code>acme.co.uk</code>. A company can have several.</li>
         <li>A message from <code>someone@acme.co.uk</code> arriving on a shared inbox is then attributed to Acme automatically.</li>
@@ -57,7 +57,7 @@ require __DIR__ . '/_top.php';
     <h4>Specific senders (address-level routing)</h4>
     <p>On a company, add a <strong>specific sender</strong> — a single full email address (e.g. <code>jo.bloggs@gmail.com</code>) — to route just that one person to that company, even though their domain is shared. It's the precise complement to domain routing.</p>
     <h4>Public / free-email domains</h4>
-    <p>The <strong>Public email domains</strong> card (shown only once you have more than one company) lists the domains FreeITSM treats as personal/free — <code>gmail.com</code>, <code>outlook.com</code> and the like. Mail from these is never auto-attributed by domain, so it can only reach a company via a specific sender. FreeITSM ships with a built-in list (expandable from the card); you can add your own as well. The list is add-only.</p>
+    <p>The <strong>Public email domains</strong> card (shown only once you have more than one company) lists the domains Domus Desk treats as personal/free — <code>gmail.com</code>, <code>outlook.com</code> and the like. Mail from these is never auto-attributed by domain, so it can only reach a company via a specific sender. Domus Desk ships with a built-in list (expandable from the card); you can add your own as well. The list is add-only.</p>
     <div class="syshelp-callout info">Rule of thumb: <strong>domains</strong> route a whole organisation; <strong>specific senders</strong> route one individual; the <strong>public email-domains list</strong> protects shared providers from being mapped by accident.</div>
 </div>
 

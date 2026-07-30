@@ -2,7 +2,7 @@
 /**
  * The page a QR asset label opens: /a/<token>
  *
- * MOBILE-FIRST, NOT MOBILE-ADAPTED. This is the one page in FreeITSM whose
+ * MOBILE-FIRST, NOT MOBILE-ADAPTED. This is the one page in Domus Desk whose
  * primary device is a phone — you are standing in a store room holding the
  * laptop. So it is built narrow-first with big touch targets and no reliance on
  * the desktop asset module being responsive; it is a purpose-built surface, not
@@ -107,7 +107,7 @@ $title = $asset ? ($asset['asset_tag'] ?: $asset['hostname'] ?: 'Asset') : 'Asse
     <?php /* No user-scalable=no: pinch-zoom is how somebody reads a serial number
              off a battered label in a dim store room. */ ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo htmlspecialchars($title); ?> · FreeITSM</title>
+    <title><?php echo htmlspecialchars($title); ?> · Domus Desk</title>
     <link rel="stylesheet" href="../assets/css/theme.css?v=22">
     <?php echo Tz::scriptTag(); ?>
     <style>
@@ -190,14 +190,14 @@ $title = $asset ? ($asset['asset_tag'] ?: $asset['hostname'] ?: 'Asset') : 'Asse
 <body>
 <div class="scan-bar">
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-    <span>FreeITSM · Asset</span>
+    <span>Domus Desk · Asset</span>
 </div>
 
 <div class="scan-wrap">
 <?php if (!$loggedIn): ?>
     <div class="card empty">
         <h1>Sign in to view this asset</h1>
-        <p>You need to be signed in to FreeITSM to see asset details. Sign in, then scan the label again — it will open straight to this asset.</p>
+        <p>You need to be signed in to Domus Desk to see asset details. Sign in, then scan the label again — it will open straight to this asset.</p>
         <a class="btn-touch" href="<?php echo htmlspecialchars(BASE_URL); ?>login">Sign in</a>
     </div>
 <?php elseif ($problem === 'no_access'): ?>

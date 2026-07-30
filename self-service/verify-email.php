@@ -93,7 +93,7 @@ if ($token !== '' && preg_match('/^[0-9a-f]{64}$/i', $token)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirm your account - FreeITSM</title>
+    <title>Confirm your account - Domus Desk</title>
     <style>
         body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0ede8; color: #2c3e50;
                display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }

@@ -1,5 +1,5 @@
 /**
- * FreeITSM Tasks — Shared right-click context menu
+ * Domus Desk Tasks — Shared right-click context menu
  *
  * One menu used by the dashboard (right-click a board / list card) and the
  * timeline (right-click a Gantt bar). Each page provides:

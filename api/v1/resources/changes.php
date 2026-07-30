@@ -1,6 +1,6 @@
 <?php
 /**
- * FreeITSM REST API v1 — changes resource (Change Management).
+ * Domus Desk REST API v1 — changes resource (Change Management).
  *
  * Mirrors the module's internal endpoints so a change touched via the API is
  * indistinguishable from one touched in the UI:

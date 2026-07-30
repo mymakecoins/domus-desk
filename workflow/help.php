@@ -155,7 +155,7 @@ $translationNamespaces = ['common', 'workflow'];
             </a>
             <!-- The wiki carries the design reasoning this page deliberately
                  leaves out (why the fire-once ledger exists, what it cost). -->
-            <a href="https://github.com/edmozley/freeitsm/wiki/Workflows" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/mymakecoins/domus-desk/wiki/Workflows" target="_blank" rel="noopener noreferrer"
                class="wfh-nav-link" style="margin-top:10px; border-top:1px solid var(--border-soft, #eee); padding-top:14px;">
                 <span class="wfh-nav-num">&#128214;</span> <?php echo htmlspecialchars(t('workflow.help.nav_wiki')); ?> &#8599;
             </a>

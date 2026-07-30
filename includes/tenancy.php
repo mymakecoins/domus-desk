@@ -2,7 +2,7 @@
 /**
  * Multi-tenancy helper — the single choke-point for tenant logic.
  *
- * A FreeITSM install can host multiple client companies ("tenants"). On a
+ * A Domus Desk install can host multiple client companies ("tenants"). On a
  * single-company install everything lives inside one silent "Default" tenant,
  * so multi-tenancy stays completely invisible until a second tenant is created
  * (see isMultiTenant()).

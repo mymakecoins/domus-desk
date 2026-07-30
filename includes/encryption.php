@@ -22,7 +22,7 @@ if (!defined('ENCRYPTION_KEY_PATH')) {
     if ($_encKeyPath === false || $_encKeyPath === '') {
         $_encKeyPath = PHP_OS_FAMILY === 'Windows'
             ? 'c:\\wamp64\\encryption_keys\\sdtickets.key'
-            : '/var/www/encryption_keys/freeitsm.key';
+            : '/var/www/encryption_keys/domus_desk.key';
     }
     define('ENCRYPTION_KEY_PATH', $_encKeyPath);
 }

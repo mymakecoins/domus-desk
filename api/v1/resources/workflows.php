@@ -1,6 +1,6 @@
 <?php
 /**
- * FreeITSM REST API v1 — workflows resource (definitions + executions).
+ * Domus Desk REST API v1 — workflows resource (definitions + executions).
  *
  * Mirrors the module's internal endpoints (api/workflow/*):
  *   - definitions are single rows with conditions/actions as JSON — the API

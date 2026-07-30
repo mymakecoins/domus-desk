@@ -1,5 +1,5 @@
 /**
- * FreeITSM shared data-table engine
+ * Domus Desk shared data-table engine
  *
  * One implementation of the full-screen, Excel-style table view used by the
  * asset, tasks, calendar and change-management modules. Everything that used to

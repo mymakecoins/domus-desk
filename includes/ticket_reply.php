@@ -11,7 +11,7 @@
  * a customer whose reply reopens their ticket on Monday (email) but not on
  * Tuesday (portal), which is impossible to explain to them.
  *
- * The email template FreeITSM sends already tells requesters "just reply to this
+ * The email template Domus Desk sends already tells requesters "just reply to this
  * email and it will be reopened" (workflow/includes/templates.php) — before this,
  * nothing anywhere honoured that promise on any channel.
  *

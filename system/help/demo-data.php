@@ -9,7 +9,7 @@ require __DIR__ . '/_top.php';
 <!-- 1. Overview -->
 <div class="syshelp-section" id="overview">
     <div class="syshelp-section-header"><h3>What demo data is for</h3></div>
-    <p class="syshelp-lead">Demo data populates a FreeITSM install with realistic, pre-built sample records so you can explore how each module looks and behaves with content in it — without spending an afternoon entering test data by hand.</p>
+    <p class="syshelp-lead">Demo data populates a Domus Desk install with realistic, pre-built sample records so you can explore how each module looks and behaves with content in it — without spending an afternoon entering test data by hand.</p>
     <p>It's aimed squarely at <strong>evaluating and trialling</strong> the product, demos, and training environments. You import one module at a time from <strong>System &rarr; Demo data</strong>, and a record count next to each module tells you roughly how much it will add.</p>
     <div class="syshelp-callout warn"><strong>For evaluation, not production.</strong> Demo data creates real records in your database (including analyst logins). Use it on a fresh or test install, not on a system that already holds your live data. There is no separate sandbox — everything is added to the database you're connected to.</div>
     <div class="syshelp-callout info"><strong>Sample analyst logins.</strong> Core Data creates 4 analysts who can all sign in with the password <code>demo1234</code>. These are demo accounts — never leave them on a system that will go live.</div>
@@ -66,7 +66,7 @@ require __DIR__ . '/_top.php';
 <div class="syshelp-section" id="remove">
     <div class="syshelp-section-header"><h3>Removing demo data</h3></div>
     <p class="syshelp-lead">Anything you import can be removed again from the same page — a module's button turns green once imported, and clicking it again removes that module's demo records.</p>
-    <p>After a successful import the <em>Import</em> button becomes a green, ticked button showing the record count. Click it a second time and FreeITSM asks you to confirm before deleting that module's demo data.</p>
+    <p>After a successful import the <em>Import</em> button becomes a green, ticked button showing the record count. Click it a second time and Domus Desk asks you to confirm before deleting that module's demo data.</p>
     <div class="syshelp-callout warn"><strong>Removal deletes records.</strong> Removing a module deletes the demo records it created. If you've edited a demo ticket or added your own notes to demo content, that work goes too — only remove demo data from a system where losing those records is fine. When in doubt, point demo data at a throwaway install you can drop entirely.</div>
 </div>
 

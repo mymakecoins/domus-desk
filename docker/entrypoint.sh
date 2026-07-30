@@ -1,8 +1,8 @@
 #!/bin/bash
-# FreeITSM Docker Entrypoint
+# Domus Desk Docker Entrypoint
 # Auto-generates the encryption key on first boot if one doesn't exist
 
-KEY_PATH="${ENCRYPTION_KEY_PATH:-/var/www/encryption_keys/freeitsm.key}"
+KEY_PATH="${ENCRYPTION_KEY_PATH:-/var/www/encryption_keys/domus_desk.key}"
 KEY_DIR=$(dirname "$KEY_PATH")
 
 # Create key directory if needed

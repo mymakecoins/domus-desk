@@ -10,7 +10,7 @@ require __DIR__ . '/_top.php';
 <!-- 1. Overview -->
 <div class="syshelp-section" id="overview">
     <div class="syshelp-section-header"><h3>What an orphaned ticket is</h3></div>
-    <p class="syshelp-lead">An orphaned ticket is one that belongs to a department that <strong>no longer exists</strong>. The department was deleted; the tickets that pointed at it weren't. They still carry the old department's id, and nothing in FreeITSM answers to it any more.</p>
+    <p class="syshelp-lead">An orphaned ticket is one that belongs to a department that <strong>no longer exists</strong>. The department was deleted; the tickets that pointed at it weren't. They still carry the old department's id, and nothing in Domus Desk answers to it any more.</p>
     <p>That makes them <em>invisible</em>, which is what makes them dangerous. They aren't in any team's queue, because no team is linked to a department that doesn't exist. They aren't in the &ldquo;no department&rdquo; bucket either, because as far as the database is concerned they <em>do</em> have a department. They're simply gone from view — still open, still someone's problem, and nobody can see them.</p>
     <div class="syshelp-callout info"><strong>This page is the safety net.</strong> It finds them and lets you put them back into a real department. If it says <strong>no orphaned tickets</strong>, there's nothing to do — that's the normal state, and worth a glance whenever you've been reorganising departments.</div>
 </div>

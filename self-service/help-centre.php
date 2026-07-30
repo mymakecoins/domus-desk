@@ -282,7 +282,7 @@ let hcSearchTimer = null;
         // raw markup.
         function safeArticleHtml(html) {
             if (typeof safeHtmlFragment !== 'function') {
-                console.error('FreeITSM: assets/js/safe-html.js did not load — article shown as plain text.');
+                console.error('Domus Desk: assets/js/safe-html.js did not load — article shown as plain text.');
                 return typeof escapeHtmlText === 'function' ? escapeHtmlText(html) : '';
             }
             return safeHtmlFragment(html);

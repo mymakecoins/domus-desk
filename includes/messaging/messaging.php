@@ -18,7 +18,7 @@
 require_once __DIR__ . '/MessagingProvider.php';
 require_once __DIR__ . '/TwilioProvider.php';
 require_once __DIR__ . '/MetaCloudProvider.php';
-require_once __DIR__ . '/FreeitsmProvider.php';
+require_once __DIR__ . '/DomusDeskProvider.php';
 require_once __DIR__ . '/../encryption.php';
 
 /** The 24h provider service window, in seconds. */
@@ -37,8 +37,10 @@ function messagingProvider(array $channel): MessagingProvider
             return new TwilioProvider($channel);
         case 'meta':
             return new MetaCloudProvider($channel);
-        case 'freeitsm':
-            return new FreeitsmProvider($channel);
+        case 'domus_desk':
+        case 'domus-desk':
+        case 'domus_desk_LEGACY_FALLBACK':
+            return new DomusDeskProvider($channel);
         default:
             throw new Exception('Unknown messaging provider: ' . ($channel['provider'] ?? '?'));
     }

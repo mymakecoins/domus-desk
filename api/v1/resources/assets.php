@@ -1,6 +1,6 @@
 <?php
 /**
- * FreeITSM REST API v1 — assets resource.
+ * Domus Desk REST API v1 — assets resource.
  *
  * Mirrors the Assets module's behaviour so an asset touched via the API is
  * indistinguishable from one touched in the UI or by the inventory agent:

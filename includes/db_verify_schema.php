@@ -4,12 +4,12 @@
  *
  * Database Verification creates any missing table from this and ALTERs in any
  * missing column. It is one of the schema's two hand-maintained sources of
- * truth — `database/freeitsm.sql` (used by a FRESH install) is the other, and
+ * truth — `database/domus-desk.sql` (used by a FRESH install) is the other, and
  * the two must agree.
  *
  * ⚠️ They can silently disagree, and that has shipped a real bug: a column here
- * but not in freeitsm.sql leaves a NEW install missing it until someone runs
- * Verification, while a column in freeitsm.sql but not here means an EXISTING
+ * but not in domus-desk.sql leaves a NEW install missing it until someone runs
+ * Verification, while a column in domus-desk.sql but not here means an EXISTING
  * install never gains it. dbVerifyColumnSelfCheck() (includes/db_verify_column_parse.php)
  * compares the two on every Verification run and raises a red card on drift.
  *
@@ -551,7 +551,7 @@ return [
     ],
 
     // Pre-approved provider message templates (replying after the WhatsApp 24h window).
-    // FreeITSM stores the definition; the template is created/approved at the provider.
+    // Domus Desk stores the definition; the template is created/approved at the provider.
     // provider_ref = Twilio Content SID or Meta template name. language used by Meta.
     'messaging_templates' => [
         'id'               => 'INT NOT NULL AUTO_INCREMENT',
@@ -566,7 +566,7 @@ return [
     ],
 
     // Embed config for one website chat widget. Drives a messaging_channels row
-    // (channel_type='webchat', provider='freeitsm'); company routing + active flag
+    // (channel_type='webchat', provider='domus_desk'); company routing + active flag
     // live there. widget_key is public (ships in the site's <script>) — abuse is
     // contained by allowed_origins + rate limiting, not by hiding this.
     'webchat_widgets' => [
@@ -589,7 +589,7 @@ return [
         'created_datetime' => 'DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP',
     ],
 
-    // Pre-ticket chat transcript (AI 'deflect' mode) — see freeitsm.sql. sender is
+    // Pre-ticket chat transcript (AI 'deflect' mode) — see domus-desk.sql. sender is
     // 'visitor'|'ai'|'agent'|'system'. Source for the ticket opening message + .txt log.
     'webchat_messages' => [
         'id'               => 'INT NOT NULL AUTO_INCREMENT',
@@ -2207,7 +2207,7 @@ return [
         'is_portal_visible' => 'TINYINT(1) NOT NULL DEFAULT 0',
         // Catalogue-request approval (#928): gate a portal submission behind a
         // designated approver before a ticket is raised. FK on approver_id lives
-        // in freeitsm.sql. requires_approval on + approver_id NULL = unconfigured.
+        // in domus-desk.sql. requires_approval on + approver_id NULL = unconfigured.
         'requires_approval' => 'TINYINT(1) NOT NULL DEFAULT 0',
         'approver_id'       => 'INT NULL',
     ],
@@ -2237,7 +2237,7 @@ return [
         'submitted_date'    => 'DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP',
         // Catalogue-request approval (#928). approval_status: not_required (default,
         // and every pre-#928 row) / pending / approved / rejected. approver_id is
-        // snapshotted from the form at submit time. FKs live in freeitsm.sql.
+        // snapshotted from the form at submit time. FKs live in domus-desk.sql.
         'approval_status'            => "VARCHAR(20) NOT NULL DEFAULT 'not_required'",
         'approver_id'                => 'INT NULL',
         'approval_decided_by_id'     => 'INT NULL',
@@ -2754,7 +2754,7 @@ return [
         'created_by_analyst_id' => 'INT NULL',
     ],
 
-    // Network Mapper — visual diagrams over the CMDB graph (see freeitsm.sql header).
+    // Network Mapper — visual diagrams over the CMDB graph (see domus-desk.sql header).
     'network_diagrams' => [
         'id'                    => 'INT NOT NULL AUTO_INCREMENT',
         'parent_diagram_id'     => 'INT NULL',

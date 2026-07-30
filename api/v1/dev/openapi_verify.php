@@ -17,7 +17,7 @@
 if (PHP_SAPI !== 'cli') { http_response_code(403); exit("CLI only.\n"); }
 
 $KEY  = $argv[1] ?? getenv('FITSM_API_KEY') ?: '';
-$BASE = $argv[2] ?? getenv('FITSM_API_BASE') ?: 'http://localhost/freeitsm-app/api/v1/index.php';
+$BASE = $argv[2] ?? getenv('FITSM_API_BASE') ?: 'http://localhost/domus-desk-app/api/v1/index.php';
 if ($KEY === '') { fwrite(STDERR, "Provide an API key: php openapi_verify.php <key> [base_url]\n"); exit(2); }
 
 require __DIR__ . '/../lib/openapi.php';

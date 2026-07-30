@@ -9,9 +9,9 @@ require __DIR__ . '/_top.php';
 <!-- 1. Overview -->
 <div class="syshelp-section" id="overview">
     <div class="syshelp-section-header"><h3>What this area does</h3></div>
-    <p class="syshelp-lead">FreeITSM holds a number of secrets it needs to connect to other systems — your vCenter password, AI API keys, and the Microsoft/Azure credentials used to read a mailbox. Rather than store these in plain text, it encrypts them with a single <strong>AES-256-GCM</strong> key.</p>
-    <p>This page is where you generate and check that key. You only need it once: create the key, keep a safe backup, and the rest happens automatically. Encrypted values are written to the database with an <code>ENC:</code> prefix so FreeITSM knows which fields to decrypt on the fly.</p>
-    <div class="syshelp-callout info">The key lives in a single file on the server, outside the database. FreeITSM reads it whenever it needs to decrypt a stored secret, so the file must stay readable by the web server.</div>
+    <p class="syshelp-lead">Domus Desk holds a number of secrets it needs to connect to other systems — your vCenter password, AI API keys, and the Microsoft/Azure credentials used to read a mailbox. Rather than store these in plain text, it encrypts them with a single <strong>AES-256-GCM</strong> key.</p>
+    <p>This page is where you generate and check that key. You only need it once: create the key, keep a safe backup, and the rest happens automatically. Encrypted values are written to the database with an <code>ENC:</code> prefix so Domus Desk knows which fields to decrypt on the fly.</p>
+    <div class="syshelp-callout info">The key lives in a single file on the server, outside the database. Domus Desk reads it whenever it needs to decrypt a stored secret, so the file must stay readable by the web server.</div>
 </div>
 
 <!-- 2. Key status -->
@@ -21,7 +21,7 @@ require __DIR__ . '/_top.php';
     <div class="syshelp-cards">
         <div class="syshelp-card">
             <h4>Key present and valid</h4>
-            <p>The green state. A correct key file exists at its path and FreeITSM can encrypt and decrypt normally. Nothing to do.</p>
+            <p>The green state. A correct key file exists at its path and Domus Desk can encrypt and decrypt normally. Nothing to do.</p>
         </div>
         <div class="syshelp-card">
             <h4>Key invalid</h4>
@@ -41,7 +41,7 @@ require __DIR__ . '/_top.php';
     <p class="syshelp-lead">If the status is <strong>missing</strong>, generating a key is a one-click, one-time step.</p>
     <div class="syshelp-steps">
         <div class="syshelp-step"><div class="syshelp-step-num">1</div><div><strong>Open this page.</strong> If no key exists you'll see the red <em>missing</em> status with a <strong>Generate</strong> button.</div></div>
-        <div class="syshelp-step"><div class="syshelp-step-num">2</div><div><strong>Click Generate.</strong> FreeITSM creates a fresh random AES-256 key and writes it to the key file on the server. The status refreshes to green when it succeeds.</div></div>
+        <div class="syshelp-step"><div class="syshelp-step-num">2</div><div><strong>Click Generate.</strong> Domus Desk creates a fresh random AES-256 key and writes it to the key file on the server. The status refreshes to green when it succeeds.</div></div>
         <div class="syshelp-step"><div class="syshelp-step-num">3</div><div><strong>Back up the key file immediately</strong> (see below) before you start saving any credentials that depend on it.</div></div>
     </div>
     <div class="syshelp-callout warn"><strong>Regenerating replaces the existing key.</strong> If a key is already in use, generating a new one means anything encrypted with the old key can no longer be decrypted. Only regenerate when the current key is genuinely lost or invalid, and be ready to re-enter the affected credentials afterwards.</div>
@@ -50,7 +50,7 @@ require __DIR__ . '/_top.php';
 <!-- 4. What's encrypted -->
 <div class="syshelp-section" id="whats">
     <div class="syshelp-section-header"><h3>What gets encrypted</h3></div>
-    <p>The key protects the credential fields FreeITSM stores for its integrations:</p>
+    <p>The key protects the credential fields Domus Desk stores for its integrations:</p>
     <h4>System settings</h4>
     <ul>
         <li>vCenter server, user and password (<code>vcenter_server</code>, <code>vcenter_user</code>, <code>vcenter_password</code>)</li>

@@ -19,7 +19,7 @@
             {
                 "_ref": "induction",
                 "title": "Service Desk Induction",
-                "description": "Everything a new first-line analyst needs on day one: how to work a ticket in FreeITSM, the tone we use with customers, and what our SLAs actually mean.",
+                "description": "Everything a new first-line analyst needs on day one: how to work a ticket in Domus Desk, the tone we use with customers, and what our SLAs actually mean.",
                 "content_type": "native",
                 "pass_mark": null,
                 "is_active": 1,
@@ -54,7 +54,7 @@
             {
                 "_ref": "ind_l1",
                 "course_id": "@lms_courses.induction",
-                "title": "Working a ticket in FreeITSM",
+                "title": "Working a ticket in Domus Desk",
                 "body": "<p>Every request becomes a <strong>ticket</strong>. Your job on first line: acknowledge it, understand what the customer actually needs, and either resolve it or route it to the right team. Keep the ticket updated as you go — the notes are how everyone else knows what has happened.</p>",
                 "display_order": 1
             },

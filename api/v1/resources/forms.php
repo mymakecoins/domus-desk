@@ -1,6 +1,6 @@
 <?php
 /**
- * FreeITSM REST API v1 — forms resource (forms, fields, versions, submissions).
+ * Domus Desk REST API v1 — forms resource (forms, fields, versions, submissions).
  *
  * Mirrors the module's internal endpoints:
  *   - GET /forms is get_forms.php: ONE row per version chain (the leaf — the

@@ -371,7 +371,7 @@ return [
 
         'collection_heading' => 'Hoe gegevens worden verzameld',
         'collection_intro'   => 'De Software-module verzamelt zelf geen gegevens. In plaats daarvan vertrouwt deze op het PowerShell-script voor assetbeheer ({script}) dat op elke beheerde Windows-machine draait en geïnstalleerde software rapporteert als onderdeel van de bredere hardware- en software-inventaris.',
-        'collection_p2'      => 'Wanneer het PowerShell-script op een machine draait, leest het de registervermeldingen van Programma\'s toevoegen/verwijderen en verzamelt het elke geïnstalleerde toepassing en systeemcomponent. Deze gegevens worden naar de FreeITSM-API verzonden, waar ze worden opgeslagen bij het assetrecord. De Software-module voegt deze gegevens vervolgens samen over alle machines om u het overzicht van de hele omgeving te geven.',
+        'collection_p2'      => 'Wanneer het PowerShell-script op een machine draait, leest het de registervermeldingen van Programma\'s toevoegen/verwijderen en verzamelt het elke geïnstalleerde toepassing en systeemcomponent. Deze gegevens worden naar de Domus Desk-API verzonden, waar ze worden opgeslagen bij het assetrecord. De Software-module voegt deze gegevens vervolgens samen over alle machines om u het overzicht van de hele omgeving te geven.',
         'flow_script' => 'PowerShell-script',
         'flow_api'    => 'system-info-API',
         'flow_db'     => 'Database',
@@ -390,7 +390,7 @@ return [
         'settings_heading' => 'Instellingen',
         'settings_intro'   => 'Op de pagina Instellingen kunt u configureren hoe de Software-module zich gedraagt. Hier kunt u API-sleutels beheren die het inventarisscript authenticeren en bepalen welke softwarevermeldingen in de hoofdlijst verschijnen.',
         'settings_s1_b'    => 'API-sleutelbeheer',
-        'settings_s1_t'    => 'genereer en beheer API-sleutels die het PowerShell-inventarisscript authenticeren tegen uw FreeITSM-instantie. U kunt meerdere sleutels maken, ze deactiveren zonder ze te verwijderen en bijhouden wanneer elke sleutel voor het laatst is gebruikt.',
+        'settings_s1_t'    => 'genereer en beheer API-sleutels die het PowerShell-inventarisscript authenticeren tegen uw Domus Desk-instantie. U kunt meerdere sleutels maken, ze deactiveren zonder ze te verwijderen en bijhouden wanneer elke sleutel voor het laatst is gebruikt.',
         'settings_s2_b'    => 'Genegeerde software',
         'settings_s2_t'    => 'sommige systeemcomponenten of ongewenste vermeldingen vervuilen de softwarelijst. Gebruik de negeerfunctie om specifieke titels uit de inventarisweergave te verbergen. Genegeerde items worden nog steeds verzameld en opgeslagen, maar zijn verborgen voor de hoofdlijst en dashboardberekeningen.',
         'settings_s3_b'    => 'Softwarecategorieën',

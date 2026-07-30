@@ -303,7 +303,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         /**
-         * The app-wide toast, so portal messages match the rest of FreeITSM.
+         * The app-wide toast, so portal messages match the rest of Domus Desk.
          *
          * Note what does NOT use it: the "Request submitted" confirmation is a
          * page STATE, not a passing message — the form is replaced by it and the

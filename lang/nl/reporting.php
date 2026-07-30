@@ -198,7 +198,7 @@ return [
 
         // Section 3: System logs
         's3_heading' => 'Systeemlogboeken',
-        's3_intro'   => 'Het Logboeken-gebied legt alles vast wat er achter de schermen in uw FreeITSM-instantie gebeurt. Elke aanmeldpoging, e-mailimport en systeemgebeurtenis wordt vastgelegd met een tijdstempel en status, zodat u altijd een volledig beeld hebt van de platformactiviteit.',
+        's3_intro'   => 'Het Logboeken-gebied legt alles vast wat er achter de schermen in uw Domus Desk-instantie gebeurt. Elke aanmeldpoging, e-mailimport en systeemgebeurtenis wordt vastgelegd met een tijdstempel en status, zodat u altijd een volledig beeld hebt van de platformactiviteit.',
         's3_badge_login'  => 'AANMELDING',
         's3_badge_email'  => 'E-MAIL',
         's3_badge_system' => 'SYSTEEM',

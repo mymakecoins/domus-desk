@@ -516,7 +516,7 @@ return [
         'hierarchy_body'    => 'Gebruik die ouer/kind-skakel wanneer die verwydering van die ouer die kind betekenisloos maak. Klassieke voorbeeld: \'n SQL-ketting.',
         'hierarchy_diagram_n1' => 'Bediener (SQLSVR01)',
         'hierarchy_diagram_n2' => 'SQL-instansie (MSSQLSERVER)',
-        'hierarchy_diagram_n3' => 'Databasis (FREEITSM)',
+        'hierarchy_diagram_n3' => 'Databasis (DOMUS_DESK)',
         'hierarchy_diagram_n4' => 'Gestoorde prosedure (sp_archive)',
         'hierarchy_diagram_n5' => 'SQL-taak (Nagtelikse argief)',
         'hierarchy_body2'   => 'Elke vlak kan werklik nie sonder sy ouer bestaan nie &mdash; skrap die Bediener, en elke laag daaronder gaan saam. <strong>Kaskade-skrap word afgedwing</strong>; die bevestiging vertel jou presies hoeveel afstammelinge sal gaan.',
@@ -529,7 +529,7 @@ return [
         'relationships_step1'   => 'In die <strong>Verhoudings</strong>-afdeling op die objek se besonderhedebladsy, klik <strong>+ Voeg verhouding by</strong>.',
         'relationships_step2'   => 'Kies \'n werkwoord uit die aftreklys (\'n wenk wys die omgekeerde werkwoord sodat jy kan sien hoe dit van die ander kant af sal lees).',
         'relationships_step3'   => 'Tik om die geskakelde objek te soek &mdash; die outo-aanvulling deursoek elke klas. Kies en stoor.',
-        'relationships_body2'   => 'Die verhouding is simmetries: wanneer jy die geskakelde objek bekyk, verskyn dit in <em>sy</em> inkomende kolom met die omgekeerde werkwoord. So <em>"FREEITSM hang af van AD"</em> op die databasis wys as <em>"FREEITSM word afgehang deur AD"</em> wanneer jy AD bekyk.',
+        'relationships_body2'   => 'Die verhouding is simmetries: wanneer jy die geskakelde objek bekyk, verskyn dit in <em>sy</em> inkomende kolom met die omgekeerde werkwoord. So <em>"DOMUS_DESK hang af van AD"</em> op die databasis wys as <em>"DOMUS_DESK word afgehang deur AD"</em> wanneer jy AD bekyk.',
         'relationships_tip'     => 'Voeg nuwe werkwoorde by in <strong>Instellings &rarr; Verhoudingstipes</strong> &mdash; elke werkwoord het \'n omgekeerde. Drie word met die eerste loop gesaai: <em>hang af van</em>, <em>verbind met</em>, <em>bestuur deur</em>.',
 
         // 8. When to use which

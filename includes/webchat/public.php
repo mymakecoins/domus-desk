@@ -3,7 +3,7 @@
  * Web chat — public request plumbing.
  *
  * Required by the unauthenticated widget endpoints (api/webchat/{config,start,send,poll}).
- * These are the only FreeITSM endpoints a random website visitor reaches, so everything
+ * These are the only Domus Desk endpoints a random website visitor reaches, so everything
  * that keeps them safe lives here: CORS scoped to the widget's own origin allowlist, the
  * widget-key lookup, per-conversation token loading, and basic rate limiting.
  *
@@ -29,7 +29,7 @@ function webchatClientIp(): string
 
 /**
  * The origin of the requesting page. Cross-origin requests carry an Origin header (the
- * authoritative case in production, where the customer's site and the FreeITSM host are
+ * authoritative case in production, where the customer's site and the Domus Desk host are
  * different origins). Same-origin requests — e.g. a demo site on the same host — omit
  * Origin entirely, so we fall back to the scheme+host of the Referer. Returns '' if
  * neither is present. Like the whole allowlist, this is a deterrent, not a crypto control.

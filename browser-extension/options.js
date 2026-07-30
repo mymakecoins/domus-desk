@@ -1,5 +1,5 @@
 /**
- * FreeITSM Watchtower — Options Page
+ * Domus Desk Watchtower — Options Page
  */
 
 document.addEventListener('DOMContentLoaded', async () => {

@@ -99,7 +99,7 @@ function lmsValidatePackage(ZipArchive $zip): array
         // has no use for one, and the server's handler rules decide what it means.
         $ext = strtolower(pathinfo($normalised, PATHINFO_EXTENSION));
         if ($ext === '' || !in_array($ext, LMS_ALLOWED_EXTENSIONS, true)) {
-            throw new Exception('The package contains a file FreeITSM will not host: ' . htmlspecialchars($name)
+            throw new Exception('The package contains a file Domus Desk will not host: ' . htmlspecialchars($name)
                 . '. A SCORM package should only hold course content (HTML, CSS, JavaScript, images, media and fonts).');
         }
 
@@ -112,7 +112,7 @@ function lmsValidatePackage(ZipArchive $zip): array
 
         $totalBytes += $size;
         if ($totalBytes > LMS_MAX_UNCOMPRESSED_BYTES) {
-            throw new Exception('That package expands to more than ' . round(LMS_MAX_UNCOMPRESSED_BYTES / 1048576) . ' MB, which is larger than FreeITSM will accept.');
+            throw new Exception('That package expands to more than ' . round(LMS_MAX_UNCOMPRESSED_BYTES / 1048576) . ' MB, which is larger than Domus Desk will accept.');
         }
 
         $files[] = $name;

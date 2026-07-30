@@ -8,10 +8,10 @@ services:
         condition: service_healthy
     environment:
       - DB_SERVER=db
-      - DB_NAME=freeitsm
-      - DB_USERNAME=freeitsm
-      - DB_PASSWORD=freeitsm
-      - ENCRYPTION_KEY_PATH=/var/www/encryption_keys/freeitsm.key
+      - DB_NAME=domus_desk
+      - DB_USERNAME=domus_desk
+      - DB_PASSWORD=domus_desk
+      - ENCRYPTION_KEY_PATH=/var/www/encryption_keys/domus_desk.key
     volumes:
       - attachments:/var/www/html/tickets/attachments
       - cm-attachments:/var/www/html/change-management/attachments
@@ -21,14 +21,14 @@ services:
     image: mysql:8.0
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: freeitsm
-      MYSQL_USER: freeitsm
-      MYSQL_PASSWORD: freeitsm
+      MYSQL_DATABASE: domus_desk
+      MYSQL_USER: domus_desk
+      MYSQL_PASSWORD: domus_desk
     ports:
       - "3307:3306"
     volumes:
       - db-data:/var/lib/mysql
-      - ./database/freeitsm.sql:/docker-entrypoint-initdb.d/01-schema.sql
+      - ./database/domus-desk.sql:/docker-entrypoint-initdb.d/01-schema.sql
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       interval: 5s

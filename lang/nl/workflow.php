@@ -29,7 +29,7 @@ return [
         'verify_ssl_label'        => 'SSL verifiëren',
         'verify_ssl_hint'         => 'Schakel dit alleen uit om te testen tegen omgevingen met zelfondertekende certificaten (bijv. achter een inspecterende proxy).',
         'ssl_warning_title'       => 'Waarschuwing',
-        'ssl_warning_body'        => 'SSL-verificatie staat uit. FreeITSM accepteert elk TLS-certificaat van de AI-provider zonder het te controleren. Iedereen met toegang tot je netwerk kan zich voordoen als de provider, het verkeer onderscheppen en je API key stelen — samen met elke prompt en elk antwoord dat volgt. Laat dit alleen uit in testomgevingen met zelfondertekende certificaten — nooit in productie.',
+        'ssl_warning_body'        => 'SSL-verificatie staat uit. Domus Desk accepteert elk TLS-certificaat van de AI-provider zonder het te controleren. Iedereen met toegang tot je netwerk kan zich voordoen als de provider, het verkeer onderscheppen en je API key stelen — samen met elke prompt en elk antwoord dat volgt. Laat dit alleen uit in testomgevingen met zelfondertekende certificaten — nooit in productie.',
         'test_btn'                => 'Testen',
         'testing'                 => 'Testen…',
     ],

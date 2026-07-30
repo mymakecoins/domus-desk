@@ -371,7 +371,7 @@ return [
 
         'collection_heading' => 'Como os dados são coletados',
         'collection_intro'   => 'O módulo de Software não coleta dados por conta própria. Em vez disso, ele depende do script PowerShell de Gerenciamento de Ativos ({script}), que é executado em cada máquina Windows gerenciada e reporta o software instalado como parte do inventário mais amplo de hardware e software.',
-        'collection_p2'      => 'Quando o script PowerShell é executado em uma máquina, ele lê as entradas de registro de Adicionar/Remover Programas e coleta cada aplicativo e componente do sistema instalado. Esses dados são enviados à API do FreeITSM, onde são armazenados no registro do ativo. O módulo de Software então agrega esses dados em todas as máquinas para fornecer a visão de todo o parque.',
+        'collection_p2'      => 'Quando o script PowerShell é executado em uma máquina, ele lê as entradas de registro de Adicionar/Remover Programas e coleta cada aplicativo e componente do sistema instalado. Esses dados são enviados à API do Domus Desk, onde são armazenados no registro do ativo. O módulo de Software então agrega esses dados em todas as máquinas para fornecer a visão de todo o parque.',
         'flow_script' => 'Script PowerShell',
         'flow_api'    => 'API system-info',
         'flow_db'     => 'Banco de dados',
@@ -390,7 +390,7 @@ return [
         'settings_heading' => 'Configurações',
         'settings_intro'   => 'A página de Configurações permite definir como o módulo de Software se comporta. A partir daqui você pode gerenciar as chaves de API que autenticam o script de inventário e controlar quais entradas de software aparecem na lista principal.',
         'settings_s1_b'    => 'Gerenciamento de chaves de API',
-        'settings_s1_t'    => 'gere e gerencie chaves de API que autenticam o script PowerShell de inventário na sua instância do FreeITSM. Você pode criar várias chaves, desativá-las sem excluir e acompanhar quando cada chave foi usada pela última vez.',
+        'settings_s1_t'    => 'gere e gerencie chaves de API que autenticam o script PowerShell de inventário na sua instância do Domus Desk. Você pode criar várias chaves, desativá-las sem excluir e acompanhar quando cada chave foi usada pela última vez.',
         'settings_s2_b'    => 'Software ignorado',
         'settings_s2_t'    => 'alguns componentes do sistema ou entradas indesejadas poluem a lista de software. Use o recurso de ignorar para ocultar títulos específicos da visualização de inventário. Os itens ignorados ainda são coletados e armazenados, mas ficam ocultos na lista principal e nos cálculos do painel.',
         'settings_s3_b'    => 'Categorias de software',

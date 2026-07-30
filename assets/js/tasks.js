@@ -1,5 +1,5 @@
 /**
- * FreeITSM Tasks Module — Board, List, Detail Panel, Drag & Drop
+ * Domus Desk Tasks Module — Board, List, Detail Panel, Drag & Drop
  */
 
 // ── State ──────────────────────────────────────────────────────────

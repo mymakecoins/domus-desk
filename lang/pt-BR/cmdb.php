@@ -522,7 +522,7 @@ return [
         'hierarchy_body'    => 'Use o vínculo pai/filho quando remover o pai torna o filho sem sentido. Exemplo clássico: uma cadeia SQL.',
         'hierarchy_diagram_n1' => 'Servidor (SQLSVR01)',
         'hierarchy_diagram_n2' => 'Instância SQL (MSSQLSERVER)',
-        'hierarchy_diagram_n3' => 'Banco de Dados (FREEITSM)',
+        'hierarchy_diagram_n3' => 'Banco de Dados (DOMUS_DESK)',
         'hierarchy_diagram_n4' => 'Procedimento armazenado (sp_archive)',
         'hierarchy_diagram_n5' => 'Job SQL (Arquivamento noturno)',
         'hierarchy_body2'   => 'Cada nível realmente não pode existir sem seu pai &mdash; exclua o Servidor e cada camada abaixo vai junto. <strong>A exclusão em cascata é aplicada</strong>; a confirmação informa exatamente quantos descendentes serão excluídos.',
@@ -535,7 +535,7 @@ return [
         'relationships_step1'   => 'Na seção <strong>Relacionamentos</strong> da página de detalhes do objeto, clique em <strong>+ Adicionar relacionamento</strong>.',
         'relationships_step2'   => 'Escolha um verbo na lista suspensa (uma dica mostra o verbo inverso para que você veja como ficará do outro lado).',
         'relationships_step3'   => 'Digite para pesquisar o objeto vinculado &mdash; o autocompletar pesquisa todas as classes. Escolha e salve.',
-        'relationships_body2'   => 'O relacionamento é simétrico: ao visualizar o objeto vinculado, ele aparece na coluna de entrada <em>dele</em> com o verbo inverso. Assim, <em>"FREEITSM depende de AD"</em> no banco de dados aparece como <em>"FREEITSM é dependido por AD"</em> quando você está visualizando o AD.',
+        'relationships_body2'   => 'O relacionamento é simétrico: ao visualizar o objeto vinculado, ele aparece na coluna de entrada <em>dele</em> com o verbo inverso. Assim, <em>"DOMUS_DESK depende de AD"</em> no banco de dados aparece como <em>"DOMUS_DESK é dependido por AD"</em> quando você está visualizando o AD.',
         'relationships_tip'     => 'Adicione novos verbos em <strong>Configurações &rarr; Tipos de relacionamento</strong> &mdash; cada verbo tem um inverso. Três são pré-cadastrados na primeira execução: <em>depende de</em>, <em>conecta-se a</em>, <em>gerenciado por</em>.',
 
         // 8. When to use which

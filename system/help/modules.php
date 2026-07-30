@@ -9,7 +9,7 @@ require __DIR__ . '/_top.php';
 <!-- 1. Overview -->
 <div class="syshelp-section" id="overview">
     <div class="syshelp-section-header"><h3>What this area does</h3></div>
-    <p class="syshelp-lead">Modules lets you decide, per analyst, which parts of FreeITSM each person can open — Tickets, Assets, Knowledge, Changes, Calendar, Checks, Reporting, Software, Forms, Contracts, Wiki, Tasks, CMDB and System. It's a single grid of analysts against modules, with a toggle in every cell.</p>
+    <p class="syshelp-lead">Modules lets you decide, per analyst, which parts of Domus Desk each person can open — Tickets, Assets, Knowledge, Changes, Calendar, Checks, Reporting, Software, Forms, Contracts, Wiki, Tasks, CMDB and System. It's a single grid of analysts against modules, with a toggle in every cell.</p>
     <p>It does not switch a module on or off for the whole install. Every module stays available; this page just governs who is allowed to reach it. Only active analysts appear in the grid.</p>
     <div class="syshelp-callout info">Changes save the moment you flip a toggle — there is no Save button. A small confirmation appears after each change.</div>
 </div>

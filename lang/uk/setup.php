@@ -10,7 +10,7 @@
  * passed in via {placeholder} params rather than translated.
  */
 return [
-    'title'   => 'FreeITSM Встановлення',
+    'title'   => 'Domus Desk Встановлення',
     'heading' => 'Перевірка встановлення',
 
     'summary' => [
@@ -67,7 +67,7 @@ return [
 
     'footer' => [
         'warning'   => 'Після переведення системи в продуктивний режим видаліть теку {folder} з міркувань безпеки.',
-        'signature' => 'Перевірка встановлення FreeITSM',
+        'signature' => 'Перевірка встановлення Domus Desk',
     ],
 
     'js' => [

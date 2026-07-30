@@ -1,5 +1,5 @@
 /**
- * FreeITSM Change Management — table view config
+ * Domus Desk Change Management — table view config
  *
  * Supplies the change-specific pieces to the shared data-table engine
  * (assets/js/data-table.js): the COLUMNS catalogue, change loading, and inline

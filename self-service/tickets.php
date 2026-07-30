@@ -597,7 +597,7 @@ let ssTickets = [];
 
         /**
          * Confirmations use the APP-WIDE toast (assets/js/toast.js), so the
-         * portal behaves like the rest of FreeITSM instead of growing its own
+         * portal behaves like the rest of Domus Desk instead of growing its own
          * message strip.
          *
          * It also fixes a real problem this page had: the strip lived INSIDE the
@@ -618,7 +618,7 @@ let ssTickets = [];
 
         function safeBody(html, type) {
             if (typeof messageBodyHtml !== 'function') {
-                console.error('FreeITSM: assets/js/safe-html.js did not load — message shown as plain text.');
+                console.error('Domus Desk: assets/js/safe-html.js did not load — message shown as plain text.');
                 return esc(html || '');
             }
             return messageBodyHtml(html, type);

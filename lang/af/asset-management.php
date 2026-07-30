@@ -463,7 +463,7 @@ return [
         'secret_saved_placeholder'    => 'Gestoor (voer nuwe geheim in om te verander)',
         'verify_ssl'                  => 'Verifieer SSL',
         'verify_ssl_hint'             => 'Deaktiveer slegs vir toetsing teen omgewings met selfondertekende sertifikate',
-        'verify_ssl_warning'          => '<strong>Waarskuwing:</strong> SSL-verifikasie is afgeskakel. FreeITSM sal enige TLS-sertifikaat van Microsoft se bedieners aanvaar sonder om dit na te gaan. Enigiemand met toegang tot jou netwerk (of jou DNS, of \'n gekompromitteerde sertifikaatowerheid) kan voorgee om Microsoft te wees, die verkeer onderskep, en jou huurder-ID, kliënt-ID, kliëntgeheim, en die toegangstekens wat volg, steel. Laat dit slegs af in toetsomgewings met selfondertekende sertifikate &mdash; nooit in produksie nie.',
+        'verify_ssl_warning'          => '<strong>Waarskuwing:</strong> SSL-verifikasie is afgeskakel. Domus Desk sal enige TLS-sertifikaat van Microsoft se bedieners aanvaar sonder om dit na te gaan. Enigiemand met toegang tot jou netwerk (of jou DNS, of \'n gekompromitteerde sertifikaatowerheid) kan voorgee om Microsoft te wees, die verkeer onderskep, en jou huurder-ID, kliënt-ID, kliëntgeheim, en die toegangstekens wat volg, steel. Laat dit slegs af in toetsomgewings met selfondertekende sertifikate &mdash; nooit in produksie nie.',
         'batch_size_label'            => 'Sagteware-sinkronisering-bondelgrootte',
         'batch_size_hint'             => 'Aantal toestelle ingesluit in \'n enkele sagteware-sinkroniseringstaak (1–500). Kleiner bondels voltooi vinniger maar vereis meer kliks om die landgoed te dek.',
         'sync'                        => 'Sinkroniseer',

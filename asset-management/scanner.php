@@ -5,7 +5,7 @@
  * WHY THIS EXISTS. A phone's own camera already opens an asset label — the QR
  * holds a plain HTTPS URL precisely so it needs no app. That is the right tool
  * for looking one thing up. It is the wrong tool for a stocktake: to update
- * forty assets you leave FreeITSM, open the camera, tap the banner, edit, then
+ * forty assets you leave Domus Desk, open the camera, tap the banner, edit, then
  * repeat the whole dance forty times. This page keeps the camera on screen so
  * the loop is scan → applied → scan, with the app never leaving the screen.
  *
@@ -44,7 +44,7 @@ $ready = assetLabelsSchemaReady($conn);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scan assets · FreeITSM</title>
+    <title>Scan assets · Domus Desk</title>
     <link rel="stylesheet" href="../assets/css/theme.css?v=22">
     <style>
         /* Self-contained: shares no layout with the desktop module. Every

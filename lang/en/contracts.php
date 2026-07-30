@@ -251,7 +251,7 @@ return [
         'ai_openai_keys'          => 'OpenAI keys:',
         'ai_verify_ssl'           => 'Verify SSL',
         'ai_verify_ssl_help'      => 'Disable only for testing against environments with self-signed certificates (e.g. behind an inspecting proxy).',
-        'ai_ssl_warning'          => '<strong>Warning:</strong> SSL verification is turned off. FreeITSM will accept any TLS certificate from the AI provider without checking it. Anyone with access to your network (or your DNS, or a compromised certificate authority) could pose as the provider, intercept the traffic, and steal your API key &mdash; along with every prompt and response that follows. Only leave this off in test environments with self-signed certificates &mdash; never in production.',
+        'ai_ssl_warning'          => '<strong>Warning:</strong> SSL verification is turned off. Domus Desk will accept any TLS certificate from the AI provider without checking it. Anyone with access to your network (or your DNS, or a compromised certificate authority) could pose as the provider, intercept the traffic, and steal your API key &mdash; along with every prompt and response that follows. Only leave this off in test environments with self-signed certificates &mdash; never in production.',
         'ai_style_guide'          => 'Default style guide',
         'ai_style_guide_ph'       => 'Optional. Used as the default style guide for any RFP that doesn\'t have its own override. Examples: tone of voice, British vs US English, sentence-case vs title-case headings, specific terminology preferences.',
         'ai_style_guide_help'     => 'Applied at every AI generation step that produces document text (Pass 3 section generation, Pass 4 restyle, framing-section generation). Each individual RFP can override this on its own settings.',
@@ -504,7 +504,7 @@ return [
             'nav_faq'            => 'FAQ',
 
             'overview_p1'  => 'The RFP Builder takes departmental feedback documents (one per contributing department), uses AI to extract every individual requirement, deduplicates and categorises them, drafts a professional RFP document you can send to suppliers, and then scores supplier responses requirement-by-requirement to drive a decision.',
-            'overview_p2'  => 'The tool is <strong>internal-only</strong>. Suppliers never log in — you share the generated PDF with them via your usual procurement channel (email, sourcing platform, etc.) and they reply outside FreeITSM. You enter their scores yourself based on reading their responses.',
+            'overview_p2'  => 'The tool is <strong>internal-only</strong>. Suppliers never log in — you share the generated PDF with them via your usual procurement channel (email, sourcing platform, etc.) and they reply outside Domus Desk. You enter their scores yourself based on reading their responses.',
             'overview_tip' => '<strong>The differentiating step is consolidation.</strong> Five departments asking for "the same thing" rarely use the same words — Pass 2 (consolidation) merges those duplicates while preserving every original quote for political cover, and flags genuine contradictions between departments for you to resolve.',
 
             'wf_source'      => 'Source docs',
@@ -562,7 +562,7 @@ return [
             'p4_preview'   => '<strong>Preview document</strong> in the page header opens a clean single-page rendered view. Use Ctrl+P / Cmd+P to print or save as PDF — that\'s the artifact you share with suppliers.',
 
             'p5_title' => 'Suppliers & scoring',
-            'p5_p1'    => 'Add suppliers to the shortlist via the Suppliers page — pick from existing FreeITSM suppliers or create a new prospective one inline. Track demo dates and per-RFP notes per supplier.',
+            'p5_p1'    => 'Add suppliers to the shortlist via the Suppliers page — pick from existing Domus Desk suppliers or create a new prospective one inline. Track demo dates and per-RFP notes per supplier.',
             'p5_p2'    => '<strong>Score</strong> on each supplier opens the scoring page. Click the score boxes 0–5 (red→green gradient) for each consolidated requirement, add notes for evidence, and watch the running averages update live in the left-hand "Score by category" panel and the bottom bar. The <strong>Spider</strong> button opens a full-screen radar chart of your category averages.',
             'p5_tip'   => 'Multiple analysts can score the same supplier independently. The tool rolls those up — see <a href="#multi-analyst">multi-analyst scoring</a>.',
 

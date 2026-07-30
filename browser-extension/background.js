@@ -1,5 +1,5 @@
 /**
- * FreeITSM Watchtower — Background Service Worker
+ * Domus Desk Watchtower — Background Service Worker
  * Polls the Watchtower API on a schedule and updates the badge
  */
 

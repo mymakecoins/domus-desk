@@ -1,6 +1,6 @@
 <?php
 /**
- * FreeITSM REST API v1 — morning-checks resource (checks, results, day board).
+ * Domus Desk REST API v1 — morning-checks resource (checks, results, day board).
  *
  * Mirrors the module's internal endpoints:
  *   - checks CRUD mirrors add/update/delete_check.php (delete removes the

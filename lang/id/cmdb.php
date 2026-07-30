@@ -516,7 +516,7 @@ return [
         'hierarchy_body'    => 'Gunakan tautan induk/anak saat menghapus induk membuat anak menjadi tak bermakna. Contoh klasik: rantai SQL.',
         'hierarchy_diagram_n1' => 'Server (SQLSVR01)',
         'hierarchy_diagram_n2' => 'SQL Instance (MSSQLSERVER)',
-        'hierarchy_diagram_n3' => 'Database (FREEITSM)',
+        'hierarchy_diagram_n3' => 'Database (DOMUS_DESK)',
         'hierarchy_diagram_n4' => 'Stored Procedure (sp_archive)',
         'hierarchy_diagram_n5' => 'SQL Job (Arsip malam)',
         'hierarchy_body2'   => 'Setiap tingkat memang tidak dapat ada tanpa induknya &mdash; hapus Server, setiap lapisan di bawahnya ikut terhapus. <strong>Penghapusan berantai diberlakukan</strong>; konfirmasi memberi tahu Anda persis berapa banyak keturunan yang akan ikut terhapus.',
@@ -529,7 +529,7 @@ return [
         'relationships_step1'   => 'Pada bagian <strong>Relasi</strong> halaman detail objek, klik <strong>+ Tambah relasi</strong>.',
         'relationships_step2'   => 'Pilih kata kerja dari dropdown (sebuah petunjuk menunjukkan kata kerja kebalikan sehingga Anda dapat melihat bagaimana ia terbaca dari sisi lain).',
         'relationships_step3'   => 'Ketik untuk mencari objek tertaut &mdash; pelengkapan otomatis mencari setiap kelas. Pilih dan simpan.',
-        'relationships_body2'   => 'Relasi bersifat simetris: saat Anda melihat objek tertaut, ia muncul di kolom masuk <em>miliknya</em> dengan kata kerja kebalikan. Jadi <em>"FREEITSM bergantung pada AD"</em> pada database tampil sebagai <em>"FREEITSM dijadikan tumpuan oleh AD"</em> saat Anda melihat AD.',
+        'relationships_body2'   => 'Relasi bersifat simetris: saat Anda melihat objek tertaut, ia muncul di kolom masuk <em>miliknya</em> dengan kata kerja kebalikan. Jadi <em>"DOMUS_DESK bergantung pada AD"</em> pada database tampil sebagai <em>"DOMUS_DESK dijadikan tumpuan oleh AD"</em> saat Anda melihat AD.',
         'relationships_tip'     => 'Tambahkan kata kerja baru di <strong>Pengaturan &rarr; Tipe Relasi</strong> &mdash; setiap kata kerja memiliki kebalikan. Tiga disemai pada saat pertama dijalankan: <em>bergantung pada</em>, <em>terhubung ke</em>, <em>dikelola oleh</em>.',
 
         // 8. When to use which

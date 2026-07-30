@@ -52,7 +52,7 @@ function maskId($s) {
     $s = (string)$s;
     if ($s === '') return '(empty!)';
     // GUIDs and long opaque ids → partial mask; short human-readable client
-    // names (e.g. a Keycloak "freeitsm-app") aren't identifying, so show them.
+    // names (e.g. a Keycloak "domus-desk-app") aren't identifying, so show them.
     if (preg_match('/^[0-9a-fA-F-]{20,}$/', $s) || strlen($s) > 24) return maskMiddle($s);
     return $s;
 }
@@ -80,7 +80,7 @@ addSection($sections, "REPORT HEADER", [
 // ---- 2. AUTH GATE ------------------------------------------------------
 
 if (!isset($_SESSION['analyst_id'])) {
-    addSection($sections, "AUTH", "FAIL: not logged in. Log into FreeITSM in the same browser, then re-run.");
+    addSection($sections, "AUTH", "FAIL: not logged in. Log into Domus Desk in the same browser, then re-run.");
     emit_and_exit($sections);
 }
 

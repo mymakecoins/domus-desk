@@ -463,7 +463,7 @@ return [
         'secret_saved_placeholder'    => 'Opgeslagen (voer een nieuw geheim in om te wijzigen)',
         'verify_ssl'                  => 'SSL verifiëren',
         'verify_ssl_hint'             => 'Schakel alleen uit voor tests tegen omgevingen met zelfondertekende certificaten',
-        'verify_ssl_warning'          => '<strong>Waarschuwing:</strong> SSL-verificatie is uitgeschakeld. FreeITSM accepteert elk TLS-certificaat van de servers van Microsoft zonder dit te controleren. Iedereen met toegang tot je netwerk (of je DNS, of een gecompromitteerde certificeringsinstantie) kan zich voordoen als Microsoft, het verkeer onderscheppen en je tenant-ID, client-ID, clientgeheim en de daaropvolgende toegangstokens stelen. Laat dit alleen uit in testomgevingen met zelfondertekende certificaten &mdash; nooit in productie.',
+        'verify_ssl_warning'          => '<strong>Waarschuwing:</strong> SSL-verificatie is uitgeschakeld. Domus Desk accepteert elk TLS-certificaat van de servers van Microsoft zonder dit te controleren. Iedereen met toegang tot je netwerk (of je DNS, of een gecompromitteerde certificeringsinstantie) kan zich voordoen als Microsoft, het verkeer onderscheppen en je tenant-ID, client-ID, clientgeheim en de daaropvolgende toegangstokens stelen. Laat dit alleen uit in testomgevingen met zelfondertekende certificaten &mdash; nooit in productie.',
         'batch_size_label'            => 'Batchgrootte softwaresynchronisatie',
         'batch_size_hint'             => 'Aantal apparaten in één softwaresynchronisatietaak (1–500). Kleinere batches zijn sneller klaar, maar vergen meer klikken om het hele bestand te dekken.',
         'sync'                        => 'Synchroniseren',
