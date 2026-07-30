@@ -74,7 +74,7 @@ try {
         . '<h2 style="color: #667eea;">Password Reset Request</h2>'
         . '<p>Hi ' . htmlspecialchars($analyst['full_name']) . ',</p>'
         . '<p>We received a request to reset your password. Click the link below to set a new password:</p>'
-        . '<p style="margin: 24px 0;"><a href="' . htmlspecialchars($resetUrl) . '" style="display: inline-block; padding: 12px 24px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 5px; font-weight: 600;">Reset Password</a></p>'
+        . '<p style="margin: 24px 0;"><a href="' . htmlspecialchars($resetUrl) . '" style="display: inline-block; padding: 12px 24px; background: linear-gradient(135deg, #0A192F 0%, #1E3A8A 100%); color: white; text-decoration: none; border-radius: 5px; font-weight: 600;">Reset Password</a></p>'
         . '<p style="font-size: 13px; color: #666;">Or copy and paste this URL into your browser:<br>'
         . '<a href="' . htmlspecialchars($resetUrl) . '" style="color: #667eea;">' . htmlspecialchars($resetUrl) . '</a></p>'
         . '<p style="font-size: 13px; color: #999;">This link expires in 1 hour. If you did not request a password reset, you can safely ignore this email.</p>'
