@@ -411,10 +411,11 @@ body.portal-app .portal-layout { padding: 0; max-width: none; margin: 0; }
  * ones stay literal on purpose: there is no --info-* pair in theme.css, and per
  * the theming guidance you reach for an existing token rather than invent one —
  * a self-coloured badge reads fine on either surface. */
-.status-open        { background: #dbeafe;                    color: #1e40af; }
-.status-in-progress { background: var(--warning-bg, #fff7ed); color: var(--warning-text, #c2410c); }
-.status-on-hold     { background: var(--warning-bg, #fef3c7); color: var(--warning-text, #92400e); }
-.status-closed      { background: var(--success-bg, #d1fae5); color: var(--success-text, #065f46); }
+.status-open        { background: #e0f2fe; color: #075985; border: 1px solid #bae6fd; }
+.status-in-progress { background: #fef3c7; color: #78350f; border: 1px solid #fde68a; }
+.status-on-hold     { background: #ffedd5; color: #9a3412; border: 1px solid #fdba74; }
+.status-closed      { background: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; }
+.status-resolved    { background: #d1fae5; color: #065f46; border: 1px solid #6ee7b7; }
 .priority-high      { background: var(--danger-bg, #fee2e2);  color: var(--danger-text, #991b1b); }
 .priority-normal    { background: var(--surface-hover, #f3f4f6); color: var(--text-muted, #6b7280); }
 .priority-low       { background: #e0e7ff;                    color: #3730a3; }
