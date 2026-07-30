@@ -11,14 +11,17 @@ if (isset($_SESSION['analyst_id'])) {
     exit;
 }
 
+require_once __DIR__ . '/../includes/i18n.php';
+I18n::initFromSession();
+
 $token = $_GET['token'] ?? '';
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo htmlspecialchars(I18n::getLocale()); ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reset Password</title>
+    <title><?php echo htmlspecialchars(t('auth.reset_password.page_title')); ?></title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -149,30 +152,30 @@ $token = $_GET['token'] ?? '';
                 <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                 <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
             </svg>
-            <h1>Reset Password</h1>
-            <p>Enter your new password below.</p>
+            <h1><?php echo htmlspecialchars(t('auth.reset_password.heading')); ?></h1>
+            <p><?php echo htmlspecialchars(t('auth.reset_password.description')); ?></p>
         </div>
 
         <div id="msg" class="msg"></div>
 
         <?php if (empty($token)): ?>
-            <div class="msg error">Invalid or missing reset link. Please request a new one.</div>
-            <a href="forgot-password.php" class="back-link">Request a new reset link</a>
+            <div class="msg error"><?php echo htmlspecialchars(t('auth.reset_password.invalid_link')); ?></div>
+            <a href="forgot-password.php" class="back-link"><?php echo htmlspecialchars(t('auth.reset_password.request_new_link')); ?></a>
         <?php else: ?>
             <div id="formFields">
                 <div class="form-group">
-                    <label for="newPw">New Password</label>
+                    <label for="newPw"><?php echo htmlspecialchars(t('auth.reset_password.new_password')); ?></label>
                     <input type="password" id="newPw" autocomplete="new-password" autofocus>
                 </div>
 
                 <div class="form-group">
-                    <label for="confirmPw">Confirm Password</label>
+                    <label for="confirmPw"><?php echo htmlspecialchars(t('auth.reset_password.confirm_password')); ?></label>
                     <input type="password" id="confirmPw" autocomplete="new-password">
                 </div>
 
-                <button type="button" class="submit-btn" id="submitBtn" onclick="resetPassword()">Reset Password</button>
+                <button type="button" class="submit-btn" id="submitBtn" onclick="resetPassword()"><?php echo htmlspecialchars(t('auth.reset_password.submit')); ?></button>
             </div>
-            <a href="login.php" class="back-link">Back to login</a>
+            <a href="login.php" class="back-link"><?php echo htmlspecialchars(t('auth.reset_password.back_to_login')); ?></a>
 
             <script>
             document.querySelectorAll('input').forEach(input => {

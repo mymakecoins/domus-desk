@@ -5,6 +5,9 @@
  */
 session_start();
 
+require_once __DIR__ . '/../includes/i18n.php';
+I18n::initFromSession();
+
 // Already logged in
 if (isset($_SESSION['analyst_id'])) {
     header('Location: index.php');
@@ -12,11 +15,11 @@ if (isset($_SESSION['analyst_id'])) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo htmlspecialchars(I18n::getLocale()); ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forgot Password</title>
+    <title><?php echo htmlspecialchars(t('auth.forgot_password.page_title')); ?></title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -147,22 +150,22 @@ if (isset($_SESSION['analyst_id'])) {
                 <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                 <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
             </svg>
-            <h1>Forgot Password</h1>
-            <p>Enter your username or email address and we'll send you a link to reset your password.</p>
+            <h1><?php echo htmlspecialchars(t('auth.forgot_password.heading')); ?></h1>
+            <p><?php echo htmlspecialchars(t('auth.forgot_password.description')); ?></p>
         </div>
 
         <div id="msg" class="msg"></div>
 
         <div id="formFields">
             <div class="form-group">
-                <label for="identifier">Username or Email</label>
+                <label for="identifier"><?php echo htmlspecialchars(t('auth.forgot_password.identifier_label')); ?></label>
                 <input type="text" id="identifier" autofocus autocomplete="username">
             </div>
 
-            <button type="button" class="submit-btn" id="submitBtn" onclick="requestReset()">Send Reset Link</button>
+            <button type="button" class="submit-btn" id="submitBtn" onclick="requestReset()"><?php echo htmlspecialchars(t('auth.forgot_password.submit')); ?></button>
         </div>
 
-        <a href="login.php" class="back-link">Back to login</a>
+        <a href="login.php" class="back-link"><?php echo htmlspecialchars(t('auth.forgot_password.back_to_login')); ?></a>
     </div>
 
     <script>
@@ -180,12 +183,12 @@ if (isset($_SESSION['analyst_id'])) {
 
         if (!identifier) {
             msgEl.className = 'msg error';
-            msgEl.textContent = 'Please enter your username or email address.';
+            msgEl.textContent = <?php echo json_encode(t('auth.forgot_password.enter_identifier')); ?>;
             return;
         }
 
         btn.disabled = true;
-        btn.textContent = 'Sending...';
+        btn.textContent = <?php echo json_encode(t('auth.forgot_password.submitting')); ?>;
 
         try {
             const resp = await fetch('api/auth/request_password_reset.php', {
@@ -203,13 +206,13 @@ if (isset($_SESSION['analyst_id'])) {
                 msgEl.className = 'msg error';
                 msgEl.textContent = data.error;
                 btn.disabled = false;
-                btn.textContent = 'Send Reset Link';
+                btn.textContent = <?php echo json_encode(t('auth.forgot_password.submit')); ?>;
             }
         } catch (e) {
             msgEl.className = 'msg error';
-            msgEl.textContent = 'Something went wrong. Please try again.';
+            msgEl.textContent = <?php echo json_encode(t('common.error_generic')); ?>;
             btn.disabled = false;
-            btn.textContent = 'Send Reset Link';
+            btn.textContent = <?php echo json_encode(t('auth.forgot_password.submit')); ?>;
         }
     }
     </script>

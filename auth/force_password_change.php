@@ -5,6 +5,8 @@
  */
 session_start();
 require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../includes/i18n.php';
+I18n::initFromSession();
 
 // Must be logged in with expired password flag
 if (!isset($_SESSION['analyst_id']) || empty($_SESSION['password_expired'])) {
@@ -15,11 +17,11 @@ if (!isset($_SESSION['analyst_id']) || empty($_SESSION['password_expired'])) {
 $analyst_name = $_SESSION['analyst_name'] ?? 'Analyst';
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo htmlspecialchars(I18n::getLocale()); ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Domus Desk - Change Password</title>
+    <title><?php echo htmlspecialchars(t('auth.force_change.page_title')); ?></title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -150,29 +152,29 @@ $analyst_name = $_SESSION['analyst_name'] ?? 'Analyst';
                 <line x1="12" y1="9" x2="12" y2="13"></line>
                 <line x1="12" y1="17" x2="12.01" y2="17"></line>
             </svg>
-            <h1>Password Expired</h1>
-            <p>Your password has expired and must be changed before you can continue.</p>
+            <h1><?php echo htmlspecialchars(t('auth.force_change.heading')); ?></h1>
+            <p><?php echo htmlspecialchars(t('auth.force_change.description')); ?></p>
         </div>
 
         <div id="msg" class="msg"></div>
 
         <div class="form-group">
-            <label for="currentPw">Current Password</label>
+            <label for="currentPw"><?php echo htmlspecialchars(t('auth.force_change.current_password')); ?></label>
             <input type="password" id="currentPw" autocomplete="current-password" autofocus>
         </div>
 
         <div class="form-group">
-            <label for="newPw">New Password</label>
+            <label for="newPw"><?php echo htmlspecialchars(t('auth.force_change.new_password')); ?></label>
             <input type="password" id="newPw" autocomplete="new-password">
         </div>
 
         <div class="form-group">
-            <label for="confirmPw">Confirm New Password</label>
+            <label for="confirmPw"><?php echo htmlspecialchars(t('auth.force_change.confirm_password')); ?></label>
             <input type="password" id="confirmPw" autocomplete="new-password">
         </div>
 
-        <button type="button" class="submit-btn" id="submitBtn" onclick="changePassword()">Change Password</button>
-        <a href="analyst_logout.php" class="logout-link">Logout instead</a>
+        <button type="button" class="submit-btn" id="submitBtn" onclick="changePassword()"><?php echo htmlspecialchars(t('auth.force_change.submit')); ?></button>
+        <a href="analyst_logout.php" class="logout-link"><?php echo htmlspecialchars(t('auth.force_change.logout')); ?></a>
     </div>
 
     <script>
@@ -193,7 +195,7 @@ $analyst_name = $_SESSION['analyst_name'] ?? 'Analyst';
         }
 
         btn.disabled = true;
-        btn.textContent = 'Changing...';
+        btn.textContent = <?php echo json_encode(t('auth.force_change.submitting')); ?>;
 
         try {
             const resp = await fetch('api/myaccount/change_password.php', {
@@ -215,13 +217,13 @@ $analyst_name = $_SESSION['analyst_name'] ?? 'Analyst';
                 msgEl.className = 'msg error';
                 msgEl.textContent = data.error;
                 btn.disabled = false;
-                btn.textContent = 'Change Password';
+                btn.textContent = <?php echo json_encode(t('auth.force_change.submit')); ?>;
             }
         } catch (e) {
             msgEl.className = 'msg error';
             msgEl.textContent = 'Failed to change password. Please try again.';
             btn.disabled = false;
-            btn.textContent = 'Change Password';
+            btn.textContent = <?php echo json_encode(t('auth.force_change.submit')); ?>;
         }
     }
 

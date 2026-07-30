@@ -6,6 +6,8 @@ session_start();
 require_once __DIR__ . '/../config.php';
 require_once __DIR__ . '/../includes/functions.php';
 require_once __DIR__ . '/../includes/ldap.php';
+require_once __DIR__ . '/../includes/i18n.php';
+I18n::initFromSession();
 
 // An SSO sign-in attempt that failed bounces back here with a message.
 $sso_error = $_SESSION['sso_error'] ?? null;
@@ -405,11 +407,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo htmlspecialchars(I18n::getLocale()); ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Domus Desk Login</title>
+    <title><?php echo htmlspecialchars(t('auth.login.page_title')); ?></title>
     <style>
         * {
             margin: 0;
@@ -629,9 +631,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="login-header">
             <img src="assets/images/CompanyLogo.png?v=2" alt="Company Logo">
             <?php if ($mfa_required): ?>
-                <h1>Verification</h1>
+                <h1><?php echo htmlspecialchars(t('auth.login.heading_mfa')); ?></h1>
             <?php else: ?>
-                <h1>Domus Desk Login</h1>
+                <h1><?php echo htmlspecialchars(t('auth.login.heading')); ?></h1>
             <?php endif; ?>
         </div>
 
@@ -642,13 +644,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                 </svg>
             </div>
-            <p class="mfa-subtitle">Enter the 6-digit code from your authenticator app</p>
+            <p class="mfa-subtitle"><?php echo htmlspecialchars(t('auth.login.mfa_desc')); ?></p>
             <div id="mfaError" class="mfa-error"></div>
             <div class="form-group">
                 <input type="text" id="otpCode" class="otp-input-field" maxlength="6" inputmode="numeric" autocomplete="one-time-code" autofocus placeholder="------">
             </div>
-            <button type="button" class="login-button" id="verifyBtn" onclick="verifyOtp()">Verify</button>
-            <a href="login.php?cancel_mfa=1" class="mfa-cancel">Cancel and return to login</a>
+            <button type="button" class="login-button" id="verifyBtn" onclick="verifyOtp()"><?php echo htmlspecialchars(t('auth.login.mfa_verify')); ?></button>
+            <a href="login.php?cancel_mfa=1" class="mfa-cancel"><?php echo htmlspecialchars(t('auth.login.mfa_cancel')); ?></a>
 
             <script>
             // Auto-submit when 6 digits entered
@@ -671,7 +673,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 const btn = document.getElementById('verifyBtn');
                 const errEl = document.getElementById('mfaError');
                 btn.disabled = true;
-                btn.textContent = 'Verifying...';
+                btn.textContent = <?php echo json_encode(t('auth.login.mfa_verifying')); ?>;
                 errEl.style.display = 'none';
 
                 try {
@@ -689,13 +691,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         document.getElementById('otpCode').value = '';
                         document.getElementById('otpCode').focus();
                         btn.disabled = false;
-                        btn.textContent = 'Verify';
+                        btn.textContent = <?php echo json_encode(t('auth.login.mfa_verify')); ?>;
                     }
                 } catch (e) {
-                    errEl.textContent = 'Verification failed. Please try again.';
+                    errEl.textContent = <?php echo json_encode(t('auth.login.mfa_error')); ?>;
                     errEl.style.display = 'block';
                     btn.disabled = false;
-                    btn.textContent = 'Verify';
+                    btn.textContent = <?php echo json_encode(t('auth.login.mfa_verify')); ?>;
                 }
             }
             </script>
@@ -734,8 +736,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             } catch (Exception $e) { $ssoProviders = []; $hasLdap = false; }
             $ssoActive = $ssoOn && !empty($ssoProviders);
             $localLinkLabel = !empty($hasLdap)
-                ? 'Sign in with a username and password'
-                : 'Sign in with a local account';
+                ? t('auth.login.local_link_user_pass')
+                : t('auth.login.local_link_local_acc');
             // Break-glass: ?local=1 always reveals the local form, even when local login is "off".
             $forceLocal = isset($_GET['local']);
             // Is local login permitted at all (for the reveal link / email-first fallback)?
@@ -747,13 +749,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <!-- Email-first router: type email -> routed to your provider (or fall back to local) -->
                 <div id="emailFirst">
                     <div class="form-group">
-                        <label for="ssoEmail">Email</label>
-                        <input type="email" id="ssoEmail" autofocus autocomplete="username" placeholder="you@example.com">
+                        <label for="ssoEmail"><?php echo htmlspecialchars(t('auth.login.email_label')); ?></label>
+                        <input type="email" id="ssoEmail" autofocus autocomplete="username" placeholder="<?php echo htmlspecialchars(t('auth.login.email_placeholder')); ?>">
                     </div>
-                    <button type="button" class="login-button" id="continueBtn">Continue</button>
+                    <button type="button" class="login-button" id="continueBtn"><?php echo htmlspecialchars(t('auth.login.continue')); ?></button>
                     <div class="error-message" id="routerError" style="display:none;margin-top:10px;"></div>
                 </div>
-                <div style="<?php echo $divider; ?>"><span style="flex:1;height:1px;background:#ddd;"></span>or<span style="flex:1;height:1px;background:#ddd;"></span></div>
+                <div style="<?php echo $divider; ?>"><span style="flex:1;height:1px;background:#ddd;"></span><?php echo htmlspecialchars(t('auth.login.or')); ?><span style="flex:1;height:1px;background:#ddd;"></span></div>
                 <?php foreach ($ssoProviders as $p): ?>
                     <a href="<?php echo htmlspecialchars(BASE_URL . 'api/auth/oidc_login.php?provider=' . (int)$p['id']); ?>"
                        style="display:block;text-align:center;padding:11px;margin-bottom:8px;border:1px solid #cfd8dc;border-radius:6px;color:#37474f;text-decoration:none;font-weight:600;font-size:14px;background:#fff;">
@@ -770,23 +772,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                      users, so its wording must not claim to be local-only. -->
                 <div class="modal-overlay" id="localModal">
                     <div class="modal-box">
-                        <button type="button" class="modal-close" id="localModalClose" aria-label="Close">&times;</button>
-                        <h2><?php echo !empty($hasLdap) ? 'Sign in' : 'Local account'; ?></h2>
+                        <button type="button" class="modal-close" id="localModalClose" aria-label="<?php echo htmlspecialchars(t('auth.login.modal_close_aria')); ?>">&times;</button>
+                        <h2><?php echo !empty($hasLdap) ? htmlspecialchars(t('auth.login.modal_title_sign_in')) : htmlspecialchars(t('auth.login.modal_title_local')); ?></h2>
                         <?php if ($error): ?>
                             <div class="error-message"><?php echo htmlspecialchars($error); ?></div>
                         <?php endif; ?>
                         <form method="POST" action="" autocomplete="off" id="localLoginForm">
                             <div class="form-group">
-                                <label for="username"><?php echo !empty($hasLdap) ? 'Username or email' : 'Username'; ?></label>
+                                <label for="username"><?php echo !empty($hasLdap) ? htmlspecialchars(t('auth.login.username_user_email')) : htmlspecialchars(t('auth.login.username_user')); ?></label>
                                 <input type="text" id="username" name="username" required autocomplete="off">
                             </div>
                             <div class="form-group">
-                                <label for="password">Password</label>
+                                <label for="password"><?php echo htmlspecialchars(t('auth.login.password')); ?></label>
                                 <input type="password" id="password" name="password" required autocomplete="off">
                             </div>
-                            <button type="submit" class="login-button">Sign In</button>
+                            <button type="submit" class="login-button"><?php echo htmlspecialchars(t('auth.login.sign_in')); ?></button>
                         </form>
-                        <a href="forgot-password.php" class="forgot-link">Forgot password?</a>
+                        <a href="forgot-password.php" class="forgot-link"><?php echo htmlspecialchars(t('auth.login.forgot_password')); ?></a>
                     </div>
                 </div>
 
@@ -819,7 +821,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     async function resolve() {
                         var email = (emailEl.value || '').trim();
-                        if (!email) { routerErr.textContent = 'Please enter your email.'; routerErr.style.display = 'block'; return; }
+                        if (!email) { routerErr.textContent = <?php echo json_encode(t('auth.login.enter_email_error')); ?>; routerErr.style.display = 'block'; return; }
                         routerErr.style.display = 'none';
                         contBtn.disabled = true;
                         try {
@@ -837,7 +839,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         if (localAllowed) {
                             openModal(true);
                         } else {
-                            routerErr.textContent = 'No single sign-on provider is set up for that email. Please contact your administrator.';
+                            routerErr.textContent = <?php echo json_encode(t('auth.login.no_sso_for_email')); ?>;
                             routerErr.style.display = 'block';
                         }
                         contBtn.disabled = false;
@@ -853,16 +855,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <?php endif; ?>
                 <form method="POST" action="" autocomplete="off" id="localLoginForm">
                     <div class="form-group">
-                        <label for="username">Username</label>
+                        <label for="username"><?php echo htmlspecialchars(t('auth.login.username_user')); ?></label>
                         <input type="text" id="username" name="username" required autofocus autocomplete="off">
                     </div>
                     <div class="form-group">
-                        <label for="password">Password</label>
+                        <label for="password"><?php echo htmlspecialchars(t('auth.login.password')); ?></label>
                         <input type="password" id="password" name="password" required autocomplete="off">
                     </div>
-                    <button type="submit" class="login-button">Sign In</button>
+                    <button type="submit" class="login-button"><?php echo htmlspecialchars(t('auth.login.sign_in')); ?></button>
                 </form>
-                <a href="forgot-password.php" class="forgot-link">Forgot password?</a>
+                <a href="forgot-password.php" class="forgot-link"><?php echo htmlspecialchars(t('auth.login.forgot_password')); ?></a>
             <?php endif; ?>
         <?php endif; ?>
     </div>
