@@ -27,7 +27,7 @@ $analyst_name = $_SESSION['analyst_name'] ?? 'Analyst';
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0A192F 0%, #1E3A8A 100%);
+            background: linear-gradient(135deg, #02A4FC 0%, #0468F7 35%, #271BAE 70%, #310AE3 100%);
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -118,7 +118,7 @@ $analyst_name = $_SESSION['analyst_name'] ?? 'Analyst';
         .submit-btn {
             width: 100%;
             padding: 12px;
-            background: linear-gradient(135deg, #0A192F 0%, #1E3A8A 100%);
+            background: linear-gradient(135deg, #02A4FC 0%, #0468F7 35%, #271BAE 70%, #310AE3 100%);
             color: white;
             border: none;
             border-radius: 5px;

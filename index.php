@@ -43,7 +43,7 @@ $allowed_modules = $_SESSION['allowed_modules'] ?? null;
         }
 
         .landing-header {
-            background: linear-gradient(135deg, #0078d4, #106ebe);
+            background: linear-gradient(135deg, #055883, #a3dfff, #055883);
             color: white;
             padding: 15px 30px;
             display: flex;
@@ -65,7 +65,7 @@ $allowed_modules = $_SESSION['allowed_modules'] ?? null;
         }
 
         .company-logo {
-            width: 300px;
+            width: 390px;
             height: auto;
             margin-bottom: 30px;
         }
@@ -178,7 +178,7 @@ $allowed_modules = $_SESSION['allowed_modules'] ?? null;
 
             .landing-container { padding: 24px 14px 32px; justify-content: flex-start; }
 
-            .company-logo { width: 220px; max-width: 70%; margin-bottom: 20px; }
+            .company-logo { width: 286px; max-width: 80%; margin-bottom: 20px; }
 
             .welcome-text { margin-bottom: 28px; }
             .welcome-text h2 { font-size: 24px; }

@@ -38,7 +38,7 @@ $translationNamespaces = ['common', 'self-service'];
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0A192F 0%, #1E3A8A 100%);
+            background: linear-gradient(135deg, #02A4FC 0%, #0468F7 35%, #271BAE 70%, #310AE3 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -120,7 +120,7 @@ $translationNamespaces = ['common', 'self-service'];
         .login-button {
             width: 100%;
             padding: 12px;
-            background: linear-gradient(135deg, #0A192F 0%, #1E3A8A 100%);
+            background: #271BAE;
             color: white;
             border: none;
             border-radius: 5px;

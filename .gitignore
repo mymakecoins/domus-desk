@@ -128,3 +128,9 @@ yarn-error.log
 *.backup
 *.old
 *.orig
+
+# ============================================
+# CLAUDE CODE (local settings)
+# ============================================
+
+.claude/settings.local.json

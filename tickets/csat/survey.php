@@ -84,7 +84,7 @@ $emojiLabels = ['', 'Very dissatisfied', 'Dissatisfied', 'Neutral', 'Satisfied',
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #0A192F 0%, #1E3A8A 100%);
+    background: linear-gradient(135deg, #02A4FC 0%, #0468F7 35%, #271BAE 70%, #310AE3 100%);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -175,7 +175,7 @@ textarea {
 }
 textarea:focus { outline: none; border-color: #667eea; }
 button.submit {
-    background: linear-gradient(135deg, #0A192F 0%, #1E3A8A 100%);
+    background: linear-gradient(135deg, #02A4FC 0%, #0468F7 35%, #271BAE 70%, #310AE3 100%);
     color: white;
     border: none;
     padding: 12px 36px;

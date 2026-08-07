@@ -13,6 +13,9 @@ services:
       - DB_PASSWORD=domus_desk
       - ENCRYPTION_KEY_PATH=/var/www/encryption_keys/domus_desk.key
     volumes:
+      - .:/var/www/html
+      - ./docker/config.php:/var/www/html/config.php
+      - ./docker/db_config.php:/var/www/html/db_config.php
       - attachments:/var/www/html/tickets/attachments
       - cm-attachments:/var/www/html/change-management/attachments
       - encryption-keys:/var/www/encryption_keys

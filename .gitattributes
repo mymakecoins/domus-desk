@@ -1,2 +1,9 @@
 # Force LF line endings for shell scripts (required for Docker/Linux)
 *.sh text eol=lf
+*.bash text eol=lf
+
+# Treat these as text regardless of platform
+*.md   text
+*.json text
+*.yml  text
+*.yaml text

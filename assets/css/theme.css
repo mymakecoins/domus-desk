@@ -15,32 +15,39 @@
 [data-theme="default"] {
     color-scheme: light;
 
-    /* Surfaces */
-    --app-bg:        #F8FAFC;   /* Slate Light page / app background */
-    --surface:       #FFFFFF;   /* panels, cards, reading pane    */
-    --surface-2:     #f8fafc;   /* subtle raised/striped surface  */
-    --surface-3:     #f1f5f9;   /* slightly deeper subtle surface */
-    --surface-hover: #f1f5f9;   /* row / item hover               */
-    --row-unread:    #f0f9ff;   /* unread ticket-list row tint    */
+    /* BetaUp Brand Core Tokens */
+    --color-brand-primary:       #0468F7;   /* Beta Blue */
+    --color-brand-primary-hover: #0286F7;   /* Beta Blue Hover */
+    --color-brand-secondary:     #310AE3;   /* Beta Violet */
+    --color-brand-accent:        #02A4FC;   /* Beta Cyan */
+    --color-brand-depth:         #271BAE;   /* Core Indigo */
 
-    /* Text */
-    --text:        #0F172A;     /* primary body text (Grafite Escuro) */
-    --text-muted:  #64748B;     /* labels, secondary (Cinza Neutro)   */
-    --text-dim:    #888888;     /* tertiary            */
-    --text-faint:  #94a3b8;     /* placeholders, hints */
+    --accent:                    #0468F7;
+    --accent-hover:              #0286F7;
+    --accent-soft:               #EFF6FF;   /* Blue scale 50 */
+    --on-accent:                 #FFFFFF;
 
-    /* Lines */
-    --border:      #E2E8F0;     /* default borders/dividers (Cinza Claro) */
-    --border-soft: #f1f5f9;     /* faint dividers           */
+    /* BetaUp Surfaces */
+    --app-bg:        #F6F8FC;   /* Cloud */
+    --surface:       #FFFFFF;   /* White */
+    --surface-2:     #F1F5F9;   /* Neutral scale 100 */
+    --surface-3:     #E2E8F0;   /* Neutral scale 200 */
+    --surface-hover: #EFF6FF;   /* Blue scale 50 */
+    --row-unread:    #EFF6FF;   /* Beta Blue 50 */
 
-    /* Primary Brand (Rodoind) & Accent */
-    --color-brand-primary:       #0A192F;   /* Azul Marinho Profundo */
-    --color-brand-primary-hover: #112240;   /* Azul Marinho Intermediário */
-    --color-brand-accent:        #1E3A8A;   /* Azul Médio Corporativo */
-    --accent:                    #0A192F;
-    --accent-hover:              #1E3A8A;
-    --accent-soft:               #e2e8f0;   /* tinted accent background */
-    --on-accent:                 #ffffff;   /* text/icons on accent     */
+    /* BetaUp Text Tokens */
+    --text:        #111827;     /* Ink */
+    --text-muted:  #5B6472;     /* Slate */
+    --text-dim:    #94A3B8;     /* Neutral scale 400 */
+    --text-faint:  #CBD5E1;     /* Neutral scale 300 */
+
+    /* Lines & Borders */
+    --border:      #E2E8F0;     /* Neutral scale 200 */
+    --border-soft: #F1F5F9;
+
+    /* Gradientes da Marca */
+    --gradient-primary: linear-gradient(135deg, #02A4FC 0%, #0468F7 35%, #271BAE 70%, #310AE3 100%);
+    --gradient-soft:    linear-gradient(135deg, #0468F7 0%, #310AE3 100%);
 
     /* Action / CTAs */
     --color-cta-primary:       #F59E0B;   /* Amarelo / Laranja Vibrante */
@@ -68,101 +75,83 @@
     --problem-bg:        #faf7fd;  --problem-border: #e6d8f2;
     --problem-text:      #6a1b9a;  --problem-badge-bg: #ede7f6;
 
-    /* Knowledge module (purple) accents — buttons, tag pills, AI chat */
-    --kb-accent:       #8764b8;  --kb-accent-hover: #6b4fa2;
-    --kb-accent-soft:  #f3eef8;  --kb-on-accent:    #ffffff;
+    /* Knowledge module (indigo/violet) accents — buttons, tag pills, AI chat */
+    --kb-accent:       #271BAE;  --kb-accent-hover: #310AE3;
+    --kb-accent-soft:  #EFF6FF;  --kb-on-accent:    #ffffff;
 
     /* Change Management module (teal) accents — buttons, filters, CAB */
     --cm-accent:       #00897b;  --cm-accent-hover: #00695c;
     --cm-accent-soft:  #e0f2f1;  --cm-on-accent:    #ffffff;
 
-    /* Problem Management module (red) accents — buttons, filters, RCA.
-       Red is the module's registered brand colour (module-colors.php: the
-       waffle tile + header gradient). Distinct from the cross-module
-       --problem-* purple badge palette above (used by Tickets). */
+    /* Problem Management module (red) accents — buttons, filters, RCA. */
     --pm-accent:       #dc2626;  --pm-accent-hover: #b91c1c;
     --pm-accent-soft:  #fde8e8;  --pm-on-accent:    #ffffff;
 
-    /* Calendar module (orange) accents — buttons, today, event chips */
-    --cal-accent:      #ef6c00;  --cal-accent-hover: #e65100;
-    --cal-accent-soft: #fff3e0;  --cal-on-accent:    #ffffff;
+    /* Calendar module (amber/orange) accents — buttons, today, event chips */
+    --cal-accent:      #F5A524;  --cal-accent-hover: #D97706;
+    --cal-accent-soft: #FEF3C7;  --cal-on-accent:    #ffffff;
 
-    /* Morning Checks module (cyan) accents — chart border, raise-ticket chip.
-       Cyan is the module's registered brand colour (module-colors.php). */
+    /* Morning Checks module (cyan) accents — chart border, raise-ticket chip. */
     --mc-accent:       #00acc1;  --mc-accent-hover: #00838f;
     --mc-accent-soft:  #e0f7fa;  --mc-on-accent:    #ffffff;
 
-    /* Reporting module (rust-orange) accents — cards, links, chart, hero.
-       Rust is the module's registered brand colour (module-colors.php).
-       Distinct from Calendar's brighter orange (--cal-*). */
+    /* Reporting module (rust-orange) accents — cards, links, chart, hero. */
     --rep-accent:      #ca5010;  --rep-accent-hover: #a5410a;
     --rep-accent-soft: #fdeee6;  --rep-on-accent:    #ffffff;
 
-    /* Software module (indigo) accents — cards, links, charts, badges.
-       Indigo is the module's registered brand colour (module-colors.php). */
+    /* Software module (indigo) accents — cards, links, charts, badges. */
     --sw-accent:       #5c6bc0;  --sw-accent-hover: #3f51b5;
     --sw-accent-soft:  #e8eaf6;  --sw-on-accent:    #ffffff;
 
-    /* Forms module (teal) accents — builder, fields, submissions, hero.
-       Teal is the module's registered brand colour (module-colors.php);
-       shares the same hues as Change Management but kept as its own set. */
+    /* Forms module (teal) accents — builder, fields, submissions, hero. */
     --forms-accent:      #00897b;  --forms-accent-hover: #00695c;
     --forms-accent-soft: #e0f2f1;  --forms-on-accent:    #ffffff;
 
-    /* CMDB module (pink/magenta) accents — object browser, relationships, hero.
-       Pink is the module's registered brand colour (module-colors.php). */
+    /* CMDB module (pink/magenta) accents — object browser, relationships, hero. */
     --cmdb-accent:      #be185d;  --cmdb-accent-hover: #9d174d;
     --cmdb-accent-soft: #fce4ec;  --cmdb-on-accent:    #ffffff;
 
-    /* Tasks module (violet) accents — board, list, timeline, calendar.
-       Violet is the module's registered brand colour (module-colors.php). */
-    --tsk-accent:      #7c3aed;  --tsk-accent-hover: #6d28d9;
-    --tsk-accent-soft: #f3f0ff;  --tsk-on-accent:    #ffffff;
+    /* Tasks module (Beta Violet) accents — board, list, timeline, calendar. */
+    --tsk-accent:      #310AE3;  --tsk-accent-hover: #271BAE;
+    --tsk-accent-soft: #EFF6FF;  --tsk-on-accent:    #ffffff;
 
-    /* Contracts module (amber) accents — contracts, suppliers, RFP builder.
-       Amber is the module's registered brand colour (module-colors.php). */
+    /* Contracts module (amber) accents — contracts, suppliers, RFP builder. */
     --con-accent:      #f59e0b;  --con-accent-hover: #d97706;
     --con-accent-soft: #fef3c7;  --con-on-accent:    #ffffff;
 
-    /* Service Status module (emerald) accents — chrome only; the up/down/
-       degraded STATE colours are data. Emerald is the registered brand. */
+    /* Service Status module (emerald) accents */
     --ss-accent:       #10b981;  --ss-accent-hover:  #059669;
     --ss-accent-soft:  #d1fae5;  --ss-on-accent:     #ffffff;
 
-    /* Network Mapper module (cyan) accents — editor CHROME only; the diagram
-       canvas + nodes stay a light worksheet. Cyan is the registered brand. */
+    /* Network Mapper module (cyan) accents */
     --nm-accent:       #06b6d4;  --nm-accent-hover:  #0891b2;
     --nm-accent-soft:  #ecfeff;  --nm-on-accent:     #ffffff;
 
-    /* Workflows module (amber) accents — editor CHROME only; the workflow
-       canvas + nodes stay a light worksheet. NB workflow.css is authored amber
-       (#f59e0b), even though module-colors registers #ea580c for the header. */
+    /* Workflows module (amber) accents */
     --wf-accent:       #f59e0b;  --wf-accent-hover:  #d97706;
     --wf-accent-soft:  #fef3c7;  --wf-on-accent:     #ffffff;
 
-    /* Process Mapper module (indigo) accents — editor CHROME only; the flowchart
-       canvas + steps stay a light worksheet. Indigo is the registered brand.
-       (--pm-* is Problem Management; process-mapper uses --pmap-*.) */
-    --pmap-accent:      #6366f1;  --pmap-accent-hover: #4f46e5;
-    --pmap-accent-soft: #eef2ff;  --pmap-on-accent:    #ffffff;
+    /* Process Mapper module (Beta Blue) accents */
+    --pmap-accent:      #0468F7;  --pmap-accent-hover: #0286F7;
+    --pmap-accent-soft: #EFF6FF;  --pmap-on-accent:    #ffffff;
 
-    /* System Wiki — red (module-colors.php 'wiki') */
+    /* System Wiki — red */
     --wiki-accent:      #c62828;  --wiki-accent-hover: #b71c1c;
     --wiki-accent-soft: #fdecea;  --wiki-on-accent:    #ffffff;
 
-    /* LMS — blue (module-colors.php 'lms') */
+    /* LMS — blue */
     --lms-accent:       #2563eb;  --lms-accent-hover:  #1d4ed8;
     --lms-accent-soft:  #eff6ff;  --lms-on-accent:     #ffffff;
 
-    /* Watchtower — slate (module-colors.php 'watchtower') */
+    /* Watchtower — slate */
     --wt-accent:        #1e293b;  --wt-accent-hover:   #0f172a;
     --wt-accent-soft:   #f1f5f9;  --wt-on-accent:      #ffffff;
 
-    /* System — blue-grey (module-colors.php 'system') */
+    /* System — blue-grey */
     --sys-accent:       #546e7a;  --sys-accent-hover:  #37474f;
     --sys-accent-soft:  #eceff1;  --sys-on-accent:     #ffffff;
 
-    /* Messaging-channel (WhatsApp etc.) composer — green-tinted surface */
+    /* Messaging-channel (WhatsApp etc.) composer */
     --channel-bg:        #f7fdf9;  --channel-border: #d6e9d8;
 
     /* Effects */
@@ -172,120 +161,153 @@
 [data-theme="dark"] {
     color-scheme: dark;
 
-    /* Surfaces */
-    --app-bg:        #14171c;
-    --surface:       #1e2228;
-    --surface-2:     #232830;
-    --surface-3:     #20242b;
-    --surface-hover: #2a3039;
-    --row-unread:    #1b2733;
+    /* BetaUp Dark Brand & Surfaces */
+    --app-bg:        #0B1020;   /* Midnight */
+    --surface:       #191C24;   /* Deep Night */
+    --surface-2:     #272A31;   /* Graphite */
+    --surface-3:     #334155;   /* Neutral scale 700 */
+    --surface-hover: #1E293B;
 
-    /* Text */
-    --text:        #e6e8eb;
-    --text-muted:  #aab2bd;
-    --text-dim:    #8d95a0;
-    --text-faint:  #79818b;
+    --text:        #FFFFFF;   /* White */
+    --text-muted:  #94A3B8;   /* Neutral 400 */
+    --border:      #272A31;
 
-    /* Lines */
-    --border:      #343b45;
-    --border-soft: #2b313a;
+    --accent:        #02A4FC;   /* Beta Cyan */
+    --accent-hover:  #38BDF8;   /* Sky Tech */
+    --accent-soft:   #1E3A8A;
+    --on-accent:     #FFFFFF;
 
-    /* Accent — nudged lighter so it reads on dark surfaces */
-    --accent:        #2b88d8;
-    --accent-hover:  #4a9ee0;
-    --accent-soft:   #1d3346;
-    --on-accent:     #ffffff;
+    --gradient-dark: linear-gradient(180deg, #0B1020 0%, #111827 100%);
 
-    /* Status / semantic pairs — dark surfaces with light readable text */
+    /* Status / semantic pairs */
     --success-bg:     #16331f;  --success-text: #86efac;  --success-accent: #22c55e;  --success-border: #2f6b46;
     --danger-bg:      #3a1a1d;  --danger-text:  #fca5a5;  --danger-accent:  #f87171;  --danger-border:  #6b2b30;
     --warning-bg:     #3a2e12;  --warning-text: #fcd34d;  --warning-border: #5a4a1e;
 
-    /* Problem Management (purple) — dark surfaces with light readable text */
+    /* Problem Management (purple) */
     --problem-bg:        #241a30;  --problem-border: #3a2c4d;
     --problem-text:      #c9a9e9;  --problem-badge-bg: #2e2440;
 
-    /* Knowledge module (purple) — accent nudged lighter to read on dark */
-    --kb-accent:       #a98cd8;  --kb-accent-hover: #bda3e4;
-    --kb-accent-soft:  #2a2238;  --kb-on-accent:    #ffffff;
+    /* Knowledge module (indigo/violet) */
+    --kb-accent:       #310AE3;  --kb-accent-hover: #02A4FC;
+    --kb-accent-soft:  #1E3A8A;  --kb-on-accent:    #ffffff;
 
-    /* Change Management module (teal) — accent nudged lighter to read on dark */
+    /* Change Management module (teal) */
     --cm-accent:       #26a69a;  --cm-accent-hover: #4db6ac;
     --cm-accent-soft:  #16302d;  --cm-on-accent:    #ffffff;
 
-    /* Problem Management module (red) — accent nudged lighter to read on dark */
+    /* Problem Management module (red) */
     --pm-accent:       #f87171;  --pm-accent-hover: #fca5a5;
     --pm-accent-soft:  #3a1a1d;  --pm-on-accent:    #ffffff;
 
-    /* Calendar module (orange) — accent nudged lighter to read on dark */
-    --cal-accent:      #ff9d4d;  --cal-accent-hover: #ffb375;
+    /* Calendar module (amber/orange) */
+    --cal-accent:      #F5A524;  --cal-accent-hover: #D97706;
     --cal-accent-soft: #3a2a17;  --cal-on-accent:    #ffffff;
 
-    /* Morning Checks module (cyan) — accent nudged lighter to read on dark */
+    /* Morning Checks module (cyan) */
     --mc-accent:       #26c6da;  --mc-accent-hover: #4dd0e1;
     --mc-accent-soft:  #14343a;  --mc-on-accent:    #ffffff;
 
-    /* Reporting module (rust-orange) — accent nudged lighter to read on dark */
+    /* Reporting module (rust-orange) */
     --rep-accent:      #e8703a;  --rep-accent-hover: #f08a5a;
     --rep-accent-soft: #3a2416;  --rep-on-accent:    #ffffff;
 
-    /* Software module (indigo) — accent nudged lighter to read on dark */
+    /* Software module (indigo) */
     --sw-accent:       #7986cb;  --sw-accent-hover: #9fa8da;
     --sw-accent-soft:  #262b45;  --sw-on-accent:    #ffffff;
 
-    /* Forms module (teal) — accent nudged lighter to read on dark */
+    /* Forms module (teal) */
     --forms-accent:      #26a69a;  --forms-accent-hover: #4db6ac;
     --forms-accent-soft: #16302d;  --forms-on-accent:    #ffffff;
 
-    /* CMDB module (pink/magenta) — accent nudged lighter to read on dark */
+    /* CMDB module (pink/magenta) */
     --cmdb-accent:      #ec4899;  --cmdb-accent-hover: #f472b6;
     --cmdb-accent-soft: #3a1826;  --cmdb-on-accent:    #ffffff;
 
-    /* Tasks module (violet) — accent nudged lighter to read on dark */
-    --tsk-accent:      #a78bfa;  --tsk-accent-hover: #c4b5fd;
-    --tsk-accent-soft: #2a2145;  --tsk-on-accent:    #ffffff;
+    /* Tasks module (Beta Cyan / Beta Violet) */
+    --tsk-accent:      #02A4FC;  --tsk-accent-hover: #38BDF8;
+    --tsk-accent-soft: #1E3A8A;  --tsk-on-accent:    #ffffff;
 
-    /* Contracts module (amber) — accent nudged lighter to read on dark */
+    /* Contracts module (amber) */
     --con-accent:      #fbbf24;  --con-accent-hover: #fcd34d;
     --con-accent-soft: #3a2e12;  --con-on-accent:    #ffffff;
 
-    /* Service Status module (emerald) — accent nudged lighter to read on dark */
+    /* Service Status module (emerald) */
     --ss-accent:       #34d399;  --ss-accent-hover:  #6ee7b7;
     --ss-accent-soft:  #0f2e24;  --ss-on-accent:     #ffffff;
 
-    /* Network Mapper module (cyan) — accent nudged lighter to read on dark */
+    /* Network Mapper module (cyan) */
     --nm-accent:       #22d3ee;  --nm-accent-hover:  #67e8f9;
     --nm-accent-soft:  #0d2b30;  --nm-on-accent:     #ffffff;
 
-    /* Workflows module (amber) — accent nudged lighter to read on dark */
+    /* Workflows module (amber) */
     --wf-accent:       #fbbf24;  --wf-accent-hover:  #fcd34d;
     --wf-accent-soft:  #3a2e12;  --wf-on-accent:     #ffffff;
 
-    /* Process Mapper module (indigo) — accent nudged lighter to read on dark */
-    --pmap-accent:      #818cf8;  --pmap-accent-hover: #a5b4fc;
-    --pmap-accent-soft: #262a45;  --pmap-on-accent:    #ffffff;
+    /* Process Mapper module (Beta Cyan) */
+    --pmap-accent:      #02A4FC;  --pmap-accent-hover: #38BDF8;
+    --pmap-accent-soft: #1E3A8A;  --pmap-on-accent:    #ffffff;
 
-    /* System Wiki — red, lifted so it reads on a dark surface */
+    /* System Wiki */
     --wiki-accent:      #ef5350;  --wiki-accent-hover: #f77c7a;
     --wiki-accent-soft: #3a1d1c;  --wiki-on-accent:    #ffffff;
 
-    /* LMS — blue, lifted */
+    /* LMS */
     --lms-accent:       #60a5fa;  --lms-accent-hover:  #93c5fd;
     --lms-accent-soft:  #1b2a45;  --lms-on-accent:     #ffffff;
 
-    /* Watchtower — slate. The registered brand (#1e293b) is near-black: fine as a
-       header gradient, invisible as an accent on a dark surface. So dark lifts it
-       to a readable mid-slate rather than nudging the brand value. */
+    /* Watchtower */
     --wt-accent:        #94a3b8;  --wt-accent-hover:   #cbd5e1;
     --wt-accent-soft:   #22293a;  --wt-on-accent:      #0f172a;
 
-    /* System — blue-grey, lifted */
+    /* System */
     --sys-accent:       #90a4ae;  --sys-accent-hover:  #b0bec5;
     --sys-accent-soft:  #263238;  --sys-on-accent:     #263238;
 
-    /* Messaging-channel (WhatsApp etc.) composer — dark green-tinted surface */
+    /* Messaging-channel */
     --channel-bg:        #15231b;  --channel-border: #2b3d31;
 
     /* Effects */
     --shadow:        rgba(0, 0, 0, 0.45);
+}
+
+/* Base Components: Botões Primários e Controles de Formulário */
+.btn-primary {
+    background-color: var(--color-brand-primary, #0468F7);
+    color: var(--on-accent, #ffffff);
+    border: 1px solid var(--color-brand-primary, #0468F7);
+    transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-primary:hover {
+    background-color: var(--color-brand-primary-hover, #0286F7);
+    border-color: var(--color-brand-primary-hover, #0286F7);
+    color: var(--on-accent, #ffffff);
+}
+.btn-primary:focus,
+.btn-primary:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(4, 104, 247, 0.3);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+select,
+textarea,
+.form-input {
+    border-color: var(--border, #E2E8F0);
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+select:focus,
+textarea:focus,
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-brand-primary, #0468F7);
+    box-shadow: 0 0 0 3px rgba(4, 104, 247, 0.15);
 }

@@ -314,7 +314,7 @@ $modules = [
 
     /* Module title in header */
     .module-title {
-        font-size: 14px;
+        font-size: 20px;
         font-weight: 600;
         color: rgba(255, 255, 255, 0.9);
         margin-right: 20px;
@@ -324,8 +324,11 @@ $modules = [
     }
 
     /* Module header colors */
+    .header,
+    .landing-header,
+    .portal-header { background: linear-gradient(135deg, #055883, #a3dfff, #055883); }
     <?php foreach (getModuleColors() as $key => $c): ?>
-    .header.<?php echo $key; ?>-header { background: linear-gradient(135deg, <?php echo $c[0]; ?>, <?php echo $c[1]; ?>); }
+    .header.<?php echo $key; ?>-header { background: linear-gradient(135deg, #055883, #a3dfff, #055883); }
     <?php endforeach; ?>
 
     /* Dark palettes: lay a translucent black wash over the (per-module) coloured
@@ -760,9 +763,11 @@ function renderHeaderRight($analyst_name, $path_prefix) {
             flex-shrink: 0;
         }
         .theme-swatch-check { margin-left: auto; color: var(--accent); font-weight: 700; }
-        /* Per-palette preview swatch — extend as palettes are added */
-        .theme-swatch-default { background: #ffffff; }
-        .theme-swatch-dark { background: #1e2228; }
+        /* Per-palette preview swatch — BetaUp Soluções */
+        .theme-swatch-default { background: #F6F8FC; border-color: #E2E8F0; position: relative; }
+        .theme-swatch-default::after { content: ''; position: absolute; width: 6px; height: 6px; border-radius: 50%; background: #0468F7; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+        .theme-swatch-dark { background: #0B1020; border-color: #272A31; position: relative; }
+        .theme-swatch-dark::after { content: ''; position: absolute; width: 6px; height: 6px; border-radius: 50%; background: #02A4FC; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 
         .mfa-badge {
             margin-left: auto;

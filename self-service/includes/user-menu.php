@@ -172,8 +172,10 @@ if (count($_um_parts) > 1) {
         border: 1px solid rgba(0,0,0,.15);
         display: inline-block;
     }
-    .ss-theme-swatch-default { background: linear-gradient(135deg, #ffffff 50%, #f3f4f6 50%); }
-    .ss-theme-swatch-dark    { background: linear-gradient(135deg, #1f2937 50%, #111827 50%); }
+    .ss-theme-swatch-default { background: #F6F8FC; border-color: #E2E8F0; position: relative; }
+    .ss-theme-swatch-default::after { content: ''; position: absolute; width: 6px; height: 6px; border-radius: 50%; background: #0468F7; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+    .ss-theme-swatch-dark    { background: #0B1020; border-color: #272A31; position: relative; }
+    .ss-theme-swatch-dark::after { content: ''; position: absolute; width: 6px; height: 6px; border-radius: 50%; background: #02A4FC; top: 50%; left: 50%; transform: translate(-50%, -50%); }
     .ss-modal-footer {
         padding: 16px 24px;
         border-top: 1px solid #e0e0e0;

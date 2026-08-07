@@ -135,15 +135,22 @@
     padding: 20px 30px;
 }
 
-/* Teal theme overrides */
+/* BetaUp brand button overrides */
 .forms-container .btn-primary {
-    background: var(--forms-accent, #00897b);
-    border-color: var(--forms-accent, #00897b);
+    background: var(--color-brand-primary, #0468F7);
+    border-color: var(--color-brand-primary, #0468F7);
+    color: #FFFFFF;
 }
 
 .forms-container .btn-primary:hover {
-    background: var(--forms-accent-hover, #00695c);
-    border-color: var(--forms-accent-hover, #00695c);
+    background: var(--color-brand-primary-hover, #0286F7);
+    border-color: var(--color-brand-primary-hover, #0286F7);
+    color: #FFFFFF;
+}
+
+.forms-container .btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(4, 104, 247, 0.3);
 }
 
 /* Empty / welcome state */
