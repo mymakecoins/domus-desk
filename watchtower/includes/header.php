@@ -5,7 +5,7 @@
 
 $path_prefix = $path_prefix ?? '../';
 $current_module = 'watchtower';
-$module_title = function_exists('t') ? t('watchtower.title') : 'Watchtower';
+$module_title = function_exists('t') ? t('watchtower.title') : 'Dashboard';
 
 // Ensure user is logged in
 if (!isset($_SESSION['analyst_id'])) {

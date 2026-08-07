@@ -4,7 +4,7 @@
  * Missing keys fall back to lang/en/watchtower.php per-key.
  */
 return [
-    'title' => 'Watchtower',
+    'title' => 'Dashboard',
 
     'nav' => [
         'dashboard' => 'Painel',
@@ -12,7 +12,7 @@ return [
     ],
 
     'dashboard' => [
-        'heading'      => 'Visão geral de atenção',
+        'heading'      => 'Dashboard',
         'refresh'      => 'Atualizar',
         'updated'      => 'Atualizado {time}',
     ],

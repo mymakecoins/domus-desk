@@ -289,6 +289,29 @@
     box-shadow: 0 0 0 3px rgba(4, 104, 247, 0.3);
 }
 
+/* Botões .btn.btn-primary.btn-full com esquema de cores do login (#1b41ae) no tema light */
+html:not([data-theme-mode="dark"]):not([data-theme="dark"]) .btn.btn-primary.btn-full,
+:root:not([data-theme-mode="dark"]):not([data-theme="dark"]) .btn.btn-primary.btn-full {
+    background: #1b41ae !important;
+    background-color: #1b41ae !important;
+    color: #ffffff !important;
+    border: none !important;
+}
+
+html:not([data-theme-mode="dark"]):not([data-theme="dark"]) .btn.btn-primary.btn-full:hover,
+:root:not([data-theme-mode="dark"]):not([data-theme="dark"]) .btn.btn-primary.btn-full:hover {
+    background: #1b41ae !important;
+    background-color: #1b41ae !important;
+    color: #ffffff !important;
+    border: none !important;
+    transform: translateY(-2px);
+}
+
+html:not([data-theme-mode="dark"]):not([data-theme="dark"]) .btn.btn-primary.btn-full:active,
+:root:not([data-theme-mode="dark"]):not([data-theme="dark"]) .btn.btn-primary.btn-full:active {
+    transform: translateY(0);
+}
+
 input[type="text"],
 input[type="password"],
 input[type="email"],

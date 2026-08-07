@@ -45,7 +45,7 @@ $allowed_modules = $_SESSION['allowed_modules'] ?? null;
         .landing-header {
             background: linear-gradient(135deg, #055883, #a3dfff, #055883);
             color: white;
-            padding: 15px 30px;
+            padding: 10px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -62,12 +62,14 @@ $allowed_modules = $_SESSION['allowed_modules'] ?? null;
             font-size: 20px;
             font-weight: 600;
             margin: 0;
+            display: flex;
+            align-items: center;
         }
 
         .company-logo {
-            width: 390px;
-            height: auto;
-            margin-bottom: 30px;
+            height: 54px;
+            width: auto;
+            display: block;
         }
 
         .header-right {
@@ -173,12 +175,12 @@ $allowed_modules = $_SESSION['allowed_modules'] ?? null;
            Above 768px nothing here applies, so the desktop render is unchanged.
            ==================================================================== */
         @media (max-width: 768px) {
-            .landing-header { padding: 12px 14px; }
+            .landing-header { padding: 10px 14px; }
             .landing-header h1 { font-size: 16px; }
 
             .landing-container { padding: 24px 14px 32px; justify-content: flex-start; }
 
-            .company-logo { width: 286px; max-width: 80%; margin-bottom: 20px; }
+            .company-logo { height: 42px; }
 
             .welcome-text { margin-bottom: 28px; }
             .welcome-text h2 { font-size: 24px; }
@@ -201,13 +203,12 @@ $allowed_modules = $_SESSION['allowed_modules'] ?? null;
 </head>
 <body>
     <div class="landing-header">
-        <h1><?php echo htmlspecialchars(t('common.home.header_title')); ?></h1>
+        <h1><img src="assets/images/CompanyLogo-white.png?v=1" alt="<?php echo htmlspecialchars(t('common.home.header_title')); ?>" class="company-logo"></h1>
         <?php renderHeaderRight($analyst_name, ''); ?>
     </div>
     <script>function closeWaffleMenu() {}</script>
 
     <div class="landing-container">
-        <img src="assets/images/CompanyLogo.png?v=2" alt="Company Logo" class="company-logo">
         <div class="welcome-text">
             <h2><?php echo htmlspecialchars(t('common.home.welcome_heading')); ?></h2>
             <p><?php echo htmlspecialchars(t('common.home.welcome_subtitle')); ?></p>

@@ -221,6 +221,43 @@ $modules = [
         margin-bottom: 15px;
         padding-bottom: 10px;
         border-bottom: 1px solid var(--border-soft);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .waffle-logo-link {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .waffle-logo {
+        height: 31px;
+        width: auto;
+        display: block;
+    }
+
+    .waffle-logo-light {
+        display: block;
+    }
+
+    .waffle-logo-dark {
+        display: none;
+    }
+
+    [data-theme-mode="dark"] .waffle-logo-light,
+    [data-theme="dark"] .waffle-logo-light,
+    html[data-theme-mode="dark"] .waffle-logo-light,
+    html[data-theme="dark"] .waffle-logo-light {
+        display: none !important;
+    }
+
+    [data-theme-mode="dark"] .waffle-logo-dark,
+    [data-theme="dark"] .waffle-logo-dark,
+    html[data-theme-mode="dark"] .waffle-logo-dark,
+    html[data-theme="dark"] .waffle-logo-dark {
+        display: block !important;
     }
 
     .waffle-modules {
@@ -438,7 +475,10 @@ function renderWaffleMenuPanel($modules, $current_module, $path_prefix) {
     ?>
     <div class="waffle-panel" id="wafflePanel">
         <div class="waffle-panel-header">
-            <span><?php echo htmlspecialchars(t('common.waffle.title')); ?></span>
+            <a href="<?php echo BASE_URL; ?>" class="waffle-logo-link">
+                <img src="<?php echo BASE_URL; ?>assets/images/CompanyLogo-crop.png" alt="<?php echo htmlspecialchars(t('common.waffle.title')); ?>" class="waffle-logo waffle-logo-light">
+                <img src="<?php echo BASE_URL; ?>assets/images/CompanyLogo-white.png" alt="<?php echo htmlspecialchars(t('common.waffle.title')); ?>" class="waffle-logo waffle-logo-dark">
+            </a>
             <button type="button" class="waffle-close" onclick="closeWaffleMenu()" aria-label="Close">&times;</button>
         </div>
         <div class="waffle-modules">

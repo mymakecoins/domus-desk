@@ -77,7 +77,7 @@ $localAllowed = $localOn || $forceLocal;
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #33a7e5;
+            background: #165d83;
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -143,7 +143,7 @@ $localAllowed = $localOn || $forceLocal;
         .login-button {
             width: 100%;
             padding: 12px;
-            background: #271BAE;
+            background: #1b41ae;
             color: white;
             border: none;
             border-radius: 5px;

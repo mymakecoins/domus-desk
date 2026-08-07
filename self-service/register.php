@@ -120,7 +120,7 @@ $translationNamespaces = ['common', 'self-service'];
         .login-button {
             width: 100%;
             padding: 12px;
-            background: #271BAE;
+            background: #1b41ae;
             color: white;
             border: none;
             border-radius: 5px;

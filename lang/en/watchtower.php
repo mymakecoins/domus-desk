@@ -13,7 +13,7 @@
  * event titles, article titles, service names, etc.
  */
 return [
-    'title' => 'Watchtower',
+    'title' => 'Dashboard',
 
     'nav' => [
         'dashboard' => 'Dashboard',
@@ -21,7 +21,7 @@ return [
     ],
 
     'dashboard' => [
-        'heading'      => 'Attention Overview',
+        'heading'      => 'Dashboard',
         'refresh'      => 'Refresh',
         'updated'      => 'Updated {time}',
     ],
