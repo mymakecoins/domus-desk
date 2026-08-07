@@ -219,6 +219,40 @@ $localAllowed = $localOn || $forceLocal;
             color: #999; text-decoration: none; font-size: 13px; cursor: pointer;
         }
         .ss-text-link:hover { color: #666; }
+
+        .password-input-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .password-input-container input {
+            padding-right: 40px !important;
+        }
+
+        .toggle-password-btn {
+            position: absolute;
+            right: 10px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #718096;
+            border-radius: 4px;
+            transition: color 0.2s, background-color 0.2s;
+        }
+
+        .toggle-password-btn:hover {
+            color: #2d3748;
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .toggle-password-btn:focus {
+            outline: none;
+        }
     </style>
 </head>
 <body>
@@ -243,7 +277,13 @@ $localAllowed = $localOn || $forceLocal;
                 </div>
                 <div class="form-group" id="passwordGroup"<?php if ($ssoActive): ?> style="display:none;"<?php endif; ?>>
                     <label for="password"><?php echo htmlspecialchars(t('self-service.login.password')); ?></label>
-                    <input type="password" id="password" autocomplete="off">
+                    <div class="password-input-container">
+                        <input type="password" id="password" autocomplete="off">
+                        <button type="button" class="toggle-password-btn" aria-label="Mostrar/Ocultar senha">
+                            <svg class="eye-icon eye-show" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                            <svg class="eye-icon eye-hide" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>
+                        </button>
+                    </div>
                 </div>
                 <?php if ($ssoActive): ?>
                     <button type="button" class="login-button" id="continueBtn"><?php echo htmlspecialchars(t('self-service.login.continue')); ?></button>
@@ -488,6 +528,26 @@ $localAllowed = $localOn || $forceLocal;
         <?php endif; ?>
     })();
 <?php endif; ?>
+    document.querySelectorAll('.toggle-password-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var container = btn.closest('.password-input-container');
+            if (!container) return;
+            var input = container.querySelector('input');
+            var eyeShow = btn.querySelector('.eye-show');
+            var eyeHide = btn.querySelector('.eye-hide');
+            if (!input) return;
+
+            if (input.type === 'password') {
+                input.type = 'text';
+                if (eyeShow) eyeShow.style.display = 'none';
+                if (eyeHide) eyeHide.style.display = 'inline-block';
+            } else {
+                input.type = 'password';
+                if (eyeShow) eyeShow.style.display = 'inline-block';
+                if (eyeHide) eyeHide.style.display = 'none';
+            }
+        });
+    });
     </script>
 </body>
 </html>

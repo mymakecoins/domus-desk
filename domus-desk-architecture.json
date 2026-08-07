@@ -1,0 +1,488 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Domus Desk — Arquitetura do Sistema",
+    "subtitle": "Monolito PHP multi-tenant · identidade federada, ingestão de e-mail, jobs agendados e IA BYOK",
+    "output": "domus-desk-architecture.html"
+  },
+  "components": [
+    {
+      "id": "channels",
+      "type": "frontend",
+      "label": "Canais Externos",
+      "sublabel": "webchat · extensão",
+      "tag": "público",
+      "pos": [
+        20,
+        90
+      ],
+      "size": [
+        180,
+        64
+      ]
+    },
+    {
+      "id": "browser",
+      "type": "frontend",
+      "label": "Navegador Web",
+      "sublabel": "HTML5 · JS vanilla",
+      "tag": "Cmd+K · Dark Mode",
+      "pos": [
+        20,
+        240
+      ],
+      "size": [
+        180,
+        64
+      ]
+    },
+    {
+      "id": "idp",
+      "type": "external",
+      "label": "Identidade Externa",
+      "sublabel": "LDAP/AD · Entra ID · Google",
+      "pos": [
+        20,
+        430
+      ],
+      "size": [
+        180,
+        64
+      ]
+    },
+    {
+      "id": "mail_sources",
+      "type": "external",
+      "label": "Caixas de E-mail",
+      "sublabel": "IMAP · Gmail · MS Graph",
+      "pos": [
+        20,
+        600
+      ],
+      "size": [
+        180,
+        64
+      ]
+    },
+    {
+      "id": "rest_api",
+      "type": "backend",
+      "label": "API REST v1",
+      "sublabel": "api/v1 · OpenAPI 3.0",
+      "pos": [
+        280,
+        90
+      ],
+      "size": [
+        160,
+        64
+      ]
+    },
+    {
+      "id": "webserver",
+      "type": "cloud",
+      "label": "Apache / Nginx",
+      "sublabel": "mod_rewrite · :8080",
+      "pos": [
+        280,
+        240
+      ],
+      "size": [
+        160,
+        64
+      ]
+    },
+    {
+      "id": "auth",
+      "type": "security",
+      "label": "Autenticação & MFA",
+      "sublabel": "LDAP · OIDC · TOTP",
+      "pos": [
+        280,
+        430
+      ],
+      "size": [
+        160,
+        64
+      ]
+    },
+    {
+      "id": "mail_connector",
+      "type": "backend",
+      "label": "Conectores Mailbox",
+      "sublabel": "imap · gmail · graph",
+      "pos": [
+        280,
+        600
+      ],
+      "size": [
+        160,
+        64
+      ]
+    },
+    {
+      "id": "monolith",
+      "type": "backend",
+      "label": "Monolito Modular PHP",
+      "sublabel": "PHP 7.4-8.4 · 21 módulos",
+      "tag": "Tenancy & RBAC",
+      "pos": [
+        520,
+        240
+      ],
+      "size": [
+        180,
+        64
+      ]
+    },
+    {
+      "id": "cron",
+      "type": "cloud",
+      "label": "Jobs Agendados",
+      "sublabel": "SLA · webhooks · workflow",
+      "pos": [
+        520,
+        600
+      ],
+      "size": [
+        180,
+        64
+      ]
+    },
+    {
+      "id": "ai_client",
+      "type": "backend",
+      "label": "IA Multi-Provider",
+      "sublabel": "ai_provider.php (BYOK)",
+      "pos": [
+        780,
+        90
+      ],
+      "size": [
+        170,
+        64
+      ]
+    },
+    {
+      "id": "crypto",
+      "type": "security",
+      "label": "Criptografia & RBAC",
+      "sublabel": "AES-256-GCM (OpenSSL)",
+      "pos": [
+        780,
+        430
+      ],
+      "size": [
+        170,
+        64
+      ]
+    },
+    {
+      "id": "outbound",
+      "type": "backend",
+      "label": "Integrações de Saída",
+      "sublabel": "webhook_delivery · intune",
+      "pos": [
+        780,
+        600
+      ],
+      "size": [
+        170,
+        64
+      ]
+    },
+    {
+      "id": "mysql_db",
+      "type": "database",
+      "label": "MySQL 8.0+",
+      "sublabel": "PDO · domus_desk :3306",
+      "pos": [
+        1030,
+        240
+      ],
+      "size": [
+        170,
+        64
+      ]
+    },
+    {
+      "id": "key_store",
+      "type": "security",
+      "label": "Chaves de Encriptação",
+      "sublabel": "/var/www/encryption_keys",
+      "tag": "Fora do Web Root",
+      "pos": [
+        1030,
+        430
+      ],
+      "size": [
+        170,
+        64
+      ]
+    },
+    {
+      "id": "ai_providers",
+      "type": "external",
+      "label": "Provedores de LLM",
+      "sublabel": "Anthropic, OpenAI, OpenRouter",
+      "pos": [
+        1280,
+        90
+      ],
+      "size": [
+        190,
+        64
+      ]
+    },
+    {
+      "id": "attachments",
+      "type": "cloud",
+      "label": "Volumes de Anexos",
+      "sublabel": "tickets · change-mgmt",
+      "pos": [
+        1280,
+        240
+      ],
+      "size": [
+        190,
+        64
+      ]
+    },
+    {
+      "id": "ext_systems",
+      "type": "external",
+      "label": "Sistemas Externos",
+      "sublabel": "endpoints · Microsoft Intune",
+      "pos": [
+        1280,
+        600
+      ],
+      "size": [
+        190,
+        64
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Container Docker App (LAMP / PHP)",
+      "wraps": [
+        "rest_api",
+        "webserver",
+        "auth",
+        "mail_connector",
+        "monolith",
+        "cron",
+        "ai_client",
+        "crypto",
+        "outbound"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "Camada de Persistência & Arquivos",
+      "wraps": [
+        "mysql_db",
+        "attachments"
+      ]
+    },
+    {
+      "kind": "security-group",
+      "label": "Área Protegida / Segredos",
+      "wraps": [
+        "key_store"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "browser",
+      "to": "webserver",
+      "label": "HTTPS",
+      "variant": "emphasis"
+    },
+    {
+      "from": "channels",
+      "to": "rest_api",
+      "label": "REST"
+    },
+    {
+      "from": "webserver",
+      "to": "rest_api",
+      "label": "/api/v1/",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "labelDx": 44
+    },
+    {
+      "from": "webserver",
+      "to": "monolith",
+      "label": "mod_rewrite",
+      "variant": "emphasis"
+    },
+    {
+      "from": "webserver",
+      "to": "auth",
+      "label": "login · SSO",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDx": 46,
+      "labelDy": 50
+    },
+    {
+      "from": "auth",
+      "to": "idp",
+      "variant": "security",
+      "fromSide": "left",
+      "toSide": "right"
+    },
+    {
+      "from": "monolith",
+      "to": "mysql_db",
+      "label": "SQL / PDO",
+      "variant": "emphasis",
+      "labelDy": -22
+    },
+    {
+      "from": "monolith",
+      "to": "ai_client",
+      "label": "IA (BYOK)",
+      "fromSide": "top",
+      "toSide": "left",
+      "via": [
+        [
+          610,
+          122
+        ]
+      ]
+    },
+    {
+      "from": "ai_client",
+      "to": "ai_providers",
+      "label": "HTTPS"
+    },
+    {
+      "from": "monolith",
+      "to": "crypto",
+      "label": "AES-256",
+      "fromSide": "right",
+      "toSide": "left",
+      "via": [
+        [
+          740,
+          272
+        ],
+        [
+          740,
+          462
+        ]
+      ]
+    },
+    {
+      "from": "crypto",
+      "to": "key_store",
+      "label": "chave AES",
+      "variant": "security"
+    },
+    {
+      "from": "monolith",
+      "to": "attachments",
+      "label": "anexos",
+      "variant": "dashed",
+      "fromSide": "right",
+      "toSide": "top",
+      "via": [
+        [
+          740,
+          272
+        ],
+        [
+          740,
+          190
+        ],
+        [
+          1375,
+          190
+        ]
+      ]
+    },
+    {
+      "from": "mail_sources",
+      "to": "mail_connector",
+      "label": "e-mails"
+    },
+    {
+      "from": "mail_connector",
+      "to": "monolith",
+      "label": "chamados",
+      "variant": "dashed",
+      "fromSide": "right",
+      "toSide": "left",
+      "via": [
+        [
+          480,
+          632
+        ],
+        [
+          480,
+          272
+        ]
+      ],
+      "labelDx": 22
+    },
+    {
+      "from": "cron",
+      "to": "monolith",
+      "label": "SLA · workflow",
+      "variant": "dashed",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "from": "cron",
+      "to": "outbound",
+      "label": "entrega"
+    },
+    {
+      "from": "outbound",
+      "to": "ext_systems",
+      "label": "webhooks · Intune"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Entrada & Superfícies",
+      "items": [
+        "Interface web server-rendered em HTML5/CSS/JS vanilla, sem build step, atrás do Apache com mod_rewrite na porta 8080.",
+        "API REST v1 (api/v1, OpenAPI 3.0) atende também o webchat público e a extensão de navegador."
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Núcleo & Persistência",
+      "items": [
+        "Monolito PHP 7.4-8.4 com 21+ módulos (chamados, ativos, CMDB, mudanças, problemas, base de conhecimento, LMS).",
+        "Multi-tenancy nativo e RBAC por escopo de tenant; acesso a MySQL 8.0 sempre por consultas parametrizadas via PDO."
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Identidade & Segredos",
+      "items": [
+        "Autenticação local, LDAP/AD e OIDC (Entra ID, Google), com segundo fator TOTP em includes/totp.php.",
+        "Segredos cifrados em AES-256-GCM; a chave vive em ENCRYPTION_KEY_PATH, fora do web root, em volume dedicado."
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Assíncrono & Integrações",
+      "items": [
+        "Caixas IMAP, Gmail API e Microsoft Graph são convertidas em chamados pelos conectores de mailbox.",
+        "Três jobs de cron sustentam o pipeline assíncrono: verificação de SLA, workflows agendados e fila de entrega de webhooks (também usada pela integração com o Intune)."
+      ]
+    }
+  ]
+}

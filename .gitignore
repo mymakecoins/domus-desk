@@ -18,6 +18,11 @@ database/backups/
 .env
 .env.local
 .env.*.local
+db_config.php
+
+# AI Assistant & Knowledge Graph Output
+.brain/
+graphify-out/
 
 # ============================================
 # DEVELOPMENT & IDE FILES

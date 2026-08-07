@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Domus Desk — Relacionamento de Funcionalidades",
+    "subtitle": "Fluxo de Comunicação e Dependências de Informação entre os Módulos ITSM",
+    "output": "domus-desk-funcionalidades.html",
+    "quality_profile": "showcase",
+    "visual_preset": "blueprint",
+    "views": [
+      {
+        "id": "service-desk-flow",
+        "label": "Fluxo Central de Suporte & Ingestão",
+        "focus": ["self_service", "tickets", "workflow_engine", "ai_engine"],
+        "note": "Abertura de chamados por solicitantes, automações de triagem e auxílio da IA."
+      },
+      {
+        "id": "itil-governance",
+        "label": "Governança ITIL & Análise de Impacto",
+        "focus": ["tickets", "problem_mgmt", "change_mgmt", "cmdb", "assets"],
+        "note": "Evolução de Incidentes para Problemas, Mudanças (RFC/CAB) e vínculo no CMDB."
+      },
+      {
+        "id": "knowledge-and-ops",
+        "label": "Conhecimento, Operações & Status",
+        "focus": ["knowledge", "watchtower", "service_status", "contracts_rfp"],
+        "note": "Base de conhecimento, central de atenção, saúde dos serviços e contratos."
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "self_service",
+      "type": "frontend",
+      "label": "Portal Self-Service",
+      "sublabel": "Catálogo & Webchat",
+      "tag": "Solicitante",
+      "pos": [40, 200],
+      "size": [140, 60]
+    },
+    {
+      "id": "workflow_engine",
+      "type": "backend",
+      "label": "Motor de Workflows",
+      "sublabel": "138+ Gatilhos & Forms",
+      "pos": [40, 440],
+      "size": [140, 60]
+    },
+    {
+      "id": "service_status",
+      "type": "cloud",
+      "label": "Status dos Serviços",
+      "sublabel": "Painel Público",
+      "pos": [40, 680],
+      "size": [140, 60]
+    },
+    {
+      "id": "tickets",
+      "type": "backend",
+      "label": "Gestão de Chamados",
+      "sublabel": "Inbox, SLA, E-mail",
+      "tag": "Núcleo ITSM",
+      "pos": [320, 200],
+      "size": [140, 60]
+    },
+    {
+      "id": "problem_mgmt",
+      "type": "backend",
+      "label": "Gestão de Problemas",
+      "sublabel": "Análise RCA",
+      "pos": [320, 440],
+      "size": [140, 60]
+    },
+    {
+      "id": "change_mgmt",
+      "type": "backend",
+      "label": "Gestão de Mudanças",
+      "sublabel": "RFC, Votação CAB",
+      "pos": [320, 680],
+      "size": [140, 60]
+    },
+    {
+      "id": "knowledge",
+      "type": "backend",
+      "label": "Base Conhecimento",
+      "sublabel": "Artigos, LMS & Processos",
+      "pos": [600, 200],
+      "size": [140, 60]
+    },
+    {
+      "id": "watchtower",
+      "type": "frontend",
+      "label": "Watchtower",
+      "sublabel": "Central de Atenção",
+      "tag": "Analistas",
+      "pos": [600, 440],
+      "size": [140, 60]
+    },
+    {
+      "id": "contracts_rfp",
+      "type": "backend",
+      "label": "Contratos & RFP",
+      "sublabel": "Gestão de Fornecedores",
+      "pos": [600, 680],
+      "size": [140, 60]
+    },
+    {
+      "id": "ai_engine",
+      "type": "external",
+      "label": "Provedor Central IA",
+      "sublabel": "LLMs via BYOK",
+      "tag": "BYOK",
+      "pos": [880, 200],
+      "size": [140, 60]
+    },
+    {
+      "id": "cmdb",
+      "type": "database",
+      "label": "CMDB & Topology",
+      "sublabel": "CIs & Network Mapper",
+      "pos": [880, 440],
+      "size": [140, 60]
+    },
+    {
+      "id": "assets",
+      "type": "backend",
+      "label": "Gestão de Ativos",
+      "sublabel": "Hardware, Software",
+      "pos": [880, 680],
+      "size": [140, 60]
+    }
+  ],
+  "boundaries": [],
+  "connections": [
+    {
+      "id": "c_user_tickets",
+      "from": "self_service",
+      "to": "tickets",
+      "label": "Abre Chamados",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelAt": [240, 215],
+      "variant": "emphasis"
+    },
+
+    {
+      "id": "c_watchtower_tickets",
+      "from": "watchtower",
+      "to": "tickets",
+      "label": "Triagem & Alertas",
+      "fromSide": "bottom",
+      "toSide": "left",
+      "via": [[670, 560], [250, 560], [250, 230]],
+      "labelAt": [460, 560]
+    },
+    {
+      "id": "c_tickets_workflow",
+      "from": "tickets",
+      "to": "workflow_engine",
+      "label": "Gatilhos",
+      "fromSide": "left",
+      "toSide": "top",
+      "via": [[290, 230], [290, 350], [110, 350]],
+      "labelAt": [200, 350]
+    },
+    {
+      "id": "c_tickets_problem",
+      "from": "tickets",
+      "to": "problem_mgmt",
+      "label": "Escala Incidentes",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelAt": [340, 350]
+    },
+    {
+      "id": "c_tickets_change",
+      "from": "tickets",
+      "to": "change_mgmt",
+      "label": "Solicita RFC",
+      "fromSide": "left",
+      "toSide": "left",
+      "via": [[270, 230], [270, 710]],
+      "labelAt": [220, 620]
+    },
+    {
+      "id": "c_problem_kb",
+      "from": "problem_mgmt",
+      "to": "knowledge",
+      "label": "Erros Conhecidos",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "via": [[390, 360], [670, 360]],
+      "labelAt": [530, 360]
+    },
+    {
+      "id": "c_change_cmdb",
+      "from": "change_mgmt",
+      "to": "cmdb",
+      "label": "Impacto de CIs",
+      "fromSide": "right",
+      "toSide": "left",
+      "via": [[490, 710], [490, 610], [830, 610], [830, 470]],
+      "labelAt": [660, 610]
+    },
+    {
+      "id": "c_change_status",
+      "from": "change_mgmt",
+      "to": "service_status",
+      "label": "Janela Manutenção",
+      "fromSide": "left",
+      "toSide": "right",
+      "labelAt": [185, 760]
+    },
+    {
+      "id": "c_assets_cmdb",
+      "from": "assets",
+      "to": "cmdb",
+      "label": "Mapeia CIs",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "c_assets_contracts",
+      "from": "contracts_rfp",
+      "to": "assets",
+      "label": "Associa Garantias",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "c_ai_tickets",
+      "from": "ai_engine",
+      "to": "tickets",
+      "label": "Sugere Respostas",
+      "fromSide": "top",
+      "toSide": "top",
+      "variant": "dashed"
+    },
+    {
+      "id": "c_ai_problem",
+      "from": "ai_engine",
+      "to": "problem_mgmt",
+      "label": "Sintetiza RCA",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "variant": "dashed",
+      "via": [[950, 410], [390, 410]],
+      "labelAt": [670, 410]
+    },
+    {
+      "id": "c_ai_kb",
+      "from": "ai_engine",
+      "to": "knowledge",
+      "label": "Busca Vetorial",
+      "fromSide": "left",
+      "toSide": "right",
+      "variant": "dashed"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Quem Fala com Quem?",
+      "items": [
+        "Solicitantes via Self-Service falam com Chamados, Base de Conhecimento e Status de Serviços.",
+        "Analistas no Watchtower consomem Chamados, Tarefas pendentes e Alertas em tempo real.",
+        "Módulo de Chamados aciona o Motor de Workflows, solicita RFCs para Mudanças e escala Problemas."
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Quem Depende de Quem?",
+      "items": [
+        "Gestão de Mudanças depende dos Itens de Configuração do CMDB para matriz de risco e aprovação CAB.",
+        "Gestão de Ativos alimenta o CMDB e depende do módulo de Contratos para controle de garantias.",
+        "Status dos Serviços depende das Janelas de Manutenção aprovadas em Mudanças e dos Morning Checks."
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "Serviços Transversais (IA & Automação)",
+      "items": [
+        "Motor de Workflows reage a 138+ gatilhos de Chamados, Formulários e Mudanças para executar ações.",
+        "Provedor de IA (BYOK) atua como assistente transversal para Chamados (respostas), Problemas (RCA) e KB (vetorial)."
+      ]
+    }
+  ]
+}

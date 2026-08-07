@@ -83,7 +83,7 @@ $translationNamespaces = ['common', 'asset-management'];
         .summary-icon.cpu { background: linear-gradient(135deg, #8764b8, #6b4fa0); }
         .summary-icon.memory { background: linear-gradient(135deg, #e3008c, #b4009e); }
         .summary-icon.disk { background: linear-gradient(135deg, #ff8c00, #d67200); }
-        .summary-icon.hosts { background: linear-gradient(135deg, #00b7c3, #008b94); }
+        .summary-icon.hosts { background: linear-gradient(135deg, #a3dfff, #055883); }
         .summary-icon.clusters { background: linear-gradient(135deg, #498205, #3b6c04); }
 
         .summary-info {
